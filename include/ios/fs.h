@@ -36,6 +36,6 @@ typedef struct
 /* 0x0 */ u32 length;
 /* 0x4 */ u32 position;
 } FsFileStats;
-SIZE_ASSERT(FsFileStats, 8);
+SIZE_ASSERT(FsFileStats, 8)
 
 CPP_WRAPPER_END()
