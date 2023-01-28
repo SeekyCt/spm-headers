@@ -74,7 +74,7 @@ typedef struct
 /* 0x1B4 */ s32 code;
 /* 0x1B8 */ s32 saveId; // slot of save file to work on
 } NandWork;
-SIZE_ASSERT(NandWork, 0x1bc);
+SIZE_ASSERT(NandWork, 0x1bc)
 
 DECOMP_STATIC(NandWork nandmgr_work)
 DECOMP_STATIC(NandWork * nandmgr_wp)
