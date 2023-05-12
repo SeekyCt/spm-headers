@@ -709,6 +709,9 @@
 // more
 // OSThread.c
 80277ffc:OSSuspendThread
+80278190:OSSleepThread
+8027827c:OSWakeupThread
+// more
 // OSTime
 80278370:OSGetTime
 // more
@@ -725,10 +728,28 @@
 
 // dvd.a
 // dvdfs.c
+    // text
 8027b910:DVDConvertPathToEntrynum
 // more
+    // data
+805aec08:__DVDThreadQueue
+805aec10:MaxEntryNum
+805aec14:FstStringStart
+805aec18:FstStart
+// more
+// dvd.c
+    // text
+8027e840:stateReady
+    // sbss
+805aec24:PauseFlag
+805aeca0:executing
+// more    
 // dvd_broadway.c
 805ae2d8:devDiStr
+// more
+// dvdqueue.c
+    // text
+802803dc:__DVDPushWaitingQueue
 // more
 
 // vi.a
@@ -771,12 +792,21 @@
 80295d90:MEMGetSizeForMBlockExpHeap
 // more
 
+// fs.a
+80296a04:ISFS_ReadDir
+// more
+
 // ipc.a
+    // text
+80297f04:__ios_Ipc2
 80298268:IOS_Open
 80298448:IOS_Close
 802985f0:IOS_Read
 80298b18:IOS_Ioctl
 80298e68:IOS_Ioctlv
+80299360:iosAllocAligned
+    // sdata
+805ae3b4:ipc_lbl_805ae3b4
 // more
 
 // NAND.a

@@ -36,9 +36,18 @@ typedef signed char s8;
 typedef float f32;
 typedef double f64;
 
-typedef u32 size_t;
-
-#define NULL 0
+#ifdef USE_STL
+    #include <cstddef>
+    static_assert(sizeof(size_t) == 4, "Expected 32-bit size_t");
+#else
+    typedef u32 size_t;
+    #define NULL 0
+    #ifdef __MWERKS__
+        #define offsetof(type, member) ((u32)&((type *)0)->member)
+    #else
+        #define offsetof __builtin_offsetof
+    #endif
+#endif
 
 typedef s32 BOOL;
 
@@ -68,13 +77,6 @@ typedef u8 unk8;
 // Use CW special static assert
 #ifdef __MWERKS__
     #define static_assert(cond, msg) __static_assert(cond, msg) 
-#endif
-
-// Use special offsetof if available
-#ifdef __MWERKS__
-    #define offsetof(type, member) ((u32)&((type *)0)->member)
-#else
-    #define offsetof __builtin_offsetof
 #endif
 
 // Macro for quick size static assert
