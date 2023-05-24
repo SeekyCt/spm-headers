@@ -22,6 +22,8 @@ CPP_WRAPPER(wii::nand)
 #define NAND_MODE_READ 1
 #define NAND_MODE_WRITE 2
 
+#define NAND_PATH_LENGTH 64
+
 typedef struct
 {
 /* 0x00 */ u8 unknown_0x0[0x8c - 0x0];

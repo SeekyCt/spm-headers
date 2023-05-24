@@ -482,7 +482,7 @@
 // relmgr.c
 // text
 8023e434:relInit
-8023e444:loadRel
+8023e444:relMain
 8023e600:isRelLoaded
 // sdata
 805ae1a0:relmgr_wp
@@ -637,10 +637,15 @@
 // more
 
 // mem.a
+// mem_heapCommon.c
+8029540c:MEMFindContainHeap
+// more
 // mem_expHeap.c
 80295b3c:MEMAllocFromExpHeapEx
+80295bec:MEMFreeToExpHeap
 80295cb8:MEMGetAllocatableSizeForExpHeapEx
 80295d90:MEMGetSizeForMBlockExpHeap
+// more
 
 // ipc.a
 80298268:IOS_Open
