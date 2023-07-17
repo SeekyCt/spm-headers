@@ -145,7 +145,7 @@ typedef struct _NPCEntry
 /* 0x390 */ s32 onSpawnEvtId; // id of the EvtEntry running a templated npc's onSpawn scripts
                               // (unknown for non-templated NPCs)
 /* 0x394 */ u8 unknown_0x394[0x39c - 0x394];
-/* 0x39C */ f32 tribeField0xE; // field 0xe of spawning NPCTribe cast to float 
+/* 0x39C */ f32 tribeField0xE; // field 0xe of spawning NPCTribe cast to float
 /* 0x3A0 */ f32 tribeField0x10; // field 0x10 of spawning NPCTribe cast to float
 /* 0x3A4 */ f32 tribeField0x12; // field 0x12 of spawning NPCTribe cast to float
 /* 0x3A8 */ u8 unknown_0x3a8[0x3ac - 0x3a8];
@@ -161,11 +161,13 @@ typedef struct _NPCEntry
 /* 0x478 */ u32 tribeField0x54; // field 0x54 of spawning NPCTribe
 /* 0x47C */ u8 unknown_0x47c[0x49c - 0x47c];
 /* 0x49C */ s32 tribeId; // id of the NPCTribe this NPC was spawned with
-/* 0x4A0 */ s32 tribeId2; // seemingly just a copy of tribeId 
+/* 0x4A0 */ s32 tribeId2; // seemingly just a copy of tribeId
 /* 0x4A4 */ u8 unknown_0x4a4[0x4ec - 0x4a4];
 /* 0x4EC */ u32 maxHp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F0 */ u32 hp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
-/* 0x4F4 */ u8 unknown_0x4f4[0x510 - 0x4f4];
+/* 0x4F4 */ u8 unknown_0x4f4[0x508 - 0x4f4];
+/* 0x508 */ u32 axisMovementUnit;
+/* 0x4F4 */ u8 unknown_0x50c[0x510 - 0x50c];
 /* 0x510 */ s32 unitWork[16];
 /* 0x550 */ u8 unknown_0x550[0x574 - 0x550];
 /* 0x574 */ s32 dropItemId; // id of the item this npc would drop if killed (determined on spawn)
@@ -292,7 +294,7 @@ NPCEntry * npcEntry(const char * instanceName, const char * animPoseName, s32 in
 NPCEntry * npcIdToPtr(s32 id);
 NPCEntry * npcNameToPtr(const char * instanceName);
 NPCEntry * npcNameToPtr_NoAssert(const char * instanceName);
-UNKNOWN_FUNCTION(npcDelete);
+void npcDelete(char *name);
 UNKNOWN_FUNCTION(func_801b73cc);
 UNKNOWN_FUNCTION(func_801b7a20);
 UNKNOWN_FUNCTION(func_801b8064);

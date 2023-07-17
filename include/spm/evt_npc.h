@@ -15,6 +15,8 @@ EVT_DECLARE_USER_FUNC(evt_npc_get_position, 4)
 // evt_npc_set_position(const char * instanceName, f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_npc_set_position, 4)
 
+EVT_DECLARE_USER_FUNC(evt_rpg_npctribe_handle, 0)
+
 UNKNOWN_FUNCTION(func_800fe338);
 UNKNOWN_FUNCTION(func_800fe404);
 UNKNOWN_FUNCTION(func_800fe4e8);
@@ -186,7 +188,6 @@ UNKNOWN_FUNCTION(func_801072a4);
 UNKNOWN_FUNCTION(func_801072f8);
 UNKNOWN_FUNCTION(evt_npc_get_coin_drop_count);
 UNKNOWN_FUNCTION(evt_npc_get_drop_item_type);
-UNKNOWN_FUNCTION(evt_npc_id_to_name);
 UNKNOWN_FUNCTION(func_801075b8);
 UNKNOWN_FUNCTION(func_80107600);
 UNKNOWN_FUNCTION(func_80107648);
@@ -198,6 +199,14 @@ UNKNOWN_FUNCTION(func_80107a5c);
 UNKNOWN_FUNCTION(func_80107ac8);
 UNKNOWN_FUNCTION(func_80107b34);
 UNKNOWN_FUNCTION(func_80107b80);
+
+
+EVT_DECLARE_USER_FUNC(evt_env_blur_on, 2)
+
+EVT_DECLARE_USER_FUNC(evt_npc_id_to_name, 2)
+
+//(s32 tribeId, int)
+EVT_DECLARE_USER_FUNC(evt_npc_stats_set_up, 2)
 
 // evt_npc_set_camid(const char * name, s32 camId)
 EVT_DECLARE_USER_FUNC(evt_npc_set_camid, 2)

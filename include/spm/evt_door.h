@@ -81,6 +81,9 @@ UNKNOWN_FUNCTION(roomBottomlesssCb);
 // evt_door_set_door_descs(DoorDesc * descs, s32 count)
 EVT_DECLARE_USER_FUNC(evt_door_set_door_descs, 1)
 
+//evt_door_set_event(char *door, int unknown, EvtScriptCode * script)
+EVT_DECLARE_USER_FUNC(evt_door_set_event, 3)
+
 UNKNOWN_FUNCTION(evt_door_enable_disable_door_desc);
 UNKNOWN_FUNCTION(func_800e2b78);
 UNKNOWN_FUNCTION(func_800e3050);

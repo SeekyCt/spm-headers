@@ -50,7 +50,7 @@ typedef struct
 /* 0x010 */ u8 unknown_0x10[0x11c - 0x10];
 /* 0x11C */ EffTypeStats typeStats[2];
 /* 0x12C */ u8 unknown_0x12c[0x134 - 0x12c];
-} EffWork; 
+} EffWork;
 SIZE_ASSERT(EffWork, 0x134);
 
 DECOMP_STATIC(EffWork effdrv_work)
@@ -111,6 +111,8 @@ void effSoftDelete(EffEntry * entry);
     Gets an entry by name
 */
 EffEntry * effNameToPtr(const char * name);
+
+EffEntry * effNiceEntry(double param_1, double param_2, double param_3, double param_4, int param_5);
 
 UNKNOWN_FUNCTION(func_80061c28);
 UNKNOWN_FUNCTION(func_80061cd0);
