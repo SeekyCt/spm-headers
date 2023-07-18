@@ -239,6 +239,25 @@
 
 //evt_rpg.c
 80c6c94c:rpg_handle_menu
+80C6F2A8:evt_rpg_calc_damage_to_enemy
+80c72900:evt_rpg_wakeup_check
+80c6f244:evt_rpg_underchomp_name_grab
+80c72a54:evt_rpg_effects_handle
+80c72764:evt_rpg_menu_effects_handler
+80c72528:evt_rpg_mario_take_damage
+80c72398:evt_rpg_enemy_take_damage
+80c725c0:evt_rpg_point_calculation
+80c72c40:evt_rpg_point_handling
+80c7249c:evt_rpg_calc_mario_damage
+80c72c78:evt_rpg_get_item_msg
+80c72b38:evt_rpg_calc_item_stats
+80c72c00:evt_rpg_add_xp
+80c6f1dc:evt_rpg_char_get
+80c72620:evt_rpg_enemy_death_check
+80c726b8:evt_rpg_status_remove
+80c72680:evt_rpg_effect_check
+80c6d894:evt_rpg_choice_handler
+80c6d87c:changeRandomDAT1
 
 // evt_fade.c
 800e7100:evt_fade_end_wait
@@ -292,33 +311,14 @@
 800f25b0:evt_set_gravity
 800f0074:evt_mario_face_coords
 80c774c4:evt_unknown_pointer_change
-80c72680:evt_rpg_effect_check
-80c6d894:evt_rpg_choice_handler
-80c6d87c:changeRandomDAT1
 800f1954:evt_mario_set_pose
 800ef958:evt_mario_set_character
-80c6f1dc:evt_rpg_char_get
-80c72620:evt_rpg_enemy_death_check
-80c726b8:evt_rpg_status_remove
 800ef908:evt_mario_get_character
 800f2450:evt_mario_fairy_reset
 800f046c:evt_mario_pos_change
 800efd88:evt_mario_direction_face
 800efd28:evt_mario_direction_reset
 800CC01C:effNiceEntry
-80C6F2A8:evt_rpg_calc_damage_to_enemy
-80c72900:evt_rpg_wakeup_check
-80c6f244:evt_rpg_underchomp_name_grab
-80c72a54:evt_rpg_effects_handle
-80c72764:evt_rpg_menu_effects_handler
-80c72528:evt_rpg_mario_take_damage
-80c72398:evt_rpg_enemy_take_damage
-80c725c0:evt_rpg_point_calculation
-80c72c40:evt_rpg_point_handling
-80c7249c:evt_rpg_calc_mario_damage
-80c72c78:evt_rpg_get_item_msg
-80c72b38:evt_rpg_calc_item_stats
-80c72c00:evt_rpg_add_xp
 // more
 
 // evt_mobj.c
