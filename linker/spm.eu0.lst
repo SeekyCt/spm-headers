@@ -150,10 +150,10 @@
 // more
 
 // evt_sub.c
-800d46d8:evt_sub_set_game_speed
 800d37d8:evt_sub_intpl_msec_init
 800d3878:evt_sub_intpl_msec_get_value
 800d40a4:evt_sub_random
+800d46d8:evt_sub_set_game_speed
 800d4de4:func_800d4de4
 800d4774:evt_sub_get_entername
 800d4960:evt_sub_get_language
@@ -164,7 +164,6 @@
 8010c600:evt_paper_entry
 8010c660:evt_paper_delete
 
-// evt_pouch.c
 8010cffc:evt_pouch_increment_enemies_defeated
 8010c80c:evt_pouch_add_xp
 8010c7c0:evt_pouch_get_xp
@@ -173,14 +172,13 @@
 8010cdd4:evt_pouch_set_level
 8010c714:evt_pouch_add_hp
 8010c6c8:evt_pouch_get_hp
+8010c698:evt_pouch_set_hp
 8010c744:evt_pouch_get_max_hp
 8010c790:evt_pouch_set_max_hp
 8010c86c:evt_pouch_get_attack
 8010c83c:evt_pouch_set_attack
 8010c8b8:evt_pouch_add_attack
-8010c698:evt_pouch_set_hp
 8010c9c4:evt_pouch_check_have_item
-8010ca18:evt_pouch_remove_item
 
 // evtmgr.c
 800d87e4:evtGetWork
@@ -220,18 +218,22 @@
 // sdata
 805ae020:evt_door_wp
 
-//evt_rpg.c
+// rpgdrv.c
 80c6c94c:rpg_handle_menu
-80C6F2A8:evt_rpg_calc_damage_to_enemy
-80c72900:evt_rpg_wakeup_check
+
+// evt_rpg.c
+80c6d894:evt_rpg_choice_handler
+80c6d87c:changeRandomDAT1
 80c6f244:evt_rpg_underchomp_name_grab
+80C6F2A8:evt_rpg_calc_damage_to_enemy
+80c7249c:evt_rpg_calc_mario_damage
+80c72900:evt_rpg_wakeup_check
 80c72a54:evt_rpg_effects_handle
 80c72764:evt_rpg_menu_effects_handler
 80c72528:evt_rpg_mario_take_damage
 80c72398:evt_rpg_enemy_take_damage
 80c725c0:evt_rpg_point_calculation
 80c72c40:evt_rpg_point_handling
-80c7249c:evt_rpg_calc_mario_damage
 80c72c78:evt_rpg_get_item_msg
 80c72b38:evt_rpg_calc_item_stats
 80c72c00:evt_rpg_add_xp
@@ -239,8 +241,6 @@
 80c72620:evt_rpg_enemy_death_check
 80c726b8:evt_rpg_status_remove
 80c72680:evt_rpg_effect_check
-80c6d894:evt_rpg_choice_handler
-80c6d87c:changeRandomDAT1
 
 // evt_fade.c
 800e7100:evt_fade_end_wait
