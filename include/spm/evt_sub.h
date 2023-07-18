@@ -32,16 +32,18 @@ UNKNOWN_FUNCTION(evt_key_get_buttontrg);
 UNKNOWN_FUNCTION(func_800d45ac);
 UNKNOWN_FUNCTION(func_800d45dc);
 UNKNOWN_FUNCTION(func_800d46a4);
-UNKNOWN_FUNCTION(func_800d46d8);
 UNKNOWN_FUNCTION(evt_sub_get_mapname);
 
 // Returns the door/bero name
 // evt_sub_get_entername(&char* ret)
 EVT_DECLARE_USER_FUNC(evt_sub_get_entername, 1)
 
+//evt_sub_gameSpeedChange(float newSpeed)
+EVT_DECLARE_USER_FUNC(evt_sub_gameSpeedChange, 1)
+
 UNKNOWN_FUNCTION(evt_sub_set_entername);
 UNKNOWN_FUNCTION(func_800d47e4);
-UNKNOWN_FUNCTION(evt_sub_get_language);
+EVT_DECLARE_USER_FUNC(evt_sub_get_language, 1);
 
 // evt_sub_animgroup_async(const char * name)
 EVT_DECLARE_USER_FUNC(evt_sub_animgroup_async, 1)

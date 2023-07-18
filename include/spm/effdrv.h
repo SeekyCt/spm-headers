@@ -112,6 +112,8 @@ void effSoftDelete(EffEntry * entry);
 */
 EffEntry * effNameToPtr(const char * name);
 
+EffEntry * effNiceEntry(double param_1, double param_2, double param_3, double param_4, int param_5);
+
 UNKNOWN_FUNCTION(func_80061c28);
 UNKNOWN_FUNCTION(func_80061cd0);
 s32 func_80061d78();
