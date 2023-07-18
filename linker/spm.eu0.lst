@@ -295,7 +295,7 @@
 800f1954:evt_mario_set_pose
 800ef958:evt_mario_set_character
 80c6f1dc:evt_rpg_char_get
-80c72398:evt_rpg_char_death_check
+80c72620:evt_rpg_enemy_death_check
 80c726b8:evt_rpg_status_remove
 800ef908:evt_mario_get_character
 800f2450:evt_mario_fairy_reset
@@ -309,7 +309,7 @@
 80c72a54:evt_rpg_effects_handle
 80c72764:evt_rpg_menu_effects_handler
 80c72528:evt_rpg_mario_take_damage
-80c72620:evt_rpg_enemy_take_damage
+80c72398:evt_rpg_enemy_take_damage
 80c725c0:evt_rpg_point_calculation
 80c72c40:evt_rpg_point_handling
 80c7249c:evt_rpg_calc_mario_damage

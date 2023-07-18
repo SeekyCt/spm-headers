@@ -10,35 +10,15 @@ UNKNOWN_FUNCTION(evt_mario_flag4_onoff);
 
 // evt_mario_flag8_onoff(bool onOff, u32 mask)
 EVT_DECLARE_USER_FUNC(evt_mario_flag8_onoff, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_effect_check, 1)
-EVT_DECLARE_USER_FUNC(evt_rpg_choice_handler, 5)
-EVT_DECLARE_USER_FUNC(changeRandomDAT1, 0)
-EVT_DECLARE_USER_FUNC(evt_rpg_wakeup_check, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_effects_handle, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_menu_effects_handler, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_mario_take_damage, 3)
-EVT_DECLARE_USER_FUNC(evt_rpg_enemy_take_damage, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_point_calculation, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_point_handling, 1)
-EVT_DECLARE_USER_FUNC(evt_rpg_underchomp_name_grab, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_calc_mario_damage, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_get_item_msg, 2)
-EVT_DECLARE_USER_FUNC(evt_rpg_calc_item_stats, 4)
-EVT_DECLARE_USER_FUNC(evt_rpg_add_xp, 1)
 
 UNKNOWN_FUNCTION(func_800ef53c);
 UNKNOWN_FUNCTION(evt_mario_cont_onoff);
 
-//didnt know where to put this so here ig
-EVT_DECLARE_USER_FUNC(evt_unknown_pointer_change, 1)
 EVT_DECLARE_USER_FUNC(evt_mario_pos_change, 3)
 EVT_DECLARE_USER_FUNC(evt_mario_fairy_reset, 0)
 EVT_DECLARE_USER_FUNC(evt_mario_direction_face, 2)
 EVT_DECLARE_USER_FUNC(evt_mario_direction_reset, 0)
 
-EVT_DECLARE_USER_FUNC(evt_rpg_calc_damage_to_enemy, 3)
-EVT_DECLARE_USER_FUNC(evt_rpg_char_death_check, 4)
-EVT_DECLARE_USER_FUNC(evt_rpg_status_remove, 3)
 
 // evt_mario_key_on()
 EVT_DECLARE_USER_FUNC(evt_mario_key_on, 0)
@@ -54,7 +34,6 @@ UNKNOWN_FUNCTION(func_800ef8c8);
 EVT_DECLARE_USER_FUNC(evt_mario_get_character, 1)
 
 EVT_DECLARE_USER_FUNC(evt_mario_set_character, 1);
-EVT_DECLARE_USER_FUNC(evt_rpg_char_get, 1);
 
 // evt_mario_get_pos(f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_mario_set_pos, 3)

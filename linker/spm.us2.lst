@@ -22,7 +22,7 @@
 80C30AF8:evt_rpg_menu_effects_handler
 80C308BC:evt_rpg_mario_take_damage
 8010C100:evt_pouch_add_hp
-80C309B4:evt_rpg_enemy_take_damage
+80C3072C:evt_rpg_enemy_take_damage
 80C30954:evt_rpg_point_calculation
 80C30FD4:evt_rpg_point_handling
 8010C1F8:evt_pouch_add_xp
@@ -61,7 +61,7 @@
 800D31CC:evt_snd_get_last_sfx_id
 800D3140:func_800d2fa4
 80C2D63C:evt_rpg_calc_damage_to_enemy
-80C3072C:evt_rpg_char_death_check
+80C309B4:evt_rpg_enemy_death_check
 80C30A4C:evt_rpg_status_remove
 80DAC3C0:techChild1
 80DAC374:techChild2

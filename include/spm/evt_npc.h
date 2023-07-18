@@ -15,8 +15,6 @@ EVT_DECLARE_USER_FUNC(evt_npc_get_position, 4)
 // evt_npc_set_position(const char * instanceName, f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_npc_set_position, 4)
 
-EVT_DECLARE_USER_FUNC(evt_rpg_npctribe_handle, 0)
-
 UNKNOWN_FUNCTION(func_800fe338);
 UNKNOWN_FUNCTION(func_800fe404);
 UNKNOWN_FUNCTION(func_800fe4e8);
