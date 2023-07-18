@@ -237,6 +237,9 @@
 // sdata
 805ae020:evt_door_wp
 
+//evt_rpg.c
+80c6c94c:rpg_handle_menu
+
 // evt_fade.c
 800e7100:evt_fade_end_wait
 800e7050:evt_fade_entry

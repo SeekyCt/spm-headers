@@ -3,6 +3,7 @@
 800030c8:firstRel
 800030cc:lastRel
 
+80C3D5E0:rpg_handle_menu
 801B601C:npcDelete
 80C3FF80:rpgTribePatch1
 80C3E2AC:rpgTribePatch2
