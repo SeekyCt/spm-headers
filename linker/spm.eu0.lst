@@ -36,7 +36,7 @@
 // text
 800294e0:mapDataPtr
 // data
-804031b8:mapDataList
+804031b8:mapData
 
 // mobjdrv.c
 8002c834:mobjNameToPtr
@@ -99,7 +99,7 @@
 800677f8:fadeIsFinish
 800678e8:fadeSetMapChangeTransition
 // more
-805ae828:fadedrvWp2
+805ae828:fadedrv_wp
 
 // hitdrv.c
 8006f920:hitNameToPtr
@@ -394,6 +394,7 @@
 // more
 
 // mario_pouch.c
+// text
 8014c088:pouchGetPtr
 8014d458:pouchGetHp
 8014d468:pouchAddHp
@@ -410,6 +411,8 @@
 8014fc20:pouchCountChars
 8014fc70:pouchCountPixls
 // more
+// bss
+80511a28:mario_pouch_work
 
 // seq_logo.c
 80179140:seq_logoMain
@@ -449,8 +452,8 @@
 80189cf0:pluswinChapterWinOpen
 // more
 // data
-805ae0f0:pluswinWp
-805ae930:pausewinWp
+805ae0f0:pausewin_pluswinWp
+805ae930:pausewin_wp
 // more
 
 // charpixlitemwin.c
@@ -534,8 +537,8 @@
 // data
 8042a408:size_table
 // sdata
-805ae168:memoryWp
-805ae16c:memorySwp
+805ae168:memory_wp
+805ae16c:memory_swp
 
 // parse.c
 801a6e9c:parseInit
@@ -611,7 +614,7 @@
 // relmgr.c
 // text
 8023e434:relInit
-8023e444:loadRel
+8023e444:relMain
 8023e600:isRelLoaded
 // sdata
 805ae1a0:relmgr_wp
@@ -655,6 +658,7 @@
 8025a874:memmove
 8025e8fc:strcpy
 8025e9bc:strncpy
+8025ea00:strcat
 8025ea78:strcmp
 8025eb94:strncmp
 8025ebd4:strchr
@@ -679,6 +683,10 @@
 // text
 80270c60:OSReport
 80270f78:__OSUnhandledException
+// more
+// OSExec.c
+802713e8:Run
+// OSFatal.c
 802729b8:OSFatal
 // more
 // rodata
@@ -696,8 +704,16 @@
 // OSLink.c
 80274c0c:OSLink
 // more
+// OSReboot.c
+// text
+80275c98:__OSReboot
+// more
+// data
+805aeb70:SaveStart
+805aeb74:SaveEnd
 // OSReset.c
 80275fd4:OSShutdownSystem
+80276198:OSRestart
 // more
 // OSThread.c
 80277ffc:OSSuspendThread
@@ -753,13 +769,21 @@
 // more
 
 // mem.a
+// mem_heapCommon.c
+8029540c:MEMFindContainHeap
+// more
 // mem_expHeap.c
+80295b3c:MEMAllocFromExpHeapEx
+80295bec:MEMFreeToExpHeap
 80295cb8:MEMGetAllocatableSizeForExpHeapEx
 80295d90:MEMGetSizeForMBlockExpHeap
+// more
 
 // ipc.a
 80298268:IOS_Open
 80298448:IOS_Close
+802985f0:IOS_Read
+80298b18:IOS_Ioctl
 80298e68:IOS_Ioctlv
 // more
 
@@ -828,7 +852,7 @@
 1,1,3dbec:danCountdownDone
 1,1,3dbfc:evt_dan_start_countdown
 1,1,3dc2c:danCheckKeyInMapBbox
-1,1,3dd1c:danCheckKeyEnemyInMapBbox
+1,1,3dd1c:danCheckEnemyInMapBbox
 1,1,3de48:evt_dan_handle_key_failsafe
 1,1,3df80:evt_dan_handle_chest_room_dokans_and_doors
 1,1,3e02c:evt_dan_get_chest_room_item
