@@ -113,7 +113,7 @@
 800F018C:evt_mario_face_coords
 800fc070:evt_msg_toge
 8010C9E8:evt_pouch_increment_enemies_defeated
-800D4874:evt_sub_gameSpeedChange
+800D4874:evt_sub_set_game_speed
 800E0074:evt_cam3d_evt_zoom_in
 800EE318:evt_mapobj_get_position
 800E66E0:evt_env_blur_on

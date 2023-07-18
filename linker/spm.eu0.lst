@@ -9,23 +9,6 @@
 
 800e658c:evt_env_blur_on
 
-// iValues.h
-80df32d0:finalRpgChild
-80df1b70:underchompAttack1
-80df1eb0:underchompAttack2
-80df21f0:underchompAttack3
-80df2530:checkWinOrContinue
-80def500:attacking
-80def9d8:usePixls
-80df0500:useItems
-80df1958:runningAway
-80def438:techChild1
-80def3ec:techChild2
-80DF334C:theParentOfBeginRPG
-80c6cb08:techtext1
-80c6f2ec:rpgTribePatch1
-80c6d618:rpgTribePatch2
-80c6d624:underchompRepeatPatch
 
 // Runtime.PPCEABI.H.a
 // __mem.c
@@ -167,7 +150,7 @@
 // more
 
 // evt_sub.c
-800d46d8:evt_sub_gameSpeedChange
+800d46d8:evt_sub_set_game_speed
 800d37d8:evt_sub_intpl_msec_init
 800d3878:evt_sub_intpl_msec_get_value
 800d40a4:evt_sub_random
@@ -832,6 +815,20 @@
 //   80ca9ae8 4 .rodata
 //   80cf5180 5 .data
 //   80f64340 6 .bss
+
+// an2_08.h.h
+80df32d0:finalRpgChild
+80df1b70:underchompAttack1
+80df1eb0:underchompAttack2
+80df21f0:underchompAttack3
+80df2530:checkWinOrContinue
+80def500:attacking
+80def9d8:usePixls
+80df0500:useItems
+80df1958:runningAway
+80def438:techChild1
+80def3ec:techChild2
+80DF334C:theParentOfBeginRPG
 
 // machi.c
 1,1,000052e4:evt_machi_set_elv_descs

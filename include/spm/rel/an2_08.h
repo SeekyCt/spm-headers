@@ -22,5 +22,7 @@ EVT_DECLARE(techChild1);
 EVT_DECLARE(techChild2);
 
 EVT_DECLARE_USER_FUNC(evt_unknown_pointer_change, 1);
+EVT_DECLARE_USER_FUNC(evt_an2_08_draw_face, 2);
+EVT_DECLARE_USER_FUNC(evt_an2_08_target_face, 1);
 
 CPP_WRAPPER_END()

@@ -14,10 +14,6 @@ EVT_DECLARE_USER_FUNC(evt_mario_flag8_onoff, 2)
 UNKNOWN_FUNCTION(func_800ef53c);
 UNKNOWN_FUNCTION(evt_mario_cont_onoff);
 
-EVT_DECLARE_USER_FUNC(evt_mario_pos_change, 3)
-EVT_DECLARE_USER_FUNC(evt_mario_fairy_reset, 0)
-EVT_DECLARE_USER_FUNC(evt_mario_direction_face, 2)
-EVT_DECLARE_USER_FUNC(evt_mario_direction_reset, 0)
 
 
 // evt_mario_key_on()
@@ -45,10 +41,14 @@ UNKNOWN_FUNCTION(func_800efac4);
 UNKNOWN_FUNCTION(func_800efb50);
 UNKNOWN_FUNCTION(func_800efbdc);
 UNKNOWN_FUNCTION(func_800efc54);
-EVT_UNKNOWN_USER_FUNC(func_800efce0)
-UNKNOWN_FUNCTION(func_800efd28);
+EVT_UNKNOWN_USER_FUNC(func_800efce0);
+
+EVT_DECLARE_USER_FUNC(evt_mario_direction_reset, 0);
+
 UNKNOWN_FUNCTION(func_800efd58);
-EVT_UNKNOWN_USER_FUNC(func_800efd88)
+
+EVT_DECLARE_USER_FUNC(evt_mario_direction_face, 2);
+
 UNKNOWN_FUNCTION(func_800eff6c);
 
 // evt_mario_face_npc(const char * name)
@@ -64,6 +64,9 @@ UNKNOWN_FUNCTION(func_800f0210);
 UNKNOWN_FUNCTION(evt_mario_face);
 UNKNOWN_FUNCTION(evt_mario_face_free);
 UNKNOWN_FUNCTION(func_800f0304);
+
+EVT_DECLARE_USER_FUNC(evt_mario_pos_change, 3)
+
 UNKNOWN_FUNCTION(func_800f05b0);
 UNKNOWN_FUNCTION(func_800f074c);
 EVT_UNKNOWN_USER_FUNC(func_800f09c4)
@@ -100,6 +103,9 @@ UNKNOWN_FUNCTION(func_800f2144);
 UNKNOWN_FUNCTION(func_800f2310);
 EVT_UNKNOWN_USER_FUNC(func_800f23e4)
 EVT_UNKNOWN_USER_FUNC(func_800f240c)
+
+EVT_DECLARE_USER_FUNC(evt_mario_fairy_reset, 0)
+
 UNKNOWN_FUNCTION(evt_mario_swim_onoff);
 UNKNOWN_FUNCTION(func_800f24d8);
 UNKNOWN_FUNCTION(func_800f2544);
@@ -141,5 +147,6 @@ UNKNOWN_FUNCTION(func_800f3310);
 UNKNOWN_FUNCTION(func_800f3334);
 UNKNOWN_FUNCTION(evt_mario_check_3d);
 UNKNOWN_FUNCTION(func_800f33b0);
+UNKNOWN_FUNCTION(evt_mario_calc_damage_to_enemy);
 
 CPP_WRAPPER_END()

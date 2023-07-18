@@ -159,10 +159,10 @@ void evtEntryRunCheck();
 */
 // TODO: try fix const in decomp
 #ifdef DECOMP
-EvtEntry * evtEntry(const EvtScriptCode * script, u32 priority, u8 flags);
-EvtEntry * evtEntryType(const EvtScriptCode * script, u32 priority, u8 flags, u8 type);
-EvtEntry * evtChildEntry(EvtEntry * parent, const EvtScriptCode * script, u8 flags);
-EvtEntry * evtBrotherEntry(EvtEntry * brother, const EvtScriptCode * script, u8 flags);
+EvtEntry * evtEntry(EvtScriptCode * script, u32 priority, u8 flags);
+EvtEntry * evtEntryType(EvtScriptCode * script, u32 priority, u8 flags, u8 type);
+EvtEntry * evtChildEntry(EvtEntry * parent, EvtScriptCode * script, u8 flags);
+EvtEntry * evtBrotherEntry(EvtEntry * brother, EvtScriptCode * script, u8 flags);
 #else
 EvtEntry * evtEntry(const EvtScriptCode * script, u32 priority, u8 flags);
 EvtEntry * evtEntryType(const EvtScriptCode * script, u32 priority, u8 flags, u8 type);

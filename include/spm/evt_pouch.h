@@ -34,8 +34,6 @@ EVT_UNKNOWN_USER_FUNC(evt_pouch_remove_shop_item_idx)
 // evt_pouch_set_pixl_selected(s32 id)
 EVT_DECLARE_USER_FUNC(evt_pouch_set_pixl_selected, 1)
 
-//evt_pouch_increment_enemies_defeated(void)
-EVT_DECLARE_USER_FUNC(evt_pouch_increment_enemies_defeated, 0)
 
 EVT_UNKNOWN_USER_FUNC(evt_pouch_count_use_items)
 EVT_UNKNOWN_USER_FUNC(evt_pouch_count_free_shop_items)
@@ -52,5 +50,8 @@ EVT_UNKNOWN_USER_FUNC(evt_pouch_get_total_coins_collected)
 EVT_UNKNOWN_USER_FUNC(evt_pouch_get_max_jump_combo)
 EVT_UNKNOWN_USER_FUNC(evt_pouch_get_max_stylish_combo)
 EVT_UNKNOWN_USER_FUNC(evt_pouch_get_enemies_defeated)
+
+//evt_pouch_increment_enemies_defeated(void)
+EVT_DECLARE_USER_FUNC(evt_pouch_increment_enemies_defeated, 0)
 
 CPP_WRAPPER_END()

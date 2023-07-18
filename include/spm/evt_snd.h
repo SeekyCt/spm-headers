@@ -11,12 +11,12 @@ EVT_DECLARE_USER_FUNC(evt_snd_bgmon, 2)
 EVT_DECLARE_USER_FUNC(evt_snd_bgmon_f_d, -1)
 
 // evt_snd_bgmoff(s32 bgmPlayerId)
-EVT_DECLARE_USER_FUNC(evt_snd_bgmoff, 1)
-EVT_DECLARE_USER_FUNC(evt_snd_bgmoff_f_d, -1)
+EVT_DECLARE_USER_FUNC(evt_snd_bgmoff, 1);
+EVT_DECLARE_USER_FUNC(evt_snd_bgmoff_f_d, -1);
 
-EVT_UNKNOWN_USER_FUNC(func_800d2268)
-EVT_UNKNOWN_USER_FUNC(func_800d2294)
-EVT_UNKNOWN_USER_FUNC(func_800d22d8)
+EVT_UNKNOWN_USER_FUNC(func_800d2268);
+EVT_UNKNOWN_USER_FUNC(func_800d2294);
+EVT_UNKNOWN_USER_FUNC(func_800d22d8);
 UNKNOWN_FUNCTION(func_800d231c);
 UNKNOWN_FUNCTION(func_800d2388);
 UNKNOWN_FUNCTION(func_800d23cc);
@@ -24,8 +24,7 @@ UNKNOWN_FUNCTION(func_800d2438);
 UNKNOWN_FUNCTION(func_800d247c);
 
 // evt_snd_get_bgm_wait_time(s32 bgmPlayerId, s32& ret)
-EVT_DECLARE_USER_FUNC(evt_snd_get_bgm_wait_time, 2)
-EVT_DECLARE_USER_FUNC(evt_snd_envon_f, 3)
+EVT_DECLARE_USER_FUNC(evt_snd_get_bgm_wait_time, 2);
 
 UNKNOWN_FUNCTION(evt_snd_get_bgm_name);
 
@@ -55,20 +54,21 @@ UNKNOWN_FUNCTION(func_800d2c58);
 
 // evt_snd_sfxon_3d_player_character(const char * marioName, const char * peach,
 //                                   const char * bowserName, const char * luigiName)
-EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d_player_character, 4)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d_player_character, 4);
 
 UNKNOWN_FUNCTION(func_800d2db8);
 UNKNOWN_FUNCTION(func_800d2ed0);
 
 // evt_snd_sfxoff(s32 id)
-EVT_DECLARE_USER_FUNC(evt_snd_sfxoff, 1)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxoff, 1);
 
 UNKNOWN_FUNCTION(func_800d3000);
 
 // evt_snd_get_last_sfx_id(s32& ret)
-EVT_DECLARE_USER_FUNC(evt_snd_get_last_sfx_id, 1)
-EVT_DECLARE_USER_FUNC(evt_snd_string_call, 1)
-EVT_DECLARE_USER_FUNC(func_800d2fa4, 2)
+EVT_DECLARE_USER_FUNC(evt_snd_get_last_sfx_id, 1);
+EVT_DECLARE_USER_FUNC(evt_snd_envon_f, 3);
+EVT_DECLARE_USER_FUNC(evt_snd_string_call, 1);
+EVT_DECLARE_USER_FUNC(func_800d2fa4, 2);
 
 UNKNOWN_FUNCTION(func_800d3060);
 UNKNOWN_FUNCTION(func_800d30e8);
