@@ -111,6 +111,7 @@
 // more
 
 // item_event_data.c
+80025164:getItemUseEvt
 803fbc10:itemEventDataTable
 // more
 
@@ -405,6 +406,7 @@
 // more
 
 // seq_mapchange.c
+8017a464:seq_mapChangeMain
 8017af98:_unload
 // more
 

@@ -581,6 +581,8 @@
 800559D8:camGetCurNo
 800568E8:cam3dMain
 804C9F80:camPtrTbl
+80179C38:seq_mapChangeMain
+80025014:getItemUseEvt
 
 // new to rld3 v1
 8025C950:strcat

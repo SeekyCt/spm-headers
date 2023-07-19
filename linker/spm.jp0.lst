@@ -580,6 +580,9 @@
 800E71CC:evt_fade_entry
 80056948:cam3dMain
 8049D880:camPtrTbl
+801797BC:seq_mapChangeMain
+80025074:getItemUseEvt
+
 
 // new to rld3 v1
 8025C158:strcat
