@@ -8,7 +8,7 @@ CPP_WRAPPER(spm::evt_rpg)
 
 EVT_DECLARE_USER_FUNC(evt_rpg_effect_check, 1)
 EVT_DECLARE_USER_FUNC(evt_rpg_choice_handler, 5)
-EVT_DECLARE_USER_FUNC(changeRandomDAT1, 0)
+EVT_DECLARE_USER_FUNC(evt_rpg_change_menu_flag, 0)
 EVT_DECLARE_USER_FUNC(evt_rpg_wakeup_check, 2)
 EVT_DECLARE_USER_FUNC(evt_rpg_effects_handle, 2)
 EVT_DECLARE_USER_FUNC(evt_rpg_menu_effects_handler, 2)

@@ -45,4 +45,8 @@ SIZE_ASSERT(PhysicalMenu, 0x34);
 
 u8 rpg_handle_menu(int param_1, PhysicalMenu menu);
 
+UNKNOWN_FUNCTION(func_80c6cccc);
+UNKNOWN_FUNCTION(func_80c6ce24);
+UNKNOWN_FUNCTION(func_80c6ce8c);
+
 CPP_WRAPPER_END()
