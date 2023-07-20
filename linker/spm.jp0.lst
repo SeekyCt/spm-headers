@@ -460,7 +460,7 @@
 800677D0:fadeSetMapChangeTransition
 8023AB64:spsndCheckBgmPlaying
 
-// new to v10
+// new to SPM-RPG-battles
 80C58500:rpg_handle_menu
 801B5FC4:npcDelete
 80C5AEA0:rpgTribePatch1
@@ -582,6 +582,8 @@
 8049D880:camPtrTbl
 801797BC:seq_mapChangeMain
 80025074:getItemUseEvt
+8002F240:msgUnLoad
+8002F014:msgLoad
 
 
 // new to rld3 v1

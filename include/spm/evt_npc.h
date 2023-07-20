@@ -65,13 +65,12 @@ UNKNOWN_FUNCTION(evt_npc_set_hp);
 // evt_npc_delete(const char * name)
 EVT_DECLARE_USER_FUNC(evt_npc_delete, 1)
 
-UNKNOWN_FUNCTION(func_80102eb8);
+//(s32 tribeId, int)
+EVT_DECLARE_USER_FUNC(evt_npc_stats_set_up, 2)
 
 // evt_npc_entry(const char * instanceName, const char * animPoseName, s32 instanceId)
 EVT_DECLARE_USER_FUNC(evt_npc_entry, 3)
 
-//(s32 tribeId, int)
-EVT_DECLARE_USER_FUNC(evt_npc_stats_set_up, 2)
 
 UNKNOWN_FUNCTION(func_80102fe4);
 EVT_DECLARE_USER_FUNC(evt_npc_add_flip_part, 1)

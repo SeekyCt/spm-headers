@@ -26,6 +26,8 @@
 // more
 
 // msgdrv.c
+8002f130:msgLoad
+8002f35c:msgUnLoad
 8003270c:msgSearch
 // more
 
@@ -130,7 +132,6 @@
 800e0430:evt_cam_zoom_to_coords
 800e04fc:evt_cam_look_at_door
 800dfe08:evt_cam_shake
-80c775b0:evt_cam_target_face
 // evt_snd.c
 800d2148:evt_snd_bgmon
 800d36f4:func_800d36f4
@@ -328,7 +329,6 @@
 800fbe74:evt_msg_continue
 800fc02c:evt_msg_toge
 800fbc64:evt_msg_print_add
-80c72cf8:evt_an2_08_draw_face
 800fbd00:evt_msg_print_add_insert
 800fd0c4:evt_msg_fmt_str
 // more
@@ -834,6 +834,8 @@
 80def438:techChild1
 80def3ec:techChild2
 80DF334C:theParentOfBeginRPG
+80c72cf8:evt_an2_08_draw_face
+80c775b0:evt_an2_08_target_face
 
 // machi.c
 1,1,000052e4:evt_machi_set_elv_descs
