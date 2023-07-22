@@ -463,9 +463,6 @@
 // new to SPM-RPG-battles
 80C2ACE0:rpg_handle_menu
 801B6390:npcDelete
-80C2D680:rpgTribePatch1
-80C2B9AC:rpgTribePatch2
-80C2B9B8:underchompRepeatPatch
 80C30F94:evt_rpg_add_xp
 800FCE20:evt_msg_fmt_str
 800D3440:evt_snd_sfx_wait
@@ -475,7 +472,6 @@
 80C30ECC:evt_rpg_calc_item_stats
 80C30830:evt_rpg_calc_mario_damage
 80C30C94:evt_rpg_wakeup_check
-80C2D680:tribeidPatch
 80C2D5D8:evt_rpg_underchomp_name_grab
 80C30DE8:evt_rpg_effects_handle
 80C30AF8:evt_rpg_menu_effects_handler
@@ -512,10 +508,9 @@
 800D3110:evt_snd_sfxoff
 801038F8:evt_npc_set_unitwork
 800E0650:evt_cam_look_at_door
-80C35944:evt_cam_target_face
+80C35944:evt_an2_08_target_face
 800DD20C:evt_inline_evt
 8012A054:marioTakeDamage
-80C2AE9C:techtext1
 80DB0214:theParentOfBeginRPG
 800D31CC:evt_snd_get_last_sfx_id
 800D3140:func_800d2fa4

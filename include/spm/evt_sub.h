@@ -32,10 +32,12 @@ UNKNOWN_FUNCTION(evt_key_get_buttontrg);
 UNKNOWN_FUNCTION(func_800d45ac);
 UNKNOWN_FUNCTION(func_800d45dc);
 UNKNOWN_FUNCTION(func_800d46a4);
-UNKNOWN_FUNCTION(evt_sub_get_mapname);
 
 //evt_sub_set_game_speed(float newSpeed)
 EVT_DECLARE_USER_FUNC(evt_sub_set_game_speed, 1)
+
+UNKNOWN_FUNCTION(evt_sub_get_mapname);
+
 
 // Returns the door/bero name
 // evt_sub_get_entername(&char* ret)

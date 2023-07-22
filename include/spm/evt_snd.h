@@ -31,24 +31,24 @@ UNKNOWN_FUNCTION(evt_snd_get_bgm_name);
 // evt_snd_sfxon(const char * name)
 EVT_DECLARE_USER_FUNC(evt_snd_sfxon, 1)
 
-EVT_DECLARE_USER_FUNC(evt_snd_sfxon_character, 4);
 
 UNKNOWN_FUNCTION(func_800d2834);
 UNKNOWN_FUNCTION(func_800d2894);
 
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_character, 4);
+
 // evt_snd_sfxon_3d(const char * name, f32 x, f32 y, f32 z)
-EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d, 4)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d, 4);
 
 UNKNOWN_FUNCTION(func_800d2a58);
 
 // evt_snd_sfxon_npc(const char * sfxName, const char * npcName)
-EVT_DECLARE_USER_FUNC(evt_snd_sfxon_npc, 2)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_npc, 2);
 
 UNKNOWN_FUNCTION(evt_snd_sfxon_npc_delay);
 
 // evt_snd_sfxon_3d_player(const char * name)
-EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d_player, 1)
-EVT_DECLARE_USER_FUNC(evt_snd_sfx_wait_name, 1)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d_player, 1);
 
 UNKNOWN_FUNCTION(func_800d2c58);
 
@@ -72,11 +72,12 @@ EVT_DECLARE_USER_FUNC(func_800d2fa4, 2);
 
 UNKNOWN_FUNCTION(func_800d3060);
 UNKNOWN_FUNCTION(func_800d30e8);
-EVT_UNKNOWN_USER_FUNC(func_800d3144)
-EVT_UNKNOWN_USER_FUNC(func_800d31a0)
+EVT_UNKNOWN_USER_FUNC(func_800d3144);
+EVT_UNKNOWN_USER_FUNC(func_800d31a0);
 UNKNOWN_FUNCTION(func_800d31d0);
 UNKNOWN_FUNCTION(func_800d3248);
 EVT_DECLARE_USER_FUNC(evt_snd_sfx_wait, 1);
+EVT_DECLARE_USER_FUNC(evt_snd_sfx_wait_name, 1)
 UNKNOWN_FUNCTION(evt_snd_sfx_flag_on);
 UNKNOWN_FUNCTION(evt_snd_sfx_flag_off);
 UNKNOWN_FUNCTION(func_800d33dc);
