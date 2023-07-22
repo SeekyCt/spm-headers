@@ -44,11 +44,6 @@ typedef struct PhysicalMenu {
 } PhysicalMenu;
 SIZE_ASSERT(PhysicalMenu, 0x34);
 
-u8 rpg_handle_menu(int param_1, PhysicalMenu menu);
-
-UNKNOWN_FUNCTION(func_80c6cccc);
-UNKNOWN_FUNCTION(func_80c6ce24);
-
 EVT_DECLARE(theParentOfBeginRPG);
 EVT_DECLARE(finalRpgChild);
 EVT_DECLARE(underchompAttack1);
@@ -62,6 +57,10 @@ EVT_DECLARE(runningAway);
 EVT_DECLARE(techChild1);
 EVT_DECLARE(techChild2);
 
+UNKNOWN_FUNCTION(func_80c6c908);
+u8 rpg_handle_menu(int param_1, PhysicalMenu menu);
+UNKNOWN_FUNCTION(func_80c6cccc);
+UNKNOWN_FUNCTION(func_80c6ce24);
 void rpg_screen_draw();
 
 EVT_DECLARE_USER_FUNC(evt_rpg_npctribe_handle, 0);
@@ -85,8 +84,7 @@ EVT_DECLARE_USER_FUNC(evt_rpg_add_xp, 1);
 EVT_DECLARE_USER_FUNC(evt_rpg_point_handling, 1);
 EVT_DECLARE_USER_FUNC(evt_rpg_get_item_msg, 2);
 EVT_DECLARE_USER_FUNC(evt_an2_08_draw_face, 2);
-EVT_DECLARE_USER_FUNC(evt_unknown_pointer_change, 1);
-EVT_DECLARE_USER_FUNC(evt_an2_08_target_face, 1);
-
+UNKNOWN_FUNCTION(func_80c72d5c);
+UNKNOWN_FUNCTION(func_80c72e10);
 
 CPP_WRAPPER_END()

@@ -461,6 +461,7 @@
 8023B5CC:spsndCheckBgmPlaying
 
 // new to SPM-RPG-battles
+80C2B220:rpg_screen_draw
 80C2ACE0:rpg_handle_menu
 801B6390:npcDelete
 80C30F94:evt_rpg_add_xp
@@ -508,7 +509,7 @@
 800D3110:evt_snd_sfxoff
 801038F8:evt_npc_set_unitwork
 800E0650:evt_cam_look_at_door
-80C35944:evt_an2_08_target_face
+80C35944:evt_an_remove_npcs
 800DD20C:evt_inline_evt
 8012A054:marioTakeDamage
 80DB0214:theParentOfBeginRPG
@@ -556,7 +557,7 @@
 80DB0198:finalRpgChild
 800E0F50:evt_exit_case_evt
 800E0F78:evt_del_case_evt
-80C35858:evt_unknown_pointer_change
+80C35858:evt_an_darkness_onoff
 800EDE2C:evt_map_checkanim
 800EDD84:evt_map_playanim
 800E0584:evt_cam_zoom_to_coords

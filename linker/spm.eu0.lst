@@ -223,9 +223,6 @@
 // sdata
 805ae020:evt_door_wp
 
-// rpgdrv.c
-80c6c94c:rpg_handle_menu
-
 
 // evt_fade.c
 800e7100:evt_fade_end_wait
@@ -799,43 +796,47 @@
 //   80cf5180 5 .data
 //   80f64340 6 .bss
 
-// an2_08.h.h
-80c6ce8c:rpg_screen_draw
-80df32d0:finalRpgChild
-80df1b70:underchompAttack1
-80df1eb0:underchompAttack2
-80df21f0:underchompAttack3
-80df2530:checkWinOrContinue
-80def500:attacking
-80def9d8:usePixls
-80df0500:useItems
-80df1958:runningAway
-80def438:techChild1
-80def3ec:techChild2
-80DF334C:theParentOfBeginRPG
-80c6d584:evt_rpg_npctribe_handle
-80c6d87c:evt_rpg_change_menu_flag
-80c6d894:evt_rpg_choice_handler
-80c6f1dc:evt_rpg_char_get
-80c6f244:evt_rpg_underchomp_name_grab
-80C6F2A8:evt_rpg_calc_damage_to_enemy
-80c72398:evt_rpg_enemy_take_damage
-80c7249c:evt_rpg_calc_mario_damage
-80c72528:evt_rpg_mario_take_damage
-80c725c0:evt_rpg_point_calculation
-80c72620:evt_rpg_enemy_death_check
-80c72680:evt_rpg_effect_check
-80c726b8:evt_rpg_status_remove
-80c72764:evt_rpg_menu_effects_handler
-80c72900:evt_rpg_wakeup_check
-80c72a54:evt_rpg_effects_handle
-80c72b38:evt_rpg_calc_item_stats
-80c72c00:evt_rpg_add_xp
-80c72c40:evt_rpg_point_handling
-80c72c78:evt_rpg_get_item_msg
-80c72cf8:evt_an2_08_draw_face
-80c774c4:evt_unknown_pointer_change
-80c775b0:evt_an2_08_target_face
+// an2_08.c
+1,5,fe150:finalRpgChild
+1,5,fc9f0:underchompAttack1
+1,5,fcd30:underchompAttack2
+1,5,fd070:underchompAttack3
+1,5,fd3b0:checkWinOrContinue
+1,5,fa380:attacking
+1,5,fa858:usePixls
+1,5,fb380:useItems
+1,5,fc7d8:runningAway
+1,5,fa2b8:techChild1
+1,5,fa26c:techChild2
+1,5,fe1cc:theParentOfBeginRPG
+1,1,27050:rpg_handle_menu
+1,1,27590:rpg_screen_draw
+1,1,27c88:evt_rpg_npctribe_handle
+1,1,27f80:evt_rpg_change_menu_flag
+1,1,27f98:evt_rpg_choice_handler
+1,1,298e0:evt_rpg_char_get
+1,1,29948:evt_rpg_underchomp_name_grab
+1,1,299ac:evt_rpg_calc_damage_to_enemy
+1,1,2ca9c:evt_rpg_enemy_take_damage
+1,1,2cba0:evt_rpg_calc_mario_damage
+1,1,2cc2c:evt_rpg_mario_take_damage
+1,1,2ccc4:evt_rpg_point_calculation
+1,1,2cd24:evt_rpg_enemy_death_check
+1,1,2cd84:evt_rpg_effect_check
+1,1,2cdbc:evt_rpg_status_remove
+1,1,2ce68:evt_rpg_menu_effects_handler
+1,1,2d004:evt_rpg_wakeup_check
+1,1,2d158:evt_rpg_effects_handle
+1,1,2d23c:evt_rpg_calc_item_stats
+1,1,2d304:evt_rpg_add_xp
+1,1,2d344:evt_rpg_point_handling
+1,1,2d37c:evt_rpg_get_item_msg
+1,1,2d3fc:evt_an2_08_draw_face
+
+//an.c
+1,1,31bc8:evt_an_darkness_onoff
+1,1,31cb4:evt_an_remove_npcs
+// more
 
 // machi.c
 1,1,000052e4:evt_machi_set_elv_descs

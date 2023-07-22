@@ -508,7 +508,7 @@
 800D319C:evt_snd_sfxoff
 801034C8:evt_npc_set_unitwork
 800E06CC:evt_cam_look_at_door
-80C48244:evt_an2_08_target_face
+80C48244:evt_an_remove_npcs
 800DD288:evt_inline_evt
 80129C24:marioTakeDamage
 80DC2A94:theParentOfBeginRPG
@@ -556,7 +556,7 @@
 80DC2A18:finalRpgChild
 800E0FCC:evt_exit_case_evt
 800E0FF4:evt_del_case_evt
-80C48158:evt_unknown_pointer_change
+80C48158:evt_an_darkness_onoff
 800EDB6C:evt_map_checkanim
 800EDAC4:evt_map_playanim
 800E0600:evt_cam_zoom_to_coords
@@ -579,6 +579,7 @@
 800250EC:getItemUseEvt
 8002F240:msgUnLoad
 8002F014:msgLoad
+80C3DB20:rpg_screen_draw
 
 // new to rld3 v1
 8025C1B0:strcat
