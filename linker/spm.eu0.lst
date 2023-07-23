@@ -65,6 +65,7 @@
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
+// bss
 8050b580:camPtrTbl
 // more
 
