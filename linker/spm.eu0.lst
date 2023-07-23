@@ -835,6 +835,7 @@
 1,1,2d3fc:evt_an2_08_draw_face
 
 //an.c
+1,1,319ac:an_init_tpl
 1,1,31bc8:evt_an_darkness_onoff
 1,1,31cb4:evt_an_remove_npcs
 // more
