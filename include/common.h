@@ -138,6 +138,18 @@ typedef u8 unk8;
 #define NORETURN ATTRIBUTE(noreturn)
 #define ALIGNED(x) ATTRIBUTE(aligned(x))
 
+#ifdef __has_attribute
+    #define HAS_ATTRIBUTE(x) __has_attribute(x)
+#else
+    #define HAS_ATTRIBUTE(x) 0
+#endif
+
+#if HAS_ATTRIBUTE(format)
+    #define ATTRIBUTE_FORMAT(...) __attribute__((format(__VA_ARGS__)))
+#else
+    #define ATTRIBUTE_FORMAT(...)
+#endif
+
 #define SQUARE(x) ((x) * (x))
 #define CUBE(x) ((x) * (x) * (x))
 #define QUART(x) ((x) * (x) * (x) * (x))
