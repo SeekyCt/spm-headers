@@ -8,5 +8,6 @@ CPP_WRAPPER(spm::an)
 
 EVT_DECLARE_USER_FUNC(evt_an_darkness_onoff, 1);
 EVT_DECLARE_USER_FUNC(evt_an_remove_npcs, 1);
+// more
 
 CPP_WRAPPER_END()

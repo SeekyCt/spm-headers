@@ -461,7 +461,7 @@
 8023ABBC:spsndCheckBgmPlaying
 
 // new to SPM-RPG-battles
-80C3D5E0:rpg_handle_menu
+80C3D5E0:rpgHandleMenu
 801B601C:npcDelete
 80C43894:evt_rpg_add_xp
 800FC9F0:evt_msg_fmt_str
@@ -511,28 +511,28 @@
 80C48244:evt_an_remove_npcs
 800DD288:evt_inline_evt
 80129C24:marioTakeDamage
-80DC2A94:theParentOfBeginRPG
+80DC2A94:begin_rpg_parent_evt
 800D3258:evt_snd_get_last_sfx_id
 800D31CC:func_800d2fa4
 80C3FF3C:evt_rpg_calc_damage_to_enemy
 80C432B4:evt_rpg_char_death_check
 80C4334C:evt_rpg_status_remove
-80DBEC40:techChild1
-80DBEBF4:techChild2
+80DBEC40:rpg_snd_miss_evt
+80DBEBF4:rpg_snd_hit_evt
 800EF760:evt_mario_get_character
 800D2A28:evt_snd_sfxon
 800FB914:evt_msg_print_add_insert
 800EF7B0:evt_mario_set_character
 800D350C:evt_snd_sfx_wait_name
 80C3FE70:evt_rpg_char_get
-80DBED08:attacking
-80DBF160:usePixls
-80DBFC88:useItems
-80DC10A0:runningAway
-80DC1C78:checkWinOrContinue
-80DC1938:underchompAttack3
-80DC15F8:underchompAttack2
-80DC12B8:underchompAttack1
+80DBED08:rpg_attacking_evt
+80DBF160:rpg_use_pixls_evt
+80DBFC88:rpg_use_items_evt
+80DC10A0:rpg_run_away_evt
+80DC1C78:rpg_check_win_or_continue_evt
+80DC1938:underchomp_attack_3_evt
+80DC15F8:underchomp_attack_2_evt
+80DC12B8:underchomp_attack_1_evt
 800D368C:evt_snd_envon_f
 800D2388:evt_snd_bgmon_f_d
 800D23F4:evt_snd_bgmoff
@@ -553,7 +553,7 @@
 8010BC1C:evt_paper_delete
 8010BBBC:evt_paper_entry
 800EE3F0:evt_mapdisp_onoff
-80DC2A18:finalRpgChild
+80DC2A18:final_rpg_child_evt
 800E0FCC:evt_exit_case_evt
 800E0FF4:evt_del_case_evt
 80C48158:evt_an_darkness_onoff

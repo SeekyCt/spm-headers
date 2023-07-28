@@ -798,19 +798,19 @@
 //   80f64340 6 .bss
 
 // an2_08.c
-1,5,fe150:finalRpgChild
-1,5,fc9f0:underchompAttack1
-1,5,fcd30:underchompAttack2
-1,5,fd070:underchompAttack3
-1,5,fd3b0:checkWinOrContinue
-1,5,fa380:attacking
-1,5,fa858:usePixls
-1,5,fb380:useItems
-1,5,fc7d8:runningAway
-1,5,fa2b8:techChild1
-1,5,fa26c:techChild2
-1,5,fe1cc:theParentOfBeginRPG
-1,1,27050:rpg_handle_menu
+1,5,fe150:final_rpg_child_evt
+1,5,fc9f0:underchomp_attack_1_evt
+1,5,fcd30:underchomp_attack_2_evt
+1,5,fd070:underchomp_attack_3_evt
+1,5,fd3b0:rpg_check_win_or_continue_evt
+1,5,fa380:rpg_attacking_evt
+1,5,fa858:rpg_use_pixls_evt
+1,5,fb380:rpg_use_items_evt
+1,5,fc7d8:rpg_run_away_evt
+1,5,fa2b8:rpg_snd_miss_evt
+1,5,fa26c:rpg_snd_hit_evt
+1,5,fe1cc:begin_rpg_parent_evt
+1,1,27050:rpgHandleMenu
 1,1,27590:rpg_screen_draw
 1,1,27c88:evt_rpg_npctribe_handle
 1,1,27f80:evt_rpg_change_menu_flag

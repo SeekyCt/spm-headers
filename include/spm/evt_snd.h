@@ -62,14 +62,11 @@ UNKNOWN_FUNCTION(func_800d2ed0);
 // evt_snd_sfxoff(s32 id)
 EVT_DECLARE_USER_FUNC(evt_snd_sfxoff, 1);
 
+EVT_DECLARE_USER_FUNC(func_800d2fa4, 2);
 UNKNOWN_FUNCTION(func_800d3000);
 
 // evt_snd_get_last_sfx_id(s32& ret)
 EVT_DECLARE_USER_FUNC(evt_snd_get_last_sfx_id, 1);
-EVT_DECLARE_USER_FUNC(evt_snd_envon_f, 3);
-EVT_DECLARE_USER_FUNC(evt_snd_string_call, 1);
-EVT_DECLARE_USER_FUNC(func_800d2fa4, 2);
-
 UNKNOWN_FUNCTION(func_800d3060);
 UNKNOWN_FUNCTION(func_800d30e8);
 EVT_UNKNOWN_USER_FUNC(func_800d3144);
@@ -82,6 +79,8 @@ UNKNOWN_FUNCTION(evt_snd_sfx_flag_on);
 UNKNOWN_FUNCTION(evt_snd_sfx_flag_off);
 UNKNOWN_FUNCTION(func_800d33dc);
 UNKNOWN_FUNCTION(evt_snd_envon);
+EVT_DECLARE_USER_FUNC(evt_snd_envon_f, 3);
+EVT_DECLARE_USER_FUNC(evt_snd_string_call, 1);
 UNKNOWN_FUNCTION(func_800d34e4);
 UNKNOWN_FUNCTION(func_800d3528);
 UNKNOWN_FUNCTION(func_800d3594);

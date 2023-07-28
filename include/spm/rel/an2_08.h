@@ -44,21 +44,21 @@ typedef struct PhysicalMenu {
 } PhysicalMenu;
 SIZE_ASSERT(PhysicalMenu, 0x34);
 
-EVT_DECLARE(theParentOfBeginRPG);
-EVT_DECLARE(finalRpgChild);
-EVT_DECLARE(underchompAttack1);
-EVT_DECLARE(underchompAttack2);
-EVT_DECLARE(underchompAttack3);
-EVT_DECLARE(checkWinOrContinue);
-EVT_DECLARE(attacking);
-EVT_DECLARE(usePixls);
-EVT_DECLARE(useItems);
-EVT_DECLARE(runningAway);
-EVT_DECLARE(techChild1);
-EVT_DECLARE(techChild2);
+EVT_DECLARE(begin_rpg_parent_evt);
+EVT_DECLARE(final_rpg_child_evt);
+EVT_DECLARE(underchomp_attack_1_evt);
+EVT_DECLARE(underchomp_attack_2_evt);
+EVT_DECLARE(underchomp_attack_3_evt);
+EVT_DECLARE(rpg_check_win_or_continue_evt);
+EVT_DECLARE(rpg_attacking_evt);
+EVT_DECLARE(rpg_use_pixls_evt);
+EVT_DECLARE(rpg_use_items_evt);
+EVT_DECLARE(rpg_run_away_evt);
+EVT_DECLARE(rpg_snd_miss_evt);
+EVT_DECLARE(rpg_snd_hit_evt);
 
 UNKNOWN_FUNCTION(func_80c6c908);
-u8 rpg_handle_menu(int param_1, PhysicalMenu menu);
+u8 rpgHandleMenu(int param_1, PhysicalMenu * menu);
 UNKNOWN_FUNCTION(func_80c6cccc);
 UNKNOWN_FUNCTION(func_80c6ce24);
 void rpg_screen_draw();
