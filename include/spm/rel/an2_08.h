@@ -6,26 +6,26 @@
 
 CPP_WRAPPER(spm::an2_08)
 
-typedef struct RpgNPC {
+typedef struct RpgMenu {
 /* 0x00 */ s32 flags;
 /* 0x04 */ s32 unk4;
 /* 0x08 */ s32 maxHp;
 /* 0x0C */ s32 attackStrength;
 /* 0x10 */ s32 unk_10;
 /* 0x14 */ s32 killXp;
-} RpgUnk;
-SIZE_ASSERT(RpgNPC, 0x18);
+} RpgMenu;
+SIZE_ASSERT(RpgMenu, 0x18);
 
-typedef struct RpgMenu {
+typedef struct An2_08Work {
 /* 0x00 */ s32 flags;
 /* 0x04 */ s32 unk_04;
 /* 0x08 */ void* unk_08;
-/* 0x0C */ RpgNPC rpgNpcInfo[3];
+/* 0x0C */ RpgMenu rpgNpcInfo[3];
 /* 0x54 */ s32 unk_54;
 /* 0x58 */ s32 unk_58[15];
 /* 0x94 */ char unk_94[4];
-} RpgMenu; //sizeof 0x98
-SIZE_ASSERT(RpgMenu, 0x98);
+} An2_08Work; //sizeof 0x98
+SIZE_ASSERT(An2_08Work, 0x98);
 
 typedef struct PhysicalMenu {
 /* 0x00 */ char * option_1;
