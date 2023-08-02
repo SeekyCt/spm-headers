@@ -6,28 +6,28 @@
 
 CPP_WRAPPER(spm::an2_08)
 
-typedef struct RpgMenu {
+typedef struct RpgNPC {
 /* 0x00 */ s32 flags;
 /* 0x04 */ s32 unk4;
 /* 0x08 */ s32 maxHp;
 /* 0x0C */ s32 attackStrength;
 /* 0x10 */ s32 unk_10;
 /* 0x14 */ s32 killXp;
-} RpgMenu;
-SIZE_ASSERT(RpgMenu, 0x18);
+} RpgNPC;
+SIZE_ASSERT(RpgNPC, 0x18);
 
 typedef struct An2_08Work {
 /* 0x00 */ s32 flags;
 /* 0x04 */ s32 unk_04;
 /* 0x08 */ void* unk_08;
-/* 0x0C */ RpgMenu rpgNpcInfo[3];
+/* 0x0C */ RpgNPC rpgNpcInfo[3];
 /* 0x54 */ s32 unk_54;
 /* 0x58 */ s32 unk_58[15];
 /* 0x94 */ char unk_94[4];
 } An2_08Work; //sizeof 0x98
 SIZE_ASSERT(An2_08Work, 0x98);
 
-typedef struct PhysicalMenu {
+typedef struct RpgMenu {
 /* 0x00 */ char * option_1;
 /* 0x04 */ char * unk_4;
 /* 0x08 */ char * option_2;
@@ -41,8 +41,8 @@ typedef struct PhysicalMenu {
 /* 0x28 */ char * option_6;
 /* 0x2c */ char * unk_2c;
 /* 0x30 */ char * unk_30;
-} PhysicalMenu;
-SIZE_ASSERT(PhysicalMenu, 0x34);
+} RpgMenu;
+SIZE_ASSERT(RpgMenu, 0x34);
 
 EVT_DECLARE(begin_rpg_parent_evt);
 EVT_DECLARE(final_rpg_child_evt);
@@ -58,7 +58,7 @@ EVT_DECLARE(rpg_snd_miss_evt);
 EVT_DECLARE(rpg_snd_hit_evt);
 
 UNKNOWN_FUNCTION(func_80c6c908);
-u8 rpgHandleMenu(int param_1, PhysicalMenu * menu);
+u8 rpgHandleMenu(int param_1, RpgMenu * menu);
 UNKNOWN_FUNCTION(func_80c6cccc);
 UNKNOWN_FUNCTION(func_80c6ce24);
 void rpg_screen_draw();
