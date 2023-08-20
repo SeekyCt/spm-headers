@@ -43,15 +43,21 @@ typedef u32 size_t;
 typedef s32 BOOL;
 
 #ifndef __cplusplus
+    #define bool char
 
-#define bool _Bool
-
-#define true 1
-#define false 0
-
+    #define true 1
+    #define false 0
 #endif
 
-typedef u16 wchar16_t;
+#ifndef __cplusplus
+    #define wchar_t s16
+#endif
+
+#ifdef DECOMP
+    typedef wchar_t wchar16_t;
+#else
+    typedef s16 wchar16_t;
+#endif
 
 // Unknown type
 typedef u32 Unk;
@@ -64,10 +70,11 @@ typedef u8 unk8;
     #define static_assert(cond, msg) __static_assert(cond, msg) 
 #endif
 
-#ifdef DECOMP
-#define offsetof(type, member) ((u32)&((type *)0)->member)
+// Use special offsetof if available
+#ifdef __MWERKS__
+    #define offsetof(type, member) ((u32)&((type *)0)->member)
 #else
-#define offsetof __builtin_offsetof
+    #define offsetof __builtin_offsetof
 #endif
 
 // Macro for quick size static assert
@@ -88,12 +95,18 @@ typedef u8 unk8;
     #define DECOMP_STATIC(expr) extern expr;
 #endif
 
-// Macro for C++ namespacing & extern "C"
-#ifndef DECOMP
-    #define CPP_WRAPPER(ns) \
-        namespace ns { \
-        extern "C" {
-    #define CPP_WRAPPER_END() }}
+// Use extern "C" in C++, use namespacing in mods
+#ifdef __cplusplus
+    #ifndef DECOMP
+        #define CPP_WRAPPER(ns) \
+            namespace ns { \
+            extern "C" {
+        #define CPP_WRAPPER_END() }}
+    #else
+        #define CPP_WRAPPER(ns) \
+            extern "C" {
+        #define CPP_WRAPPER_END() }
+    #endif
 #else
     #define CPP_WRAPPER(ns)
     #define CPP_WRAPPER_END()
@@ -101,14 +114,14 @@ typedef u8 unk8;
 
 // Macro for potential using statements
 // Should go inside a CPP_WRAPPER
-#ifndef DECOMP
+#if (defined __cplusplus) && !(defined DECOMP)
     #define USING(name) using name;
 #else
     #define USING(name)
 #endif
 
 // For GCC these have to be defined in the linker script
-#if (defined DECOMP) && !(defined M2C)
+#if (defined __MWERKS__) && !(defined M2C)
     #define FIXED_ADDR(type, name, addr) \
         type name : addr
 #else
@@ -116,14 +129,15 @@ typedef u8 unk8;
         extern type name
 #endif
 
-#ifndef __INTELLISENSE__
-    #define NORETURN __attribute__((noreturn))
+#if !(defined __INTELLISENSE__) && !(defined M2C)
+    #define ATTRIBUTE(x) __attribute__((x))
 #else
-    #define NORETURN
+    #define ATTRIBUTE(x)
 #endif
 
-#ifndef __INTELLISENSE__
-    #define ALIGNED(x) __attribute__((aligned(x)))
-#else
-    #define ALIGNED(x)
-#endif
+#define NORETURN ATTRIBUTE(noreturn)
+#define ALIGNED(x) ATTRIBUTE(aligned(x))
+
+#define SQUARE(x) ((x) * (x))
+#define CUBE(x) ((x) * (x) * (x))
+#define QUART(x) ((x) * (x) * (x) * (x))
