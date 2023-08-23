@@ -585,7 +585,26 @@
 80107C38:evt_npc_get_position
 80D5BF6C:mr_l_appear
 80D5C8E8:brobot_appear
-
+8023950C:spsndSFXOn
+800D2E74:evt_snd_sfxon_3d_player_character
+800D2C90:evt_snd_sfxon_npc
+800D2D00:evt_snd_sfxon_npc_delay
+800E6778:evt_env_static_blur_on
+80C1A700:func_80c5c36c
+80102E60:func_80103410
+800E629C:evt_eff_softdelete
+800F2F78:evt_mario_set_anim_change_handler
+800FF65C:evt_npc_walk_to
+800E5910:evt_eff
+8010761C:evt_npc_set_camid
+800FE3B0:func_800fe92c
+800FE0EC:evt_npc_rotate
+80D5BA48:mrLTribeAnimDefs
+80D5BBD0:theGreenThunderTribeAnimDefs
+80C1A4E4:returnCharAnimPos
+80D5BB30:mrLTauntTribeAnimDefs
+80D5C8E8:mrLBattleTribeAnimDefs
+80C1A698:func_80c5c304
 
 // new to rld3 v1
 8025C950:strcat

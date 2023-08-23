@@ -19,10 +19,10 @@ UNKNOWN_FUNCTION(func_800fe338);
 UNKNOWN_FUNCTION(func_800fe404);
 UNKNOWN_FUNCTION(func_800fe4e8);
 UNKNOWN_FUNCTION(evt_npc_get_rotation);
-UNKNOWN_FUNCTION(evt_npc_rotate);
+EVT_DECLARE_USER_FUNC(evt_npc_rotate, 4);
 UNKNOWN_FUNCTION(func_800fe760);
 UNKNOWN_FUNCTION(func_800fe82c);
-UNKNOWN_FUNCTION(func_800fe92c);
+EVT_DECLARE_USER_FUNC(func_800fe92c, 4);
 UNKNOWN_FUNCTION(func_800fea70);
 UNKNOWN_FUNCTION(func_800feb54);
 UNKNOWN_FUNCTION(func_800fec04);
@@ -42,7 +42,7 @@ UNKNOWN_FUNCTION(func_800ff86c);
 EVT_UNKNOWN_USER_FUNC(func_800ff8f8)
 UNKNOWN_FUNCTION(func_800ff9a4);
 UNKNOWN_FUNCTION(func_800ffab4);
-UNKNOWN_FUNCTION(evt_npc_walk_to);
+EVT_DECLARE_USER_FUNC(evt_npc_walk_to, 8);
 
 // evt_npc_jump_to(const char * name, f32 destX, f32 destY, f32 destZ, f32 height, s32 length)
 EVT_DECLARE_USER_FUNC(evt_npc_jump_to, 6)
@@ -79,7 +79,10 @@ UNKNOWN_FUNCTION(func_801031a0);
 UNKNOWN_FUNCTION(func_80103268);
 UNKNOWN_FUNCTION(evt_npc_get_cur_anim);
 UNKNOWN_FUNCTION(evt_npc_search_anim_defs);
-EVT_UNKNOWN_USER_FUNC(func_80103410)
+
+// func_80103410(const char * npcName, s32 partId)
+EVT_DECLARE_USER_FUNC(func_80103410, 2);
+
 UNKNOWN_FUNCTION(func_80103574);
 
 // evt_npc_flag8_onoff(const char * instanceName, bool on, u32 mask)

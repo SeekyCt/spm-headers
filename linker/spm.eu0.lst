@@ -145,6 +145,9 @@
 800d2800:evt_snd_sfxon
 800d28fc:evt_snd_sfxon_character
 800d29cc:evt_snd_sfxon_3d
+800d2af4:evt_snd_sfxon_npc
+800d2b64:evt_snd_sfxon_npc_delay
+800d2cd8:evt_snd_sfxon_3d_player
 800d2fa4:func_800d2fa4
 800d2f74:evt_snd_sfxoff
 800d3030:evt_snd_get_last_sfx_id
@@ -204,8 +207,14 @@
 // sdata
 805ae020:evt_door_wp
 
+// evt_eff.c
+800e57bc:evt_eff
+800e6148:evt_eff_softdelete
+// more
+
 // evt_env.c
 800e658c:evt_env_blur_on
+800e6624:evt_env_static_blur_on
 
 // evt_fade.c
 800e7050:evt_fade_entry
@@ -265,6 +274,7 @@
 800f1954:evt_mario_set_pose
 800f2450:evt_mario_fairy_reset
 800f25b0:evt_set_gravity
+800f2f68:evt_mario_set_anim_change_handler
 // more
 
 // evt_mobj.c
@@ -292,10 +302,14 @@
 // evt_npc.c
 800fe124:evt_npc_get_position
 800fe21c:evt_npc_set_position
+800fe668:evt_npc_rotate
+800fe92c:func_800fe92c
+800ffbd8:evt_npc_walk_to
 80102EB8:evt_npc_stats_set_up
 80102f5c:evt_npc_entry
 80103054:func_80103054
 80103108:evt_npc_set_anim
+80103410:func_80103410
 8010368c:evt_npc_flag8_onoff
 801039b8:evt_npc_animflag_onoff
 80103ea8:evt_npc_set_unitwork
@@ -305,6 +319,7 @@
 801059d0:func_801059d0
 80106724:evt_npc_entry_from_template
 80107540:evt_npc_id_to_name
+80107bcc:evt_npc_set_camid
 80107cfc:func_80107cfc
 80107d20:func_80107d20
 80108194:func_80108194
@@ -572,6 +587,7 @@
 
 // spmario_snd.c
 80238598:spsndExit
+8023b0f0:spsndSFXOn
 8023c93c:spsndBGMOn
 8023c948:spsndBGMOff_f_d
 8023d1b0:spsndCheckBgmPlaying
@@ -843,7 +859,14 @@
 // more
 
 //sp4_13.c
+1,1,16854:returnCharAnimPos
+1,1,16a08:func_80c5c304
+1,1,16a70:func_80c5c36c
+1,5,a9600:mrLTribeAnimDefs
+1,5,a96e8;mrLTauntTribeAnimDefs
+1,5,a9788:theGreenThunderTribeAnimDefs
 1,5,a9b24:mr_l_appear
+1,5,aa4a0:mrLBattleTribeAnimDefs
 1,5,aa4a0:brobot_appear
 // more
 

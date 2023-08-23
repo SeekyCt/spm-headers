@@ -45,7 +45,8 @@ UNKNOWN_FUNCTION(func_800d2a58);
 // evt_snd_sfxon_npc(const char * sfxName, const char * npcName)
 EVT_DECLARE_USER_FUNC(evt_snd_sfxon_npc, 2);
 
-UNKNOWN_FUNCTION(evt_snd_sfxon_npc_delay);
+// evt_snd_sfxon_npc_delay(const char * sfxName, const char * npcName, s32 delayTime)
+EVT_DECLARE_USER_FUNC(evt_snd_sfxon_npc_delay);
 
 // evt_snd_sfxon_3d_player(const char * name)
 EVT_DECLARE_USER_FUNC(evt_snd_sfxon_3d_player, 1);
