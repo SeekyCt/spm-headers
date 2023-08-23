@@ -14,7 +14,6 @@ EVT_DECLARE_USER_FUNC(func_80c5c36c, 0);
 extern spm::npcdrv::NPCTribeAnimDef mrLTribeAnimDefs[10];
 extern spm::npcdrv::NPCTribeAnimDef mrLTauntTribeAnimDefs[6];
 extern spm::npcdrv::NPCTribeAnimDef theGreenThunderTribeAnimDefs[10];
-extern spm::npcdrv::NPCTribeAnimDef mrLBattleTribeAnimDefs[6];
 
 EVT_DECLARE(mr_l_appear);
 EVT_DECLARE(brobot_appear);
