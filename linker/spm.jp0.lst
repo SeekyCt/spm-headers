@@ -580,7 +580,10 @@
 80025074:getItemUseEvt
 8002F240:msgUnLoad
 8002F014:msgLoad
-80C62E5C:an_init_tpl
+80C62E5C:evt_an_init_tpl
+80107808:evt_npc_get_position
+80D8970C:mr_l_appear
+80D8A088:brobot_appear
 
 
 // new to rld3 v1

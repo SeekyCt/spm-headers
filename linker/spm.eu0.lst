@@ -60,11 +60,11 @@
 // more
 
 // camdrv.c
+// text
+80055b24:camGetPtr
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
-// text
-80055b24:camGetPtr
 // bss
 8050b580:camPtrTbl
 // more
@@ -290,6 +290,7 @@
 800fd0c4:evt_msg_fmt_str
 // more
 // evt_npc.c
+800fe124:evt_npc_get_position
 800fe21c:evt_npc_set_position
 80102EB8:evt_npc_stats_set_up
 80102f5c:evt_npc_entry
@@ -836,9 +837,14 @@
 1,1,2d3fc:evt_an2_08_draw_face
 
 //an.c
-1,1,319ac:an_init_tpl
+1,1,319ac:evt_an_init_tpl
 1,1,31bc8:evt_an_darkness_onoff
 1,1,31cb4:evt_an_remove_npcs
+// more
+
+//sp4_13.c
+1,5,a9b24:mr_l_appear
+1,5,aa4a0:brobot_appear
 // more
 
 // machi.c

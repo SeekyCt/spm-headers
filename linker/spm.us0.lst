@@ -580,7 +580,10 @@
 8002F240:msgUnLoad
 8002F014:msgLoad
 80C3DB20:rpg_screen_draw
-80C47F3C:an_init_tpl
+80C47F3C:evt_an_init_tpl
+80107808:evt_npc_get_position
+80D6E7EC:mr_l_appear
+80D6F168:brobot_appear
 
 // new to rld3 v1
 8025C1B0:strcat
