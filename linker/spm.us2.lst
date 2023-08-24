@@ -604,6 +604,10 @@
 80C1A4E4:returnCharAnimPos
 80D5BB30:mrLTauntTribeAnimDefs
 80C1A698:func_80c5c304
+80D5BA40:mrLStartTribeAnimDefs
+800F1AD8:evt_mario_wait_anim
+800FFF44:evt_npc_jump_to
+
 
 // new to rld3 v1
 8025C950:strcat

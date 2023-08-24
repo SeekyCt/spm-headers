@@ -147,7 +147,7 @@
 800d29cc:evt_snd_sfxon_3d
 800d2af4:evt_snd_sfxon_npc
 800d2b64:evt_snd_sfxon_npc_delay
-800d2cd8:evt_snd_sfxon_3d_player
+800d2cd8:evt_snd_sfxon_3d_player_character
 800d2fa4:func_800d2fa4
 800d2f74:evt_snd_sfxoff
 800d3030:evt_snd_get_last_sfx_id
@@ -266,6 +266,7 @@
 800ef908:evt_mario_get_character
 800ef958:evt_mario_set_character
 800ef988:evt_mario_set_pos
+800f19c0:evt_mario_wait_anim
 800efa4c:evt_mario_get_pos
 800efd28:evt_mario_direction_reset
 800efd88:evt_mario_direction_face
@@ -305,6 +306,7 @@
 800fe668:evt_npc_rotate
 800fe92c:func_800fe92c
 800ffbd8:evt_npc_walk_to
+801004c0:evt_npc_jump_to
 80102EB8:evt_npc_stats_set_up
 80102f5c:evt_npc_entry
 80103054:func_80103054
@@ -862,8 +864,9 @@
 1,1,16854:returnCharAnimPos
 1,1,16a08:func_80c5c304
 1,1,16a70:func_80c5c36c
+1,5,a95f8:mrLStartTribeAnimDefs
 1,5,a9600:mrLTribeAnimDefs
-1,5,a96e8;mrLTauntTribeAnimDefs
+1,5,a96e8:mrLTauntTribeAnimDefs
 1,5,a9788:theGreenThunderTribeAnimDefs
 1,5,a9b24:mr_l_appear
 1,5,aa4a0:brobot_appear
