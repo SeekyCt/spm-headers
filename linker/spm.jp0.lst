@@ -606,6 +606,7 @@
 80D891E0:mrLStartTribeAnimDefs
 800F1818:evt_mario_wait_anim
 800FFB14:evt_npc_jump_to
+80C5E1D4:evt_rpg_enemy_death_check
 
 // new to rld3 v1
 8025C158:strcat
