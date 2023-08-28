@@ -73,7 +73,7 @@ typedef struct
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item, percentage
 /* 0x50 */ NPCDropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ u8 unknown_0x54[0x64 - 0x54];
-/* 0x64 */ u8 attackStrength; // only used for the tattle, doesn't affect damage
+/* 0x64 */ u8 attackStrength; // only used for the tattle and turn-based combat, doesn't affect normal damage
 /* 0x65 */ u8 unknown_0x65[0x68 - 0x65];
 } NPCTribe;
 SIZE_ASSERT(NPCTribe, 0x68)

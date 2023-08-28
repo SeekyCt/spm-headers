@@ -16,17 +16,6 @@ typedef struct RpgNPC {
 } RpgNPC;
 SIZE_ASSERT(RpgNPC, 0x18);
 
-typedef struct An2_08Work {
-/* 0x00 */ s32 flags;
-/* 0x04 */ s32 unk_04;
-/* 0x08 */ void* unk_08;
-/* 0x0C */ RpgNPC rpgNpcInfo[3];
-/* 0x54 */ s32 unk_54;
-/* 0x58 */ s32 unk_58[15];
-/* 0x94 */ char unk_94[4];
-} An2_08Work; //sizeof 0x98
-SIZE_ASSERT(An2_08Work, 0x98);
-
 typedef struct RpgMenu {
 /* 0x00 */ char * option_1;
 /* 0x04 */ char * unk_4;
@@ -43,6 +32,17 @@ typedef struct RpgMenu {
 /* 0x30 */ char * unk_30;
 } RpgMenu;
 SIZE_ASSERT(RpgMenu, 0x34);
+
+typedef struct An2_08Work {
+/* 0x00 */ s32 flags;
+/* 0x04 */ s32 unk_04;
+/* 0x08 */ RpgMenu* rpgMenu;
+/* 0x0C */ RpgNPC rpgNpcInfo[3];
+/* 0x54 */ s32 unk_54;
+/* 0x58 */ s32 unk_58[15];
+/* 0x94 */ char unk_94[4];
+} An2_08Work; //sizeof 0x98
+SIZE_ASSERT(An2_08Work, 0x98);
 
 EVT_DECLARE(begin_rpg_parent_evt);
 EVT_DECLARE(final_rpg_child_evt);
