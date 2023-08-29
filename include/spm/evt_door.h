@@ -111,10 +111,12 @@ EVT_DECLARE_USER_FUNC(evt_door_enable_disable_map_door_desc, 2)
 
 UNKNOWN_FUNCTION(evt_door_add_map_door_desc_to_unk_mask);
 
-//evt_door_set_event(char *door, int unknown, EvtScriptCode * script)
+// evt_door_set_event(char *door, int unknown, EvtScriptCode * script)
 EVT_DECLARE_USER_FUNC(evt_door_set_event, 3)
 
-UNKNOWN_FUNCTION(func_800e468c);
+// evt_door_toggle(int flags) 
+EVT_DECLARE_USER_FUNC(evt_door_toggle, 1);
+
 UNKNOWN_FUNCTION(evt_door_get_map_door_desc);
 UNKNOWN_FUNCTION(func_800e47a8);
 UNKNOWN_FUNCTION(func_800e56b4);

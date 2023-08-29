@@ -200,6 +200,7 @@
 800e4118:evt_door_set_map_door_descs
 800e4308:evt_door_enable_disable_map_door_desc
 800e45c8:evt_door_set_event
+800e468c:evt_door_toggle
 // more
 // data
 8041a2b0:door_init_evt
@@ -345,6 +346,7 @@
 8010c83c:evt_pouch_set_attack
 8010c8b8:evt_pouch_add_attack
 8010c9c4:evt_pouch_check_have_item
+8010CA18:evt_pouch_remove_item
 8010cdd4:evt_pouch_set_level
 8010cd88:evt_pouch_get_level
 8010ce04:evt_pouch_get_next_level_xp

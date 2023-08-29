@@ -607,6 +607,7 @@
 800F1818:evt_mario_wait_anim
 800FFB14:evt_npc_jump_to
 80C432B4:evt_rpg_enemy_death_check
+80D6FF90:evt_door_toggle
 
 // new to rld3 v1
 8025C1B0:strcat
