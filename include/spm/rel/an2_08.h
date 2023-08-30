@@ -44,6 +44,8 @@ typedef struct An2_08Work {
 } An2_08Work; //sizeof 0x98
 SIZE_ASSERT(An2_08Work, 0x98);
 
+extern An2_08Work An2_08_wp;
+
 EVT_DECLARE(begin_rpg_parent_evt);
 EVT_DECLARE(final_rpg_child_evt);
 EVT_DECLARE(underchomp_attack_1_evt);

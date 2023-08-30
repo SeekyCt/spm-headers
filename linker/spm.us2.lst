@@ -608,6 +608,7 @@
 800F1AD8:evt_mario_wait_anim
 800FFF44:evt_npc_jump_to
 80D5D710:evt_door_toggle
+80F20740:An2_08_wp
 
 // new to rld3 v1
 8025C950:strcat

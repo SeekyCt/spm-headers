@@ -608,6 +608,7 @@
 800FFB14:evt_npc_jump_to
 80C5E1D4:evt_rpg_enemy_death_check
 80D8AEB0:evt_door_toggle
+80F4DE80:An2_08_wp
 
 // new to rld3 v1
 8025C158:strcat

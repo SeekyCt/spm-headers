@@ -820,6 +820,7 @@
 //   80f64340 6 .bss
 
 // an2_08.c
+1,6,1320:An2_08_wp
 1,5,fa26c:rpg_snd_hit_evt
 1,5,fa2b8:rpg_snd_miss_evt
 1,5,fa380:rpg_attacking_evt
