@@ -8,7 +8,7 @@ CPP_WRAPPER(spm::an2_08)
 
 typedef struct RpgNPC {
 /* 0x00 */ s32 flags;
-/* 0x04 */ s32 unk4;
+/* 0x04 */ s32 unk_4;
 /* 0x08 */ s32 maxHp;
 /* 0x0C */ s32 attackStrength;
 /* 0x10 */ s32 unk_10;
