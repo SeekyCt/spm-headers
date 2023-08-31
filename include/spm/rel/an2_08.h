@@ -17,19 +17,19 @@ typedef struct RpgNPC {
 SIZE_ASSERT(RpgNPC, 0x18);
 
 typedef struct RpgMenu {
-/* 0x00 */ char * option_1;
-/* 0x04 */ char * unk_4;
-/* 0x08 */ char * option_2;
-/* 0x0c */ char * unk_c;
-/* 0x10 */ char * option_3;
-/* 0x14 */ char * unk_14;
-/* 0x18 */ char * option_4;
-/* 0x1c */ char * unk_1c;
-/* 0x20 */ char * option_5;
-/* 0x24 */ char * unk_24;
-/* 0x28 */ char * option_6;
-/* 0x2c */ char * unk_2c;
-/* 0x30 */ char * unk_30;
+/* 0x00 */ const char * option_1;
+/* 0x04 */ int unk_4;
+/* 0x08 */ const char * option_2;
+/* 0x0c */ int unk_c;
+/* 0x10 */ const char * option_3;
+/* 0x14 */ int unk_14;
+/* 0x18 */ const char * option_4;
+/* 0x1c */ int unk_1c;
+/* 0x20 */ const char * option_5;
+/* 0x24 */ int unk_24;
+/* 0x28 */ const char * option_6;
+/* 0x2c */ int unk_2c;
+/* 0x30 */ int unk_30;
 } RpgMenu;
 SIZE_ASSERT(RpgMenu, 0x34);
 
@@ -44,7 +44,8 @@ typedef struct An2_08Work {
 } An2_08Work; //sizeof 0x98
 SIZE_ASSERT(An2_08Work, 0x98);
 
-extern An2_08Work An2_08_wp;
+extern An2_08Work an2_08_wp;
+extern const char * wang_special_1_80def2c8[4];
 
 EVT_DECLARE(begin_rpg_parent_evt);
 EVT_DECLARE(final_rpg_child_evt);

@@ -582,8 +582,8 @@
 8002F014:msgLoad
 80C62E5C:evt_an_init_tpl
 80107808:evt_npc_get_position
-80D8970C:mr_l_appear
-80D8A088:brobot_appear
+80D8970C:evt_mr_l_appear
+80D8A088:evt_brobot_appear
 80238A9C:spsndSFXOn
 800D2F00:evt_snd_sfxon_3d_player_character
 800D2D1C:evt_snd_sfxon_npc
@@ -608,7 +608,12 @@
 800FFB14:evt_npc_jump_to
 80C5E1D4:evt_rpg_enemy_death_check
 80D8AEB0:evt_door_toggle
-80F4DE80:An2_08_wp
+80F4DE80:an2_08_wp
+80C584BC:func_80c6c908
+8014E58C:pouchGetPixlInfo
+8019C0F0:qqsort
+8014E4A4:pouchGetCharInfo
+80DBEAD0:wang_special_1_80def2c8
 
 // new to rld3 v1
 8025C158:strcat
