@@ -581,8 +581,8 @@
 8002F014:msgLoad
 1,1,31620:evt_an_init_tpl
 80107808:evt_npc_get_position
-1,5,a8cac:evt_mr_l_appear
-1,5,a9628:evt_brobot_appear
+1,5,a8cac:mr_l_appear_evt
+1,5,a9628:brobot_appear_evt
 80238A9C:spsndSFXOn
 800D2F00:evt_snd_sfxon_3d_player_character
 800D2D1C:evt_snd_sfxon_npc
@@ -597,12 +597,12 @@
 801071EC:evt_npc_set_camid
 800FDF80:func_800fe92c
 800FDCBC:evt_npc_rotate
-1,5,a8788:mrLTribeAnimDefs
-1,5,a8910:theGreenThunderTribeAnimDefs
+1,5,a8788:spMrLTribeAnimDefs
+1,5,a8910:spTheGreenThunderTribeAnimDefs
 1,1,164c8:spReturnAngryAnimPos
-1,5,a8870:mrLTauntTribeAnimDefs
+1,5,a8870:spMrLTauntTribeAnimDefs
 1,1,1667c:func_80c5c304
-1,5,a8780:mrLStartTribeAnimDefs
+1,5,a8780:spMrLStartTribeAnimDefs
 800F1818:evt_mario_wait_anim
 800FFB14:evt_npc_jump_to
 1,1,2c998:evt_rpg_enemy_death_check
@@ -612,7 +612,7 @@
 8014E58C:pouchGetPixlInfo
 8019C0F0:qqsort
 8014E4A4:pouchGetCharInfo
-1,5,de070:wang_special_1_80def2c8
+1,5,de070:lbl_80def2c8
 
 // new to rld3 v1
 8025C158:strcat

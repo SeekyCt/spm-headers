@@ -824,7 +824,7 @@
 
 // an2_08.c
 1,6,1320:an2_08_wp
-1,5,fa148:wang_special_1_80def2c8
+1,5,fa148:lbl_80def2c8
 1,5,fa26c:rpg_snd_hit_evt
 1,5,fa2b8:rpg_snd_miss_evt
 1,5,fa380:rpg_attacking_evt
@@ -872,12 +872,12 @@
 1,1,16854:spReturnAngryAnimPos
 1,1,16a08:func_80c5c304
 1,1,16a70:func_80c5c36c
-1,5,a95f8:mrLStartTribeAnimDefs
-1,5,a9600:mrLTribeAnimDefs
-1,5,a96e8:mrLTauntTribeAnimDefs
-1,5,a9788:theGreenThunderTribeAnimDefs
-1,5,a9b24:evt_mr_l_appear
-1,5,aa4a0:evt_brobot_appear
+1,5,a95f8:spMrLStartTribeAnimDefs
+1,5,a9600:spMrLTribeAnimDefs
+1,5,a96e8:spMrLTauntTribeAnimDefs
+1,5,a9788:spTheGreenThunderTribeAnimDefs
+1,5,a9b24:mr_l_appear_evt
+1,5,aa4a0:brobot_appear_evt
 // more
 
 // machi.c

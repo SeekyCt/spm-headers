@@ -44,8 +44,8 @@ typedef struct An2_08Work {
 } An2_08Work; //sizeof 0x98
 SIZE_ASSERT(An2_08Work, 0x98);
 
-extern An2_08Work an2_08_wp;
-extern const char * wang_special_1_80def2c8[4];
+DECOMP_STATIC(An2_08Work an2_08_wp)
+DECOMP_STATIC(const char * lbl_80def2c8[4])
 
 EVT_DECLARE(begin_rpg_parent_evt);
 EVT_DECLARE(final_rpg_child_evt);
