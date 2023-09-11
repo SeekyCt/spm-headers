@@ -200,7 +200,7 @@
 800e4118:evt_door_set_map_door_descs
 800e4308:evt_door_enable_disable_map_door_desc
 800e45c8:evt_door_set_event
-800e468c:evt_door_toggle
+800e468c:evt_door_openable_onoff
 // more
 // data
 8041a2b0:door_init_evt
@@ -869,7 +869,7 @@
 // more
 
 //sp4_13.c
-1,1,16854:returnCharAnimPos
+1,1,16854:spReturnAngryAnimPos
 1,1,16a08:func_80c5c304
 1,1,16a70:func_80c5c36c
 1,5,a95f8:mrLStartTribeAnimDefs

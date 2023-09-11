@@ -9,7 +9,7 @@ CPP_WRAPPER(spm::sp4_13)
 
 USING(spm::npcdrv::NPCTribeAnimDef)
 
-char * returnCharAnimPos(char *param_1);
+char * spReturnAngryAnimPos(char *param_1);
 char * func_80c5c304(char *param_1);
 EVT_DECLARE_USER_FUNC(func_80c5c36c, 0);
 
