@@ -5,10 +5,10 @@
 
 CPP_WRAPPER(spm::evt_eff)
 
-EVT_DECLARE_USER_FUNC(evt_eff, 14);
+EVT_DECLARE_USER_FUNC(evt_eff, 14)
 
 // evt_eff_softdelete(const char * name)
-EVT_DECLARE_USER_FUNC(evt_eff_softdelete, 1);
+EVT_DECLARE_USER_FUNC(evt_eff_softdelete, 1)
 
 UNKNOWN_FUNCTION(func_800e617c);
 UNKNOWN_FUNCTION(func_800e61b0);

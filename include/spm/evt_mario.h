@@ -29,7 +29,7 @@ UNKNOWN_FUNCTION(func_800ef8c8);
 // evt_mario_get_character(s32& ret)
 EVT_DECLARE_USER_FUNC(evt_mario_get_character, 1)
 
-EVT_DECLARE_USER_FUNC(evt_mario_set_character, 1);
+EVT_DECLARE_USER_FUNC(evt_mario_set_character, 1)
 
 // evt_mario_get_pos(f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_mario_set_pos, 3)
@@ -41,13 +41,13 @@ UNKNOWN_FUNCTION(func_800efac4);
 UNKNOWN_FUNCTION(func_800efb50);
 UNKNOWN_FUNCTION(func_800efbdc);
 UNKNOWN_FUNCTION(func_800efc54);
-EVT_UNKNOWN_USER_FUNC(func_800efce0);
+EVT_UNKNOWN_USER_FUNC(func_800efce0)
 
-EVT_DECLARE_USER_FUNC(evt_mario_direction_reset, 0);
+EVT_DECLARE_USER_FUNC(evt_mario_direction_reset, 0)
 
 UNKNOWN_FUNCTION(func_800efd58);
 
-EVT_DECLARE_USER_FUNC(evt_mario_direction_face, 2);
+EVT_DECLARE_USER_FUNC(evt_mario_direction_face, 2)
 
 UNKNOWN_FUNCTION(func_800eff6c);
 

@@ -11,7 +11,7 @@ USING(spm::npcdrv::NPCTribeAnimDef)
 
 char * spReturnAngryAnimPos(char *param_1);
 char * func_80c5c304(char *param_1);
-EVT_DECLARE_USER_FUNC(func_80c5c36c, 0);
+EVT_DECLARE_USER_FUNC(func_80c5c36c, 0)
 
 DECOMP_STATIC(NPCTribeAnimDef spMrLStartTribeAnimDefs[0])
 DECOMP_STATIC(NPCTribeAnimDef spMrLTribeAnimDefs[10])
