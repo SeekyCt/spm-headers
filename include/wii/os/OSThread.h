@@ -21,7 +21,7 @@ typedef struct
 {
 /* 0x0 */ u8 unknown_0x0[0x8 - 0x0];
 } OSThreadQueue;
-SIZE_ASSERT(OSThreadQueue, 0x8);
+SIZE_ASSERT(OSThreadQueue, 0x8)
 
 FIXED_ADDR(OSThread *, currentThread, 0x800000e4);
 

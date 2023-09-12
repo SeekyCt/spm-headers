@@ -53,7 +53,7 @@ typedef struct
         } file;
     };
 } FstEntry;
-SIZE_ASSERT(FstEntry, 0xc);
+SIZE_ASSERT(FstEntry, 0xc)
 
 typedef struct
 {
@@ -61,7 +61,7 @@ typedef struct
     u32 location;
     u32 next;
 } DVDDir;
-SIZE_ASSERT(DVDDir, 0xc);
+SIZE_ASSERT(DVDDir, 0xc)
 
 typedef struct
 {
@@ -69,7 +69,7 @@ typedef struct
     BOOL isDir;
     const char * name;
 } DVDDirEntry;
-SIZE_ASSERT(DVDDirEntry, 0xc);
+SIZE_ASSERT(DVDDirEntry, 0xc)
 
 // Just a normal string literal, but useful for riivo detection
 extern char devDiStr[]; // "/dev/di"
@@ -79,7 +79,7 @@ DECOMP_STATIC(u32 MaxEntryNum)
 DECOMP_STATIC(char * FstStringStart)
 DECOMP_STATIC(FstEntry * FstStart)
 DECOMP_STATIC(u32 PauseFlag)
-DECOMP_STATIC(u32 executing);
+DECOMP_STATIC(u32 executing)
 
 
 UNKNOWN_FUNCTION(__DVDFSInit);

@@ -32,7 +32,7 @@ typedef struct
 } Ioctlv;
 SIZE_ASSERT(Ioctlv, 0x8)
 
-DECOMP_STATIC(s32 ipc_lbl_805ae3b4);
+DECOMP_STATIC(s32 ipc_lbl_805ae3b4)
 
 UNKNOWN_FUNCTION(IPCInit);
 UNKNOWN_FUNCTION(IPCReadReg);
