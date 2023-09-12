@@ -8,8 +8,21 @@
 #define UNKNOWN_FUNCTION(name) void name(void)
 #endif
 
+// Intellisense doesn't like asm compiler extensions
 #ifdef __INTELLISENSE__ 
     #define asm
+#endif
+
+// Helpers for compiler feature checking
+#ifdef __has_builtin
+    #define HAS_BUILTIN(x) __has_builtin(x)
+#else
+    #define HAS_BUILTIN(x) 0
+#endif
+#ifdef __has_attribute
+    #define HAS_ATTRIBUTE(x) __has_attribute(x)
+#else
+    #define HAS_ATTRIBUTE(x) 0
 #endif
 
 // Basic types
@@ -42,10 +55,10 @@ typedef double f64;
 #else
     typedef u32 size_t;
     #define NULL 0
-    #ifdef __MWERKS__
-        #define offsetof(type, member) ((u32)&((type *)0)->member)
-    #else
+    #if HAS_BUILTIN(__builtin_offsetof)
         #define offsetof __builtin_offsetof
+    #else
+        #define offsetof(type, member) ((u32)&((type *)0)->member)
     #endif
 #endif
 
@@ -137,14 +150,13 @@ typedef u8 unk8;
     #define ATTRIBUTE(x)
 #endif
 
-#define NORETURN ATTRIBUTE(noreturn)
-#define ALIGNED(x) ATTRIBUTE(aligned(x))
-
-#ifdef __has_attribute
-    #define HAS_ATTRIBUTE(x) __has_attribute(x)
+#if HAS_ATTRIBUTE(noreturn)
+    #define NORETURN ATTRIBUTE(noreturn)
 #else
-    #define HAS_ATTRIBUTE(x) 0
+    #define NORETURN
 #endif
+
+#define ALIGNED(x) ATTRIBUTE(aligned(x))
 
 #if HAS_ATTRIBUTE(format)
     #define ATTRIBUTE_FORMAT(...) __attribute__((format(__VA_ARGS__)))
