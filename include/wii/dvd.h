@@ -6,22 +6,43 @@ CPP_WRAPPER(wii::dvd)
 
 #define DVD_ALIGN 32
 
-typedef struct
+struct _DVDCommandBlock;
+typedef void (DVDCBCallback)(s32 code, struct _DVDCommandBlock * block);
+
+typedef struct _DVDCommandBlock
 {
-/* 0x00 */ u8 unknown_0x0[0x3c - 0x0];
+/* 0x00 */ u8 unknown_0x0[0x8 - 0x0];
+/* 0x08 */ s32 command;
+/* 0x0C */ s32 state;
+/* 0x10 */ u32 offset;
+/* 0x14 */ u8 unknown_0x14[0x28 - 0x14];
+/* 0x28 */ DVDCBCallback * callback;
+/* 0x2C */ void * userData;
+} DVDCommandBlock;
+SIZE_ASSERT(DVDCommandBlock, 0x30)
+
+typedef struct _DVDFileInfo
+{
+/* 0x00 */ DVDCommandBlock commandBlock;
+/* 0x30 */ u32 startAddr;
+/* 0x34 */ u32 length;
+/* 0x38 */ u8 unknown_0x38[0x3c - 0x38];
 } DVDFileInfo;
 SIZE_ASSERT(DVDFileInfo, 0x3c)
+
+typedef void (DVDFICallback)(s32 code, struct _DVDFileInfo * fileInfo);
 
 // Just a normal string literal, but useful for riivo detection
 extern char devDiStr[]; // "/dev/di"
 
 UNKNOWN_FUNCTION(__DVDFSInit);
 s32 DVDConvertPathToEntrynum(const char * path);
-UNKNOWN_FUNCTION(DVDFastOpen);
-UNKNOWN_FUNCTION(DVDClose);
-UNKNOWN_FUNCTION(DVDReadAsyncPrio);
+s32 DVDFastOpen(s32 entrynum, DVDFileInfo * fileInfo);
+s32 DVDClose(DVDFileInfo * fileInfo);
+s32 DVDReadAsyncPrio(DVDFileInfo * fileInfo, void * addr, s32 length, s32 offset,
+                     DVDFICallback * callback, s32 priority);
 UNKNOWN_FUNCTION(cbForReadAsync);
-UNKNOWN_FUNCTION(DVDReadPrio);
+s32 DVDReadPrio(DVDFileInfo * fileInfo, void * dest, s32 length, s32 offset, s32 priority);
 UNKNOWN_FUNCTION(cbForReadSync);
 UNKNOWN_FUNCTION(StampCommand);
 UNKNOWN_FUNCTION(defaultOptionalCommandChecker);
