@@ -33,6 +33,7 @@ n.variable("cpp", os.path.join("$devkitppc", "bin", "powerpc-eabi-cpp"))
 MOD_INCLUDES = ["$incdir", "$mod_incdir"]
 n.variable("mod_cc", os.path.join("$devkitppc", "bin", "powerpc-eabi-g++"))
 n.variable("mod_incdir", "mod")
+n.variable("mod_source", os.path.join("$builddir", "mod.c"))
 n.variable(
     "mod_machdep",
     ' '.join([
@@ -185,18 +186,27 @@ def compile_regions(dest: str, source: str, includes: List[str], defines: List[s
         compile(dest.format(region=region), source, includes, defines + [f"SPM_{region.upper()}"],
                 decomp)
 
-for i in range(args.shuffle):
-    source = os.path.join("$builddir", f"mod_{i}.cpp")
-    incgen(source, MOD_INCLUDES, i)
-    compile_regions(os.path.join("$builddir", f"mod_{{region}}_{i}.o"), source,
-                    MOD_INCLUDES, ["USE_STL"])
-    compile_regions(os.path.join("$builddir", f"old_mod_{{region}}_{i}.o"), source,
-                    MOD_INCLUDES, [])
+# Test the headers in the modding setups
+incgen("$mod_source", MOD_INCLUDES)
+compile_regions(os.path.join("$builddir", "mod_{region}.o"), "$mod_source",
+                MOD_INCLUDES, ["USE_STL"])
+compile_regions(os.path.join("$builddir", "old_mod_{region}.o"), "$mod_source",
+                MOD_INCLUDES, [])
 
+# If possible, test the headers in the decomp setup
 if args.decomp:
     incgen("$decomp_source", DECOMP_INCLUDES)
     compile_regions(os.path.join("$builddir", "decomp_{region}.o"), "$decomp_source",
                     DECOMP_INCLUDES, ["DECOMP"], True)
+
+# Test shuffled include orders if requested
+# Currently, there aren't enough region differences to be worth testing more than eu0 here,
+# nor enough differences to be testing decomp & non-stl mod
+for i in range(1, 1 + args.shuffle):
+    source = os.path.join("$builddir", f"shuffle_{args.seed}_{i}.cpp")
+    incgen(source, MOD_INCLUDES, i)
+    compile(os.path.join("$builddir", f"shuffle_{args.seed}_{i}.o"), source, MOD_INCLUDES,
+            ["USE_STL", "SPM_EU0"])
 
 with open("build.ninja", 'w') as f:
     f.write(outbuf.getvalue())
