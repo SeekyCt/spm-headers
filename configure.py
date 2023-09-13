@@ -11,6 +11,7 @@ parser = ArgumentParser()
 parser.add_argument("--decomp", type=str, help="Decomp path")
 parser.add_argument("--seed", type=int, default=1, help="Shuffling seed")
 parser.add_argument("--shuffle", type=int, default=0, help="Number of randomised orders to test")
+parser.add_argument("--individual", action="store_true", help="Test every header on its own")
 args = parser.parse_args()
 
 outbuf = StringIO()
@@ -26,6 +27,7 @@ n.variable("incdir", "include")
 n.variable("seed", args.seed)
 
 n.variable("incgen", f"{PYTHON} tools/incgen.py")
+n.variable("incgen_single", f"{PYTHON} tools/incgen_single.py")
 
 n.variable("devkitppc", os.environ.get("DEVKITPPC"))
 n.variable("cpp", os.path.join("$devkitppc", "bin", "powerpc-eabi-cpp"))
@@ -124,6 +126,11 @@ n.rule(
 )
 
 n.rule(
+    "incgen_single",
+    ALLOW_CHAIN + "$incgen_single $header > $out"
+)
+
+n.rule(
     "mod_cc",
     command = "$mod_cc -MMD -MT $out -MF $out.d $mod_cxxflags $flags -c $in -o $out",
     depfile = "$out.d",
@@ -153,6 +160,16 @@ def incgen(source: str, dirs: List[str], iteration: int = 0):
         variables={
             "dirs" : ' '.join(dirs),
             "iteration" : str(iteration),
+        }
+    )
+
+def incgen_single(source, header: str):
+    n.build(
+        source,
+        rule="incgen_single",
+        inputs=[],
+        variables={
+            "header" : header,
         }
     )
 
@@ -186,6 +203,22 @@ def compile_regions(dest: str, source: str, includes: List[str], defines: List[s
         compile(dest.format(region=region), source, includes, defines + [f"SPM_{region.upper()}"],
                 decomp)
 
+def find_headers(dirname: str, base=None) -> List[str]:
+    """Returns a list of all headers in a folder recursively"""
+
+    if base is None:
+        base = dirname
+
+    ret = []
+    for name in os.listdir(dirname):
+        path = os.path.join(dirname, name)
+        if os.path.isdir(path):
+            ret.extend(find_headers(path, base))
+        elif name.endswith('.h'):
+            ret.append(path[len(base)+1:])
+
+    return ret
+
 # Test the headers in the modding setups
 incgen("$mod_source", MOD_INCLUDES)
 compile_regions(os.path.join("$builddir", "mod_{region}.o"), "$mod_source",
@@ -199,14 +232,23 @@ if args.decomp:
     compile_regions(os.path.join("$builddir", "decomp_{region}.o"), "$decomp_source",
                     DECOMP_INCLUDES, ["DECOMP"], True)
 
+# Currently, there aren't enough differences to be worth testing more than eu0 stl mod here
+
 # Test shuffled include orders if requested
-# Currently, there aren't enough region differences to be worth testing more than eu0 here,
-# nor enough differences to be testing decomp & non-stl mod
 for i in range(1, 1 + args.shuffle):
     source = os.path.join("$builddir", f"shuffle_{args.seed}_{i}.cpp")
     incgen(source, MOD_INCLUDES, i)
     compile(os.path.join("$builddir", f"shuffle_{args.seed}_{i}.o"), source, MOD_INCLUDES,
             ["USE_STL", "SPM_EU0"])
+
+# Test individual headers if requested
+if args.individual:
+    for header in find_headers("include"):
+        name = header.removeprefix("include/").removesuffix(".h")
+        source = os.path.join("$builddir", "individual", f"{name}.c")
+        incgen_single(source, header)
+        compile(os.path.join("$builddir", "individual", f"{name}.o"), source, MOD_INCLUDES,
+                ["USE_STL", "SPM_EU0"])
 
 with open("build.ninja", 'w') as f:
     f.write(outbuf.getvalue())
