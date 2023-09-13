@@ -22,8 +22,6 @@ n = Writer(outbuf)
 
 n.variable("builddir", "build")
 n.variable("incdir", "include")
-n.variable("mod_incdir", "mod")
-n.variable("decomp_incdir", "decomp")
 
 n.variable("seed", args.seed)
 
@@ -84,6 +82,7 @@ DECOMP_INCLUDES = [
 ]
 n.variable("decomp", args.decomp)
 n.variable("decomp_cc", os.path.join("$decomp", "tools", "4199_60831", "mwcceppc.exe"))
+n.variable("decomp_incdir", "decomp")
 n.variable("decomp_source", os.path.join("$builddir", "decomp.c"))
 n.variable(
     "decomp_cxxflags",
