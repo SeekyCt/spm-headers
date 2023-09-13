@@ -9,6 +9,8 @@ from ninja_syntax import Writer
 
 parser = ArgumentParser()
 parser.add_argument("--decomp", type=str, help="Decomp path")
+parser.add_argument("--seed", type=int, default=1, help="Shuffling seed")
+parser.add_argument("--shuffle", type=int, default=0, help="Number of randomised orders to test")
 args = parser.parse_args()
 
 outbuf = StringIO()
@@ -23,6 +25,8 @@ n.variable("incdir", "include")
 n.variable("mod_incdir", "mod")
 n.variable("decomp_incdir", "decomp")
 
+n.variable("seed", args.seed)
+
 n.variable("incgen", f"{PYTHON} tools/incgen.py")
 
 n.variable("devkitppc", os.environ.get("DEVKITPPC"))
@@ -30,7 +34,6 @@ n.variable("cpp", os.path.join("$devkitppc", "bin", "powerpc-eabi-cpp"))
 
 MOD_INCLUDES = ["$incdir", "$mod_incdir"]
 n.variable("mod_cc", os.path.join("$devkitppc", "bin", "powerpc-eabi-g++"))
-n.variable("mod_source", os.path.join("$builddir", "mod.cpp"))
 n.variable("mod_incdir", "mod")
 n.variable(
     "mod_machdep",
@@ -117,7 +120,7 @@ ALLOW_CHAIN = "cmd /c " if os.name == "nt" else ""
 
 n.rule(
     "incgen",
-    ALLOW_CHAIN + "$incgen $dirs > $out"
+    ALLOW_CHAIN + "$incgen $dirs -s $seed -i $iteration > $out"
 )
 
 n.rule(
@@ -142,13 +145,14 @@ if args.decomp:
 # Builds #
 ##########
 
-def incgen(source: str, dirs: List[str]):
+def incgen(source: str, dirs: List[str], iteration: int = 0):
     n.build(
         source,
         rule="incgen",
         inputs=[],
         variables={
             "dirs" : ' '.join(dirs),
+            "iteration" : str(iteration),
         }
     )
 
@@ -182,10 +186,13 @@ def compile_regions(dest: str, source: str, includes: List[str], defines: List[s
         compile(dest.format(region=region), source, includes, defines + [f"SPM_{region.upper()}"],
                 decomp)
 
-
-incgen("$mod_source", MOD_INCLUDES)
-compile_regions(os.path.join("$builddir", "mod_{region}.o"), "$mod_source", MOD_INCLUDES, ["USE_STL"])
-compile_regions(os.path.join("$builddir", "old_mod_{region}.o"), "$mod_source", MOD_INCLUDES, [])
+for i in range(args.shuffle):
+    source = os.path.join("$builddir", f"mod_{i}.cpp")
+    incgen(source, MOD_INCLUDES, i)
+    compile_regions(os.path.join("$builddir", f"mod_{{region}}_{i}.o"), source,
+                    MOD_INCLUDES, ["USE_STL"])
+    compile_regions(os.path.join("$builddir", f"old_mod_{{region}}_{i}.o"), source,
+                    MOD_INCLUDES, [])
 
 if args.decomp:
     incgen("$decomp_source", DECOMP_INCLUDES)
