@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 from io import StringIO
 import os
-from sys import executable as PYTHON
+from sys import executable as PYTHON, platform
 from typing import List
 
 from ninja_syntax import Writer
@@ -11,10 +11,11 @@ parser = ArgumentParser()
 parser.add_argument("tests", type=str, nargs="*", help="Tests to run" \
                     "(mod_ctx, old_mod_ctx, decomp_ctx, mod_ctx_shuffle, test_mod_individual)")
 parser.add_argument("--regions", type=str, nargs="+", help="Regions to test")
-parser.add_argument("--codewarrior", type=str, help="mwcceppc.exe path")
 parser.add_argument("--seed", type=int, default=1, help="Shuffling seed")
 parser.add_argument("--shuffle", type=int, default=50, help="Number of randomised orders to test")
 parser.add_argument("--individual", action="store_true", help="Test every header on its own")
+parser.add_argument("--codewarrior", type=str, help="mwcceppc.exe path")
+parser.add_argument("-w", "--wine", type=str, help="Wine override (ignored on Windows)")
 args = parser.parse_args()
 
 outbuf = StringIO()
@@ -85,7 +86,17 @@ DECOMP_INCLUDES = [
     "$incdir",
     "$decomp_incdir",
 ]
-n.variable("decomp_cc", args.codewarrior.replace("/", os.sep) if args.codewarrior else None)
+if args.codewarrior:
+    cw = args.codewarrior.replace("/", os.sep)
+    if args.wine:
+        wine = args.wine
+    else:
+        wine = "wine"
+    if platform != "win32":
+        cw = f"{wine} {cw}"
+else:
+    cw = None
+n.variable("decomp_cc", cw)
 n.variable("decomp_incdir", "decomp")
 n.variable("decomp_source", os.path.join("$builddir", "decomp.c"))
 n.variable(
