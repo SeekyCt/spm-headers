@@ -8,9 +8,12 @@ from ninja_syntax import Writer
 
 
 parser = ArgumentParser()
+parser.add_argument("tests", type=str, nargs="*", help="Tests to run" \
+                    "(mod_ctx, old_mod_ctx, decomp_ctx, mod_ctx_shuffle, test_mod_individual)")
+parser.add_argument("--regions", type=str, nargs="+", help="Regions to test")
 parser.add_argument("--codewarrior", type=str, help="mwcceppc.exe path")
 parser.add_argument("--seed", type=int, default=1, help="Shuffling seed")
-parser.add_argument("--shuffle", type=int, default=0, help="Number of randomised orders to test")
+parser.add_argument("--shuffle", type=int, default=50, help="Number of randomised orders to test")
 parser.add_argument("--individual", action="store_true", help="Test every header on its own")
 args = parser.parse_args()
 
@@ -194,9 +197,9 @@ def compile(dest: str, source: str, includes: List[str], defines: List[str], dec
             }
         )
 
-def compile_regions(dest: str, source: str, includes: List[str], defines: List[str],
-                    decomp: bool = False):
-    for region in REGIONS:
+def compile_regions(dest: str, source: str, regions: List[str], includes: List[str],
+                    defines: List[str], decomp: bool = False):
+    for region in regions:
         compile(dest.format(region=region), source, includes, defines + [f"SPM_{region.upper()}"],
                 decomp)
 
@@ -216,36 +219,64 @@ def find_headers(dirname: str, base=None) -> List[str]:
 
     return ret
 
-# Test the headers in the modding setups
-incgen("$mod_source", MOD_INCLUDES)
-compile_regions(os.path.join("$builddir", "mod_{region}.o"), "$mod_source",
-                MOD_INCLUDES, ["USE_STL"])
-compile_regions(os.path.join("$builddir", "old_mod_{region}.o"), "$mod_source",
-                MOD_INCLUDES, [])
+# Test the headers in the spm-utils modding setup
+def test_mod_ctx(regions: List[str]):
+    compile_regions(os.path.join("$builddir", "{region}", "mod.o"), "$mod_source", regions,
+                    MOD_INCLUDES, ["USE_STL"])
 
-# If possible, test the headers in the decomp setup
-if args.codewarrior:
-    incgen("$decomp_source", DECOMP_INCLUDES)
-    compile_regions(os.path.join("$builddir", "decomp_{region}.o"), "$decomp_source",
+# Test the headers in the old modding setup
+def test_old_mod_ctx(regions: List[str]):
+    compile_regions(os.path.join("$builddir", "{region}", "old_mod.o"), "$mod_source", regions,
+                    MOD_INCLUDES, [])
+
+# Test the headers in the decomp setup
+def test_decomp_ctx(regions: List[str]):
+    assert args.codewarrior, "Error: decomp_ctx test requires --codewarrior"
+    compile_regions(os.path.join("$builddir", "{region}", "decomp.o"), "$decomp_source", regions,
                     DECOMP_INCLUDES, ["DECOMP", "SKIP_PPCDIS"], True)
 
-# Currently, there aren't enough differences to be worth testing more than eu0 stl mod here
+# Test shuffled include orders
+def test_mod_ctx_shuffle(regions: List[str]):
+    assert args.shuffle, "mod_ctx_shuffle test requires --shuffle"
+    for i in range(1, 1 + args.shuffle):
+        source = os.path.join("$builddir", f"shuffle_{args.seed}", f"{i}.cpp")
+        incgen(source, MOD_INCLUDES, i)
+        compile_regions(os.path.join("$builddir", "{region}", f"shuffle_mod_{args.seed}_{i}.o"),
+                        source, regions, MOD_INCLUDES, ["USE_STL"])
 
-# Test shuffled include orders if requested
-for i in range(1, 1 + args.shuffle):
-    source = os.path.join("$builddir", f"shuffle_{args.seed}_{i}.cpp")
-    incgen(source, MOD_INCLUDES, i)
-    compile(os.path.join("$builddir", f"shuffle_{args.seed}_{i}.o"), source, MOD_INCLUDES,
-            ["USE_STL", "SPM_EU0"])
-
-# Test individual headers if requested
-if args.individual:
+# Test individual headers
+def test_mod_individual(regions: List[str]):
     for header in find_headers("include"):
         name = header.removeprefix("include/").removesuffix(".h")
         source = os.path.join("$builddir", "individual", f"{name}.c")
         incgen_single(source, header)
-        compile(os.path.join("$builddir", "individual", f"{name}.o"), source, MOD_INCLUDES,
-                ["USE_STL", "SPM_EU0"])
+        compile_regions(os.path.join("$builddir", "{region}", "individual", f"{name}.o"), source,
+                        regions, MOD_INCLUDES, ["USE_STL", "SPM_EU0"])
+
+test_fns = {
+    "mod_ctx" : test_mod_ctx,
+    "old_mod_ctx" : test_old_mod_ctx,
+    "decomp_ctx" : test_decomp_ctx,
+    "mod_ctx_shuffle" : test_mod_ctx_shuffle,
+    "test_mod_individual" : test_mod_individual,
+}
+
+incgen("$mod_source", MOD_INCLUDES)
+default_tests = ["mod_ctx", "old_mod_ctx"]
+
+if args.codewarrior:
+    incgen("$decomp_source", DECOMP_INCLUDES)
+    default_tests.append("decomp_ctx")
+
+# Add requested tests
+tests = set(args.tests if args.tests else default_tests)
+regions = args.regions if args.regions else REGIONS
+for test in tests:
+    if test not in test_fns:
+        assert False, f"Error: unknown test {test}"
+    else:
+        test_fns[test](regions)
+
 
 with open("build.ninja", 'w') as f:
     f.write(outbuf.getvalue())
