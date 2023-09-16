@@ -8,7 +8,7 @@ from ninja_syntax import Writer
 
 
 parser = ArgumentParser()
-parser.add_argument("--decomp", type=str, help="Decomp path")
+parser.add_argument("--codewarrior", type=str, help="mwcceppc.exe path")
 parser.add_argument("--seed", type=int, default=1, help="Shuffling seed")
 parser.add_argument("--shuffle", type=int, default=0, help="Number of randomised orders to test")
 parser.add_argument("--individual", action="store_true", help="Test every header on its own")
@@ -81,10 +81,8 @@ n.variable(
 DECOMP_INCLUDES = [
     "$incdir",
     "$decomp_incdir",
-    os.path.join("$decomp", "tools", "ppcdis", "include"),
 ]
-n.variable("decomp", args.decomp)
-n.variable("decomp_cc", os.path.join("$decomp", "tools", "4199_60831", "mwcceppc.exe"))
+n.variable("decomp_cc", args.codewarrior.replace("/", os.sep) if args.codewarrior else None)
 n.variable("decomp_incdir", "decomp")
 n.variable("decomp_source", os.path.join("$builddir", "decomp.c"))
 n.variable(
@@ -138,15 +136,14 @@ n.rule(
     description = "Mod CC $out",
 )
 
-if args.decomp:
-    n.rule(
-        "decomp_cc",
-        command = ALLOW_CHAIN + "$cpp -M $in -MF $out.d $cppflags && " \
-                                "$decomp_cc $decomp_cflags $flags -c $in -o $out",
-        description = "Decomp CC $in",
-        deps = "gcc",
-        depfile = "$out.d"
-    )
+n.rule(
+    "decomp_cc",
+    command = ALLOW_CHAIN + "$cpp -M $in -MF $out.d $cppflags && " \
+                            "$decomp_cc $decomp_cflags $flags -c $in -o $out",
+    description = "Decomp CC $in",
+    deps = "gcc",
+    depfile = "$out.d"
+)
 
 ##########
 # Builds #
@@ -227,10 +224,10 @@ compile_regions(os.path.join("$builddir", "old_mod_{region}.o"), "$mod_source",
                 MOD_INCLUDES, [])
 
 # If possible, test the headers in the decomp setup
-if args.decomp:
+if args.codewarrior:
     incgen("$decomp_source", DECOMP_INCLUDES)
     compile_regions(os.path.join("$builddir", "decomp_{region}.o"), "$decomp_source",
-                    DECOMP_INCLUDES, ["DECOMP"], True)
+                    DECOMP_INCLUDES, ["DECOMP", "SKIP_PPCDIS"], True)
 
 # Currently, there aren't enough differences to be worth testing more than eu0 stl mod here
 
