@@ -617,7 +617,7 @@
 
 // new to SPM-RPG-Battles V2
 800DFB78:evt_ac_entry
-800DFBD0:evt_ac_name_to_ptr
+800DFBD0:evt_ac_return_results
 800DFC7C:evt_ac_delete
 
 // new to rld3 v1
