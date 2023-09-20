@@ -191,6 +191,11 @@
 8050ce30:evt_debug_put_reg_str
 // more
 
+// evt_ac.c
+800df9a8:evt_ac_entry
+800dfa00:evt_ac_name_to_ptr
+800dfaac:evt_ac_delete
+
 // evt_door.c
 // text
 800e11b0:evtDoorGetActiveDoorDesc
@@ -743,7 +748,7 @@
     // sbss
 805aec24:PauseFlag
 805aeca0:executing
-// more    
+// more
 // dvd_broadway.c
 805ae2d8:devDiStr
 // more
