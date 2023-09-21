@@ -109,6 +109,9 @@ void acMain();
 */
 AcEntry * acEntry(s32 type);
 
+/*
+  Returns a value between 12 and 7 depending on how well the player did in the minigame
+*/
 s32 acReturnResults(const char * name);
 
 /*
