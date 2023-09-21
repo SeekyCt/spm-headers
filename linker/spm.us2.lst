@@ -619,6 +619,10 @@
 800DFAFC:evt_ac_entry
 800DFB54:evt_ac_return_results
 800DFC00:evt_ac_delete
+8003ECCC:acMain
+8003F210:acEntry
+8003F460:acReturnResults
+8003F468:acDelete
 
 // new to rld3 v1
 8025C950:strcat

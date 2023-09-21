@@ -46,7 +46,7 @@ void dispReInit();
 /*
     Register a function to be displayed this frame
 */
-void dispEntry(s8 cameraId, s8 renderMode, f32 z, DispCallback * callback, void * callbackParam);
+void dispEntry(f32 z, s8 cameraId, s8 renderMode, DispCallback * callback, void * callbackParam);
 
 void dispSetCurScissor(s32 scissorNo);
 void dispSetScissor(s32 id, u32 field_0, u32 field_4, u32 field_8, u32 field_c);
