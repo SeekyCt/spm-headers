@@ -52,14 +52,23 @@ typedef double f64;
 #ifdef USE_STL
     #include <cstddef>
     static_assert(sizeof(size_t) == 4, "Expected 32-bit size_t");
+    static_assert(sizeof(ptrdiff_t) == 4, "Expected 32-bit ptrdiff_t");
+
+    #include <cstdint>
+    static_assert(sizeof(intptr_t) == 4, "Expected 32-bit intptr_t");
+    static_assert(sizeof(uintptr_t) == 4, "Expected 32-bit uintptr_t");
 #else
     typedef u32 size_t;
+    typedef s32 ptrdiff_t;
     #define NULL 0
     #if HAS_BUILTIN(__builtin_offsetof)
         #define offsetof __builtin_offsetof
     #else
         #define offsetof(type, member) ((u32)&((type *)0)->member)
     #endif
+
+    typedef s32 intptr_t;
+    typedef u32 uintptr_t;
 #endif
 
 typedef s32 BOOL;

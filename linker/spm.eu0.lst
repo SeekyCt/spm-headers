@@ -453,6 +453,7 @@
 // more
 
 // seq_title.c
+8017b250:seq_titleMain
 8017bc4c:getNextDanMapname
 // more
 
@@ -851,6 +852,7 @@
 80298268:IOS_Open
 80298448:IOS_Close
 802985f0:IOS_Read
+802987f8:IOS_Write
 80298b18:IOS_Ioctl
 80298e68:IOS_Ioctlv
 80299360:iosAllocAligned
