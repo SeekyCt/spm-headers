@@ -633,3 +633,14 @@
 8026F338:Run
 8056d570:SaveStart
 8056d574:SaveEnd
+
+// new to rel loader template
+8014CCF8:pouchSetAttack
+8014CD2C:pouchGetAttack
+8014CD3C:pouchAddAttack
+8014CD78:pouchSetHp
+8014CE18:pouchSetMaxHp
+8014CE4C:pouchGetMaxHp
+8014CEAC:pouchSetCoin
+8014CEE0:pouchGetCoin
+8014CEF0:pouchAddCoin

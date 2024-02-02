@@ -400,10 +400,19 @@
 8014f080:pouchGetPixlInfo
 // text
 8014c088:pouchGetPtr
+8014d394:pouchSetAttack
+8014d3c8:pouchGetAttack
+8014d3d8:pouchAddAttack
+8014d414:pouchSetHp
 8014d458:pouchGetHp
 8014d468:pouchAddHp
+8014d4b4:pouchSetMaxHp
+8014d4e8:pouchGetMaxHp
 8014d4f8:pouchGetXp
 8014d508:pouchAddXp
+8014d548:pouchSetCoin
+8014d57c:pouchGetCoin
+8014d58c:pouchAddCoin
 8014d5f8:pouchAddItem
 8014dbf4:pouchCheckHaveItem
 8014df4c:pouchRemoveItem
