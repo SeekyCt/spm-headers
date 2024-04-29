@@ -337,6 +337,7 @@
 800fe92c:func_800fe92c
 800ffbd8:evt_npc_walk_to
 801004c0:evt_npc_jump_to
+80102574:evt_npc_glide_to
 80102EB8:evt_npc_stats_set_up
 80102f5c:evt_npc_entry
 80103054:func_80103054
