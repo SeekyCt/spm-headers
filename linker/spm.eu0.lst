@@ -197,6 +197,7 @@
 800d8df4:evtEntryType
 800d9060:evtChildEntry
 800d9370:evtBrotherEntry
+800d9944:evtDelete
 800d9b88:evtCheckID
 // more
 
@@ -331,6 +332,9 @@
 800fd0c4:evt_msg_fmt_str
 // more
 // evt_npc.c
+80102c7c:evt_npc_get_hp
+80102d3c:evt_npc_get_max_hp
+80102dfc:evt_npc_set_hp
 800fe124:evt_npc_get_position
 800fe21c:evt_npc_set_position
 800fe668:evt_npc_rotate
