@@ -58,9 +58,9 @@ UNKNOWN_FUNCTION(func_80101f48);
 UNKNOWN_FUNCTION(func_80102424);
 EVT_UNKNOWN_USER_FUNC(evt_npc_glide_to)
 EVT_UNKNOWN_USER_FUNC(func_80102bf8)
-EVT_UNKNOWN_USER_FUNC(evt_npc_get_hp);
+EVT_UNKNOWN_USER_FUNC(evt_npc_get_hp)
 UNKNOWN_FUNCTION(evt_npc_get_max_hp);
-EVT_UNKNOWN_USER_FUNC(evt_npc_set_hp);
+EVT_UNKNOWN_USER_FUNC(evt_npc_set_hp)
 
 // evt_npc_delete(const char * name)
 EVT_DECLARE_USER_FUNC(evt_npc_delete, 1)
@@ -309,5 +309,3 @@ UNKNOWN_FUNCTION(func_8010c2e0);
 UNKNOWN_FUNCTION(func_8010c35c);
 UNKNOWN_FUNCTION(func_8010c3e8);
 UNKNOWN_FUNCTION(func_8010c440);
-
-CPP_WRAPPER_END()
