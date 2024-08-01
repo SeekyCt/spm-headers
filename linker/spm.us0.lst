@@ -3,8 +3,6 @@
 800030c8:firstRel
 800030cc:lastRel
 
-8041BC28:superDimentioHeadDefenses
-8041BC40:superDimentioBodyDefenses
 // Automatically generated from spm.eu0.lst
 80004000:memcpy
 80004104:memset
@@ -655,3 +653,5 @@
 8010229C:evt_npc_get_hp
 8010235C:evt_npc_get_max_hp
 800d9b14:evtDelete
+8041BC28:superDimentioHeadDefenses
+8041BC40:superDimentioBodyDefenses
