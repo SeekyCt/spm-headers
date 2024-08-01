@@ -5,8 +5,9 @@
 
 CPP_WRAPPER(spm::npc_dimeen_l)
 
+USING(spm::npcdrv::NPCDefense)
 
-extern spm::npcdrv::NPCDefense superDimentioHeadDefenses;
-extern spm::npcdrv::NPCDefense superDimentioBodyDefenses;
+extern NPCDefense superDimentioHeadDefenses;
+extern NPCDefense superDimentioBodyDefenses;
 
 CPP_WRAPPER_END()
