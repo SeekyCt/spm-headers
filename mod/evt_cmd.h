@@ -6,15 +6,17 @@
 #include <spm/evtmgr.h>
 #include <spm/evtmgr_cmd.h>
 
+USING(spm::evtmgr::EvtEntry)
+
 #define EVT_DECLARE_USER_FUNC(name, parameter_count) \
     constexpr s32 name##_parameter_count = (parameter_count); \
-    s32 name(spm::evtmgr::EvtEntry * evt, bool isFirstCall);
+    s32 name(EvtEntry * evt, bool isFirstCall);
 
 #define EVT_UNKNOWN_USER_FUNC(name) \
     EVT_DECLARE_USER_FUNC(name, -1)
 
 #define EVT_DEFINE_USER_FUNC(name) \
-    s32 name(spm::evtmgr::EvtEntry * evt, bool isFirstCall)
+    s32 name(EvtEntry * evt, bool isFirstCall)
 
 #define EVT_DECLARE(name) \
     extern const spm::evtmgr::EvtScriptCode name[];
