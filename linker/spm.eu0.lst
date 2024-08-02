@@ -6,8 +6,6 @@
 // more
 
 /* Dol */
-8045B9E0:superDimentioHeadDefenses
-8045B9F8:superDimentioBodyDefenses
 
 // Runtime.PPCEABI.H.a
 // __mem.c
@@ -633,6 +631,12 @@
 8043bf30:npcTribes
 80449888:npcEnemyTemplates
 // more
+
+// npc_dimeen_l.c
+// data
+8045B9E0:superDimentioHeadDefenses
+8045B9F8:superDimentioBodyDefenses
+//more
 
 // wpadmgr.c
 80237688:wpadGetButtonsHeld
