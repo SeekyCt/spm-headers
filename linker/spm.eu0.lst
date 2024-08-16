@@ -191,6 +191,7 @@
 // evtmgr.c
 800d87e4:evtGetWork
 800d890c:make_jump_table
+800D8B2C:evtmgrReInit
 800d8b88:evtEntry
 800d8df4:evtEntryType
 800d9060:evtChildEntry
