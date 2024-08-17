@@ -410,6 +410,7 @@
 // mario_motion.c
 801433dc:marioChgMot
 80146f0c:func_80146f0c
+80426bb8:marioMotTbl 
 // more
 
 // mario_pouch.c
