@@ -2,8 +2,10 @@
 
 #include <common.h>
 #include <evt_cmd.h>
-
+#include <spm/evtmgr.h>
 CPP_WRAPPER(spm::machi)
+
+USING(spm::evtmgr::EvtScriptCode)
 
 typedef struct
 {
@@ -12,6 +14,8 @@ typedef struct
 /* 0x08 */ u8 unknown_0x8[0x2c - 0x8];
 } ElvDesc;
 SIZE_ASSERT(ElvDesc, 0x2c)
+
+EVT_DECLARE(saffronCookingScript);
 
 // ...
 
