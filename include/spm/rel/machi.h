@@ -15,7 +15,7 @@ typedef struct
 } ElvDesc;
 SIZE_ASSERT(ElvDesc, 0x2c)
 
-EVT_DECLARE(saffronCookingScript);
+EVT_DECLARE(saffronCookingScript)
 
 // ...
 
