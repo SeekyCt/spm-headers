@@ -39,7 +39,7 @@ typedef struct
 {
 /* 0x00 */ u16 id;
 /* 0x02 */ s16 mode;
-/* 0x04 */ _NPCPart * unknown_part;
+/* 0x04 */ s32 minimum_damage;
 /* 0x08 */ Vec3 position;
 /* 0x14 */ u32 flag14; // assigned to flag2c in NPCPart
 /* 0x18 */ u32 flag18; // assigned to flag30 in NPCPart
@@ -100,7 +100,7 @@ typedef struct _NPCPart
 {
 /* 0x000 */ u16 id;
 /* 0x002 */ s16 mode;
-/* 0x004 */ _NPCPart * unknown_part;
+/* 0x004 */ s32 minimum_damage;
 /* 0x008 */ Vec3 position;
 /* 0x014 */ Vec3 ownerPosLastAnimChange;
 /* 0x030 */ Vec3 positionDelta;
