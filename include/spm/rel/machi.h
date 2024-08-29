@@ -15,8 +15,6 @@ typedef struct
 } ElvDesc;
 SIZE_ASSERT(ElvDesc, 0x2c)
 
-EVT_DECLARE(saffronCookingScript)
-
 // ...
 
 // evt_machi_set_elv_descs(ElvDesc * descs, s32 count)

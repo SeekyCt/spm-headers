@@ -394,6 +394,7 @@
 
 // evt_shop.c
 80111d1c:evt_shop_set_defs
+804220D0:saffronCookingScript
 // more
 
 // mario.c
@@ -907,7 +908,6 @@
 //   80f64340 6 .bss
 
 // machi.c
-804220D0:saffronCookingScript
 1,1,52e4:evt_machi_set_elv_descs
 // more
 
