@@ -35,6 +35,22 @@ typedef struct _MEMEXPHeap
 } MEMEXPHeap;
 SIZE_ASSERT(MEMEXPHeap, 0x50)
 
+typedef struct
+{
+/* 0x0 */ void * alloc;
+/* 0x4 */ void * free;
+} MEMAllocatorFunc;
+SIZE_ASSERT(MEMAllocatorFunc, 8)
+
+typedef struct
+{
+/* 0x0 */ MEMAllocatorFunc * func;
+/* 0x4 */ void * heap;
+/* 0x8 */ u32 heapP0;
+/* 0x8 */ u32 heapP1;
+} MEMAllocator;
+SIZE_ASSERT(MEMAllocator, 0x10)
+
 #define MEM_FLAG_FILL_0 (1 << 0) // initialise allocated memory as 0
 #define MEM_FLAG_THREAD_CONTROL (1 << 2) // use mutexes for access when handling heap
 
@@ -63,9 +79,9 @@ UNKNOWN_FUNCTION(AllocatorAllocForExpHeap_);
 UNKNOWN_FUNCTION(AllocatorFreeForExpHeap_);
 UNKNOWN_FUNCTION(AllocatorAllocForFrmHeap_);
 UNKNOWN_FUNCTION(AllocatorFreeForFrmHeap_);
-UNKNOWN_FUNCTION(MEMAllocFromAllocator);
+void * MEMAllocFromAllocator(MEMAllocator * allocator, size_t size);
 UNKNOWN_FUNCTION(MEMFreeToAllocator);
-UNKNOWN_FUNCTION(MEMInitAllocatorForExpHeap);
+void MEMInitAllocatorForExpHeap(MEMAllocator * allocator, MEMHeapHandle heap, u32 alignment);
 UNKNOWN_FUNCTION(MEMInitAllocatorForFrmHeap);
 UNKNOWN_FUNCTION(MEMInitList);
 UNKNOWN_FUNCTION(MEMAppendListObject);

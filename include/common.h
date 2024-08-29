@@ -1,12 +1,7 @@
 #pragma once
 
-#if (defined DECOMP) && !(defined SKIP_PPCDIS)
-// Decomp should include ppcdis.h in all files
-#include <ppcdis.h>
-#else
-// Unknown function is useful outside of decomp too
+// Unknown function declaration
 #define UNKNOWN_FUNCTION(name) void name(void)
-#endif
 
 // Intellisense doesn't like asm compiler extensions
 #ifdef __INTELLISENSE__ 
@@ -48,6 +43,13 @@
     #define DECOMP_STATIC(expr)
 #else
     #define DECOMP_STATIC(expr) extern expr;
+#endif
+
+// Macro for something that is deadstripped outside of decomp
+#ifdef DECOMP
+    #define STRIPPED(expr) expr;
+#else
+    #define STRIPPED(expr)
 #endif
 
 // Use extern "C" in C++, use namespacing in mods
