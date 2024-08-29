@@ -43,7 +43,7 @@ typedef struct
 /* 0x08 */ Vec3 position;
 /* 0x14 */ u32 flag14; // assigned to flag2c in NPCPart
 /* 0x18 */ u32 flag18; // assigned to flag30 in NPCPart
-/* 0x1c */ u8 unknown_0x4[0x28 - 0x1c];
+/* 0x1c */ u8 unknown_0x1c[0x28 - 0x1c];
 /* 0x28 */ NPCDefense * defenses;
 /* 0x2C */ Unk * unknown_0x2c;
 /* 0x30 */ NPCPartUpdateFunc * updateFunc;
@@ -103,7 +103,7 @@ typedef struct _NPCPart
 /* 0x004 */ s32 minimum_damage;
 /* 0x008 */ Vec3 position;
 /* 0x014 */ Vec3 ownerPosLastAnimChange;
-/* 0x030 */ Vec3 positionDelta;
+/* 0x020 */ Vec3 positionDelta;
 /* 0x02C */ u32 flag2c;
 /* 0x030 */ u32 flag30;
 /* 0x034 */ u8 unknown_0x34[0x378 - 0x34];

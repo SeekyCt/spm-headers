@@ -2,10 +2,7 @@
 
 #include <common.h>
 #include <evt_cmd.h>
-#include <spm/evtmgr.h>
 CPP_WRAPPER(spm::machi)
-
-USING(spm::evtmgr::EvtScriptCode)
 
 typedef struct
 {
