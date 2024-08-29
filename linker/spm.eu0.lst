@@ -191,6 +191,7 @@
 // evtmgr.c
 800d87e4:evtGetWork
 800d890c:make_jump_table
+800D8B2C:evtmgrReInit
 800d8b88:evtEntry
 800d8df4:evtEntryType
 800d9060:evtChildEntry
@@ -393,6 +394,7 @@
 
 // evt_shop.c
 80111d1c:evt_shop_set_defs
+804220D0:saffronCookingScript
 // more
 
 // mario.c
@@ -409,6 +411,7 @@
 // mario_motion.c
 801433dc:marioChgMot
 80146f0c:func_80146f0c
+80426bb8:marioMotTbl
 // more
 
 // mario_pouch.c

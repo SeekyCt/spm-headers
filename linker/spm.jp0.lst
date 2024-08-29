@@ -635,7 +635,7 @@
 80542e90:SaveStart
 80542e94:SaveEnd
 
-// new to SPM-Hard-Mode
+// new to SPM-Hard-Mode: Rubies and Magic
 8014C8A0:pouchSetAttack
 8014C8D4:pouchGetAttack
 8014C8E4:pouchAddAttack
@@ -656,3 +656,6 @@
 800D9B14:evtDelete
 803F0E88:superDimentioHeadDefenses
 803F0EA0:superDimentioBodyDefenses
+800D8CFC:evtmgrReInit
+803BC458:marioMotTbl
+803B7970:saffronCookingScript
