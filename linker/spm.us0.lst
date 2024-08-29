@@ -576,7 +576,7 @@
 80056948:cam3dMain
 804C8580:camPtrTbl
 801797CC:seq_mapChangeMain
-800250EC:getItemUseEvt
+80025074:getItemUseEvt
 8002F240:msgUnLoad
 8002F014:msgLoad
 1,1,27204:rpg_screen_draw
@@ -657,4 +657,4 @@
 8041BC40:superDimentioBodyDefenses
 800d8cfc:evtmgrReInit
 803E71D8:marioMotTbl
-803E26F0:saffronCookingScript 
+803E26F0:saffronCookingScript
