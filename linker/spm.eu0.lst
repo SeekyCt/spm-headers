@@ -446,6 +446,10 @@
 // bss
 80511a28:mario_pouch_work
 
+// mario_status.c
+80154f3c:marioStatusApplyStatuses
+// more
+
 // seq_logo.c
 80179140:seq_logoMain
 // more

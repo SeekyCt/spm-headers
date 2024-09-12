@@ -657,4 +657,5 @@
 8041D270:superDimentioBodyDefenses
 800D8C80:evtmgrReInit
 803E8718:marioMotTbl
-803E3C30:saffronCookingScript 
+803E3C30:saffronCookingScript
+804D0428:marioStatusApplyStatuses

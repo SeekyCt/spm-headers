@@ -658,3 +658,4 @@
 800d8cfc:evtmgrReInit
 803E71D8:marioMotTbl
 803E26F0:saffronCookingScript
+804CEA28:marioStatusApplyStatuses
