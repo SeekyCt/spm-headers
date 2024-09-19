@@ -657,7 +657,7 @@
 8041D270:superDimentioBodyDefenses
 800D8C80:evtmgrReInit
 803E8718:marioMotTbl
-803E3C30:saffronCookingScript 
+803E3C30:saffronCookingScript
 
 // 2023-09-02
 802960A0:IOS_OpenAsync
@@ -672,7 +672,7 @@
 80296DB8:IOS_Ioctlv
 802970AC:iosAlloc
 1,5,18fa8:mac_02_init_evt
-8056D450:spm_errno
+8056D450:errno
 8027564C:OSCreateThread
 80275610:OSYieldThread
 80275CB4:OSResumeThread

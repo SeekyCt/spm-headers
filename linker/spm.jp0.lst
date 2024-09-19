@@ -673,7 +673,7 @@
 80296418:IOS_IoctlvAsync
 802964FC:IOS_Ioctlv
 802967F0:iosAlloc
-80542D70:spm_errno
+80542D70:errno
 80274E50:OSCreateThread
 80274E14:OSYieldThread
 80275378:OSResumeThread
