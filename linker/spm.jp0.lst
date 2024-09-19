@@ -659,3 +659,22 @@
 800D8CFC:evtmgrReInit
 803BC458:marioMotTbl
 803B7970:saffronCookingScript
+804A3D28:marioStatusApplyStatuses
+
+// 2023-09-02
+802957E4:IOS_OpenAsync
+80295A1C:IOS_CloseAsync
+80295B84:IOS_ReadAsync
+80295D8C:IOS_WriteAsync
+80295E8C:IOS_Write
+80295F94:IOS_SeekAsync
+802966C0:iosCreateHeap
+80296074:IOS_IoctlAsync
+80296418:IOS_IoctlvAsync
+802964FC:IOS_Ioctlv
+802967F0:iosAlloc
+80542D70:errno
+80274E50:OSCreateThread
+80274E14:OSYieldThread
+80275378:OSResumeThread
+802580F0:memcmp
