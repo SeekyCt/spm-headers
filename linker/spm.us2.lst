@@ -582,7 +582,7 @@
 8002F1E0:msgUnLoad
 8002EFB4:msgLoad
 1,1,31620:evt_an_init_tpl
-80107C38:evt_npc_get_position
+800FDBA8:evt_npc_get_position
 1,5,a8ccc:mr_l_appear_evt
 1,5,a9648:brobot_appear_evt
 8023950C:spsndSFXOn
