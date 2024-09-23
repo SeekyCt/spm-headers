@@ -658,6 +658,7 @@
 800D8C80:evtmgrReInit
 803E8718:marioMotTbl
 803E3C30:saffronCookingScript
+803C1070:default_item_use_evt
 
 // 2023-09-02
 802960A0:IOS_OpenAsync

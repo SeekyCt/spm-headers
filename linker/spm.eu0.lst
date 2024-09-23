@@ -128,6 +128,7 @@
 // item_event_data.c
 80025164:getItemUseEvt
 803fbc10:itemEventDataTable
+803ff190:default_item_use_evt
 // more
 
 // mapdrv.c

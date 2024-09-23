@@ -660,6 +660,7 @@
 803BC458:marioMotTbl
 803B7970:saffronCookingScript
 804A3D28:marioStatusApplyStatuses
+80394DF0:default_item_use_evt
 
 // 2023-09-02
 802957E4:IOS_OpenAsync
