@@ -333,6 +333,7 @@
 800fd0c4:evt_msg_fmt_str
 // more
 // evt_npc.c
+800ff8f8:func_800ff8f8
 80102c7c:evt_npc_get_hp
 80102d3c:evt_npc_get_max_hp
 80102dfc:evt_npc_set_hp
@@ -341,6 +342,7 @@
 800fe668:evt_npc_rotate
 800fe92c:func_800fe92c
 800ffbd8:evt_npc_walk_to
+80102bf8:func_80102bf8
 801004c0:evt_npc_jump_to
 80102574:evt_npc_glide_to
 80102EB8:evt_npc_stats_set_up
@@ -355,13 +357,19 @@
 80104694:func_80104694
 80104c94:evt_npc_set_property
 80104fac:evt_npc_modify_part
+80105550:evt_npc_wait_flip_finished
+801055A4:evt_npc_finish_flip_instant
+80105708:evt_npc_flip_to
+80105768:evt_npc_flip
 801059d0:func_801059d0
 80106724:evt_npc_entry_from_template
 80107540:evt_npc_id_to_name
 80107bcc:evt_npc_set_camid
+80107c38:func_80107c38
 80107cfc:func_80107cfc
 80107d20:func_80107d20
 80108194:func_80108194
+801086fc:evt_npc_get_active_count
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 // more
