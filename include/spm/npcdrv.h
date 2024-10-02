@@ -6,12 +6,14 @@
 #pragma once
 
 #include <common.h>
+#include <spm/setup_data.h>
 #include <spm/evtmgr.h>
 #include <wii/mtx.h>
 
 CPP_WRAPPER(spm::npcdrv)
 
 USING(spm::evtmgr::EvtScriptCode)
+USING(spm::setup_data::MiscSetupDataV6)
 USING(wii::mtx::Vec3)
 
 #define NPCTRIBE_MAX 535
@@ -337,7 +339,7 @@ UNKNOWN_FUNCTION(func_801bf5cc);
 UNKNOWN_FUNCTION(func_801bf60c);
 UNKNOWN_FUNCTION(func_801bf6a4);
 NPCEntry * npcEntryFromSetupEnemy(s32 setupFileIndex, Vec3 * pos, s32 nTemplateNo,
-                                  Unk * miscSetupData);
+                                  MiscSetupDataV6 * miscSetupData);
 s32 npcGetNextTemplateNpcId();
 UNKNOWN_FUNCTION(func_801bfc14);
 const char * npcSearchAnimDefs(NPCTribeAnimDef * defs, s32 id);
