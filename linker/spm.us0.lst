@@ -669,6 +669,9 @@
 80104D28:evt_npc_flip_to
 80104D88:evt_npc_flip
 
+// new to SPMMulti
+801796A4:seq_mapChangeInit
+
 // 2023-09-02
 80295834:IOS_OpenAsync
 80295A6C:IOS_CloseAsync
