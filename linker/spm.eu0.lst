@@ -465,6 +465,7 @@
 // more
 
 // seq_mapchange.c
+8017a33c:seq_mapChangeInit
 8017a464:seq_mapChangeMain
 8017af98:_unload
 // more
