@@ -641,6 +641,8 @@
 801adef0:npcDispMain
 801b6f2c:npcNameToPtr
 801b7064:npcDelete
+801be198:npcEntryFromTemplate
+801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
 801c9adc:npcGetWorkPtr
 801e3a1c:npcDropItem
