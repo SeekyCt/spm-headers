@@ -100,7 +100,7 @@ UNKNOWN_FUNCTION(func_80103a44);
 UNKNOWN_FUNCTION(func_80103b40);
 UNKNOWN_FUNCTION(func_80103c24);
 UNKNOWN_FUNCTION(func_80103d20);
-UNKNOWN_FUNCTION(evt_npc_get_unitwork);
+EVT_UNKNOWN_USER_FUNC(evt_npc_get_unitwork);
 
 
 // evt_npc_set_unitwork(const char * name, s32 idx, s32 val)
@@ -227,7 +227,7 @@ UNKNOWN_FUNCTION(func_801083d8);
 UNKNOWN_FUNCTION(func_80108440);
 UNKNOWN_FUNCTION(func_801084fc);
 UNKNOWN_FUNCTION(func_801085e4);
-EVT_DECLARE_USER_FUNC(evt_npc_get_active_count, 1)
+EVT_UNKNOWN_USER_FUNC(func_801086fc)
 UNKNOWN_FUNCTION(func_8010874c);
 UNKNOWN_FUNCTION(func_801087d8);
 UNKNOWN_FUNCTION(func_80108930);
@@ -237,7 +237,10 @@ UNKNOWN_FUNCTION(func_80108ac0);
 UNKNOWN_FUNCTION(func_80108b8c);
 UNKNOWN_FUNCTION(func_80108bd4);
 UNKNOWN_FUNCTION(func_80108cc0);
-UNKNOWN_FUNCTION(evt_npc_set_part_attack_power);
+
+// evt_npc_set_part_attack_power(const char * name, npcPartIndex, attackPower)
+EVT_DECLARE_USER_FUNC(evt_npc_set_part_attack_power, 3);
+
 UNKNOWN_FUNCTION(func_80108ebc);
 UNKNOWN_FUNCTION(func_80108f50);
 UNKNOWN_FUNCTION(func_80108fe4);

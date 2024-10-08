@@ -370,6 +370,7 @@
 80107d20:func_80107d20
 80108194:func_80108194
 801086fc:evt_npc_get_active_count
+80108d98:evt_npc_set_part_attack_power
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 // more

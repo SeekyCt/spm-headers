@@ -671,6 +671,7 @@
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
+801087E8:evt_npc_set_part_attack_power
 
 // 2023-09-02
 802960A0:IOS_OpenAsync
