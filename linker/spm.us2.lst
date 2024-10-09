@@ -292,7 +292,7 @@
 801029AC:evt_npc_entry
 80102AA4:func_80103054
 80102B58:evt_npc_set_anim
-801040E4:func_80104694
+801040E4:evt_npc_set_move_mode
 801030DC:evt_npc_flag8_onoff
 80103408:evt_npc_animflag_onoff
 801046E4:evt_npc_set_property
@@ -672,6 +672,8 @@
 // new to SPMMulti
 80179B10:seq_mapChangeInit
 801087E8:evt_npc_set_part_attack_power
+801C9324:func_801ca1a4
+80100180:evt_npc_arc_to
 
 // 2023-09-02
 802960A0:IOS_OpenAsync

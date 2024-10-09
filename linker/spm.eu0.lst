@@ -342,6 +342,7 @@
 800fe668:evt_npc_rotate
 800fe92c:func_800fe92c
 800ffbd8:evt_npc_walk_to
+801006fc:evt_npc_arc_to
 80102bf8:func_80102bf8
 801004c0:evt_npc_jump_to
 80102574:evt_npc_glide_to
@@ -354,7 +355,7 @@
 801039b8:evt_npc_animflag_onoff
 80103dbc:evt_npc_get_unitwork
 80103ea8:evt_npc_set_unitwork
-80104694:func_80104694
+80104694:evt_npc_set_move_mode
 80104c94:evt_npc_set_property
 80104fac:evt_npc_modify_part
 80105550:evt_npc_wait_flip_finished
@@ -647,6 +648,7 @@
 801bfc48:npcSearchAnimDefs
 801c9adc:npcGetWorkPtr
 801e3a1c:npcDropItem
+801ca1a4:func_801ca1a4
 // more
 // data
 8043bf30:npcTribes

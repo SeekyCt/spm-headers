@@ -47,7 +47,7 @@ EVT_DECLARE_USER_FUNC(evt_npc_walk_to, 8)
 // evt_npc_jump_to(const char * name, f32 destX, f32 destY, f32 destZ, f32 height, s32 length)
 EVT_DECLARE_USER_FUNC(evt_npc_jump_to, 6)
 
-UNKNOWN_FUNCTION(func_801006fc);
+EVT_UNKNOWN_USER_FUNC(evt_npc_arc_to);
 UNKNOWN_FUNCTION(func_80100df8);
 UNKNOWN_FUNCTION(func_80101328);
 UNKNOWN_FUNCTION(func_8010144c);
@@ -118,7 +118,10 @@ UNKNOWN_FUNCTION(func_8010457c);
 UNKNOWN_FUNCTION(func_801045ac);
 UNKNOWN_FUNCTION(func_801045dc);
 UNKNOWN_FUNCTION(func_80104638);
-EVT_DECLARE_USER_FUNC(func_80104694, 2)
+
+// evt_npc_set_move_mode(const char * name, NPCMoveMode moveMode )
+EVT_DECLARE_USER_FUNC(evt_npc_set_move_mode, 2)
+
 UNKNOWN_FUNCTION(func_801046f4);
 UNKNOWN_FUNCTION(func_80104750);
 UNKNOWN_FUNCTION(func_801047ac);
