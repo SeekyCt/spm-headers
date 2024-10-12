@@ -80,8 +80,8 @@ UNKNOWN_FUNCTION(func_80103268);
 UNKNOWN_FUNCTION(evt_npc_get_cur_anim);
 UNKNOWN_FUNCTION(evt_npc_search_anim_defs);
 
-// func_80103410(const char * npcName, s32 partId)
-EVT_DECLARE_USER_FUNC(func_80103410, 2)
+// evt_npc_wait_anim_end(const char * npcName, s32 partId)
+EVT_DECLARE_USER_FUNC(evt_npc_wait_anim_end, 2)
 
 UNKNOWN_FUNCTION(func_80103574);
 
@@ -164,7 +164,7 @@ UNKNOWN_FUNCTION(func_801058c8);
 // evt_npc_get_axis_movement_unit(const char * name, f32& ret)
 EVT_DECLARE_USER_FUNC(evt_npc_get_axis_movement_unit, 2)
 
-EVT_DECLARE_USER_FUNC(func_801059d0, 2)
+EVT_DECLARE_USER_FUNC(evt_npc_set_axis_movement_unit, 2)
 UNKNOWN_FUNCTION(func_80105a30);
 UNKNOWN_FUNCTION(func_80105b00);
 EVT_UNKNOWN_USER_FUNC(func_80105b94)
@@ -235,6 +235,7 @@ UNKNOWN_FUNCTION(func_8010874c);
 UNKNOWN_FUNCTION(func_801087d8);
 UNKNOWN_FUNCTION(func_80108930);
 UNKNOWN_FUNCTION(func_801089d0);
+EVT_DECLARE_USER_FUNC(evt_npc_wait_axis_movement_unit_end, 1)
 UNKNOWN_FUNCTION(func_80108a2c);
 UNKNOWN_FUNCTION(func_80108ac0);
 UNKNOWN_FUNCTION(func_80108b8c);
@@ -253,7 +254,7 @@ UNKNOWN_FUNCTION(func_801091e0);
 UNKNOWN_FUNCTION(func_80109250);
 UNKNOWN_FUNCTION(func_801092c0);
 UNKNOWN_FUNCTION(func_80109370);
-UNKNOWN_FUNCTION(func_801093e0);
+
 UNKNOWN_FUNCTION(func_80109434);
 UNKNOWN_FUNCTION(func_801094b4);
 UNKNOWN_FUNCTION(func_80109548);
@@ -282,7 +283,10 @@ UNKNOWN_FUNCTION(func_8010a1e8);
 UNKNOWN_FUNCTION(func_8010a298);
 UNKNOWN_FUNCTION(evt_npc_try_catch_card);
 UNKNOWN_FUNCTION(func_8010a37c);
-UNKNOWN_FUNCTION(func_8010a418);
+
+// evt_npc_wait_for(const char * name, s32 timeInMiliseconds)
+EVT_DECLARE_USER_FUNC(evt_npc_wait_for, 2)
+
 UNKNOWN_FUNCTION(func_8010a4ec);
 UNKNOWN_FUNCTION(func_8010a5ec);
 UNKNOWN_FUNCTION(func_8010a788);

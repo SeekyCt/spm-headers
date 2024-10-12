@@ -590,7 +590,7 @@
 800D2D8C:evt_snd_sfxon_npc_delay
 800E67A0:evt_env_static_blur_on
 1,1,166e4:func_80c5c36c
-80102A30:func_80103410
+80102A30:evt_npc_wait_anim_end
 800E62C4:evt_eff_softdelete
 800F2CB8:evt_mario_set_anim_change_handler
 800FF22C:evt_npc_walk_to
@@ -674,6 +674,8 @@
 801083B8:evt_npc_set_part_attack_power
 801C8FB0:func_801ca1a4
 800FFD50:evt_npc_arc_to
+80102488:evt_npc_delete
+80109A38:evt_npc_wait_for
 
 // 2023-09-02
 80295834:IOS_OpenAsync
@@ -692,3 +694,12 @@
 80274E64:OSYieldThread
 802753C8:OSResumeThread
 80258148:memcmp
+
+// new to april fools 2024
+800E63CC:evt_eff_exclamation_question
+800F1818:evt_mario_wait_anim
+80104FF0:evt_npc_set_axis_movement_unit
+80108A00:evt_npc_wait_axis_movement_unit_end
+803CEC30:evt_cutscene_pure_heart
+8010C6AC:evt_seq_mapchange
+800E7388:evt_set_transition
