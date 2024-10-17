@@ -77,7 +77,10 @@ EVT_DECLARE_USER_FUNC(evt_npc_add_flip_part, 1)
 EVT_DECLARE_USER_FUNC(evt_npc_set_anim, 3)
 UNKNOWN_FUNCTION(func_801031a0);
 UNKNOWN_FUNCTION(func_80103268);
-UNKNOWN_FUNCTION(evt_npc_get_cur_anim);
+
+// evt_npc_get_cur_anim(const char * name, s32 ret)
+EVT_DECLARE_USER_FUNC(evt_npc_get_cur_anim, 2);
+
 UNKNOWN_FUNCTION(evt_npc_search_anim_defs);
 
 // evt_npc_wait_anim_end(const char * npcName, s32 partId)

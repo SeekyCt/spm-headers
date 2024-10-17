@@ -210,6 +210,7 @@
 800dd534:evt_debug_put_reg
 800de594:evtGetValue
 800de9b8:evtSetValue
+800dedb8:evtGetFloat
 800df1fc:evtSetFloat
 // bss
 8050ce30:evt_debug_put_reg_str
@@ -354,6 +355,7 @@
 80102f5c:evt_npc_entry
 80103054:func_80103054
 80103108:evt_npc_set_anim
+8010330c:evt_npc_get_cur_anim
 80103410:evt_npc_wait_anim_end
 8010368c:evt_npc_flag8_onoff
 801039b8:evt_npc_animflag_onoff
