@@ -676,6 +676,8 @@
 80100180:evt_npc_arc_to
 801028B8:evt_npc_delete
 80109E68:evt_npc_wait_for
+80102D5C:evt_npc_get_cur_anim
+800DEF0C:evtGetFloat
 
 // 2023-09-02
 802960A0:IOS_OpenAsync
@@ -704,3 +706,4 @@
 803D0130:evt_cutscene_pure_heart
 8010CADC:evt_seq_mapchange
 800E7360:evt_set_transition
+800DA228:evt_lbl

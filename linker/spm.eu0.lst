@@ -204,6 +204,7 @@
 
 // evtmgr_cmd.c
 // text
+800da0d4:evt_lbl
 800dd0b8:evt_inline_evt
 800ddd5c:evtmgrCmd
 800dd500:evt_debug_put_msg
