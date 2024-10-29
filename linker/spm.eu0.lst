@@ -91,6 +91,7 @@
 
 // effdrv.c
 80061d78:func_80061d78
+800a2fe4:eff_item_thunder
 
 // fadedrv.c
 800677f8:fadeIsFinish
@@ -427,6 +428,7 @@
 // mario.c
 80121f48:marioGetPtr
 80122b68:marioCtrlOffChk
+80122bbc:marioCtrlOn
 80122b7c:marioKeyOffChk
 80122bf4:marioKeyOff
 80122c2c:marioKeyOn
