@@ -94,9 +94,11 @@ typedef struct
 /* 0x04 */ char animPoseName[32];
 /* 0x24 */ u8 unknown_0x24[0x48 - 0x24];
 /* 0x48 */ NPCTribeAnimDef * tribeAnims;
-/* 0x4C */ // unknown 0x4c+
+/* 0x4C */ u8 unknown_0x4C[0x70 - 0x4C];
+/* 0x70 */ Vec3 scriptRotation;
+/* 0x74 */ // unknown 0x4c+
 } NPCAnim; // unknown size
-OFFSET_ASSERT(NPCAnim, tribeAnims, 0x48)
+OFFSET_ASSERT(NPCAnim, scriptRotation, 0x70)
 
 typedef struct _NPCPart
 {
@@ -164,7 +166,9 @@ typedef struct _NPCEntry
 /* 0x3A4 */ f32 tribeField0x12; // field 0x12 of spawning NPCTribe cast to float
 /* 0x3A8 */ u8 unknown_0x3a8[0x3ac - 0x3a8];
 /* 0x3AC */ f32 unknown_0x3ac;
-/* 0x3B0 */ u8 unknown_0x3b0[0x46c - 0x3b0];
+/* 0x3B0 */ u8 unknown_0x3b0[0x400 - 0x3b0];
+/* 0x400 */ f32 unknown_0x400;
+/* 0x3B0 */ u8 unknown_0x404[0x46c - 0x404];
     /*
         0x80000000 is frozen
         0x40000 is on different pane to Mario

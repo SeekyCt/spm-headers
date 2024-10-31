@@ -90,8 +90,10 @@
 // more
 
 // effdrv.c
+800616e4:effEntryType
 80061d78:func_80061d78
 800a2fe4:eff_item_thunder
+800a315c:func_800a315c
 
 // fadedrv.c
 800677f8:fadeIsFinish
@@ -130,6 +132,7 @@
 80025164:getItemUseEvt
 803fbc10:itemEventDataTable
 803ff190:default_item_use_evt
+805adf00:item_event_data_wp
 // more
 
 // mapdrv.c
@@ -174,6 +177,8 @@
 // more
 
 // evt_item.c
+800277fc:evt_item_spawn_thunder
+80025700:evt_item_event_free_work
 800ecc84:evt_item_entry
 800ecda0:evt_item_get_position
 800ece50:evt_item_set_position
@@ -343,6 +348,7 @@
 80102c7c:evt_npc_get_hp
 80102d3c:evt_npc_get_max_hp
 80102dfc:evt_npc_set_hp
+801037a4:evt_npc_flag46C_onoff
 800fe124:evt_npc_get_position
 800fe21c:evt_npc_set_position
 800fe668:evt_npc_rotate
@@ -668,6 +674,7 @@
 801ca1a4:func_801ca1a4
 // more
 // data
+805ae188:npcdrv_wp
 8043bf30:npcTribes
 80449888:npcEnemyTemplates
 // more

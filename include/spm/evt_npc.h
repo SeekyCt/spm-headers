@@ -92,7 +92,7 @@ UNKNOWN_FUNCTION(func_80103574);
 EVT_DECLARE_USER_FUNC(evt_npc_flag8_onoff, 3)
 
 UNKNOWN_FUNCTION(evt_npc_flagC_onoff);
-UNKNOWN_FUNCTION(evt_npc_flag46C_onoff);
+EVT_UNKNOWN_USER_FUNC(evt_npc_flag46C_onoff);
 UNKNOWN_FUNCTION(evt_npc_flag10_onoff);
 UNKNOWN_FUNCTION(evt_npc_part_flag_onoff);
 
@@ -103,7 +103,9 @@ UNKNOWN_FUNCTION(func_80103a44);
 UNKNOWN_FUNCTION(func_80103b40);
 UNKNOWN_FUNCTION(func_80103c24);
 UNKNOWN_FUNCTION(func_80103d20);
-EVT_UNKNOWN_USER_FUNC(evt_npc_get_unitwork);
+
+// evt_npc_set_unitwork(const char * name, s32 idx, s32 ret)
+EVT_DECLARE_USER_FUNC(evt_npc_get_unitwork, 3);
 
 
 // evt_npc_set_unitwork(const char * name, s32 idx, s32 val)
