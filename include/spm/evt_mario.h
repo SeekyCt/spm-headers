@@ -109,7 +109,7 @@ EVT_DECLARE_USER_FUNC(evt_mario_fairy_reset, 0)
 UNKNOWN_FUNCTION(evt_mario_swim_onoff);
 UNKNOWN_FUNCTION(func_800f24d8);
 UNKNOWN_FUNCTION(func_800f2544);
-UNKNOWN_FUNCTION(evt_set_gravity);
+UNKNOWN_FUNCTION(evt_mario_set_gravity);
 UNKNOWN_FUNCTION(evt_get_gravity);
 UNKNOWN_FUNCTION(func_800f262c);
 UNKNOWN_FUNCTION(func_800f267c);

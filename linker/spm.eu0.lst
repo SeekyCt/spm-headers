@@ -315,7 +315,7 @@
 800f1954:evt_mario_set_pose
 800F19C0:evt_mario_wait_anim
 800f2450:evt_mario_fairy_reset
-800f25b0:evt_set_gravity
+800f25b0:evt_mario_set_gravity
 800f2f68:evt_mario_set_anim_change_handler
 // more
 
