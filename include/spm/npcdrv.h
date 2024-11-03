@@ -175,7 +175,8 @@ typedef struct _NPCEntry
         0x20000 is hidden & frozen
     */
 /* 0x46C */ u32 flag46C;
-/* 0x470 */ u8 unknown_0x470[0x478 - 0x470];
+/* 0x470 */ f32 gravity;
+/* 0x474 */ u8 unknown_0x474[0x478 - 0x474];
 /* 0x478 */ u32 tribeField0x54; // field 0x54 of spawning NPCTribe
 /* 0x47C */ u8 unknown_0x47c[0x49c - 0x47c];
 /* 0x49C */ s32 tribeId; // id of the NPCTribe this NPC was spawned with
