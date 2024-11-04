@@ -75,7 +75,8 @@ typedef struct
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
 /* 0x20 */ u8 unknown_0x20[0x38 - 0x20];
 /* 0x38 */ s16 killXp;
-/* 0x40 */ u8 unknown_0x3a[0x46 - 0x3a];
+/* 0x40 */ s16 hitXp;
+/* 0x40 */ u8 unknown_0x3c[0x46 - 0x3c];
 /* 0x46 */ u16 coinDropChance; // chance of dropping any coins at all, percentage
 /* 0x48 */ u16 coinDropBaseCount; // minimum amount of coins to drop, if any are dropping
 /* 0x4A */ u16 coinDropExtraChance; // chance for each extra coin to drop, percentage
