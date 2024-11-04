@@ -75,8 +75,8 @@ typedef struct
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
 /* 0x20 */ u8 unknown_0x20[0x38 - 0x20];
 /* 0x38 */ s16 killXp;
-/* 0x40 */ s16 hitXp;
-/* 0x40 */ u8 unknown_0x3c[0x46 - 0x3c];
+/* 0x3a */ s16 hitXp;
+/* 0x3c */ u8 unknown_0x3c[0x46 - 0x3c];
 /* 0x46 */ u16 coinDropChance; // chance of dropping any coins at all, percentage
 /* 0x48 */ u16 coinDropBaseCount; // minimum amount of coins to drop, if any are dropping
 /* 0x4A */ u16 coinDropExtraChance; // chance for each extra coin to drop, percentage
@@ -110,8 +110,10 @@ typedef struct _NPCPart
 /* 0x014 */ Vec3 ownerPosLastAnimChange;
 /* 0x020 */ Vec3 positionDelta;
 /* 0x02C */ u32 flag2c;
-/* 0x030 */ u32 flag30;
-/* 0x034 */ u8 unknown_0x34[0x378 - 0x34];
+/* 0x030 */ u32 hitFlags;
+/* 0x034 */ u8 unknown_0x34[0x3c - 0x34];
+/* 0x03c */ Vec3 hitBoxScale;
+/* 0x034 */ u8 unknown_0x48[0x378 - 0x48];
 /* 0x378 */ s32 attackPower; // initialised as 1, changed by onSpawnScript if needed
 /* 0x37C */ u8 unknown_0x37c[0x388 - 0x37c];
 /* 0x388 */ struct _NPCEntry * owner;
