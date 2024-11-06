@@ -73,19 +73,31 @@ typedef struct
 /* 0x19 */ u8 partsCount;
 /* 0x1A */ // padding 0x1a-1b
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
-/* 0x20 */ u8 unknown_0x20[0x38 - 0x20];
+/* 0x20 */ char * powBlockDeathSfx;
+/* 0x24 */ char * bowserFireDeathSfx;
+/* 0x28 */ char * boomerDeathSfx;
+/* 0x2c */ char * barryDeathSfx;
+/* 0x30 */ char * unused_sfx;
+/* 0x34 */ char * fireBurstDeathSfx;
 /* 0x38 */ s16 killXp;
 /* 0x3a */ s16 hitXp;
-/* 0x3c */ u8 unknown_0x3c[0x46 - 0x3c];
+/* 0x3c */ s16 stylishXp;
+/* 0x3e */ s16 stopWatchStunTime;
+/* 0x40 */ s16 sleepySheepStunTime;
+/* 0x42 */ s16 iceStormStunTime;
+/* 0x44 */ s16 voltShroomStunTime;
 /* 0x46 */ u16 coinDropChance; // chance of dropping any coins at all, percentage
 /* 0x48 */ u16 coinDropBaseCount; // minimum amount of coins to drop, if any are dropping
 /* 0x4A */ u16 coinDropExtraChance; // chance for each extra coin to drop, percentage
 /* 0x4C */ u16 coinDropExtraMax; // maximum amount of extra coins to drop on top of base count
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item, percentage
 /* 0x50 */ NPCDropItem * dropItemList; // terminated by an entry with id 0
-/* 0x54 */ u8 unknown_0x54[0x64 - 0x54];
+/* 0x54 */ s32 unknown_0x54; // Sets a value in npcEntry which is unused
+/* 0x58 */ f32 bounceEjection;
+/* 0x5c */ f32 jumpEjection;
+/* 0x60 */ f32 unk_float;
 /* 0x64 */ u8 attackStrength; // only used for the tattle and turn-based combat, doesn't affect normal damage
-/* 0x65 */ u8 unknown_0x65[0x68 - 0x65];
+/* 0x65 */ u8 padding_0x65[0x68 - 0x65]; // padding
 } NPCTribe;
 SIZE_ASSERT(NPCTribe, 0x68)
 
@@ -180,7 +192,7 @@ typedef struct _NPCEntry
 /* 0x46C */ u32 flag46C;
 /* 0x470 */ f32 gravity;
 /* 0x474 */ u8 unknown_0x474[0x478 - 0x474];
-/* 0x478 */ u32 tribeField0x54; // field 0x54 of spawning NPCTribe
+/* 0x478 */ u32 tribeField0x54; // field 0x54 of spawning NPCTribe, unused
 /* 0x47C */ u8 unknown_0x47c[0x49c - 0x47c];
 /* 0x49C */ s32 tribeId; // id of the NPCTribe this NPC was spawned with
 /* 0x4A0 */ s32 tribeId2; // seemingly just a copy of tribeId
@@ -200,7 +212,9 @@ typedef struct _NPCEntry
                                    // (unknown for non-templated NPCs)
 /* 0x584 */ u32 templateField0x64; // field 0x64 of spawning SetupEnemyTemplate
                                    // (unknown for non-templated NPCs)
-/* 0x588 */ u8 unknown_0x588[0x714 - 0x588];
+/* 0x588 */ u8 unknown_0x588[0x624 - 0x588];
+/* 0x624 */ f32 stunTime;
+/* 0x628 */ u8 unknown_0x628[0x714 - 0x628];
 /* 0x714 */ NPCPart * parts; // made from tribe's NPCPartDef list, linked list
 /* 0x718 */ EvtScriptCode * templateField0x58; // field 0x58 from spawning SetupEnemyTemplate
                                                // g(unknown for non-templated NPCs)
