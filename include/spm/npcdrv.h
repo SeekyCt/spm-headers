@@ -93,8 +93,8 @@ typedef struct
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item, percentage
 /* 0x50 */ NPCDropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ s32 unknown_0x54; // Sets a value in npcEntry which is unused
-/* 0x58 */ f32 bounceEjection;
-/* 0x5c */ f32 jumpEjection;
+/* 0x58 */ f32 bounceEjection1;
+/* 0x5c */ f32 bounceEjection2;
 /* 0x60 */ f32 unk_float;
 /* 0x64 */ u8 attackStrength; // only used for the tattle and turn-based combat, doesn't affect normal damage
 /* 0x65 */ u8 padding_0x65[0x68 - 0x65]; // padding
