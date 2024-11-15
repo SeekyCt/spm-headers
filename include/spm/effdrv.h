@@ -134,6 +134,9 @@ UNKNOWN_FUNCTION(func_80063308);
 UNKNOWN_FUNCTION(func_80063374);
 UNKNOWN_FUNCTION(func_8006339c);
 UNKNOWN_FUNCTION(func_800633fc);
+UNKNOWN_FUNCTION(func_800633fc);
+
+EffEntry* func_800a82c0(s32 type);
 void func_800a315c(EffEntry* entry, int blob, char name);
 
 CPP_WRAPPER_END()

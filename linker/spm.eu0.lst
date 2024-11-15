@@ -94,6 +94,7 @@
 80061d78:func_80061d78
 800a2fe4:eff_item_thunder
 800a315c:func_800a315c
+800a82c0:func_800a82c0
 
 // fadedrv.c
 800677f8:fadeIsFinish
