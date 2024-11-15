@@ -970,7 +970,11 @@
 1,1,52e4:evt_machi_set_elv_descs
 // more
 
-//sp4_13.c
+// ta3_02
+80d7ac80:tree_block_trigger //todo: convert to rel address
+// more
+
+// sp4_13.c
 // text
 1,1,16854:spReturnAngryAnimPos
 1,1,16a08:func_80c5c304
