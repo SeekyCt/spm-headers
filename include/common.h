@@ -25,6 +25,13 @@
     #define HAS_ATTRIBUTE(x) 0
 #endif
 
+// Use required static_assert keyword
+#ifdef __MWERKS__
+    #define static_assert __static_assert 
+#elif !(defined __cplusplus)
+    #define static_assert _Static_assert
+#endif
+
 // Basic types
 
 // Decomp needs long for matching, int is slightly more convenient for casting in mods
@@ -50,7 +57,7 @@ typedef float f32;
 typedef double f64;
 
 #ifdef USE_STL
-    #include <cstddef>
+    #include <stddef.h>
     static_assert(sizeof(size_t) == 4, "Expected 32-bit size_t");
 #else
     typedef u32 size_t;
@@ -64,15 +71,15 @@ typedef double f64;
 
 typedef s32 BOOL;
 
-#ifndef __cplusplus
+#ifdef DECOMP
     #define bool char
 
     #define true 1
     #define false 0
-#endif
 
-#ifndef __cplusplus
     #define wchar_t s16
+#else
+    #include <stdbool.h>
 #endif
 
 #ifdef DECOMP
@@ -86,11 +93,6 @@ typedef u32 Unk;
 typedef u32 Unk32;
 typedef u16 Unk16;
 typedef u8 unk8;
-
-// Use CW special static assert
-#ifdef __MWERKS__
-    #define static_assert(cond, msg) __static_assert(cond, msg) 
-#endif
 
 // Macro for quick size static assert
 #ifndef M2C
@@ -150,7 +152,7 @@ typedef u8 unk8;
     #define ATTRIBUTE(x)
 #endif
 
-#if HAS_ATTRIBUTE(noreturn)
+#if HAS_ATTRIBUTE(noreturn) && (defined __cplusplus) // TODO: the usage sites are probabably what should be fixed here
     #define NORETURN ATTRIBUTE(noreturn)
 #else
     #define NORETURN
