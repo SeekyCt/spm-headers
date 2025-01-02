@@ -234,7 +234,7 @@ def find_headers(dirname: str, base=None) -> List[str]:
 # Test the headers in the modding setup
 def test_mod_ctx(regions: List[str]):
     compile_regions(os.path.join("$builddir", "{region}", "mod.o"), "$mod_source", regions,
-                    MOD_INCLUDES, [""])
+                    MOD_INCLUDES, [])
 
 # Test the headers in the decomp setup
 def test_decomp_ctx(regions: List[str]):
