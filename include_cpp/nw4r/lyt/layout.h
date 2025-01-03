@@ -4,6 +4,7 @@
 #include <wii/mem.h>
 #include <msl/new.h>
 #include <nw4r/lyt/animation.h>
+#include <nw4r/lyt/drawInfo.h>
 #include <nw4r/lyt/pane.h>
 #include <nw4r/lyt/resourceAccessor.h>
 #include <nw4r/ut/rect.h>

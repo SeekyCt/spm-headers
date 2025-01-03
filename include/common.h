@@ -141,12 +141,10 @@ typedef int BOOL;
     #else
         #define offsetof(type, member) ((u32)&((type *)0)->member)
     #endif
-    #define bool char
 
     #define true 1
     #define false 0
 
-    #define wchar_t s16
     typedef wchar_t wchar16_t;
 
     typedef s32 ptrdiff_t;
