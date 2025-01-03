@@ -146,9 +146,14 @@ typedef int BOOL;
 
     #define wchar_t s16
     typedef wchar_t wchar16_t;
+
+    typedef s32 ptrdiff_t;
+    typedef s32 intptr_t;
+    typedef u32 uintptr_t;
 #else
     #include <stddef.h>
     #include <stdbool.h>
+    #include <stdint.h>
 
     // wchar_t is 32-bit in GCC but 16-bit in CW
     typedef s16 wchar16_t;
