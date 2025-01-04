@@ -132,6 +132,11 @@ typedef double f64;
 
 typedef int BOOL;
 
+#ifdef M2C
+    #define wchar_t s16
+    #define bool char
+#endif
+
 #ifdef DECOMP
     // TODO: move these to msl headers
     typedef u32 size_t;
