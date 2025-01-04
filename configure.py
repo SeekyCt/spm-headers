@@ -249,7 +249,7 @@ def test_mod_ctx_shuffle(regions: List[str]):
         source = os.path.join("$builddir", f"shuffle_{args.seed}", f"{i}.cpp")
         incgen(source, MOD_INCLUDES, i)
         compile_regions(os.path.join("$builddir", "{region}", f"shuffle_mod_{args.seed}_{i}.o"),
-                        source, regions, MOD_INCLUDES, ["USE_STL"])
+                        source, regions, MOD_INCLUDES, [])
 
 # Test individual headers
 def test_mod_individual(regions: List[str]):
@@ -258,7 +258,7 @@ def test_mod_individual(regions: List[str]):
         source = os.path.join("$builddir", "individual", f"{name}.c")
         incgen_single(source, header)
         compile_regions(os.path.join("$builddir", "{region}", "individual", f"{name}.o"), source,
-                        regions, MOD_INCLUDES, ["USE_STL", "SPM_EU0"])
+                        regions, MOD_INCLUDES, ["SPM_EU0"])
 
 test_fns = {
     "mod_ctx" : test_mod_ctx,
