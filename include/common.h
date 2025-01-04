@@ -133,35 +133,18 @@ typedef double f64;
 typedef int BOOL;
 
 #ifdef M2C
-    #define wchar_t s16
+    #define wchar_t u16
     #define bool char
 #endif
 
+#include <stddef.h>
+#include <stdbool.h>
+
+// wchar_t is 32-bit in GCC but 16-bit in CW
 #ifdef DECOMP
-    // TODO: move these to msl headers
-    typedef u32 size_t;
-    #define NULL 0
-    #if HAS_BUILTIN(__builtin_offsetof)
-        #define offsetof __builtin_offsetof
-    #else
-        #define offsetof(type, member) ((u32)&((type *)0)->member)
-    #endif
-
-    #define true 1
-    #define false 0
-
     typedef wchar_t wchar16_t;
-
-    typedef s32 ptrdiff_t;
-    typedef s32 intptr_t;
-    typedef u32 uintptr_t;
 #else
-    #include <stddef.h>
-    #include <stdbool.h>
-    #include <stdint.h>
-
-    // wchar_t is 32-bit in GCC but 16-bit in CW
-    typedef s16 wchar16_t;
+    typedef u16 wchar16_t;
 #endif
 
 // Unknown type
