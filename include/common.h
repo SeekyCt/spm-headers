@@ -152,7 +152,3 @@ typedef u32 Unk;
 typedef u32 Unk32;
 typedef u16 Unk16;
 typedef u8 unk8;
-
-#define SQUARE(x) ((x) * (x))
-#define CUBE(x) ((x) * (x) * (x))
-#define QUART(x) ((x) * (x) * (x) * (x))
