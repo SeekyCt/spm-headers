@@ -236,6 +236,11 @@ def test_mod_ctx(regions: List[str]):
     compile_regions(os.path.join("$builddir", "{region}", "mod.o"), "$mod_source", regions,
                     MOD_INCLUDES, [])
 
+# Test the headers in the relaxed namespace modding setup
+def test_rns_mod_ctx(regions: List[str]):
+    compile_regions(os.path.join("$builddir", "{region}", "rns_mod.o"), "$mod_source", regions,
+                    MOD_INCLUDES, ["RELAX_NAMESPACING"])
+
 # Test the headers in the decomp setup
 def test_decomp_ctx(regions: List[str]):
     assert args.codewarrior, "Error: decomp_ctx test requires --codewarrior"
@@ -262,13 +267,14 @@ def test_mod_individual(regions: List[str]):
 
 test_fns = {
     "mod_ctx" : test_mod_ctx,
+    "rns_mod_ctx" : test_rns_mod_ctx,
     "decomp_ctx" : test_decomp_ctx,
     "mod_ctx_shuffle" : test_mod_ctx_shuffle,
     "test_mod_individual" : test_mod_individual,
 }
 
 incgen("$mod_source", MOD_INCLUDES)
-default_tests = ["mod_ctx"]
+default_tests = ["mod_ctx", "rns_mod_ctx"]
 
 if args.codewarrior:
     incgen("$decomp_source", DECOMP_INCLUDES)
