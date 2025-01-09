@@ -376,6 +376,7 @@
 80105550:evt_npc_wait_flip_finished
 801055A4:evt_npc_finish_flip_instant
 80105708:evt_npc_flip_to
+80105924:evt_npc_get_axis_movement_unit
 80105768:evt_npc_flip
 801059d0:func_801059d0
 801059D0:evt_npc_set_axis_movement_unit

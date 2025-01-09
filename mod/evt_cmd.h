@@ -82,6 +82,9 @@
         static_cast<u32>((parameter_count) << 16 | (opcode)) \
     )
 
+#define NEXT() \
+    EVT_HELPER_CMD(0, 0),
+
 #define RETURN() \
     EVT_HELPER_CMD(0, 2),
 
