@@ -141,7 +141,6 @@ typedef int BOOL;
 
 #ifdef M2C
     #define wchar_t u16
-    #define bool char
 #endif
 
 #include <stddef.h>
