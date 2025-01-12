@@ -393,6 +393,7 @@
 8010a418:evt_npc_wait_for
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
+801e59c4:evt_npc_dimen_determine_move_pos
 // more
 
 // not sure where you want this
@@ -546,6 +547,7 @@
 8019d254:irand
 8019c54c:__assert2
 8019cf84:qqsort
+8019c688:distABf
 // more
 
 // debug.c
@@ -683,6 +685,9 @@
 
 // npc_dimeen_l.c
 // data
+80457140:dimen_unk_fight_script_1
+80457190:dimen_unk_fight_script_2
+80459028:dimen_unk_fight_script_3
 8045B9E0:superDimentioHeadDefenses
 8045B9F8:superDimentioBodyDefenses
 //more

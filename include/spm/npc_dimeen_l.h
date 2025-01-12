@@ -10,4 +10,8 @@ USING(spm::npcdrv::NPCDefense)
 extern NPCDefense superDimentioHeadDefenses;
 extern NPCDefense superDimentioBodyDefenses;
 
+EVT_DECLARE(dimen_unk_fight_script_1)
+EVT_DECLARE(dimen_unk_fight_script_2)
+EVT_DECLARE(dimen_unk_fight_script_3)
+
 CPP_WRAPPER_END()

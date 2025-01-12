@@ -152,7 +152,9 @@ typedef struct _NPCEntry
 /* 0x044 */ NPCAnim m_Anim; // unknown size
 /* ????? */ u8 unknown_unk[0x2a0 - 0x44 - sizeof(NPCAnim)];
 /* 0x2A0 */ Vec3 position;
-/* 0x2AC */ u8 unknown_0x2ac[0x348 - 0x2ac];
+/* 0x2AC */ u8 unknown_0x2ac[0x2ec - 0x2ac];
+/* 0x2EC */ s32 flippedTo3d;
+/* 0x2AC */ u8 unknown_0x2f0[0x348 - 0x2f0];
 /* 0x348 */ EvtScriptCode * templateUnkScript1; // unkScript1 from spawning SetupEnemyTemplate
                                                 // (unknown for non-templated NPCs)
 /* 0x34C */ u8 unknown_0x34c[0x360 - 0x34c];
