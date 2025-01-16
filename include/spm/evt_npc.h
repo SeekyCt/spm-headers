@@ -147,13 +147,15 @@ EVT_DECLARE_USER_FUNC(evt_npc_set_property, 3)
 
 UNKNOWN_FUNCTION(modifyPartProperty);
 
+// evt_npc_get_property(const char * instanceName, s32 propertyId, EvtVar ret)
+EVT_DECLARE_USER_FUNC(evt_npc_get_property, 3)
+
 /*
     partId -1 updates all parts
 */
 // evt_npc_set_property(const char * instanceName, s32 partId, s32 propertyId, s32 value)
 EVT_DECLARE_USER_FUNC(evt_npc_modify_part, 4)
 
-UNKNOWN_FUNCTION(evt_npc_get_property);
 UNKNOWN_FUNCTION(func_80105248);
 UNKNOWN_FUNCTION(func_801053b4);
 UNKNOWN_FUNCTION(func_80105548);

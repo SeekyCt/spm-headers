@@ -37,6 +37,15 @@ typedef struct
 } NPCTribeAnimDef;
 SIZE_ASSERT(NPCTribeAnimDef, 0x8)
 
+typedef enum NPCMoveMode {
+    NPC_MOVE_WALK_NO_HIT=0,
+    NPC_MOVE_WALK=1,
+    NPC_MOVE_STAY_NO_DAMAGE=2,
+    NPC_MOVE_SPIN=3,
+    NPC_MOVE_WALK_NO_HIT_2=4
+} NPCMoveMode;
+SIZE_ASSERT(NPCMoveMode, 0x4)
+
 typedef struct
 {
 /* 0x00 */ u16 id;
@@ -154,7 +163,9 @@ typedef struct _NPCEntry
 /* 0x2A0 */ Vec3 position;
 /* 0x2AC */ u8 unknown_0x2ac[0x2ec - 0x2ac];
 /* 0x2EC */ s32 flippedTo3d;
-/* 0x2AC */ u8 unknown_0x2f0[0x348 - 0x2f0];
+/* 0x2AC */ u8 unknown_0x2f0[0x2f8 - 0x2f0];
+/* 0x2F8 */ NPCMoveMode moveMode;
+/* 0x2FC */ u8 unknown_0x2fc[0x348 - 0x2fc];
 /* 0x348 */ EvtScriptCode * templateUnkScript1; // unkScript1 from spawning SetupEnemyTemplate
                                                 // (unknown for non-templated NPCs)
 /* 0x34C */ u8 unknown_0x34c[0x360 - 0x34c];

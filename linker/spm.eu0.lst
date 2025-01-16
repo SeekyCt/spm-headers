@@ -373,6 +373,7 @@
 80104694:evt_npc_set_move_mode
 80104c94:evt_npc_set_property
 80104fac:evt_npc_modify_part
+8010508c:evt_npc_get_property
 80105550:evt_npc_wait_flip_finished
 801055A4:evt_npc_finish_flip_instant
 80105708:evt_npc_flip_to
@@ -690,6 +691,11 @@
 80459028:dimen_unk_fight_script_3
 8045B9E0:superDimentioHeadDefenses
 8045B9F8:superDimentioBodyDefenses
+//more
+
+// npc_ninja.c
+// data
+8021de00:ninjoe_bomb_calc_chance
 //more
 
 // wpadmgr.c

@@ -668,6 +668,11 @@
 80104BC4:evt_npc_finish_flip_instant
 80104D28:evt_npc_flip_to
 80104D88:evt_npc_flip
+801E41A0:evt_npc_dimen_determine_move_pos
+80417470:dimen_unk_fight_script_1
+804174C0:dimen_unk_fight_script_2
+80419300:dimen_unk_fight_script_3
+8019B804:distABf
 
 // new to SPMMulti
 801796A4:seq_mapChangeInit
