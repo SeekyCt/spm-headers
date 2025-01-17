@@ -259,6 +259,11 @@ DECOMP_STATIC(NPCWork * npcdrv_wp)
 
 typedef bool (EnemyCanSpawnFunction)();
 
+struct NPCEntryUnkDef {
+    int type;
+    void *value;
+};
+
 typedef struct
 {
 /* 0x00 */ u8 unknown_0x0;
@@ -284,7 +289,7 @@ typedef struct
 /* 0x4C */ EvtScriptCode * unkScript7;
 /* 0x50 */ EvtScriptCode * unkScript8;
 /* 0x54 */ EvtScriptCode * unkScript9;
-/* 0x58 */ void * unknown_0x58;
+/* 0x58 */ NPCEntryUnkDef * unkDefinitionTable;
 /* 0x5C */ u8 unknown_0x5c[0x68 - 0x5c]; // all left blank to be copied from SetupEnemy
 } NPCEnemyTemplate;
 SIZE_ASSERT(NPCEnemyTemplate, 0x68)
