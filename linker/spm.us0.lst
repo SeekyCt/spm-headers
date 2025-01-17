@@ -673,6 +673,8 @@
 804174C0:dimen_unk_fight_script_2
 80419300:dimen_unk_fight_script_3
 8019B804:distABf
+801046AC:evt_npc_get_property
+8021BA80:ninjoe_bomb_calc_chance
 
 // new to SPMMulti
 801796A4:seq_mapChangeInit

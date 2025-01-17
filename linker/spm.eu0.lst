@@ -137,6 +137,7 @@
 // more
 
 // mapdrv.c
+8008c440:mapObjFlagOn
 8008cf30:mapGrpFlagOn
 8008d2fc:mapGrpFlagOff
 8008e11c:mapGrpFlag4On
