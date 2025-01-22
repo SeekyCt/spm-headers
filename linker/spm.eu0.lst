@@ -77,6 +77,7 @@
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
+800dfd88:evt_cam_get_pos
 // bss
 8050b580:camPtrTbl
 // more
@@ -95,6 +96,7 @@
 800a2fe4:eff_item_thunder
 800a315c:func_800a315c
 800a82c0:func_800a82c0
+800bc828:damageEffect
 
 // fadedrv.c
 800677f8:fadeIsFinish
@@ -147,6 +149,10 @@
 800b426c:func_800b426c
 800cd554:func_800cd554
 805aea50:errno
+
+// eff_spm_hit.c
+80094020:effSpmHitEntry
+
 
 // eff_nice.c
 800CC01C:effNiceEntry
@@ -314,6 +320,8 @@
 800efd88:evt_mario_direction_face
 800f0074:evt_mario_face_coords
 800f046c:evt_mario_pos_change
+800f0d58:evt_mario_jump_to
+800f05b0:func_800f05b0
 800f1954:evt_mario_set_pose
 800F19C0:evt_mario_wait_anim
 800f2450:evt_mario_fairy_reset

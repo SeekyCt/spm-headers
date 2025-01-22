@@ -114,6 +114,8 @@ EffEntry * effNameToPtr(const char * name);
 
 EffEntry * eff_item_thunder(float x, float y, float z, s32 param_4, s32 param_5, s32 param_6, s32 param_7, s32 param_8);
 
+EffEntry * damageEffect(float x, float y, float z,int param_4, s32 damage);
+
 UNKNOWN_FUNCTION(func_80061c28);
 UNKNOWN_FUNCTION(func_80061cd0);
 s32 func_80061d78();

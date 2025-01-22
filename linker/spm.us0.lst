@@ -675,6 +675,7 @@
 8019B804:distABf
 801046AC:evt_npc_get_property
 8021BA80:ninjoe_bomb_calc_chance
+80D4ACD0:tree_block_trigger
 
 // new to SPMMulti
 801796A4:seq_mapChangeInit
