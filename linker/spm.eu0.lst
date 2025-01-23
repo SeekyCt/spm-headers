@@ -118,6 +118,7 @@
 
 // icondrv.c
 800731b0:iconDispGx
+805adfd0:icondrv_wp
 // more
 
 // itemdrv.c
