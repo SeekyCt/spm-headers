@@ -495,7 +495,9 @@ UNKNOWN_FUNCTION(func_801cc0a0);
 UNKNOWN_FUNCTION(func_801cc0cc);
 UNKNOWN_FUNCTION(npcGetKillXp);
 UNKNOWN_FUNCTION(func_801cc134);
-UNKNOWN_FUNCTION(func_801cc150);
+
+s32 npcDamageMario(spm::npcdrv::NPCEntry *npcEntry, spm::npcdrv::NPCPart *part, wii::mtx::Vec3 *position, u32 param_4, s32 damage, u32 flags);
+
 UNKNOWN_FUNCTION(func_801cc644);
 UNKNOWN_FUNCTION(func_801cc8d0);
 UNKNOWN_FUNCTION(func_801cc9dc);

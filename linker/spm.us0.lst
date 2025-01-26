@@ -676,6 +676,9 @@
 801046AC:evt_npc_get_property
 8021BA80:ninjoe_bomb_calc_chance
 80D4ACD0:tree_block_trigger
+801CA9EC:npcDamageMario
+8056CFF0:icondrv_wp
+804A2EE8:evt_memcard_save
 
 // new to SPMMulti
 801796A4:seq_mapChangeInit

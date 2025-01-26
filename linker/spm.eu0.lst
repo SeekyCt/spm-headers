@@ -685,6 +685,7 @@
 801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
 801c9adc:npcGetWorkPtr
+801cc150:npcDamageMario
 801e3a1c:npcDropItem
 801ca1a4:func_801ca1a4
 // more
