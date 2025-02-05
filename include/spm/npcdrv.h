@@ -53,7 +53,7 @@ typedef struct
 /* 0x04 */ s32 minimum_damage;
 /* 0x08 */ Vec3 position;
 /* 0x14 */ u32 flag14; // assigned to flag2c in NPCPart
-/* 0x18 */ u32 flag18; // assigned to flag30 in NPCPart
+/* 0x18 */ u32 hitFlags; // assigned to hitFlags in NPCPart
 /* 0x1c */ u8 unknown_0x1c[0x28 - 0x1c];
 /* 0x28 */ NPCDefense * defenses;
 /* 0x2C */ Unk * unknown_0x2c;
@@ -106,7 +106,7 @@ typedef struct
 /* 0x5c */ f32 bounceEjection2;
 /* 0x60 */ f32 unk_float;
 /* 0x64 */ u8 attackStrength; // only used for the tattle and turn-based combat, doesn't affect normal damage
-/* 0x65 */ u8 padding_0x65[0x68 - 0x65]; // padding
+/* 0x65 */ u8 padding_0x65[0x68 - 0x65]; // paddhitFlagsing
 } NPCTribe;
 SIZE_ASSERT(NPCTribe, 0x68)
 
@@ -119,7 +119,7 @@ typedef struct
 /* 0x4C */ u8 unknown_0x4C[0x70 - 0x4C];
 /* 0x70 */ Vec3 scriptRotation;
 /* 0x74 */ // unknown 0x4c+
-} NPCAnim; // unknown size
+} NPCAnim; // unknown sizehitFlags
 OFFSET_ASSERT(NPCAnim, scriptRotation, 0x70)
 
 typedef struct _NPCPart

@@ -679,6 +679,13 @@
 801CA9EC:npcDamageMario
 8056c9d0:icondrv_wp
 804A4700:evt_memcard_save
+800F00D0:evt_mario_face_npc
+8012A9EC:marioSetInvincibility
+80C28C74:evt_npc_sammer_display_count
+800FBF90:evt_msg_select
+80105374:evt_npc_get_axis_movement_unit
+800D48A8:evt_sub_get_mapname
+800FBB1C:evt_msg_print_insert
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit

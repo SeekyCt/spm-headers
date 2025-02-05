@@ -199,6 +199,7 @@
 800d3878:evt_sub_intpl_msec_get_value
 800d40a4:evt_sub_random
 800d46d8:evt_sub_set_game_speed
+800d470c:evt_sub_get_mapname
 800d4de4:func_800d4de4
 800d4774:evt_sub_get_entername
 800d4960:evt_sub_get_language
@@ -319,6 +320,7 @@
 800efa4c:evt_mario_get_pos
 800efd28:evt_mario_direction_reset
 800efd88:evt_mario_direction_face
+800effb8:evt_mario_face_npc
 800f0074:evt_mario_face_coords
 800f046c:evt_mario_pos_change
 800f0d58:evt_mario_jump_to
@@ -348,7 +350,9 @@
 
 // evt_msg.c
 800fba54:evt_msg_print
+800fbad8:evt_msg_print_insert
 800fbe74:evt_msg_continue
+800fbf4c:evt_msg_select
 800fbc64:evt_msg_print_add
 800fbd00:evt_msg_print_add_insert
 800fc02c:evt_msg_toge
@@ -386,6 +390,7 @@
 8010508c:evt_npc_get_property
 80105550:evt_npc_wait_flip_finished
 801055A4:evt_npc_finish_flip_instant
+801055ec:evt_npc_check_3d
 80105708:evt_npc_flip_to
 80105924:evt_npc_get_axis_movement_unit
 80105768:evt_npc_flip
@@ -405,6 +410,8 @@
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 801e59c4:evt_npc_dimen_determine_move_pos
+80c6a8e0:evt_npc_sammer_display_count
+
 // more
 
 // not sure where you want this
@@ -452,9 +459,11 @@
 80122b7c:marioKeyOffChk
 80122bf4:marioKeyOff
 80122c2c:marioKeyOn
+801243a8:marioMain
 8012a680:marioTakeDamage
 8012b50c:marioSetGravity
 8012a3a8:marioCalcDamageToEnemy
+8012b018:marioSetInvincibility
 // more
 
 // mario_motion.c
