@@ -662,7 +662,7 @@
 804A3D28:marioStatusApplyStatuses
 80394DF0:default_item_use_evt
 80107D1C:evt_npc_get_active_count
-80102218:func_80102bf8
+80102218:evt_npc_restart_evt_id
 800FEF4C:func_800ff8f8
 80107258:func_80107c38
 80104B70:evt_npc_wait_flip_finished
@@ -680,6 +680,16 @@
 801CA994:npcDamageMario
 805422F0:icondrv_wp
 80478188:evt_memcard_save
+8012A5BC:marioSetInvincibility
+80C56494:evt_npc_sammer_display_count
+800FBB60:evt_msg_select
+80104F44:evt_npc_get_axis_movement_unit
+800D4934:evt_sub_get_mapname
+800FB6EC:evt_msg_print_insert
+800ECB18:evt_item_entry
+800ECD6C:evt_item_flag_onoff
+800ECFC0:evt_item_wait_collected
+800EFE10:evt_mario_face_npc
 
 // new to SPMMulti
 80179694:seq_mapChangeInit

@@ -117,6 +117,7 @@
 // more
 
 // icondrv.c
+800721dc:iconReInit
 800731b0:iconDispGx
 805adfd0:icondrv_wp
 // more
@@ -358,7 +359,9 @@
 800fc02c:evt_msg_toge
 800fd0c4:evt_msg_fmt_str
 // more
+
 // evt_npc.c
+800fdfd4:evtNpcNameToPtr_NoAssert
 800ff8f8:func_800ff8f8
 80102c7c:evt_npc_get_hp
 80102d3c:evt_npc_get_max_hp
@@ -372,7 +375,7 @@
 801006fc:evt_npc_arc_to
 801004c0:evt_npc_jump_to
 80102574:evt_npc_glide_to
-80102bf8:func_80102bf8
+80102bf8:evt_npc_restart_evt_id
 80102e68:evt_npc_delete
 80102EB8:evt_npc_stats_set_up
 80102f5c:evt_npc_entry
@@ -659,7 +662,7 @@
 805ae170:romfont_wp
 
 // spmario.c
-// text
+// textevt_npc_restart_evt_id
 801a7ddc:spmarioInit
 801a84d8:spmarioMain
 801a8748:spmarioDisp
