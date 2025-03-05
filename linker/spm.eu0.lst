@@ -170,9 +170,11 @@
 800d218c:evt_snd_bgmon_f_d
 800d21f8:evt_snd_bgmoff
 800d2224:evt_snd_bgmoff_f_d
+800d24b8:evt_snd_get_bgm_wait_time
 800d2800:evt_snd_sfxon
 800d28fc:evt_snd_sfxon_character
 800d29cc:evt_snd_sfxon_3d
+800d2294:evt_snd_channel_fadeout
 800d2af4:evt_snd_sfxon_npc
 800d2b64:evt_snd_sfxon_npc_delay
 800d2cd8:evt_snd_sfxon_3d_player_character
@@ -205,6 +207,7 @@
 800d4774:evt_sub_get_entername
 800d4960:evt_sub_get_language
 800d74a0:func_800d74a0
+800d7930:evt_sub_item_select_menu
 // more
 
 // evtmgr.c
@@ -319,10 +322,12 @@
 800ef988:evt_mario_set_pos
 800f19c0:evt_mario_wait_anim
 800efa4c:evt_mario_get_pos
+800efce0:evt_mario_get_height
 800efd28:evt_mario_direction_reset
 800efd88:evt_mario_direction_face
 800effb8:evt_mario_face_npc
 800f0074:evt_mario_face_coords
+800f0304:evt_mario_walk_to
 800f046c:evt_mario_pos_change
 800f0d58:evt_mario_jump_to
 800f05b0:func_800f05b0
@@ -371,6 +376,7 @@
 800fe21c:evt_npc_set_position
 800fe668:evt_npc_rotate
 800fe92c:func_800fe92c
+800ff470:evt_npc_set_rgba
 800ffbd8:evt_npc_walk_to
 801006fc:evt_npc_arc_to
 801004c0:evt_npc_jump_to
