@@ -95,6 +95,8 @@ UNKNOWN_FUNCTION(func_8014be7c);
 UNKNOWN_FUNCTION(mot_34);
 UNKNOWN_FUNCTION(mot_34_post);
 
+int boomerFuseMain(void* boomerWork);
+
 extern MarioMotFuncs marioMotTbl[78]; // index motion id
 
 CPP_WRAPPER_END()

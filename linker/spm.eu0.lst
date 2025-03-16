@@ -279,6 +279,7 @@
 // evt_case.c
 800e0dfc:evt_exit_case_evt
 800e0e24:evt_del_case_evt
+800e0ca4:evt_run_case_evt
 
 // evt_fairy.c
 800e8214:evt_fairy_flag_onoff
@@ -442,6 +443,8 @@
 8010c86c:evt_pouch_get_attack
 8010c83c:evt_pouch_set_attack
 8010c8b8:evt_pouch_add_attack
+8010c8e8:evt_pouch_set_coins
+8010c918:evt_pouch_get_coins
 8010c9c4:evt_pouch_check_have_item
 8010CA18:evt_pouch_remove_item
 8010cdd4:evt_pouch_set_level
@@ -478,6 +481,7 @@
 // mario_motion.c
 801433dc:marioChgMot
 80146f0c:func_80146f0c
+801624b8:boomerFuseMain
 80426bb8:marioMotTbl
 // more
 
@@ -697,6 +701,7 @@
 // npcdrv.c
 // text
 801adef0:npcDispMain
+801b33a0:throwDamage
 801b6f2c:npcNameToPtr
 801b7064:npcDelete
 801be198:npcEntryFromTemplate
@@ -706,6 +711,7 @@
 801cc150:npcDamageMario
 801e3a1c:npcDropItem
 801ca1a4:func_801ca1a4
+801c8b44:npcFleeped
 // more
 // data
 805ae188:npcdrv_wp
@@ -714,6 +720,8 @@
 // more
 
 // npc_dimeen_l.c
+// text
+801084fc:npc_dimeen_l_box_deal_damage
 // data
 80457140:dimen_unk_fight_script_1
 80457190:dimen_unk_fight_script_2
