@@ -697,6 +697,8 @@
 801C7CC4:npcFleeped
 80107F4C:npc_dimeen_l_box_deal_damage
 801B26CC:throwDamage
+800FEEF4:evt_npc_set_rgba
+8010C304:evt_pouch_get_coins
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
