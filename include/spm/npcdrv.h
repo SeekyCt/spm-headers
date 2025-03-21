@@ -211,7 +211,9 @@ typedef struct _NPCEntry
 /* 0x47C */ u8 unknown_0x47c[0x49c - 0x47c];
 /* 0x49C */ s32 tribeId; // id of the NPCTribe this NPC was spawned with
 /* 0x4A0 */ s32 tribeId2; // seemingly just a copy of tribeId
-/* 0x4A4 */ u8 unknown_0x4a4[0x4ec - 0x4a4];
+/* 0x4A4 */ u8 unknown_0x4a4[0x4d8 - 0x4a4];
+/* 0x4D8 */ f32 fleepStunTime;
+/* 0x4DC */ u8 unknown_0x4dc[0x4ec - 0x4dc];
 /* 0x4EC */ u32 maxHp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F0 */ u32 hp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F4 */ u8 unknown_0x4f4[0x508 - 0x4f4];
@@ -443,7 +445,9 @@ UNKNOWN_FUNCTION(func_801c45a4);
 UNKNOWN_FUNCTION(func_801c498c);
 UNKNOWN_FUNCTION(func_801c4afc);
 UNKNOWN_FUNCTION(func_801c5140);
-UNKNOWN_FUNCTION(func_801c65e8);
+
+s32 npcTakeDamage(NPCEntry *npcEntry, NPCPart *npcPart, s32 defenseType, s32 power, u32 param_5, s32 param_6);
+
 UNKNOWN_FUNCTION(func_801c7f68);
 UNKNOWN_FUNCTION(func_801c7fe0);
 UNKNOWN_FUNCTION(func_801c7ff0);

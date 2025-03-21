@@ -350,6 +350,7 @@
 800f6440:evt_mobj_kan
 800f6610:evt_mobj_arrow
 800f8be8:evt_mobj_blk
+800fb118:evt_mobj_save_blk
 // more
 // data
 8041b6d8:mobj_save_blk_sysevt
@@ -707,6 +708,7 @@
 801be198:npcEntryFromTemplate
 801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
+801c65e8:npcTakeDamage
 801c9adc:npcGetWorkPtr
 801cc150:npcDamageMario
 801e3a1c:npcDropItem

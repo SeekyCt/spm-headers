@@ -699,6 +699,7 @@
 801B26CC:throwDamage
 800FEEF4:evt_npc_set_rgba
 8010C304:evt_pouch_get_coins
+801c58dc:npcTakeDamage
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
