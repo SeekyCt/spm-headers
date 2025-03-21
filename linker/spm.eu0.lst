@@ -708,6 +708,7 @@
 801be198:npcEntryFromTemplate
 801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
+801c2130:npcGetMaxEntries
 801c65e8:npcTakeDamage
 801c9adc:npcGetWorkPtr
 801cc150:npcDamageMario

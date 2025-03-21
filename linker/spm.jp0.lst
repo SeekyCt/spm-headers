@@ -690,6 +690,8 @@
 800ECD6C:evt_item_flag_onoff
 800ECFC0:evt_item_wait_collected
 800EFE10:evt_mario_face_npc
+800FAD2C:evt_mobj_save_blk
+801C1058:npcGetMaxEntries
 
 // new to SPMMulti
 80179694:seq_mapChangeInit

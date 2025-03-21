@@ -699,6 +699,8 @@
 801C7950:npcFleeped
 80107B1C:npc_dimeen_l_box_deal_damage
 801B2358:throwDamage
+800FAD2C:evt_mobj_save_blk
+801C10B0:npcGetMaxEntries
 
 // new to SPMMulti
 801796A4:seq_mapChangeInit
