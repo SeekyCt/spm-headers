@@ -134,6 +134,7 @@
 8008cf30:mapGrpFlagOn
 8008d2fc:mapGrpFlagOff
 8008e11c:mapGrpFlag4On
+8008181c:mapLoad
 // more
 
 // somewhere
