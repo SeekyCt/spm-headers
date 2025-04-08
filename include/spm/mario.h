@@ -804,6 +804,8 @@ void marioCalcCatchPos(Vec3 * posOut);
 */
 void marioDropCatch();
 
+void marioSetInvincibility(f32 frames, s32 flags);
+
 UNKNOWN_FUNCTION(func_8012b018);
 
 /*
