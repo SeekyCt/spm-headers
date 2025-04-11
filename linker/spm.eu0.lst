@@ -397,6 +397,8 @@
 80103dbc:evt_npc_get_unitwork
 80103ea8:evt_npc_set_unitwork
 80104694:evt_npc_set_move_mode
+801049ec:func_801049ec
+80104a3c:func_80104a3c
 80104c94:evt_npc_set_property
 80104fac:evt_npc_modify_part
 8010508c:evt_npc_get_property
@@ -411,6 +413,7 @@
 80106724:evt_npc_entry_from_template
 80107540:evt_npc_id_to_name
 80107bcc:evt_npc_set_camid
+801072a4:func_801072a4
 80107c38:func_80107c38
 80107cfc:func_80107cfc
 80107d20:func_80107d20
@@ -422,6 +425,14 @@
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 801e59c4:evt_npc_dimen_determine_move_pos
+802154fc:func_802154fc
+80215514:func_80215514
+80215540:func_80215540
+80215f44:func_80215f44
+8021fbac:bomb_damage_mario
+80224804:func_80224804
+80224874:func_80224874
+80225380:func_80225380
 80c6a8e0:evt_npc_sammer_display_count
 
 // more
@@ -704,12 +715,15 @@
 // text
 801adef0:npcDispMain
 801b33a0:throwDamage
+801b6430:npcEntry
 801b6f2c:npcNameToPtr
 801b7064:npcDelete
 801be198:npcEntryFromTemplate
 801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
 801c2130:npcGetMaxEntries
+801c2148:npcAddPart
+801c2458:npcGetPartById
 801c65e8:npcTakeDamage
 801c9adc:npcGetWorkPtr
 801cc150:npcDamageMario
@@ -878,6 +892,7 @@
 8027a834:PSMTXScale
 8027a85c:PSMTXScaleApply
 8027afac:C_MTXOrtho
+8027b4fc:PSVECSquareDistance
 // more
 
 // dvd.a

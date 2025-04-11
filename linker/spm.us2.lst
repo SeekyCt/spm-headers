@@ -676,7 +676,7 @@
 80104ADC:evt_npc_get_property
 8021C418:ninjoe_bomb_calc_chance
 80d38438:tree_block_trigger
-801CA9EC:npcDamageMario
+801CB2B4:npcDamageMario
 8056c9d0:icondrv_wp
 804A4700:evt_memcard_save
 800F00D0:evt_mario_face_npc
