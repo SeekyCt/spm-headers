@@ -730,6 +730,7 @@
 801e3a1c:npcDropItem
 801ca1a4:func_801ca1a4
 801c8b44:npcFleeped
+801e5fd0:func_801e5fd0
 // more
 // data
 805ae188:npcdrv_wp

@@ -741,3 +741,5 @@
 8010CADC:evt_seq_mapchange
 800E7360:evt_set_transition
 800DA228:evt_lbl
+801E5074:func_801e5fd0
+801BEA94:npcEntryFromSetupEnemy
