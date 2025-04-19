@@ -623,6 +623,11 @@
 8003F210:acEntry
 8003F460:acReturnResults
 8003F468:acDelete
+800D8854:func_800d8700
+800F041C:evt_mario_walk_to
+800F0E70:evt_mario_jump_to
+800DFEDC:evt_cam_get_pos
+800BC9C4:damageEffect
 
 // new to rld3 v1
 8025C950:strcat
@@ -702,6 +707,7 @@
 801c58dc:npcTakeDamage
 800FB15C:evt_mobj_save_blk
 801C1424:npcGetMaxEntries
+803F8378:wracktail_defeat
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
