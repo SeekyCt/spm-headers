@@ -624,6 +624,12 @@
 8003F270:acEntry
 8003F4C0:acReturnResults
 8003F4C8:acDelete
+800D88D0:func_800d8700
+800F015C:evt_mario_walk_to
+800F0BB0:evt_mario_jump_to
+800DFF58:evt_cam_get_pos
+800BCA24:damageEffect
+803CD718:script
 
 // new to rld3 v1
 8025C158:strcat
@@ -692,6 +698,17 @@
 800EFE10:evt_mario_face_npc
 800FAD2C:evt_mobj_save_blk
 801C1058:npcGetMaxEntries
+8010400C:func_801049ec
+8010405C:func_80104a3c
+801068C4:func_801072a4
+80213208:func_802154fc
+80213220:func_80215514
+8021324C:func_80215540
+80213C50:func_80215f44
+80222408:func_80224804
+80222478:func_80224874
+80222F84:func_80225380
+801C5510:npcTakeDamage
 
 // new to SPMMulti
 80179694:seq_mapChangeInit

@@ -17,4 +17,6 @@ EVT_DECLARE(dimen_unk_fight_script_3)
 // npc_dimeen_l_box_deal_damage(s32 unused, s32 flags, s32 damage, f32 posX, f32 posY, f32 posZ)
 EVT_DECLARE_USER_FUNC(npc_dimeen_l_box_deal_damage, 6)
 
+EVT_UNKNOWN_USER_FUNC(func_801e5fd0)
+
 CPP_WRAPPER_END()
