@@ -412,6 +412,7 @@
 801059d0:func_801059d0
 801059D0:evt_npc_set_axis_movement_unit
 80106724:evt_npc_entry_from_template
+80106db4:evt_npc_spawn_sammer_guy
 80107540:evt_npc_id_to_name
 80107bcc:evt_npc_set_camid
 801072a4:func_801072a4
