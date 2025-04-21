@@ -195,7 +195,10 @@ EVT_DECLARE_USER_FUNC(evt_npc_entry_from_template, 7)
 
 UNKNOWN_FUNCTION(func_80106904);
 UNKNOWN_FUNCTION(someEvtNpcTemplateSpawn2);
-UNKNOWN_FUNCTION(evt_npc_spawn_sammer_guy);
+
+// evt_npc_spawn_sammer_guy(s32 instanceId, s32 sammerId, f32 x, f32 y, f32 z, EvtVar ret)
+EVT_DECLARE_USER_FUNC(evt_npc_spawn_sammer_guy, 6);
+
 UNKNOWN_FUNCTION(func_80106f78);
 UNKNOWN_FUNCTION(func_80106ffc);
 UNKNOWN_FUNCTION(func_80107044);
