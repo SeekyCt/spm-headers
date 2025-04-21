@@ -487,6 +487,9 @@
 80122bf4:marioKeyOff
 80122c2c:marioKeyOn
 801243a8:marioMain
+801266e4:marioChgPose
+80126940:marioChgPaper
+80126aac:marioPaperOn
 8012a680:marioTakeDamage
 8012b50c:marioSetGravity
 8012a3a8:marioCalcDamageToEnemy
