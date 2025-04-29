@@ -32,7 +32,10 @@ UNKNOWN_FUNCTION(func_800fec04);
 UNKNOWN_FUNCTION(func_800fecd0);
 UNKNOWN_FUNCTION(func_800fed9c);
 UNKNOWN_FUNCTION(func_800fee80);
-EVT_UNKNOWN_USER_FUNC(func_800fef30)
+
+// evt_npc_set_scale(const char * instanceName, f32 x, f32 y, f32 z)
+EVT_DECLARE_USER_FUNC(evt_npc_set_scale, 4)
+
 UNKNOWN_FUNCTION(func_800feffc);
 UNKNOWN_FUNCTION(func_800ff100);
 UNKNOWN_FUNCTION(func_800ff1cc);
@@ -273,7 +276,10 @@ UNKNOWN_FUNCTION(func_80109370);
 
 UNKNOWN_FUNCTION(func_80109434);
 UNKNOWN_FUNCTION(func_801094b4);
-UNKNOWN_FUNCTION(func_80109548);
+
+// evt_npc_set_thoreau_override(const char * name, void *func)
+EVT_DECLARE_USER_FUNC(evt_npc_set_thoreau_override, 2);
+
 UNKNOWN_FUNCTION(func_801095b8);
 UNKNOWN_FUNCTION(func_80109628);
 UNKNOWN_FUNCTION(func_80109698);

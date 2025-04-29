@@ -372,6 +372,7 @@
 // evt_npc.c
 800fdfd4:evtNpcNameToPtr_NoAssert
 800ff8f8:func_800ff8f8
+800fef30:evt_npc_set_scale
 80102c7c:evt_npc_get_hp
 80102d3c:evt_npc_get_max_hp
 80102dfc:evt_npc_set_hp
@@ -423,6 +424,7 @@
 801086fc:evt_npc_get_active_count
 80108d98:evt_npc_set_part_attack_power
 801093E0:evt_npc_wait_axis_movement_unit_end
+80109548:evt_npc_set_thoreau_override
 8010a418:evt_npc_wait_for
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
@@ -691,7 +693,7 @@
 805ae170:romfont_wp
 
 // spmario.c
-// textevt_npc_restart_evt_id
+// text
 801a7ddc:spmarioInit
 801a84d8:spmarioMain
 801a8748:spmarioDisp
@@ -758,6 +760,7 @@
 // npc_ninja.c
 // data
 8021de00:ninjoe_bomb_calc_chance
+8021ec54:ninjoe_thoreau_override
 //more
 
 // wpadmgr.c
