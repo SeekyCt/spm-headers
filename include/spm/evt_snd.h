@@ -79,7 +79,7 @@ EVT_DECLARE_USER_FUNC(evt_snd_sfx_wait_name, 1)
 UNKNOWN_FUNCTION(evt_snd_sfx_flag_on);
 UNKNOWN_FUNCTION(evt_snd_sfx_flag_off);
 UNKNOWN_FUNCTION(func_800d33dc);
-UNKNOWN_FUNCTION(evt_snd_envon);
+EVT_UNKNOWN_USER_FUNC(evt_snd_envon);
 EVT_DECLARE_USER_FUNC(evt_snd_envon_f, 3)
 EVT_DECLARE_USER_FUNC(evt_snd_string_call, 1)
 UNKNOWN_FUNCTION(func_800d34e4);
