@@ -718,6 +718,7 @@
 80222DF8:func_80224804
 80222E68:func_80224874
 80223974:func_80225380
+80106804:evt_npc_spawn_sammer_guy
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
