@@ -57,7 +57,9 @@ UNKNOWN_FUNCTION(marioChangeCharacter);
 UNKNOWN_FUNCTION(_marioChangeCharacter);
 UNKNOWN_FUNCTION(func_80147748);
 UNKNOWN_FUNCTION(mot_character_change);
-UNKNOWN_FUNCTION(marioChangePixl);
+
+void marioChangePixl(s32 prevPixl, s32 newPixl);
+
 UNKNOWN_FUNCTION(func_80147f14);
 UNKNOWN_FUNCTION(mot_pixl_change);
 UNKNOWN_FUNCTION(func_801484fc);

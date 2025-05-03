@@ -628,6 +628,10 @@
 800F0E70:evt_mario_jump_to
 800DFEDC:evt_cam_get_pos
 800BC9C4:damageEffect
+800E8638:evt_fairy_reset
+801097F0:evt_npc_set_disp_callback
+8010C54C:evt_pouch_set_pixl_selected
+80109350:marioLuigiNpcDispCb
 
 // new to rld3 v1
 8025C950:strcat

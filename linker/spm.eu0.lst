@@ -285,6 +285,7 @@
 
 // evt_fairy.c
 800e8214:evt_fairy_flag_onoff
+800e84e4:evt_fairy_reset
 // more
 
 // evt_guide.c
@@ -425,6 +426,8 @@
 80108d98:evt_npc_set_part_attack_power
 801093E0:evt_npc_wait_axis_movement_unit_end
 80109548:evt_npc_set_thoreau_override
+80109900:marioLuigiNpcDispCb
+80109da0:evt_npc_set_disp_callback
 8010a418:evt_npc_wait_for
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
@@ -465,6 +468,7 @@
 8010c918:evt_pouch_get_coins
 8010c9c4:evt_pouch_check_have_item
 8010CA18:evt_pouch_remove_item
+8010cb60:evt_pouch_set_pixl_selected
 8010cdd4:evt_pouch_set_level
 8010cd88:evt_pouch_get_level
 8010ce04:evt_pouch_get_next_level_xp
@@ -504,6 +508,7 @@
 80146f0c:func_80146f0c
 801624b8:boomerFuseMain
 80426bb8:marioMotTbl
+80147e18:marioChangePixl
 // more
 
 // mario_pouch.c
