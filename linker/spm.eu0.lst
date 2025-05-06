@@ -467,6 +467,7 @@
 8010c8e8:evt_pouch_set_coins
 8010c918:evt_pouch_get_coins
 8010c9c4:evt_pouch_check_have_item
+8010c994:evt_pouch_add_item
 8010CA18:evt_pouch_remove_item
 8010cb60:evt_pouch_set_pixl_selected
 8010cdd4:evt_pouch_set_level
