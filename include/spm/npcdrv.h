@@ -413,7 +413,7 @@ s32 npcGetMaxEntries();
 UNKNOWN_FUNCTION(func_801c213c);
 NPCPart * npcAddPart(NPCEntry * entry, NPCPartDef * partDef);
 UNKNOWN_FUNCTION(func_801c23b0);
-UNKNOWN_FUNCTION(npcGetPartById);
+NPCPart * npcGetPartById(NPCEntry *npc, u32 id);
 UNKNOWN_FUNCTION(func_801c2480);
 UNKNOWN_FUNCTION(func_801c24cc);
 UNKNOWN_FUNCTION(func_801c2558);

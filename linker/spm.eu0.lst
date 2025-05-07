@@ -159,6 +159,7 @@
 
 // eff_nice.c
 800CC01C:effNiceEntry
+800cc1a0:effMainFunc
 
 // evt_cam.c
 800dff20:evt_cam3d_evt_zoom_in
@@ -209,6 +210,7 @@
 800d4960:evt_sub_get_language
 800d74a0:func_800d74a0
 800d7930:evt_sub_item_select_menu
+800d8700:func_800d8700
 // more
 
 // evtmgr.c
@@ -284,6 +286,7 @@
 
 // evt_fairy.c
 800e8214:evt_fairy_flag_onoff
+800e84e4:evt_fairy_reset
 // more
 
 // evt_guide.c
@@ -371,6 +374,7 @@
 // evt_npc.c
 800fdfd4:evtNpcNameToPtr_NoAssert
 800ff8f8:func_800ff8f8
+800fef30:evt_npc_set_scale
 80102c7c:evt_npc_get_hp
 80102d3c:evt_npc_get_max_hp
 80102dfc:evt_npc_set_hp
@@ -397,6 +401,8 @@
 80103dbc:evt_npc_get_unitwork
 80103ea8:evt_npc_set_unitwork
 80104694:evt_npc_set_move_mode
+801049ec:func_801049ec
+80104a3c:func_80104a3c
 80104c94:evt_npc_set_property
 80104fac:evt_npc_modify_part
 8010508c:evt_npc_get_property
@@ -409,8 +415,10 @@
 801059d0:func_801059d0
 801059D0:evt_npc_set_axis_movement_unit
 80106724:evt_npc_entry_from_template
+80106db4:evt_npc_spawn_sammer_guy
 80107540:evt_npc_id_to_name
 80107bcc:evt_npc_set_camid
+801072a4:func_801072a4
 80107c38:func_80107c38
 80107cfc:func_80107cfc
 80107d20:func_80107d20
@@ -418,10 +426,21 @@
 801086fc:evt_npc_get_active_count
 80108d98:evt_npc_set_part_attack_power
 801093E0:evt_npc_wait_axis_movement_unit_end
+80109548:evt_npc_set_thoreau_override
+80109900:marioLuigiNpcDispCb
+80109da0:evt_npc_set_disp_callback
 8010a418:evt_npc_wait_for
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 801e59c4:evt_npc_dimen_determine_move_pos
+802154fc:func_802154fc
+80215514:func_80215514
+80215540:func_80215540
+80215f44:func_80215f44
+8021fbac:bomb_damage_mario
+80224804:func_80224804
+80224874:func_80224874
+80225380:func_80225380
 80c6a8e0:evt_npc_sammer_display_count
 
 // more
@@ -429,6 +448,7 @@
 // not sure where you want this
 8040E598:evt_cutscene_pure_heart
 804E5C20:evt_memcard_save
+80436a68:wracktail_defeat
 
 // evt_paper.c
 8010c600:evt_paper_entry
@@ -448,7 +468,9 @@
 8010c8e8:evt_pouch_set_coins
 8010c918:evt_pouch_get_coins
 8010c9c4:evt_pouch_check_have_item
+8010c994:evt_pouch_add_item
 8010CA18:evt_pouch_remove_item
+8010cb60:evt_pouch_set_pixl_selected
 8010cdd4:evt_pouch_set_level
 8010cd88:evt_pouch_get_level
 8010ce04:evt_pouch_get_next_level_xp
@@ -474,6 +496,9 @@
 80122bf4:marioKeyOff
 80122c2c:marioKeyOn
 801243a8:marioMain
+801266e4:marioChgPose
+80126940:marioChgPaper
+80126aac:marioPaperOn
 8012a680:marioTakeDamage
 8012b50c:marioSetGravity
 8012a3a8:marioCalcDamageToEnemy
@@ -485,6 +510,7 @@
 80146f0c:func_80146f0c
 801624b8:boomerFuseMain
 80426bb8:marioMotTbl
+80147e18:marioChangePixl
 // more
 
 // mario_pouch.c
@@ -674,7 +700,7 @@
 805ae170:romfont_wp
 
 // spmario.c
-// textevt_npc_restart_evt_id
+// text
 801a7ddc:spmarioInit
 801a84d8:spmarioMain
 801a8748:spmarioDisp
@@ -704,18 +730,22 @@
 // text
 801adef0:npcDispMain
 801b33a0:throwDamage
+801b6430:npcEntry
 801b6f2c:npcNameToPtr
 801b7064:npcDelete
 801be198:npcEntryFromTemplate
 801bf7a0:npcEntryFromSetupEnemy
 801bfc48:npcSearchAnimDefs
 801c2130:npcGetMaxEntries
+801c2148:npcAddPart
+801c2458:npcGetPartById
 801c65e8:npcTakeDamage
 801c9adc:npcGetWorkPtr
 801cc150:npcDamageMario
 801e3a1c:npcDropItem
 801ca1a4:func_801ca1a4
 801c8b44:npcFleeped
+801e5fd0:func_801e5fd0
 // more
 // data
 805ae188:npcdrv_wp
@@ -737,6 +767,7 @@
 // npc_ninja.c
 // data
 8021de00:ninjoe_bomb_calc_chance
+8021ec54:ninjoe_thoreau_override
 //more
 
 // wpadmgr.c
@@ -878,6 +909,7 @@
 8027a834:PSMTXScale
 8027a85c:PSMTXScaleApply
 8027afac:C_MTXOrtho
+8027b4fc:PSVECSquareDistance
 // more
 
 // dvd.a

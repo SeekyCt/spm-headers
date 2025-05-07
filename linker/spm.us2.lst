@@ -623,6 +623,15 @@
 8003F210:acEntry
 8003F460:acReturnResults
 8003F468:acDelete
+800D8854:func_800d8700
+800F041C:evt_mario_walk_to
+800F0E70:evt_mario_jump_to
+800DFEDC:evt_cam_get_pos
+800BC9C4:damageEffect
+800E8638:evt_fairy_reset
+801097F0:evt_npc_set_disp_callback
+8010C54C:evt_pouch_set_pixl_selected
+80109350:marioLuigiNpcDispCb
 
 // new to rld3 v1
 8025C950:strcat
@@ -676,7 +685,7 @@
 80104ADC:evt_npc_get_property
 8021C418:ninjoe_bomb_calc_chance
 80d38438:tree_block_trigger
-801CA9EC:npcDamageMario
+801CB2B4:npcDamageMario
 8056c9d0:icondrv_wp
 804A4700:evt_memcard_save
 800F00D0:evt_mario_face_npc
@@ -702,6 +711,18 @@
 801c58dc:npcTakeDamage
 800FB15C:evt_mobj_save_blk
 801C1424:npcGetMaxEntries
+803F8378:wracktail_defeat
+8010443C:func_801049ec
+8010448C:func_80104a3c
+80106CF4:func_801072a4
+80213BF8:func_802154fc
+80213C10:func_80215514
+80213C3C:func_80215540
+80214640:func_80215f44
+80222DF8:func_80224804
+80222E68:func_80224874
+80223974:func_80225380
+80106804:evt_npc_spawn_sammer_guy
 
 // new to SPMMulti
 80179B10:seq_mapChangeInit
@@ -741,3 +762,5 @@
 8010CADC:evt_seq_mapchange
 800E7360:evt_set_transition
 800DA228:evt_lbl
+801E5074:func_801e5fd0
+801BEA94:npcEntryFromSetupEnemy
