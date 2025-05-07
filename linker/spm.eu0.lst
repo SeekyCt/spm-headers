@@ -159,6 +159,7 @@
 
 // eff_nice.c
 800CC01C:effNiceEntry
+800cc1a0:effMainFunc
 
 // evt_cam.c
 800dff20:evt_cam3d_evt_zoom_in
