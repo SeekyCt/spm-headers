@@ -8,10 +8,10 @@ CPP_WRAPPER(spm::an2_08)
 
 typedef struct RpgNPC {
 /* 0x00 */ s32 flags;
-/* 0x04 */ s32 unk_4;
+/* 0x04 */ s32 stunTime;
 /* 0x08 */ s32 maxHp;
 /* 0x0C */ s32 attackStrength;
-/* 0x10 */ s32 unk_10;
+/* 0x10 */ s32 killDisappearTimer;
 /* 0x14 */ s32 killXp;
 } RpgNPC;
 SIZE_ASSERT(RpgNPC, 0x18)
@@ -38,8 +38,8 @@ typedef struct An2_08Work {
 /* 0x04 */ s32 unk_04;
 /* 0x08 */ RpgMenu* rpgMenu;
 /* 0x0C */ RpgNPC rpgNpcInfo[3];
-/* 0x54 */ s32 unk_54;
-/* 0x58 */ s32 unk_58[15];
+/* 0x54 */ s32 statusEffects;
+/* 0x58 */ s32 statusEffectsTimer[15]; // The amount of time in turns until a status effect wears off
 /* 0x94 */ s32 totalScore;
 } An2_08Work; //sizeof 0x98
 SIZE_ASSERT(An2_08Work, 0x98)
