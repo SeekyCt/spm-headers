@@ -749,7 +749,6 @@
 802753C8:OSResumeThread
 80258148:memcmp
 
-
 // new to april fools 2024
 800E63CC:evt_eff_exclamation_question
 800F1818:evt_mario_wait_anim
@@ -765,4 +764,3 @@
 8056d0f0:seq_load_sub_wp
 8056d1d0:nandmgr_wp
 80238af4:spsndSFXOn
-
