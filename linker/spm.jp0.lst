@@ -1,5 +1,5 @@
 // OS Globals
-800000e4:currentThread
+800000e4:OS_CURRENT_THREAD
 800030c8:firstRel
 800030cc:lastRel
 
@@ -128,7 +128,7 @@
 803BE018:seq_data
 801A5624:__memAlloc
 801A56A8:__memFree
-803BFC68:size_table
+803BFC68:memory_size_table
 80542488:memory_wp
 8054248C:memory_swp
 80235060:wpadGetButtonsHeld
@@ -740,6 +740,7 @@
 80275378:OSResumeThread
 802580F0:memcmp
 
+
 // new to april fools 2024
 800E63CC:evt_eff_exclamation_question
 800F1818:evt_mario_wait_anim
@@ -749,3 +750,10 @@
 8010C6AC:evt_seq_mapchange
 800E7388:evt_set_transition
 800DA2A4:evt_lbl
+
+// new to v10
+805423F0:seq_load_sub_wp
+805424D0:nandmgr_wp
+80238A9C:spsndSFXOn
+8017C4F0:loadMain
+

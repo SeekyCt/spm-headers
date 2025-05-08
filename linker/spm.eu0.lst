@@ -1,6 +1,7 @@
 /* OS Globals */
 
-800000e4:currentThread
+800000dc:OS_THREAD_QUEUE
+800000e4:OS_CURRENT_THREAD
 800030c8:firstRel
 800030cc:lastRel
 // more
@@ -559,6 +560,7 @@
 // more
 
 // seq_title.c
+8017b250:seq_titleMain
 8017bc4c:getNextDanMapname
 // more
 
@@ -574,6 +576,13 @@
 8017c084:seqGetSeq
 // data
 80512360:seqWork
+
+//seq_load_sub.c
+// text
+8017d1ac:loadMain
+// data
+805ae0d0:seq_load_sub_wp
+
 
 // pausewin.c
 // text
@@ -676,7 +685,7 @@
 801a62f0:__memFree
 801a6e34:__dl__FPv
 // data
-8042a408:size_table
+8042a408:memory_size_table
 // sdata
 805ae168:memory_wp
 805ae16c:memory_swp
@@ -799,6 +808,8 @@
 8023edcc:nandUpdateSave
 8023efe0:nandLoadSave
 // more
+// data
+805ae1b0:nandmgr_wp
 
 // homebuttondrv.c
 // text
@@ -815,7 +826,6 @@
 // runtime.c
 802560a4:__div2i
 // more
-
 // MSL_C.PPCEABI.bare.H.a
 // printf.c
 8025cf40:vsprintf
@@ -826,7 +836,6 @@
 // string.c
 8025ec04:strstr
 // more
-
 // string.c
 8025a874:memmove
 8025a998:memcmp
@@ -838,10 +847,8 @@
 8025ebd4:strchr
 80267018:strlen
 // more
-
 // s_cos.c
 80263ea0:cos
-
 // s_sin.c
 802642ac:sin
 
@@ -890,16 +897,23 @@
 80276198:OSRestart
 // more
 // OSThread.c
+80277154:OSGetCurrentThread
 802776c0:OSYieldThread
 802776fc:OSCreateThread
+80277968:OSExitThread
+80277a4c:OSCancelThread
 80277d64:OSResumeThread
 80277ffc:OSSuspendThread
 80278190:OSSleepThread
 8027827c:OSWakeupThread
 // more
-// OSTime
+// OSTime.c
 80278370:OSGetTime
 // more
+// OSMutex.c
+80275a50:OSInitMutex
+80275a88:OSLockMutex
+80275b64:OSUnlockMutex
 
 // mtx.a
 // mtx.c
