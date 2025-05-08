@@ -383,7 +383,7 @@
 800fe21c:evt_npc_set_position
 800fe668:evt_npc_rotate
 800fe92c:func_800fe92c
-800ff470:evt_npc_set_rgba
+800ff470:evt_npc_set_color
 800ffbd8:evt_npc_walk_to
 801006fc:evt_npc_arc_to
 801004c0:evt_npc_jump_to
@@ -432,7 +432,6 @@
 8010a418:evt_npc_wait_for
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
-801e59c4:evt_npc_dimen_determine_move_pos
 802154fc:func_802154fc
 80215514:func_80215514
 80215540:func_80215540
@@ -756,6 +755,7 @@
 // npc_dimeen_l.c
 // text
 801084fc:npc_dimeen_l_box_deal_damage
+801e59c4:npc_dimen_determine_move_pos
 // data
 80457140:dimen_unk_fight_script_1
 80457190:dimen_unk_fight_script_2
@@ -1056,8 +1056,7 @@
 // more
 
 // ta3_02
-//todo: convert to rel address
-80d7ac80:tree_block_trigger
+1,5,85b00:tree_block_trigger
 // more
 
 // sp4_13.c

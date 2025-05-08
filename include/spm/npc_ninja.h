@@ -2,6 +2,7 @@
 
 #include <common.h>
 #include <spm/npcdrv.h>
+#include <spm/mario.h>
 
 CPP_WRAPPER(spm::npc_ninja)
 

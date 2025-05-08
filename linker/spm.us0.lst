@@ -674,14 +674,13 @@
 80104BC4:evt_npc_finish_flip_instant
 80104D28:evt_npc_flip_to
 80104D88:evt_npc_flip
-801E41A0:evt_npc_dimen_determine_move_pos
+801E41A0:npc_dimen_determine_move_pos
 80417470:dimen_unk_fight_script_1
 804174C0:dimen_unk_fight_script_2
 80419300:dimen_unk_fight_script_3
 8019B804:distABf
 801046AC:evt_npc_get_property
 8021BA80:ninjoe_bomb_calc_chance
-80D4ACD0:tree_block_trigger
 801CA9EC:npcDamageMario
 8056CFF0:icondrv_wp
 804A2EE8:evt_memcard_save
@@ -695,7 +694,7 @@
 800ECD6C:evt_item_flag_onoff
 800ECFC0:evt_item_wait_collected
 800EFE10:evt_mario_face_npc
-800FEAC4:evt_npc_set_rgba
+800FEAC4:evt_npc_set_color
 8010BED4:evt_pouch_get_coins
 8010BF20:evt_pouch_add_coins
 8016192C:boomerFuseMain
