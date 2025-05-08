@@ -190,7 +190,6 @@ typedef struct _NPCEntry
                               // (unknown for non-templated NPCs)
 /* 0x394 */ s32 unkEvtId;
 /* 0x398 */ u32 flags_398;
-/* 0x39c */ u8 unknown_0x39c[0x39c - 0x39c];
 /* 0x39C */ f32 tribeField0xE; // field 0xe of spawning NPCTribe cast to float
 /* 0x3A0 */ f32 tribeField0x10; // field 0x10 of spawning NPCTribe cast to float
 /* 0x3A4 */ f32 tribeField0x12; // field 0x12 of spawning NPCTribe cast to float
