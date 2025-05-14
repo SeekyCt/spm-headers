@@ -10,16 +10,23 @@ UNKNOWN_FUNCTION(func_800e7324);
 UNKNOWN_FUNCTION(func_800e7380);
 UNKNOWN_FUNCTION(func_800e73b0);
 UNKNOWN_FUNCTION(func_800e73e0);
-UNKNOWN_FUNCTION(func_800e7404);
+
+EVT_DECLARE_USER_FUNC(evt_fairy_all_enter_run_mode1, 0);
+
 UNKNOWN_FUNCTION(func_800e7428);
-UNKNOWN_FUNCTION(func_800e7458);
+
+EVT_DECLARE_USER_FUNC(evt_fairy_all_enter_run_mode2, 0);
+
 UNKNOWN_FUNCTION(func_800e747c);
 
 // evt_fairy_set_pos(s32 id, f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_fairy_set_pos, 4)
 
 UNKNOWN_FUNCTION(evt_fairy_set_pos_all);
-UNKNOWN_FUNCTION(evt_fairy_get_pos);
+
+// evt_fairy_get_pos(s32 id, f32 x, f32 y, f32 z)
+EVT_DECLARE_USER_FUNC(evt_fairy_get_pos, 4);
+
 UNKNOWN_FUNCTION(func_800e76d4);
 UNKNOWN_FUNCTION(func_800e7784);
 UNKNOWN_FUNCTION(func_800e77d0);
@@ -28,7 +35,10 @@ UNKNOWN_FUNCTION(func_800e7900);
 UNKNOWN_FUNCTION(func_800e7aec);
 UNKNOWN_FUNCTION(func_800e7b78);
 UNKNOWN_FUNCTION(func_800e7bdc);
-UNKNOWN_FUNCTION(func_800e7d88);
+
+// evt_fairy_fly_to(s32 id, f32 x, f32 y, f32 z, s32 time)
+EVT_DECLARE_USER_FUNC(evt_fairy_fly_to, 5);
+
 UNKNOWN_FUNCTION(func_800e7f3c);
 UNKNOWN_FUNCTION(func_800e80ec);
 
@@ -45,8 +55,13 @@ UNKNOWN_FUNCTION(func_800e8468);
 EVT_DECLARE_USER_FUNC(evt_fairy_reset, 0)
 
 EVT_UNKNOWN_USER_FUNC(func_800e8518)
-UNKNOWN_FUNCTION(func_800e86dc);
-UNKNOWN_FUNCTION(func_800e8748);
+
+// evt_fairy_set_anim(s32 id, char *animName)
+EVT_DECLARE_USER_FUNC(evt_fairy_set_anim, 2);
+
+// evt_fairy_wait_anim_end(s32 id)
+EVT_DECLARE_USER_FUNC(evt_fairy_wait_anim_end, 1);
+
 UNKNOWN_FUNCTION(func_800e87ac);
 EVT_UNKNOWN_USER_FUNC(func_800e8824)
 

@@ -185,7 +185,9 @@ s32 fairyGetNumExtra();
 
 UNKNOWN_FUNCTION(func_8011f39c);
 UNKNOWN_FUNCTION(func_8011f3b0);
-UNKNOWN_FUNCTION(func_8011f45c);
+
+void func_8011f45c(double param_1, FairyEntry *fairy, Vec3 *position);
+
 UNKNOWN_FUNCTION(func_8011f534);
 
 /*
