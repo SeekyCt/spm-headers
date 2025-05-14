@@ -79,7 +79,7 @@ UNKNOWN_FUNCTION(func_800f0c28);
 // evt_mario_jump_to(f32 x, f32 y, f32 z, f32 jumpHeight, f32 time_msec)
 EVT_DECLARE_USER_FUNC(evt_mario_jump_to, 5)
 
-UNKNOWN_FUNCTION(func_800f119c);
+EVT_UNKNOWN_USER_FUNC(func_800f119c);
 EVT_UNKNOWN_USER_FUNC(func_800f1684)
 UNKNOWN_FUNCTION(func_800f1778);
 UNKNOWN_FUNCTION(func_800f1810);
@@ -116,7 +116,7 @@ EVT_DECLARE_USER_FUNC(evt_mario_fairy_reset, 0)
 UNKNOWN_FUNCTION(evt_mario_swim_onoff);
 UNKNOWN_FUNCTION(func_800f24d8);
 UNKNOWN_FUNCTION(func_800f2544);
-UNKNOWN_FUNCTION(evt_mario_set_gravity);
+EVT_UNKNOWN_USER_FUNC(evt_mario_set_gravity);
 UNKNOWN_FUNCTION(evt_get_gravity);
 UNKNOWN_FUNCTION(func_800f262c);
 UNKNOWN_FUNCTION(func_800f267c);
