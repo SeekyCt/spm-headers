@@ -344,11 +344,12 @@
 800f0074:evt_mario_face_coords
 800f0304:evt_mario_walk_to
 800f046c:evt_mario_pos_change
+800f05b0:func_800f05b0
 800f0d58:evt_mario_jump_to
 800f119c:func_800f119c
-800f05b0:func_800f05b0
 800f1954:evt_mario_set_pose
 800F19C0:evt_mario_wait_anim
+800f1a4c:func_800f1a4c
 800f2450:evt_mario_fairy_reset
 800f25b0:evt_mario_set_gravity
 800f2f68:evt_mario_set_anim_change_handler
@@ -451,7 +452,6 @@
 801f0d30:func_801f0d30
 801f1880:func_801f1880
 801f2344:func_801f2344
-800f1a4c:func_800f1a4c
 801f2af8:func_801f2af8
 801f2664:func_801f2664
 802154fc:func_802154fc
