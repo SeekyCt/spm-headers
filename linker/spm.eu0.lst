@@ -761,6 +761,7 @@
 801b33a0:throwDamage
 801b6430:npcEntry
 801b6f2c:npcNameToPtr
+801b6fd4:npcNameToPtr_NoAssert
 801b7064:npcDelete
 801be198:npcEntryFromTemplate
 801bf7a0:npcEntryFromSetupEnemy
