@@ -61,6 +61,7 @@
 8003f730:acIsRunning
 8003f780:acNameToPtr
 8003f818:acMsgDisp
+80406ed8:acdrv_acDefs
 
 // animdrv.c
 8004249c:animPoseEntry
