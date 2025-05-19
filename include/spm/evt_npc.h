@@ -102,7 +102,7 @@ UNKNOWN_FUNCTION(func_80103574);
 // evt_npc_flag8_onoff(const char * instanceName, bool on, u32 mask)
 EVT_DECLARE_USER_FUNC(evt_npc_flag8_onoff, 3)
 
-UNKNOWN_FUNCTION(evt_npc_flagC_onoff);
+EVT_UNKNOWN_USER_FUNC(evt_npc_flagC_onoff);
 EVT_UNKNOWN_USER_FUNC(evt_npc_flag46C_onoff);
 UNKNOWN_FUNCTION(evt_npc_flag10_onoff);
 UNKNOWN_FUNCTION(evt_npc_part_flag_onoff);

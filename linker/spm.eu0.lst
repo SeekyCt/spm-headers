@@ -414,6 +414,7 @@
 8010330c:evt_npc_get_cur_anim
 80103410:evt_npc_wait_anim_end
 8010368c:evt_npc_flag8_onoff
+80103718:evt_npc_flagC_onoff
 801039b8:evt_npc_animflag_onoff
 80103dbc:evt_npc_get_unitwork
 80103ea8:evt_npc_set_unitwork
