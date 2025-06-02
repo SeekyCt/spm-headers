@@ -764,3 +764,27 @@
 8056d0f0:seq_load_sub_wp
 8056d1d0:nandmgr_wp
 80238af4:spsndSFXOn
+
+// new to SPM-RPG-Battles V3
+800E7580:evt_fairy_all_enter_run_mode1
+800E75D4:evt_fairy_all_enter_run_mode2
+800E7F04:evt_fairy_fly_to
+800E8858:evt_fairy_set_anim
+800E88C4:evt_fairy_wait_anim_end
+800F3400:evt_mobj_hit_onoff
+800F37D8:evt_mobj_set_position
+800F39E8:evt_mobj_set_rotation
+800F38E0:evt_mobj_set_scale
+8010999C:evt_npc_set_animpose_disp_callback
+8010BF50:evt_pouch_add_item
+800E03C8:func_800e01f8
+800F0FF4:func_800f119c
+800F18A4:func_800f1a4c
+801EF400:func_801f0d30
+801EFF50:func_801f1880
+801F1184:func_801f2af8
+801B53E8:npcEntry
+801B5F8C:npcNameToPtr_NoAssert
+80109340:oChunksNpcDispCb
+8056D1A8:npcdrv_wp
+1,1,c7e0:mi4MimiHolographicEffect
