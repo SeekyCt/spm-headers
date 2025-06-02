@@ -39,7 +39,8 @@ EVT_DECLARE_USER_FUNC(evt_mobj_set_position, 4)
 // evt_mobj_set_scale(const char * name, f32 x, f32 y, f32 z)
 EVT_DECLARE_USER_FUNC(evt_mobj_set_scale, 4);
 
-UNKNOWN_FUNCTION(evt_mobj_set_rotation);
+EVT_UNKNOWN_USER_FUNC(evt_mobj_set_rotation);
+
 UNKNOWN_FUNCTION(evt_mobj_set_anim);
 
 // evt_mobj_wait_animation_end(const char * name, UNUSED)

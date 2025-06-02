@@ -309,7 +309,8 @@ UNKNOWN_FUNCTION(func_8010a1c4);
 UNKNOWN_FUNCTION(func_8010a1e8);
 UNKNOWN_FUNCTION(func_8010a298);
 UNKNOWN_FUNCTION(evt_npc_try_catch_card);
-UNKNOWN_FUNCTION(func_8010a37c);
+
+EVT_DECLARE_USER_FUNC(evt_npc_set_animpose_disp_callback, 3);
 
 // evt_npc_wait_for(const char * name, s32 timeInMiliseconds)
 EVT_DECLARE_USER_FUNC(evt_npc_wait_for, 2)

@@ -366,6 +366,7 @@
 800f380c:evt_mobj_flag_onoff
 800f3a88:evt_mobj_set_position
 800f3b90:evt_mobj_set_scale
+800f3c98:evt_mobj_set_rotation
 800f5ad8:evt_mobj_zyo
 800f61ac:evt_mobj_thako
 800f6440:evt_mobj_kan
@@ -450,6 +451,7 @@
 80109d20:oChunksNpcDispCb
 80109da0:evt_npc_set_disp_callback
 8010a418:evt_npc_wait_for
+8010a37c:evt_npc_set_animpose_disp_callback
 8010a910:evt_npc_teleport_effect
 8010be80:evt_npc_tribe_agb_async
 801f0d30:func_801f0d30
@@ -816,7 +818,12 @@
 8023c93c:spsndBGMOn
 8023c948:spsndBGMOff_f_d
 8023d1b0:spsndCheckBgmPlaying
+80532fe0:spsndBgmPlayers
 // more
+
+// snd.cpp
+8030019c:Skip
+8030a548:UpdateLoadingBlockIndex
 
 // relmgr.c
 // text
@@ -1236,3 +1243,6 @@
 1,5,d2820:sammerDefsCh6
 1,5,d2cd0:sammerDefsEndgame
 // more
+
+// mi4.c
+1,1,cac4:mi4MimiHolographicEffect
