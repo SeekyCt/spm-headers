@@ -142,9 +142,11 @@ void GXSetNumChans(u8 num);
 void GXSetChanCtrl(s32 chan, u8 enable, u8 ambsrc, u8 matsrc, u8 litmask, u8 diff_fn, u8 attn_fn);
 UNKNOWN_FUNCTION(GXGetTexBufferSize);
 UNKNOWN_FUNCTION(__GetImageTileCount);
-UNKNOWN_FUNCTION(GXInitTexObj);
+
+void GXInitTexObj(GXTexObj *obj, void * image, u32 width, u32 height, u32 format, u32 wrap_s, u32 wrap_t, s32 mipmap);
 UNKNOWN_FUNCTION(GXInitTexObjCI);
-UNKNOWN_FUNCTION(GXInitTexObjLOD);
+void GXInitTexObjLOD(f32, f32, f32, GXTexObj *, s32, s32, u32, u32, u32);
+
 void GXInitTexObjData(GXTexObj * texObj, void * image);
 UNKNOWN_FUNCTION(GXInitTexObjWrapMode);
 UNKNOWN_FUNCTION(GXInitTexObjTlut);
