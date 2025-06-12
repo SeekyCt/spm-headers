@@ -1000,6 +1000,8 @@
 802901f8:GXSetCullMode
 802912f4:GXSetNumChans
 80291318:GXSetChanCtrl
+802915a0:GXInitTexObj
+802917f4:GXInitTexObjLOD
 802929d4:GXSetTevOp
 80292e10:GXSetAlphaCompare
 80292ed4:GXSetTevOrder
@@ -1084,6 +1086,7 @@
 
 // tpl.c
 802e30ec:TPLBind
+802e3220:TPLGetGXTexObjFromPalette
 // more
 
 /* Rel */

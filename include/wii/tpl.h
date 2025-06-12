@@ -10,6 +10,8 @@
 
 CPP_WRAPPER(wii::tpl)
 
+USING(wii::gx::GXTexObj)
+
 // Unions are offsets in files and pointers after loading
 
 enum ImageFormat
