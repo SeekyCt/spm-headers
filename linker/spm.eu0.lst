@@ -121,7 +121,13 @@
 
 // icondrv.c
 800721dc:iconReInit
+80073980:iconGX
 800731b0:iconDispGx
+800721f4:iconMain
+80072710:iconEntry
+80072cdc:iconDisp
+80073444:iconDispGxCol
+// sdata
 805adfd0:icondrv_wp
 // more
 
@@ -640,9 +646,10 @@
 // system.c
 8019d150:rand
 8019d254:irand
+8019c508:getSpmarioDVDRoot
 8019c54c:__assert2
-8019cf84:qqsort
 8019c688:distABf
+8019cf84:qqsort
 // more
 
 // debug.c
