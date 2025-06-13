@@ -795,3 +795,10 @@
 80109770:oChunksNpcDispCb
 8056CB88:npcdrv_wp
 1,1,c7e0:mi4MimiHolographicEffect
+8028F4F0:GXInitTexObj
+80291CD8:GXInitTexObjLOD
+802E1170:TPLGetGXTexObjFromPalette
+8019BAF0:getSpmarioDVDRoot
+80072598:iconEntry
+80073808:iconGX
+8007207C:iconMain
