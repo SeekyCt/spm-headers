@@ -36,7 +36,7 @@ UNKNOWN_FUNCTION(func_800d46a4);
 //evt_sub_set_game_speed(float newSpeed)
 EVT_DECLARE_USER_FUNC(evt_sub_set_game_speed, 1)
 
-EVT_DECLARE_USER_FUNC(evt_sub_get_mapname, -1);
+EVT_DECLARE_USER_FUNC(evt_sub_get_mapname, -1)
 
 
 // Returns the door/bero name
