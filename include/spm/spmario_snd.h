@@ -8,10 +8,11 @@
 
 CPP_WRAPPER(spm::spmario_snd)
 
-//USING() straight up did not work here which is why namespacing is used instead
+USING(nw4r::snd::Snd_BasicSound)
+USING(wii::mtx::Vec3)
 
 typedef struct Snd_SoundHandle {
-    nw4r::snd::Snd_BasicSound *mSound;
+    Snd_BasicSound *mSound;
 } Snd_SoundHandle;
 SIZE_ASSERT(Snd_SoundHandle, 0x4)
 
@@ -59,12 +60,12 @@ UNKNOWN_FUNCTION(spsndGetFlag);
 UNKNOWN_FUNCTION(func_802388f4);
 UNKNOWN_FUNCTION(func_80238b04);
 UNKNOWN_FUNCTION(spsndSFXMain);
-s32 __spsndSFXOn(const char * name, u8 volume, u8 pan, s32 delay, wii::mtx::Vec3 * position, u32 param_6);
+s32 __spsndSFXOn(const char * name, u8 volume, u8 pan, s32 delay, Vec3 * position, u32 param_6);
 void spsndSFXOn(const char * name);
 void spsndSFXOnVol(const char * name, u8 volume);
 UNKNOWN_FUNCTION(spsndSFXOn_UnkEffect);
 UNKNOWN_FUNCTION(_spsndSFXOn);
-void spsndSFXOn_3D(const char * name, wii::mtx::Vec3 * position);
+void spsndSFXOn_3D(const char * name, Vec3 * position);
 UNKNOWN_FUNCTION(spsndSFXOff);
 void func_8023b38c(u32 param_1, u32 param_2);
 UNKNOWN_FUNCTION(spsndSetSfxPlayerPos);

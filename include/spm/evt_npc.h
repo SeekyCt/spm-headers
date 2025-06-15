@@ -7,10 +7,13 @@
 
 CPP_WRAPPER(spm::evt_npc)
 
+USING(spm::npcdrv::NPCEntry)
+USING(spm::evtmgr::EvtEntry)
+
 UNKNOWN_FUNCTION(_intplGetFloat);
 UNKNOWN_FUNCTION(evtNpcNameToPtr);
 
-spm::npcdrv::NPCEntry* evtNpcNameToPtr_NoAssert(spm::evtmgr::EvtEntry* evtEntry, char *name);
+NPCEntry * evtNpcNameToPtr_NoAssert(EvtEntry* evtEntry, char *name);
 
 // evt_npc_get_position(const char * name, f32& x, f32& y, f32& z)
 EVT_DECLARE_USER_FUNC(evt_npc_get_position, 4)
