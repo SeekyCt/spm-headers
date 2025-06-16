@@ -52,7 +52,7 @@ typedef struct __vt_BasicSound {
 SIZE_ASSERT(__vt_BasicSound, 0x70)
 
 typedef struct { /* Size is uncertain */
-    struct __vt_BasicSound *__vt;
+    __vt_BasicSound *__vt;
     u8 unknown_0x4[0x67 - 0x4];
     bool isPaused; 
     u8 unknown_0x68[0x70 - 0x68];
