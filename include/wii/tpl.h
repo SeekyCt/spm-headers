@@ -109,7 +109,7 @@ SIZE_ASSERT(TPLHeader, 0xc)
 */
 void TPLBind(TPLHeader * palette);
 
-UNKNOWN_FUNCTION(TPLGet);
+UNKNOWN_FUNCTION(TPLGet)
 void TPLGetGXTexObjFromPalette(TPLHeader * palette, GXTexObj * dest, u32 id);
 
 CPP_WRAPPER_END()
