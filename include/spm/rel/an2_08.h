@@ -60,10 +60,10 @@ EVT_DECLARE(rpg_run_away_evt)
 EVT_DECLARE(rpg_snd_miss_evt)
 EVT_DECLARE(rpg_snd_hit_evt)
 
-UNKNOWN_FUNCTION(func_80c6c908);
+UNKNOWN_FUNCTION(func_80c6c908)
 u8 rpgHandleMenu(int param_1, RpgMenu * menu);
-UNKNOWN_FUNCTION(func_80c6cccc);
-UNKNOWN_FUNCTION(func_80c6ce24);
+UNKNOWN_FUNCTION(func_80c6cccc)
+UNKNOWN_FUNCTION(func_80c6ce24)
 void rpg_screen_draw();
 
 EVT_DECLARE_USER_FUNC(evt_rpg_npctribe_handle, 0)
@@ -87,7 +87,7 @@ EVT_DECLARE_USER_FUNC(evt_rpg_add_xp, 1)
 EVT_DECLARE_USER_FUNC(evt_rpg_point_handling, 1)
 EVT_DECLARE_USER_FUNC(evt_rpg_get_item_msg, 2)
 EVT_DECLARE_USER_FUNC(evt_an2_08_draw_face, 2)
-UNKNOWN_FUNCTION(func_80c72d5c);
-UNKNOWN_FUNCTION(func_80c72e10);
+UNKNOWN_FUNCTION(func_80c72d5c)
+UNKNOWN_FUNCTION(func_80c72e10)
 
 CPP_WRAPPER_END()

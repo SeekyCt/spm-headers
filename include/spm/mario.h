@@ -500,24 +500,24 @@ DECOMP_STATIC(s64 mario_mainLastRunTime) // used to adjust marioGameSpeedScale f
 */
 DECOMP_STATIC(f32 mario_gameSpeedScale)
 
-UNKNOWN_FUNCTION(func_80121e18);
+UNKNOWN_FUNCTION(func_80121e18)
 
 /*
     Returns marioGameSpeedScale
 */
 f32 marioGetGameSpeedScale();
 
-UNKNOWN_FUNCTION(func_80121e58);
-UNKNOWN_FUNCTION(func_80121f40);
+UNKNOWN_FUNCTION(func_80121e58)
+UNKNOWN_FUNCTION(func_80121f40)
 
 /*
     Returns a pointer to the MarioWork instance
 */
 MarioWork * marioGetPtr();
 
-UNKNOWN_FUNCTION(func_80121f54);
-UNKNOWN_FUNCTION(func_8012217c);
-UNKNOWN_FUNCTION(func_801222a4);
+UNKNOWN_FUNCTION(func_80121f54)
+UNKNOWN_FUNCTION(func_8012217c)
+UNKNOWN_FUNCTION(func_801222a4)
 
 /*
     Changes the player's model
@@ -653,27 +653,27 @@ void marioInit();
 */
 void marioReInit();
 
-UNKNOWN_FUNCTION(func_80123f0c);
+UNKNOWN_FUNCTION(func_80123f0c)
 
 /*
     Updates respawn position if in a safe location to respawn
 */
 void marioUpdateRespawnPos();
 
-UNKNOWN_FUNCTION(func_80124374);
+UNKNOWN_FUNCTION(func_80124374)
 
 /*
     Updates the player
 */
 void marioMain();
 
-UNKNOWN_FUNCTION(func_80125854);
-UNKNOWN_FUNCTION(func_80125998);
-UNKNOWN_FUNCTION(func_80126034);
-UNKNOWN_FUNCTION(func_801265a0);
-UNKNOWN_FUNCTION(func_80126618);
-UNKNOWN_FUNCTION(func_8012662c);
-UNKNOWN_FUNCTION(func_80126688);
+UNKNOWN_FUNCTION(func_80125854)
+UNKNOWN_FUNCTION(func_80125998)
+UNKNOWN_FUNCTION(func_80126034)
+UNKNOWN_FUNCTION(func_801265a0)
+UNKNOWN_FUNCTION(func_80126618)
+UNKNOWN_FUNCTION(func_8012662c)
+UNKNOWN_FUNCTION(func_80126688)
 
 /*
     Sets the player's current animation
@@ -694,8 +694,8 @@ void marioPaperLightOff();
 */
 bool marioIsAnimFinished();
 
-UNKNOWN_FUNCTION(func_80126c98);
-UNKNOWN_FUNCTION(func_80126cfc);
+UNKNOWN_FUNCTION(func_80126c98)
+UNKNOWN_FUNCTION(func_80126cfc)
 
 /*
     Returns screen coordinates for a point in the 3d world
@@ -712,23 +712,23 @@ bool marioChkInScreen(s32 x, s32 y);
 */
 f32 marioGetScale();
 
-UNKNOWN_FUNCTION(func_80126e1c);
-UNKNOWN_FUNCTION(func_80126e6c);
+UNKNOWN_FUNCTION(func_80126e1c)
+UNKNOWN_FUNCTION(func_80126e6c)
 
 /*
     Updates the direction the player is facing
 */
 void marioMakeDispDir();
 
-UNKNOWN_FUNCTION(func_801275dc);
+UNKNOWN_FUNCTION(func_801275dc)
 
 /*
     Prepares for rendering the player
 */
 void marioPreDisp();
 
-UNKNOWN_FUNCTION(func_80127f5c);
-UNKNOWN_FUNCTION(func_801280f8);
+UNKNOWN_FUNCTION(func_80127f5c)
+UNKNOWN_FUNCTION(func_801280f8)
 
 /*
     Enables/disables effect flags
@@ -736,18 +736,18 @@ UNKNOWN_FUNCTION(func_801280f8);
 void marioEffectFlagOn(u8 mask);
 void marioEffectFlagOff(u8 mask);
 
-UNKNOWN_FUNCTION(func_80128378);
-UNKNOWN_FUNCTION(func_801289bc);
-UNKNOWN_FUNCTION(func_80128d1c);
+UNKNOWN_FUNCTION(func_80128378)
+UNKNOWN_FUNCTION(func_801289bc)
+UNKNOWN_FUNCTION(func_80128d1c)
 
 /*
     Renders the player
 */
 void marioDisp();
 
-UNKNOWN_FUNCTION(func_80128f2c);
-UNKNOWN_FUNCTION(func_80128fd4);
-UNKNOWN_FUNCTION(func_801291f8);
+UNKNOWN_FUNCTION(func_80128f2c)
+UNKNOWN_FUNCTION(func_80128fd4)
+UNKNOWN_FUNCTION(func_801291f8)
 
 /*
     Converts a front/rear animation name to its rear/front equivalent
@@ -755,14 +755,14 @@ UNKNOWN_FUNCTION(func_801291f8);
 DECOMP_STATIC(const char * mario_toRearPose(const char * name))
 DECOMP_STATIC(const char * mario_toFrontPose(const char * name))
 
-UNKNOWN_FUNCTION(func_801299f8);
-UNKNOWN_FUNCTION(func_80129d8c);
-UNKNOWN_FUNCTION(func_80129db8);
-UNKNOWN_FUNCTION(func_80129ddc);
-UNKNOWN_FUNCTION(func_80129dfc);
-UNKNOWN_FUNCTION(func_8012a064);
-UNKNOWN_FUNCTION(func_8012a168);
-UNKNOWN_FUNCTION(func_8012a354);
+UNKNOWN_FUNCTION(func_801299f8)
+UNKNOWN_FUNCTION(func_80129d8c)
+UNKNOWN_FUNCTION(func_80129db8)
+UNKNOWN_FUNCTION(func_80129ddc)
+UNKNOWN_FUNCTION(func_80129dfc)
+UNKNOWN_FUNCTION(func_8012a064)
+UNKNOWN_FUNCTION(func_8012a168)
+UNKNOWN_FUNCTION(func_8012a354)
 
 /*
     Calculates the damage the player will do to an enemy
@@ -814,14 +814,14 @@ UNKNOWN_FUNCTION(func_8012b018);
 */
 bool marioCheck3d();
 
-UNKNOWN_FUNCTION(func_8012b090);
-UNKNOWN_FUNCTION(func_8012b218);
-UNKNOWN_FUNCTION(func_8012b2c4);
-UNKNOWN_FUNCTION(func_8012b370);
-UNKNOWN_FUNCTION(func_8012b39c);
-UNKNOWN_FUNCTION(func_8012b498);
-UNKNOWN_FUNCTION(func_8012b4ac);
-UNKNOWN_FUNCTION(func_8012b4f8);
+UNKNOWN_FUNCTION(func_8012b090)
+UNKNOWN_FUNCTION(func_8012b218)
+UNKNOWN_FUNCTION(func_8012b2c4)
+UNKNOWN_FUNCTION(func_8012b370)
+UNKNOWN_FUNCTION(func_8012b39c)
+UNKNOWN_FUNCTION(func_8012b498)
+UNKNOWN_FUNCTION(func_8012b4ac)
+UNKNOWN_FUNCTION(func_8012b4f8)
 
 /*
     Sets the player's gravity direction, see enum above
@@ -848,9 +848,9 @@ void marioApplyGravity(Vec3 * in, Vec3 * out);
 */
 void marioGravityDotProduct(Vec3 * in, Vec3 * out);
 
-UNKNOWN_FUNCTION(func_8012b7f8);
-UNKNOWN_FUNCTION(func_8012ba68);
-UNKNOWN_FUNCTION(func_8012bb80);
+UNKNOWN_FUNCTION(func_8012b7f8)
+UNKNOWN_FUNCTION(func_8012ba68)
+UNKNOWN_FUNCTION(func_8012bb80)
 
 /*
     Changes the active pane boundaries and updates which pane the player is in
@@ -868,22 +868,22 @@ s32 marioGetPaneForPos(Vec3 * pos);
 */
 void marioHandleSquash();
 
-UNKNOWN_FUNCTION(func_8012c0f8);
-UNKNOWN_FUNCTION(func_8012c188);
-UNKNOWN_FUNCTION(func_8012c218);
-UNKNOWN_FUNCTION(func_8012c948);
-UNKNOWN_FUNCTION(func_8012ca58);
-UNKNOWN_FUNCTION(func_8012caec);
-UNKNOWN_FUNCTION(func_8012cb00);
-UNKNOWN_FUNCTION(func_8012cb6c);
-UNKNOWN_FUNCTION(func_8012cbcc);
-UNKNOWN_FUNCTION(func_8012cc38);
-UNKNOWN_FUNCTION(func_8012cc98);
-UNKNOWN_FUNCTION(func_8012cd9c);
-UNKNOWN_FUNCTION(func_8012ce4c);
-UNKNOWN_FUNCTION(func_8012cea8);
-UNKNOWN_FUNCTION(func_8012cf20);
-UNKNOWN_FUNCTION(func_8012cf44);
+UNKNOWN_FUNCTION(func_8012c0f8)
+UNKNOWN_FUNCTION(func_8012c188)
+UNKNOWN_FUNCTION(func_8012c218)
+UNKNOWN_FUNCTION(func_8012c948)
+UNKNOWN_FUNCTION(func_8012ca58)
+UNKNOWN_FUNCTION(func_8012caec)
+UNKNOWN_FUNCTION(func_8012cb00)
+UNKNOWN_FUNCTION(func_8012cb6c)
+UNKNOWN_FUNCTION(func_8012cbcc)
+UNKNOWN_FUNCTION(func_8012cc38)
+UNKNOWN_FUNCTION(func_8012cc98)
+UNKNOWN_FUNCTION(func_8012cd9c)
+UNKNOWN_FUNCTION(func_8012ce4c)
+UNKNOWN_FUNCTION(func_8012cea8)
+UNKNOWN_FUNCTION(func_8012cf20)
+UNKNOWN_FUNCTION(func_8012cf44)
 
 /*
     Forces respawn position
@@ -905,8 +905,8 @@ void marioLockFacingDir(Vec3 * target);
 */
 void marioUnlockFacing();
 
-UNKNOWN_FUNCTION(func_8012d230);
-UNKNOWN_FUNCTION(func_8012d494);
+UNKNOWN_FUNCTION(func_8012d230)
+UNKNOWN_FUNCTION(func_8012d494)
 
 /*
     Spawns/removes Squirps following the player
@@ -914,7 +914,7 @@ UNKNOWN_FUNCTION(func_8012d494);
 void marioAddTamara();
 void marioRemoveTamara();
 
-UNKNOWN_FUNCTION(func_8012d8b4);
+UNKNOWN_FUNCTION(func_8012d8b4)
 
 /*
     Spawns/removes Luvbi following the player
@@ -922,8 +922,8 @@ UNKNOWN_FUNCTION(func_8012d8b4);
 void marioAddAngeko();
 void marioRemoveAngeko();
 
-UNKNOWN_FUNCTION(func_8012d98c);
-UNKNOWN_FUNCTION(func_8012d9fc);
+UNKNOWN_FUNCTION(func_8012d98c)
+UNKNOWN_FUNCTION(func_8012d9fc)
 bool func_8012dab0();
 
 CPP_WRAPPER_END()

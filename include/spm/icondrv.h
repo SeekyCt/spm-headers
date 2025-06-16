@@ -121,7 +121,7 @@ void iconDelete(const char * name);
 */
 void iconDisp(s8 cameraId, IconEntry * entry);
 
-UNKNOWN_FUNCTION(func_80072da0);
+UNKNOWN_FUNCTION(func_80072da0)
 
 void iconDispGxAlpha(f32 scale, Vec3 * position, Unk param_3, s32 iconId, u8 alpha);
 
@@ -149,7 +149,7 @@ void iconSetAlpha(const char * name, u8 alpha);
 void iconNumberDispGx(Mtx34 * param_1, s32 number, s32 keta, Unk param_4, void * param_5,
                       Unk param_6);
 
-UNKNOWN_FUNCTION(func_80074f80);
-UNKNOWN_FUNCTION(func_80074fe8);
+UNKNOWN_FUNCTION(func_80074f80)
+UNKNOWN_FUNCTION(func_80074fe8)
 
 CPP_WRAPPER_END()
