@@ -45,7 +45,7 @@ UNKNOWN_FUNCTION(func_800ff1cc);
 UNKNOWN_FUNCTION(func_800ff2a8);
 UNKNOWN_FUNCTION(func_800ff3ec);
 
-EVT_DECLARE_USER_FUNC(evt_npc_set_color, 5);
+EVT_DECLARE_USER_FUNC(evt_npc_set_color, 5)
 
 UNKNOWN_FUNCTION(func_800ff5a4);
 UNKNOWN_FUNCTION(func_800ff6f4);
@@ -58,7 +58,8 @@ EVT_DECLARE_USER_FUNC(evt_npc_walk_to, 8)
 // evt_npc_jump_to(const char * name, f32 destX, f32 destY, f32 destZ, f32 height, s32 length)
 EVT_DECLARE_USER_FUNC(evt_npc_jump_to, 6)
 
-EVT_UNKNOWN_USER_FUNC(evt_npc_arc_to);
+EVT_DECLARE_USER_FUNC(evt_npc_arc_to, 10)
+
 UNKNOWN_FUNCTION(func_80100df8);
 UNKNOWN_FUNCTION(func_80101328);
 UNKNOWN_FUNCTION(func_8010144c);
@@ -67,7 +68,7 @@ UNKNOWN_FUNCTION(func_801017b8);
 UNKNOWN_FUNCTION(func_80101e60);
 UNKNOWN_FUNCTION(func_80101f48);
 UNKNOWN_FUNCTION(func_80102424);
-EVT_UNKNOWN_USER_FUNC(evt_npc_glide_to)
+EVT_DECLARE_USER_FUNC(evt_npc_glide_to, 10)
 
 // evt_npc_restart_evt_id(const char * name)
 EVT_DECLARE_USER_FUNC(evt_npc_restart_evt_id, 1)
@@ -93,7 +94,7 @@ UNKNOWN_FUNCTION(func_801031a0);
 UNKNOWN_FUNCTION(func_80103268);
 
 // evt_npc_get_cur_anim(const char * name, s32 ret)
-EVT_DECLARE_USER_FUNC(evt_npc_get_cur_anim, 2);
+EVT_DECLARE_USER_FUNC(evt_npc_get_cur_anim, 2)
 
 UNKNOWN_FUNCTION(evt_npc_search_anim_defs);
 
@@ -119,7 +120,7 @@ UNKNOWN_FUNCTION(func_80103c24);
 UNKNOWN_FUNCTION(func_80103d20);
 
 // evt_npc_set_unitwork(const char * name, s32 idx, s32 ret)
-EVT_DECLARE_USER_FUNC(evt_npc_get_unitwork, 3);
+EVT_DECLARE_USER_FUNC(evt_npc_get_unitwork, 3)
 
 
 // evt_npc_set_unitwork(const char * name, s32 idx, s32 val)
@@ -205,7 +206,7 @@ UNKNOWN_FUNCTION(func_80106904);
 UNKNOWN_FUNCTION(someEvtNpcTemplateSpawn2);
 
 // evt_npc_spawn_sammer_guy(s32 instanceId, s32 sammerId, f32 x, f32 y, f32 z, EvtVar ret)
-EVT_DECLARE_USER_FUNC(evt_npc_spawn_sammer_guy, 6);
+EVT_DECLARE_USER_FUNC(evt_npc_spawn_sammer_guy, 6)
 
 UNKNOWN_FUNCTION(func_80106f78);
 UNKNOWN_FUNCTION(func_80106ffc);
@@ -267,7 +268,7 @@ UNKNOWN_FUNCTION(func_80108bd4);
 UNKNOWN_FUNCTION(func_80108cc0);
 
 // evt_npc_set_part_attack_power(const char * name, npcPartIndex, attackPower)
-EVT_DECLARE_USER_FUNC(evt_npc_set_part_attack_power, 3);
+EVT_DECLARE_USER_FUNC(evt_npc_set_part_attack_power, 3)
 
 UNKNOWN_FUNCTION(func_80108ebc);
 UNKNOWN_FUNCTION(func_80108f50);
@@ -283,7 +284,7 @@ UNKNOWN_FUNCTION(func_80109434);
 UNKNOWN_FUNCTION(func_801094b4);
 
 // evt_npc_set_thoreau_override(const char * name, void *func)
-EVT_DECLARE_USER_FUNC(evt_npc_set_thoreau_override, 2);
+EVT_DECLARE_USER_FUNC(evt_npc_set_thoreau_override, 2)
 
 UNKNOWN_FUNCTION(func_801095b8);
 UNKNOWN_FUNCTION(func_80109628);
@@ -313,7 +314,7 @@ UNKNOWN_FUNCTION(func_8010a1e8);
 UNKNOWN_FUNCTION(func_8010a298);
 UNKNOWN_FUNCTION(evt_npc_try_catch_card);
 
-EVT_DECLARE_USER_FUNC(evt_npc_set_animpose_disp_callback, 3);
+EVT_DECLARE_USER_FUNC(evt_npc_set_animpose_disp_callback, 3)
 
 // evt_npc_wait_for(const char * name, s32 timeInMiliseconds)
 EVT_DECLARE_USER_FUNC(evt_npc_wait_for, 2)
