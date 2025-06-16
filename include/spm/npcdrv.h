@@ -42,9 +42,14 @@ typedef enum NPCMoveMode {
     NPC_MOVE_WALK=1,
     NPC_MOVE_STAY_NO_DAMAGE=2,
     NPC_MOVE_SPIN=3,
-    NPC_MOVE_WALK_NO_HIT_2=4
+    NPC_MOVE_GRABBED=4,
+    NPC_MOVE_THROWN=5,
+    NPC_MOVE_DEATH=6,
+    NPC_MOVE_DEATH_3D=7,
+    NPC_MOVE_UNK=8,
+    NPC_MOVE_BARRY=9
 } NPCMoveMode;
-SIZE_ASSERT(NPCMoveMode, 0x4)
+SIZE_ASSERT(NPCMoveMode, 0xA)
 
 typedef struct
 {
