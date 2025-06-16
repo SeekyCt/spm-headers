@@ -49,7 +49,6 @@ typedef enum NPCMoveMode {
     NPC_MOVE_UNK=8,
     NPC_MOVE_BARRY=9
 } NPCMoveMode;
-SIZE_ASSERT(NPCMoveMode, 0xA)
 
 typedef struct
 {
