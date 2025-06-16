@@ -128,7 +128,7 @@ UNKNOWN_FUNCTION(func_8006debc)
 UNKNOWN_FUNCTION(func_8006e160)
 UNKNOWN_FUNCTION(func_8006e400)
 
-UNKNOWN_FUNCTION(hitCheckVecFilter);
+UNKNOWN_FUNCTION(hitCheckVecFilter)
 bool hitCheckFilter(f32, f32, f32, f32, f32, f32, void *, f32 *, f32 *,
                     f32 *, f32 *, f32 *, f32 *, f32 *);
 

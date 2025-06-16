@@ -118,7 +118,7 @@ CamEntry * camEntryPersp(f32 fovY, f32 aspect, f32 near, f32 far, f32 param_5,
 CamEntry * camEntryOrtho(f32 top, f32 bottom, f32 left, f32 right, f32 near,
                          f32 far, s32 cam_no, CamDispFunc * callback);
 
-UNKNOWN_FUNCTION(func_800550f8);
+UNKNOWN_FUNCTION(func_800550f8)
 
 /*
     Updates all cameras

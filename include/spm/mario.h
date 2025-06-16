@@ -526,7 +526,7 @@ UNKNOWN_FUNCTION(func_801222a4)
 */
 void marioSetAnimGroup(s32 group);
 
-UNKNOWN_FUNCTION(func_8012244c);
+UNKNOWN_FUNCTION(func_8012244c)
 
 /*
     Re-reads the characterProperties for the current character into marioWork
@@ -807,7 +807,7 @@ void marioDropCatch();
 
 void marioSetInvincibility(f32 frames, s32 flags);
 
-UNKNOWN_FUNCTION(func_8012b018);
+UNKNOWN_FUNCTION(func_8012b018)
 
 /*
     Returns whether the player is in 3d

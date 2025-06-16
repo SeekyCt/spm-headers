@@ -80,7 +80,7 @@ s32 caseEntry(CaseEntDef * def);
 */
 void caseDelete(s32 id);
 
-UNKNOWN_FUNCTION(func_80059268);
+UNKNOWN_FUNCTION(func_80059268)
 
 /*
     Updates all entries

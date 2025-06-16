@@ -19,7 +19,7 @@ SIZE_ASSERT(HomeButtonWork, 0xa0)
 DECOMP_STATIC(HomeButtonWork * homebuttondrv_wp)
 
 void homebuttonInit();
-UNKNOWN_FUNCTION(func_802418c8);
+UNKNOWN_FUNCTION(func_802418c8)
 bool homebuttonMain();
 bool func_80242198();
 UNKNOWN_FUNCTION(homebuttonAllowOpen)
