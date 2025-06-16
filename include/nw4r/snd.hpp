@@ -23,7 +23,7 @@ SIZE_ASSERT(BasicPlayer, 0x11c)
 typedef struct __vt_BasicSound {
     u8 unknown_0x0[0x8 - 0x0];
     void* GetRuntimeTypeInfo;
-    void* __dt;
+    void* _dt;
     void* Update;
     void* StartPrepared;
     void* Stop;
