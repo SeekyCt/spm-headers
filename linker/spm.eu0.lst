@@ -1455,7 +1455,7 @@
 // data
 1,5,15ad78:danMapParts
 1,5,15adb8:dan_dokanDescs
-1,5,15aeb8:dan_MapDoorDescs
+1,5,15aeb8:dan_mapDoorDescs
 1,5,15aef8:dan_flipsideLockItems
 1,5,15af00:dan_flopsideLockItems
 1,5,15af08:dan_lock_interact_evt
