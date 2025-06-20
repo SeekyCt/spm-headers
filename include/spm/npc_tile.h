@@ -7,6 +7,7 @@
 CPP_WRAPPER(spm::npc_tile)
 
 USING(spm::npcdrv::NPCEntry)
+USING(spm::evtmgr::EvtEntry)
 
 typedef struct
 {
@@ -22,9 +23,9 @@ typedef struct
 } TileoidWork;
 SIZE_ASSERT(TileoidWork, 0xf0)
 
-void npc_tile_init_work(spm::evtmgr::EvtEntry * evtEntry);
+void npc_tile_init_work(EvtEntry * evtEntry);
 
-s32 npc_tile_setup_work(spm::evtmgr::EvtEntry * evtEntry);
+s32 npc_tile_setup_work(EvtEntry * evtEntry);
 
 EVT_DECLARE(npc_tile_common_onspawn_evt)
 

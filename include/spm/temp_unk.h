@@ -6,9 +6,9 @@
 
 CPP_WRAPPER(spm::temp_unk)
 
-UNKNOWN_FUNCTION(luigi_boss_set_stats);
-UNKNOWN_FUNCTION(bowser_spawn_fire);
-UNKNOWN_FUNCTION(luigi_superjump_atk);
+UNKNOWN_FUNCTION(luigi_boss_set_stats)
+UNKNOWN_FUNCTION(bowser_spawn_fire)
+UNKNOWN_FUNCTION(luigi_superjump_atk)
 EVT_DECLARE_USER_FUNC(uranoko_idk, 4)
 
 EVT_DECLARE(kameks_unk7)
@@ -18,8 +18,8 @@ EVT_DECLARE(skellobits_unk2)
 EVT_DECLARE(skellobits_unk8)
 EVT_DECLARE(lakitu_onspawn_child)
 EVT_DECLARE(goomba_unk2_child)
-UNKNOWN_FUNCTION(shellPart1UpdateFunc);
-UNKNOWN_FUNCTION(shellPart2UpdateFunc);
+UNKNOWN_FUNCTION(shellPart1UpdateFunc)
+UNKNOWN_FUNCTION(shellPart2UpdateFunc)
 EVT_DECLARE(dimen_unk_fight_script_1)
 EVT_DECLARE(dimen_unk_fight_script_2)
 EVT_DECLARE(dimen_unk_fight_script_3)
