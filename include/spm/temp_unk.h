@@ -1,10 +1,16 @@
 #pragma once
 
 #include <common.h>
+#include <evt_cmd.h>
 #include <spm/npcdrv.h>
 #include <spm/mario.h>
 
 CPP_WRAPPER(spm::temp_unk)
+
+USING(spm::mario::MarioWork)
+USING(spm::npcdrv::NPCEntry)
+USING(spm::npcdrv::NPCDefense)
+USING(spm::npcdrv::NPCTribeAnimDef)
 
 UNKNOWN_FUNCTION(luigi_boss_set_stats)
 UNKNOWN_FUNCTION(bowser_spawn_fire)
@@ -35,15 +41,15 @@ EVT_DECLARE_USER_FUNC(lakitu_spawn_spiny, 1)
 // tribe id, num
 EVT_DECLARE_USER_FUNC(lakitu_count_spinies, 2)
 
-DECOMP_STATIC(spm::npcdrv::NPCTribeAnimDef whacka_anim_defs[])
+DECOMP_STATIC(NPCTribeAnimDef whacka_anim_defs[])
 
-extern spm::npcdrv::NPCDefense whacka_defenses;
+extern NPCDefense whacka_defenses;
 
 // should go in npcdrv.h, but compiler doesn't like recursive includes
-s32 npcHandleHitXp(spm::mario::MarioWork * marioWork, spm::npcdrv::NPCEntry * npcEntry, s32 killXp, s32 unk_variant);
+s32 npcHandleHitXp(MarioWork * marioWork, NPCEntry * npcEntry, s32 killXp, s32 unk_variant);
 
-void npcDropItem(spm::npcdrv::NPCEntry * npcEntry, s32 itemType, s32 coinCount);
+void npcDropItem(NPCEntry * npcEntry, s32 itemType, s32 coinCount);
 
-s32 backCursyaHit(spm::npcdrv::NPCEntry * npcEntry, s32 firstRun);
+s32 backCursyaHit(NPCEntry * npcEntry, s32 firstRun);
 
 CPP_WRAPPER_END()
