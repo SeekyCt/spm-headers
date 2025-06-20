@@ -1462,7 +1462,7 @@
 1,5,15afe0:dan_lock_open_evt
 1,5,15b018:dan_enemy_room_init_evt
 1,5,15b3e0:dan_chestRoomDokanDesc
-1,5,15b400:dan_mapDoorDescs
+1,5,15b400:danChestRoomMapDoorDescs
 1,5,15b440:dan_exit_pipe_sign_interact_evt
 1,5,15b478:dan_chest_open_evt
 1,5,15b5b0:rotenShopItems
