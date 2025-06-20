@@ -3,11 +3,13 @@
 #include <common.h>
 #include <wii/os.h>
 #include <wii/mtx.h>
+#include <wii/gx.h>
 
 CPP_WRAPPER(spm::animdrv)
 
 USING(wii::os::OSTime)
 USING(wii::mtx::Mtx34)
+USING(wii::gx::GXColor)
 
 typedef void (AnimPoseDisplayCb)(void * param, s32 animGroupIdx, s32 param_3);
 
@@ -63,12 +65,12 @@ UNKNOWN_FUNCTION(animPoseSetFlagF4On)
 UNKNOWN_FUNCTION(animPoseSetFlagF4Off)
 UNKNOWN_FUNCTION(animPoseSetMaterialLightFlagOn)
 UNKNOWN_FUNCTION(animPoseSetMaterialLightFlagOff)
-UNKNOWN_FUNCTION(animPoseSetMaterialEvtColor)
+void animPoseSetMaterialEvtColor(s32 animPoseId, GXColor color);
 UNKNOWN_FUNCTION(animPoseSetMaterialAnmColor)
 UNKNOWN_FUNCTION(animPoseGetFlagF0)
 UNKNOWN_FUNCTION(animPoseGetFlagF4)
 UNKNOWN_FUNCTION(animPoseGetMaterialEvtColor)
-UNKNOWN_FUNCTION(animPoseSetDispCallBack2)
+void animPoseSetDispCallback2(s32 id, void * func, void * evt);
 UNKNOWN_FUNCTION(func_800451c4)
 void animPoseMain(s32 id);
 UNKNOWN_FUNCTION(pushGXModelMtx_TransformNode__)
@@ -90,7 +92,7 @@ UNKNOWN_FUNCTION(animPaperPoseDisp)
 UNKNOWN_FUNCTION(animPaperPoseDispSub)
 UNKNOWN_FUNCTION(animPoseDisp_MakeExtTexture)
 UNKNOWN_FUNCTION(animSetPaperTexMtx)
-UNKNOWN_FUNCTION(animGroupBaseAsync)
+u32 animGroupBaseAsync(const char * animPoseName, s32 param_2, void * readDoneCb);
 UNKNOWN_FUNCTION(animPoseGetAnimPosePtr)
 UNKNOWN_FUNCTION(animPoseGetAnimDataPtr)
 AnimationModelFileHeader * animPoseGetAnimBaseDataPtr(s32 id);
@@ -107,6 +109,11 @@ UNKNOWN_FUNCTION(animPoseDrawShape)
 UNKNOWN_FUNCTION(func_8004d96c)
 UNKNOWN_FUNCTION(animPoseGetShapeIdx)
 s32 animPoseGetGroupIdx(s32 id, const char * name);
+
+void animPoseSetMaterialFlagOn(s32 animPoseId, u32 flag);
+
+void animPoseSetMaterialFlagOff(s32 animPoseId, u32 flag);
+
 UNKNOWN_FUNCTION(animPoseGetGroupIdxSubname)
 
 CPP_WRAPPER_END()

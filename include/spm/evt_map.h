@@ -12,7 +12,7 @@ UNKNOWN_FUNCTION(evt_mapobj_rotate)
 UNKNOWN_FUNCTION(func_800ed7f8)
 UNKNOWN_FUNCTION(evt_map_set_fog)
 UNKNOWN_FUNCTION(evt_map_fog_onoff)
-UNKNOWN_FUNCTION(func_800ed9b0)
+EVT_DECLARE_USER_FUNC(evt_map_set_blend, 5)
 UNKNOWN_FUNCTION(func_800eda74)
 UNKNOWN_FUNCTION(func_800edab4)
 

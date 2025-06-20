@@ -90,7 +90,7 @@ UNKNOWN_FUNCTION(func_800e333c)
 UNKNOWN_FUNCTION(func_800e34f0)
 
 // evt_door_set_dokan_descs(DokanDesc * descs, s32 count)
-EVT_DECLARE_USER_FUNC(evt_door_set_dokan_descs, 1)
+EVT_DECLARE_USER_FUNC(evt_door_set_dokan_descs, 2)
 
 // evt_door_enable_disable_dokan_desc(bool enabled, const char * name)
 EVT_DECLARE_USER_FUNC(evt_door_enable_disable_dokan_desc, 2)
@@ -104,7 +104,7 @@ UNKNOWN_FUNCTION(func_800e4014)
 UNKNOWN_FUNCTION(func_800e40e0)
 
 // evt_door_set_map_door_descs(MapDoorDesc * descs, s32 count)
-EVT_DECLARE_USER_FUNC(evt_door_set_map_door_descs, 1)
+EVT_DECLARE_USER_FUNC(evt_door_set_map_door_descs, 2)
 
 // evt_door_enable_disable_map_door_desc(bool enabled, const char * name)
 EVT_DECLARE_USER_FUNC(evt_door_enable_disable_map_door_desc, 2)
@@ -123,8 +123,17 @@ UNKNOWN_FUNCTION(evt_door_get_dokan_desc_num)
 UNKNOWN_FUNCTION(evt_door_get_map_door_descs)
 UNKNOWN_FUNCTION(evt_door_get_map_door_desc_num)
 
+EVT_DECLARE(evt_door_dan_dokan)
 EVT_DECLARE(lbl_80417e10)
 EVT_DECLARE(door_init_evt)
+EVT_DECLARE(evt_door_dan_dokan_left_one)
+EVT_DECLARE(evt_door_dan_dokan_left_two)
+EVT_DECLARE(evt_door_dan_dokan_left_three)
+EVT_DECLARE(evt_door_dan_dokan_left_four)
+EVT_DECLARE(evt_door_dan_dokan_right_one)
+EVT_DECLARE(evt_door_dan_dokan_right_two)
+EVT_DECLARE(evt_door_dan_dokan_right_three)
+EVT_DECLARE(evt_door_dan_dokan_right_four)
 
 DECOMP_STATIC(EvtDoorWork * evt_door_wp)
 

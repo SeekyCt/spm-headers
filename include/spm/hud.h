@@ -6,6 +6,18 @@
 
 CPP_WRAPPER(spm::hud)
 
+typedef struct
+{
+/* 0x000 */ u32 flags;
+/* 0x004 */ u8 unknown_0x004[0x178 - 0x004];
+/* 0x178 */ s32 countdownTimer;
+/* 0x17C */ void * countdownCallback;
+/* 0x180 */ u8 unknown_0x180[0x190 - 0x180];
+} HudWork;
+SIZE_ASSERT(HudWork, 0x190)
+
+DECOMP_STATIC(HudWork * hud_wp)
+
 void hudInit();
 void hudReInit();
 UNKNOWN_FUNCTION(hudLoadStats)

@@ -11,9 +11,9 @@ USING(spm::npcdrv::NPCEntry)
 USING(spm::evtmgr::EvtEntry)
 
 UNKNOWN_FUNCTION(_intplGetFloat)
-UNKNOWN_FUNCTION(evtNpcNameToPtr)
 
 NPCEntry * evtNpcNameToPtr_NoAssert(EvtEntry* evtEntry, char *name);
+NPCEntry * evtNpcNameToPtr(EvtEntry * entry, const char * name);
 
 // evt_npc_get_position(const char * name, f32& x, f32& y, f32& z)
 EVT_DECLARE_USER_FUNC(evt_npc_get_position, 4)
@@ -46,9 +46,8 @@ UNKNOWN_FUNCTION(func_800ff2a8)
 UNKNOWN_FUNCTION(func_800ff3ec)
 
 EVT_DECLARE_USER_FUNC(evt_npc_set_color, 5)
-
-UNKNOWN_FUNCTION(func_800ff5a4)
-UNKNOWN_FUNCTION(func_800ff6f4)
+EVT_DECLARE_USER_FUNC(evt_npc_set_colorcopy, 5);
+EVT_DECLARE_USER_FUNC(evt_npc_set_colorcopytwo, 5);
 UNKNOWN_FUNCTION(func_800ff86c)
 EVT_UNKNOWN_USER_FUNC(func_800ff8f8)
 UNKNOWN_FUNCTION(func_800ff9a4)
@@ -74,7 +73,7 @@ EVT_DECLARE_USER_FUNC(evt_npc_glide_to, 10)
 EVT_DECLARE_USER_FUNC(evt_npc_restart_evt_id, 1)
 
 EVT_UNKNOWN_USER_FUNC(evt_npc_get_hp)
-UNKNOWN_FUNCTION(evt_npc_get_max_hp)
+EVT_DECLARE_USER_FUNC(evt_npc_get_max_hp, 2)
 EVT_UNKNOWN_USER_FUNC(evt_npc_set_hp)
 
 // evt_npc_delete(const char * name)
@@ -142,7 +141,8 @@ UNKNOWN_FUNCTION(func_80104638)
 // evt_npc_set_move_mode(const char * name, NPCMoveMode moveMode )
 EVT_DECLARE_USER_FUNC(evt_npc_set_move_mode, 2)
 
-UNKNOWN_FUNCTION(func_801046f4)
+EVT_DECLARE_USER_FUNC(evt_npc_get_damage_type, 2)
+
 UNKNOWN_FUNCTION(func_80104750)
 UNKNOWN_FUNCTION(func_801047ac)
 UNKNOWN_FUNCTION(func_8010480c)
@@ -239,8 +239,8 @@ UNKNOWN_FUNCTION(func_80107b80)
 EVT_DECLARE_USER_FUNC(evt_npc_set_camid, 2)
 
 EVT_DECLARE_USER_FUNC(func_80107c38, 2)
-EVT_DECLARE_USER_FUNC(func_80107cfc, 0)
-EVT_DECLARE_USER_FUNC(func_80107d20, 0)
+EVT_DECLARE_USER_FUNC(evt_npc_freeze_all, 0)
+EVT_DECLARE_USER_FUNC(evt_npc_unfreeze_all, 0)
 UNKNOWN_FUNCTION(func_80107d44)
 UNKNOWN_FUNCTION(func_80107d90)
 UNKNOWN_FUNCTION(func_80107ddc)
@@ -334,7 +334,9 @@ UNKNOWN_FUNCTION(func_8010ac50)
 UNKNOWN_FUNCTION(func_8010b550)
 UNKNOWN_FUNCTION(func_8010bc44)
 UNKNOWN_FUNCTION(func_8010bcf0)
-UNKNOWN_FUNCTION(evt_npc_agb_async)
+
+// evt_npc_agb_async(const char * animPoseName, val???)
+EVT_DECLARE_USER_FUNC(evt_npc_agb_async, 2)
 
 // evt_npc_tribe_agb_async(s32 tribeId)
 EVT_DECLARE_USER_FUNC(evt_npc_tribe_agb_async, 1)

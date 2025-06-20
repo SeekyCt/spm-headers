@@ -33,7 +33,7 @@ UNKNOWN_FUNCTION(evt_guide_flag0_onoff)
 EVT_DECLARE_USER_FUNC(evt_guide_check_flag0, 2)
 
 UNKNOWN_FUNCTION(func_800ea9f4)
-EVT_UNKNOWN_USER_FUNC(func_800eaa88)
+EVT_DECLARE_USER_FUNC(evt_guide_get_can_search, 1)
 UNKNOWN_FUNCTION(func_800eaadc)
 
 CPP_WRAPPER_END()

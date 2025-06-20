@@ -89,7 +89,8 @@ typedef struct _PausewinEntry
 /* 0x4C */ s32 curMsgLine;
 /* 0x50 */ s32 msgWidth;
 /* 0x54 */ const char * msg;
-/* 0x58 */ u8 unknown_0x58[0x64 - 0x58];
+/* 0x58 */ f32 unk_float;
+/* 0x5C */ s32 userWork[2];
 /* 0x5C */ PausewinFunc * initFunc;
 /* 0x60 */ PausewinFunc * mainFunc;
 /* 0x64 */ PausewinFunc * dispFunc;
@@ -149,6 +150,7 @@ SIZE_ASSERT(PluswinWork, 0x1b8)
 
 DECOMP_STATIC(PluswinWork * pausewin_pluswinWp)
 DECOMP_STATIC(PausewinWork * pausewin_wp)
+DECOMP_STATIC(char pausewinCardDescBuf[512])
 
 UNKNOWN_FUNCTION(pausewinGetEntry)
 UNKNOWN_FUNCTION(pausewinGetTpl)
@@ -197,9 +199,9 @@ UNKNOWN_FUNCTION(pausewinMsgBoxMain)
 UNKNOWN_FUNCTION(pausewinMsgBoxDisp)
 UNKNOWN_FUNCTION(pausewinMsgBoxDelete)
 void pausewinSetMessage(PausewinEntry * entry, s32 itemId, const char * msgName);
-UNKNOWN_FUNCTION(pausewinSetMessageCard)
+void pausewinSetMessageCard(PausewinEntry * entry, s32 itemId);
 UNKNOWN_FUNCTION(pluswinKeyItemWinOpen)
-UNKNOWN_FUNCTION(pluswinKeyItemMain)
+void pluswinKeyItemMain(PausewinEntry * entry);
 UNKNOWN_FUNCTION(pluswinKeyItemDisp)
 UNKNOWN_FUNCTION(evt_pluswin_select_return_pipe)
 UNKNOWN_FUNCTION(evt_pluswin_get_return_pipe_msg)
