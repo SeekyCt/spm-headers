@@ -147,7 +147,7 @@ u32 animGroupBaseAsync(const char * animPoseName, s32 param_2, void * readDoneCb
 AnimPose * animPoseGetAnimPosePtr(s32 animPoseId);
 UNKNOWN_FUNCTION(animPoseGetAnimDataPtr)
 AnimationModelFileHeader * animPoseGetAnimBaseDataPtr(s32 id);
-UNKNOWN_FUNCTION(animPoseGetCurrentAnim);
+UNKNOWN_FUNCTION(animPoseGetCurrentAnim)
 UNKNOWN_FUNCTION(func_8004ca08)
 UNKNOWN_FUNCTION(func_8004caec)
 UNKNOWN_FUNCTION(func_8004cd30)
