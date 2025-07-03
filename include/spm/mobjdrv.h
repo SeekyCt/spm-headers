@@ -25,7 +25,7 @@ USING(spm::mapdrv::MapFileJoint)
 USING(wii::mtx::Vec3)
 
 struct _MobjEntry;
-typedef s32 (MobjUpdateFunc)(struct _MobjEntry * entry)
+typedef s32 (MobjUpdateFunc)(struct _MobjEntry * entry);
 
 typedef struct
 {
@@ -195,7 +195,7 @@ UNKNOWN_FUNCTION(func_8002ea54)
 UNKNOWN_FUNCTION(func_8002eb0c)
 const char * mobjGetModelName(MobjEntry * mobj);
 UNKNOWN_FUNCTION(func_8002eb60)
-void func_8002ed80()
-void func_8002ed90()
+void func_8002ed80();
+void func_8002ed90();
  
 CPP_WRAPPER_END()
