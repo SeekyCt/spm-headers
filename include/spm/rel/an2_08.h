@@ -35,7 +35,7 @@ typedef struct RpgMenu {
 } RpgMenu;
 SIZE_ASSERT(RpgMenu, 0x9c)
 
-typedef struct RPGWork {
+typedef struct RpgWork {
 /* 0x00 */ s32 flags;
 /* 0x04 */ s32 num;
 /* 0x08 */ RpgMenu* menus;
@@ -43,10 +43,10 @@ typedef struct RPGWork {
 /* 0x54 */ s32 statusEffects;
 /* 0x58 */ s32 statusEffectsTimer[15]; // The amount of time in turns until a status effect wears off
 /* 0x94 */ s32 totalScore;
-} RPGWork; //sizeof 0x98
-SIZE_ASSERT(RPGWork, 0x98)
+} RpgWork; //sizeof 0x98
+SIZE_ASSERT(RpgWork, 0x98)
 
-DECOMP_STATIC(RPGWork *rpgdrv_wp)
+DECOMP_STATIC(RpgWork *rpgdrv_wp)
 DECOMP_STATIC(const char * lbl_80def2c8[4])
 
 EVT_DECLARE(begin_rpg_parent_evt)
