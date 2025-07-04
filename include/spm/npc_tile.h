@@ -1,6 +1,7 @@
 #pragma once
 
 #include <common.h>
+#include <evt_cmd.h>
 #include <spm/npcdrv.h>
 #include <spm/evtmgr.h>
 
