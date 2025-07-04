@@ -14,6 +14,7 @@ CPP_WRAPPER(spm::icondrv)
 
 USING(spm::filemgr::FileEntry)
 USING(wii::gx::GXTexObj)
+USING(wii::gx::GXColor)
 USING(wii::mtx::Vec3)
 USING(wii::mtx::Mtx34)
 
@@ -55,17 +56,29 @@ enum IconId
 
 typedef struct
 {
+/* 0x0 */ u16 texId;
+/* 0x2 */ u16 frames;
+} WiconEntryStage;
+SIZE_ASSERT(WiconEntryStage, 0x4)
+
+typedef struct
+{
 /* 0x00 */ u32 flags;
 /* 0x04 */ Vec3 position;
 /* 0x10 */ f32 scale;
-/* 0x14 */ u8 unknown_0x14[0x24 - 0x14];
+/* 0x14 */ Vec3 rotation;
+/* 0x20 */ GXColor colour;
 /* 0x24 */ char name[MAX_ICONOBJ_NAME];
 /* 0x34 */ s16 iconId;
 /* 0x36 */ u8 unknown_0x36[0x38 - 0x36];
 /* 0x38 */ s32 offscreenId;
 /* 0x3C */ u8 unknown_0x3c[0x3f - 0x3c];
 /* 0x3F */ u8 alpha;
-/* 0x40 */ u8 unknown_0x40[0x4c - 0x40];
+/* 0x40 */ u16 texWidth;
+/* 0x42 */ u16 texHeight;
+/* 0x44 */ u16 stageCount;
+/* 0x44 */ u16 curStageId;
+/* 0x48 */ WiconEntryStage curStage;
 } IconEntry;
 SIZE_ASSERT(IconEntry, 0x4c)
 
@@ -74,7 +87,7 @@ typedef struct
 /* 0x00 */ s32 num; // 0x100
 /* 0x04 */ IconEntry * entries; // array of num
 /* 0x08 */ FileEntry * wiconTpl; // wicon.tpl from dvd root
-/* 0x0C */ FileEntry * wiconbin; // wicon.bin from dvd root
+/* 0x0C */ FileEntry * wiconBin; // wicon.bin from dvd root
 } IconWork;
 SIZE_ASSERT(IconWork, 0x10)
 
@@ -122,7 +135,7 @@ void iconDispGxAlpha(f32 scale, Vec3 * position, Unk param_3, s32 iconId, u8 alp
 void iconDispGx(f32 scale, const Vec3 * position, u32 flags, s32 iconId);
 
 void iconDispGx2(Mtx34 * param_1, Unk param_2, s32 iconId);
-void iconDispGxCol(Mtx34 * param_1, Unk param_2, s32 iconId, void * param_4);
+void iconDispGxCol(Mtx34 * param_1, u32 flags, s32 iconId, GXColor color);
 void iconGetTexObj(GXTexObj * dest, s32 iconId);
 void iconGetTexObj2(GXTexObj * dest, s32 iconId, Unk param_3, Unk param_4);
 void iconGetWidthHeight(s16 * width, s16 * height, s32 iconId);
@@ -136,7 +149,7 @@ void iconSetAlpha(const char * name, u8 alpha);
 void iconNumberDispGx(Mtx34 * param_1, s32 number, s32 keta, Unk param_4, void * param_5,
                       Unk param_6);
 
-UNKNOWN_FUNCTION(func_80074f80);
-UNKNOWN_FUNCTION(func_80074fe8);
+UNKNOWN_FUNCTION(func_80074f80)
+UNKNOWN_FUNCTION(func_80074fe8)
 
 CPP_WRAPPER_END()

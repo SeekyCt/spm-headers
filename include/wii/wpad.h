@@ -19,6 +19,8 @@ CPP_WRAPPER(wii::wpad)
 #define WPAD_BTN_B 0x400
 #define WPAD_BTN_A 0x800
 #define WPAD_BTN_MINUS 0x1000
+#define WPAD_BTN_Z 0x2000
+#define WPAD_BTN_C 0x4000
 #define WPAD_BTN_HOME 0x8000
 #define WPAD_BTN_REPEAT 0x80000000
 
