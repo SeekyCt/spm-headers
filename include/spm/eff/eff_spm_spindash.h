@@ -5,11 +5,13 @@
 
 CPP_WRAPPER(spm::eff_spm_spindash)
 
+USING(spm::effdrv::EffEntry)
+
 // ...
 
-spm::effdrv::EffEntry * effSpmSpindashEntry(f32, f32, f32, f32, s32);
+EffEntry * effSpmSpindashEntry(f32, f32, f32, f32, s32);
 
-void effSpmSpindashUpdateUnkEff(spm::effdrv::EffEntry * eff);
+void effSpmSpindashUpdateUnkEff(EffEntry * eff);
 
 // ...
 

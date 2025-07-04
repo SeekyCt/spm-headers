@@ -6,6 +6,7 @@
 CPP_WRAPPER(spm::mario_motion)
 
 USING(spm::mario::MarioMotFuncs)
+USING(spm::mario::MarioWork)
 
 void marioMotion();
 
@@ -72,7 +73,7 @@ UNKNOWN_FUNCTION(func_80148928)
 UNKNOWN_FUNCTION(mot_dummy)
 UNKNOWN_FUNCTION(mot_22)
 UNKNOWN_FUNCTION(mot_23)
-void func_80148c28(spm::mario::MarioWork * mw, s32 param_2, s32 param_3);
+void func_80148c28(MarioWork * mw, s32 param_2, s32 param_3);
 UNKNOWN_FUNCTION(func_80149680)
 UNKNOWN_FUNCTION(func_801496cc)
 UNKNOWN_FUNCTION(mot_parasol_guard)
