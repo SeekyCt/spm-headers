@@ -23,8 +23,8 @@ typedef struct
 /* 0x0C */ const char * hitName2d;
 /* 0x10 */ const char * hitName3d;
 /* 0x14 */ const char * destMapName;
-/* 0x18 */ const char * unknown_0x18;
-/* 0x1C */ s32 unknown_0x1c;
+/* 0x18 */ const char * destBeroName; // loading zone; door, pipe, etc.
+/* 0x1C */ u32 doorSfxIdx;
 } MapDoorDesc;
 SIZE_ASSERT(MapDoorDesc, 0x20)
 
@@ -81,8 +81,9 @@ UNKNOWN_FUNCTION(roomBottomlesssCb)
 // evt_door_set_door_descs(DoorDesc * descs, s32 count)
 EVT_DECLARE_USER_FUNC(evt_door_set_door_descs, 1)
 
+// evt_door_enable_disable_door_desc(bool enableDisable, const char * doorName)
+EVT_DECLARE_USER_FUNC(evt_door_enable_disable_door_desc, 2)
 
-UNKNOWN_FUNCTION(evt_door_enable_disable_door_desc)
 UNKNOWN_FUNCTION(func_800e2b78)
 UNKNOWN_FUNCTION(func_800e3050)
 UNKNOWN_FUNCTION(func_800e32a0)
@@ -134,7 +135,7 @@ EVT_DECLARE(evt_door_dan_dokan_right_one)
 EVT_DECLARE(evt_door_dan_dokan_right_two)
 EVT_DECLARE(evt_door_dan_dokan_right_three)
 EVT_DECLARE(evt_door_dan_dokan_right_four)
-
+        
 DECOMP_STATIC(EvtDoorWork * evt_door_wp)
 
 CPP_WRAPPER_END()

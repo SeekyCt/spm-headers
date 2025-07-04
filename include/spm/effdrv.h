@@ -91,7 +91,7 @@ EffEntry * effEntryType(s32 type);
 /*
     Sets the name of an entry
 */
-void effSetName(const char * name);
+void effSetName(EffEntry * entry, const char * name);
 
 /*
     Loads TPLs if not loaded, calls effSubMain and calls the mainFunc of each entry

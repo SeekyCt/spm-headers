@@ -7,6 +7,7 @@
 
 #include <common.h>
 #include <wii/os.h>
+#include <wii/gx.h>
 
 CPP_WRAPPER(wii::tpl)
 
