@@ -686,7 +686,6 @@
 8056CB88:npcdrv_wp
 80109770:oChunksNpcDispCb
 8014F2DC:pouchSetEnemiesDefeated
-8007207C:iconMain
 
 // new to rld3 v1
 8025C950:strcat
