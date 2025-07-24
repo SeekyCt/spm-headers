@@ -258,4 +258,6 @@ UNKNOWN_FUNCTION(minuswinDisp)
 UNKNOWN_FUNCTION(minuswinMain)
 UNKNOWN_FUNCTION(func_801950f8)
 
+void levelUpWindowMain();
+
 CPP_WRAPPER_END()

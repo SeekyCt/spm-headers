@@ -2,16 +2,36 @@
 
 #include <common.h>
 #include <evt_cmd.h>
+#include <spm/evtmgr.h>
 
 CPP_WRAPPER(spm::evt_door)
 
+USING(spm::evtmgr::EvtScriptCode)
+
 typedef struct
 {
-/* 0x00 */ u8 unknown_0x0[0xc - 0x0];
-/* 0x0C */ const char * name;
-/* 0x10 */ u8 unknown_0x10[0x44 - 0x10];
-/* 0x44 */ const char ** npcNameList;
-/* 0x48 */ u8 unknown_0x48[0x58 - 0x48];
+    u32 flags;
+    s32 type;
+    s32 field2_0x8;
+    const char *name;
+    const char *openCase1Name;
+    const char *openCase2Name;
+    const char *closeCase1Name;
+    const char *closeCase2Name;
+    const char *field8_0x20;
+    const char *field9_0x24;
+    const char *field10_0x28;
+    const char *mapGrpName;
+    const char *hitGrpName1;
+    const char *hitGrpName2;
+    const char *field14_0x38;
+    const char *field15_0x3c;
+    EvtScriptCode *interactScript;
+    const char **npcNameList;
+    const char **mobjNameList;
+    const char **itemNameList;
+    EvtScriptCode *unkScript1;
+    EvtScriptCode *unkScript2;
 } DoorDesc;
 SIZE_ASSERT(DoorDesc, 0x58)
 

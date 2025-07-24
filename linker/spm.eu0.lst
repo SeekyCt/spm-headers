@@ -575,6 +575,7 @@
 80105924:evt_npc_get_axis_movement_unit
 801059d0:evt_npc_set_axis_movement_unit
 80105768:evt_npc_flip
+80106390:evt_read_setup_file
 80106724:evt_npc_entry_from_template
 801072a4:func_801072a4
 80106db4:evt_npc_spawn_sammer_guy
@@ -687,6 +688,8 @@
 8012823c:marioEffectFlagOn
 80128360:marioEffectFlagOff
 8012bd5c:marioHandleSquash
+//data
+805ae8e8:mario_gameSpeedScale
 // more
 
 // mario_motion.c
@@ -720,7 +723,6 @@
 8014d4f8:pouchGetXp
 8014d508:pouchAddXp
 8014d3c8:pouchGetAttack
-8014f7c8:pouchGetCardCount
 8014d548:pouchSetCoin
 8014d57c:pouchGetCoin
 8014d58c:pouchAddCoin
@@ -732,6 +734,7 @@
 8014eb68:pouchRemoveShopItem
 8014f31c:pouchGetCurPixl
 8014f7c8:pouchGetCardCount
+8014f978:pouchSetEnemiesDefeated
 8014fa20:pouchCountUseItems
 8014fad0:pouchCountKeyItems
 8014fb78:pouchCountShopItems
@@ -829,6 +832,7 @@
 80188628:pausewinSetMessageCard
 80188a64:pluswinKeyItemMain
 80189cf0:pluswinChapterWinOpen
+80181248:levelUpWindowMain
 // more
 // data
 80513970:pausewinCardDescBuf

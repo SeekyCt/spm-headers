@@ -196,7 +196,7 @@ UNKNOWN_FUNCTION(func_801061c8)
 UNKNOWN_FUNCTION(func_80106260)
 UNKNOWN_FUNCTION(func_801062b0)
 UNKNOWN_FUNCTION(func_80106300)
-UNKNOWN_FUNCTION(evt_read_setup_file)
+EVT_UNKNOWN_USER_FUNC(evt_read_setup_file)
 
 // evt_npc_entry_from_template(s32 instanceIdOverride, s32 templateId, s32 x, s32 y,
 //                             s32 z, &s32 instanceId, &char * instanceName)
