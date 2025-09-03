@@ -131,5 +131,8 @@ UNKNOWN_FUNCTION(func_800293a8)
 EVT_DECLARE_USER_FUNC(evt_itemdata_get_return_pipe_info, 2)
 
 EVT_DECLARE(default_item_use_evt)
+EVT_DECLARE(item_data_map_darken_evt)
+EVT_DECLARE(item_data_map_lighten_evt)
+
 
 CPP_WRAPPER_END()
