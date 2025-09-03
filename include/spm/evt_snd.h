@@ -63,7 +63,7 @@ UNKNOWN_FUNCTION(func_800d2ed0)
 // evt_snd_sfxoff(s32 id)
 EVT_DECLARE_USER_FUNC(evt_snd_sfxoff, 1)
 
-EVT_DECLARE_USER_FUNC(func_800d2fa4, 2)
+EVT_DECLARE_USER_FUNC(evt_snd_sfx_fadeout, 2)
 UNKNOWN_FUNCTION(func_800d3000)
 
 // evt_snd_get_last_sfx_id(s32& ret)
