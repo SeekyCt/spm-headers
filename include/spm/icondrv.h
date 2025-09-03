@@ -143,7 +143,7 @@ void iconGX(Mtx34 * param_1, IconEntry * entry);
 IconEntry * iconNameToPtr(const char * name);
 void iconSetPos(const char * name, f32 x, f32 y, f32 z);
 void iconFlagOn(const char * name, u32 flag);
-void iconFlagOn(const char * name, u32 flag);
+void iconFlagOff(const char * name, u32 flag);
 void iconSetScale(const char * name, f32 scale);
 void iconSetAlpha(const char * name, u8 alpha);
 void iconNumberDispGx(Mtx34 * param_1, s32 number, s32 keta, Unk param_4, void * param_5,
