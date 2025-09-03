@@ -527,7 +527,7 @@
 80129C24:marioTakeDamage
 1,5,fcf54:begin_rpg_parent_evt
 800D3258:evt_snd_get_last_sfx_id
-800D31CC:func_800d2fa4
+800D31CC:evt_snd_sfx_fadeout
 1,1,29620:evt_rpg_calc_damage_to_enemy
 1,1,2c998:evt_rpg_char_death_check
 1,1,2ca30:evt_rpg_status_remove
@@ -686,6 +686,14 @@
 8056D1A8:npcdrv_wp
 80109340:oChunksNpcDispCb
 8014EE84:pouchSetEnemiesDefeated
+803C78B8:acdrv_acDefs
+80C4F22C:evt_bos_01_pure_heart_set_pos
+80072B30:iconDelete
+80072BC4:iconDisp
+800746FC:iconFlagOn
+80074578:iconNameToPtr
+803BD150:item_data_map_darken_evt
+803BD1C8:item_data_map_lighten_evt
 
 // new to rld3 v1
 8025C1B0:strcat

@@ -172,12 +172,16 @@
 
 // icondrv.c
 800721dc:iconReInit
+80072c48:iconDelete
+80072ea8:iconDispGxAlpha
 80073980:iconGX
 800731b0:iconDispGx
 800721f4:iconMain
 80072710:iconEntry
 80072cdc:iconDisp
 80073444:iconDispGxCol
+80074690:iconNameToPtr
+80074814:iconFlagOn
 // sdata
 805adfd0:icondrv_wp
 // more
@@ -197,6 +201,8 @@
 80025164:getItemUseEvt
 803fbc10:itemEventDataTable
 803ff190:default_item_use_evt
+803fc770:item_data_map_darken_evt
+803fc7e8:item_data_map_lighten_evt
 // data
 805adf00:item_event_data_wp
 // more
@@ -273,7 +279,7 @@
 800d2af4:evt_snd_sfxon_npc
 800d2b64:evt_snd_sfxon_npc_delay
 800d2cd8:evt_snd_sfxon_3d_player_character
-800d2fa4:func_800d2fa4
+800d2fa4:evt_snd_sfx_fadeout
 800d2f74:evt_snd_sfxoff
 800d3030:evt_snd_get_last_sfx_id
 800d32a4:evt_snd_sfx_wait
@@ -1386,6 +1392,12 @@
 // aa1_01.c 
 // data
 1,5,154820:aa1_01_mario_house_transition_evt
+
+
+// bos_01.c 
+// data
+80c7e598:evt_bos_01_pure_heart_set_pos
+80c7e644:evt_bos_01_pure_heart_get_pos
 
 // sp4_13.c
 // text
