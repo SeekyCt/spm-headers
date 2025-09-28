@@ -26,7 +26,7 @@ typedef struct {
 /* 0x78 */ s32 unkAnimPaperPoseId;
 /* 0x7c */ u8 unknown_0x7c[0x80 - 0x7c];
 /* 0x80 */ void * ip;
-/* 0x84 */ u8 unknown_0x84[0x8c - 0x84];
+/* 0x84 */ u8 unknown_0x84[0x90 - 0x84];
 } FadeEntry;
 SIZE_ASSERT(FadeEntry, 0x90)
 
@@ -38,7 +38,7 @@ typedef struct {
 /* 0x250 */ s32 mapChangeOutTransition;
 /* 0x254 */ s32 fadeOutTime;
 /* 0x258 */ s32 fadeInTime;
-/* 0x25c */ u8 unknown_025c[0x25f - 0x25c];
+/* 0x25c */ u8 unknown_025c[0x260 - 0x25c];
 } FadeWork;
 SIZE_ASSERT(FadeWork, 0x260)
 
