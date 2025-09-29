@@ -59,18 +59,18 @@ typedef void * (ThreadFunc)(void *);
 #define OS_THREAD_STATE_SLEEPING 4
 #define OS_THREAD_STATE_MORIBUND 8
 
-UNKNOWN_FUNCTION(DefaultSwitchThreadCallback)
-UNKNOWN_FUNCTION(__OSThreadInit)
-UNKNOWN_FUNCTION(OSInitThreadQueue)
+UNKNOWN_FUNCTION(DefaultSwitchThreadCallback);
+UNKNOWN_FUNCTION(__OSThreadInit);
+UNKNOWN_FUNCTION(OSInitThreadQueue);
 OSThread * OSGetCurrentThread();
-UNKNOWN_FUNCTION(OSDisableScheduler)
-UNKNOWN_FUNCTION(OSEnableScheduler)
-UNKNOWN_FUNCTION(UnsetRun)
-UNKNOWN_FUNCTION(__OSGetEffectivePriority)
-UNKNOWN_FUNCTION(SetEffectivePriority)
-UNKNOWN_FUNCTION(__OSPromoteThread)
-UNKNOWN_FUNCTION(SelectThread)
-UNKNOWN_FUNCTION(__OSReschedule)
+UNKNOWN_FUNCTION(OSDisableScheduler);
+UNKNOWN_FUNCTION(OSEnableScheduler);
+UNKNOWN_FUNCTION(UnsetRun);
+UNKNOWN_FUNCTION(__OSGetEffectivePriority);
+UNKNOWN_FUNCTION(SetEffectivePriority);
+UNKNOWN_FUNCTION(__OSPromoteThread);
+UNKNOWN_FUNCTION(SelectThread);
+UNKNOWN_FUNCTION(__OSReschedule);
 void OSYieldThread();
 BOOL OSCreateThread(OSThread * thread, ThreadFunc * func, void * funcParam, void * stackTop,
                    u32 stackSize, s32 priority, u16 attr);
