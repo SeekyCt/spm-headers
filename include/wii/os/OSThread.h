@@ -59,8 +59,6 @@ typedef void * (ThreadFunc)(void *);
 #define OS_THREAD_STATE_SLEEPING 4
 #define OS_THREAD_STATE_MORIBUND 8
 
-typedef void * (ThreadFunc)(void *);
-
 #define OS_THREAD_DETACHED 1
 
 #define OS_THREAD_STATE_EXITED 0
