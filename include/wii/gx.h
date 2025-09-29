@@ -36,14 +36,6 @@ typedef struct
 } GXTexObj;
 SIZE_ASSERT(GXTexObj, 0x20)
 
-
-typedef enum
-{
-/* 0x0 */ GX_PERSPECTIVE,
-/* 0x1 */ GX_ORTHOGRAPHIC
-} GXProjectionType;
-
-
 typedef enum
 {
 /* 0x0 */ GX_PERSPECTIVE,
