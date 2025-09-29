@@ -45,7 +45,7 @@ SIZE_ASSERT(FadeWork, 0x260)
 DECOMP_STATIC(FadeWork * fadedrv_wp)
 
 void fadeInit();
-void fadeEntry(u32 transitionType, s32 lengthMsec, GXColor color);
+void fadeEntry(s32 transitionType, s32 lengthMsec, GXColor color);
 UNKNOWN_FUNCTION(func_80066558);
 void fadeMain();
 UNKNOWN_FUNCTION(func_80066e4c);
