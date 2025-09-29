@@ -30,8 +30,8 @@ typedef struct
     const char **npcNameList;
     const char **mobjNameList;
     const char **itemNameList;
-    EvtScriptCode *initScript;
-    EvtScriptCode *moveScript;
+    EvtScriptCode *unkScript1;
+    EvtScriptCode *unkScript2;
 } DoorDesc;
 SIZE_ASSERT(DoorDesc, 0x58)
 

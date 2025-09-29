@@ -268,7 +268,6 @@
 800d218c:evt_snd_bgmon_f_d
 800d21f8:evt_snd_bgmoff
 800d2224:evt_snd_bgmoff_f_d
-800d2268:evt_snd_idfk
 800d22d8:evt_snd_bgm_fadein
 800d23cc:evt_snd_bgm_set_vol
 800d24b8:evt_snd_get_bgm_wait_time
@@ -605,6 +604,8 @@
 8010a910:evt_npc_teleport_effect
 8010be00:evt_npc_agb_async
 8010be80:evt_npc_tribe_agb_async
+<<<<<<< HEAD
+=======
 801f0d30:func_801f0d30
 801f1880:func_801f1880
 801f2344:func_801f2344
@@ -618,6 +619,7 @@
 80224804:func_80224804
 80224874:func_80224874
 80225380:func_80225380
+>>>>>>> refs/subrepo/spm-headers/fetch
 80c6a8e0:evt_npc_sammer_display_count
 // more
 
@@ -1006,12 +1008,19 @@
 801c2558:npcPartUpdatePosition
 801c65e8:npcTakeDamage
 801c82a8:npcHandleHitXp
+<<<<<<< HEAD
 801c8b44:npcFleeped
+=======
 801c9ac8:npcGetTribe
+>>>>>>> refs/subrepo/spm-headers/fetch
 801c9adc:npcGetWorkPtr
 801cc150:npcDamageMario
 801ca1a4:func_801ca1a4
+<<<<<<< HEAD
+=======
+801c8b44:npcFleeped
 801d233c:npcFreezeAll
+>>>>>>> refs/subrepo/spm-headers/fetch
 801e5fd0:func_801e5fd0
 // more
 // data
@@ -1027,7 +1036,11 @@
 // npc_dimeen_l.c
 // text
 801084fc:npc_dimeen_l_box_deal_damage
+<<<<<<< HEAD
 801e59c4:npc_dimeen_l_determine_move_pos
+=======
+801e59c4:npc_dimen_determine_move_pos
+>>>>>>> refs/subrepo/spm-headers/fetch
 // data
 80457140:dimen_unk_fight_script_1
 80457190:dimen_unk_fight_script_2
