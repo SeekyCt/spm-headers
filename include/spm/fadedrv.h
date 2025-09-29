@@ -12,7 +12,7 @@ USING(wii::gx::GXColor)
 typedef struct {
 /* 0x00 */ u16 flags;
 /* 0x02 */ u8 unknown_0x2[0x4 - 0x2];
-/* 0x04 */ u32 transitionType;
+/* 0x04 */ s32 transitionType;
 /* 0x08 */ u8 unknown_0x8[0x10 - 0x8];
 /* 0x10 */ s32 entryP2Sign;
 /* 0x14 */ s32 entryP2;
