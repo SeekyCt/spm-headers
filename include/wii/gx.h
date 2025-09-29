@@ -23,13 +23,6 @@ typedef struct
     s16 r, g, b, a;
 } GXColorS10;
 SIZE_ASSERT(GXColorS10, 0x8)
-SIZE_ASSERT(GXColor, 0x4)
-
-typedef struct
-{
-    s16 r, g, b, a;
-} GXColorS10;
-SIZE_ASSERT(GXColorS10, 0x8)
 
 typedef struct
 {
