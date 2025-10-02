@@ -44,6 +44,7 @@
 8002f35c:msgUnLoad
 8003270c:msgSearch
 800327e4:msgSearchNoFallback
+80032f84:msgWindow_Add
 //data
 80405bd8:msgdrv_msgIcon
 // more
@@ -1426,6 +1427,7 @@
 // text
 1,1,2700c:func_80c6c908
 1,1,27050:rpgHandleMenu
+1,1,273D0:func_80c6cccc
 1,1,27590:rpg_screen_draw
 1,1,27c88:evt_rpg_npctribe_handle
 1,1,27f80:evt_rpg_change_menu_flag

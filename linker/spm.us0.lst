@@ -694,6 +694,8 @@
 80074578:iconNameToPtr
 803BD150:item_data_map_darken_evt
 803BD1C8:item_data_map_lighten_evt
+1,1,27044:func_80c6cccc
+8056CF20:item_event_data_wp
 
 // new to rld3 v1
 8025C1B0:strcat
