@@ -696,6 +696,7 @@
 803BE6C8:item_data_map_lighten_evt
 1,1,27044:func_80c6cccc
 8056C900:item_event_data_wp
+80131488:marioGetHitboxWidth
 
 // new to rld3 v1
 8025C950:strcat

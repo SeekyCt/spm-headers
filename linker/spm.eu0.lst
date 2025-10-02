@@ -782,6 +782,7 @@
 
 // mario_hit.c
 801318f8:marioGetHeight
+80131ad4:marioGetHitboxWidth
 
 // mot_walk.c
 80118f80:marioGetDashSpd
