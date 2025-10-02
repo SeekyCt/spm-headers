@@ -31,7 +31,7 @@ SIZE_ASSERT(ItemEventNpcRef, 0xc)
 
 typedef struct
 {
-/* 0x0 */ ItemEventNpcRef ItemNpcRef;
+/* 0x0 */ ItemEventNpcRef ItemNpcRef[1];
 /* 0xc */ u8 unknown_0xc[0x13f - 0xc];
 } ItemEvtWork2;
 SIZE_ASSERT(ItemEvtWork2, 0x140)

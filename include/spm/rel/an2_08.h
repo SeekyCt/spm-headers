@@ -64,7 +64,7 @@ EVT_DECLARE(rpg_snd_hit_evt)
 
 UNKNOWN_FUNCTION(func_80c6c908)
 s32 rpgHandleMenu(s32 type, RpgMenuOption* options);
-UNKNOWN_FUNCTION(func_80c6cccc)
+u32 func_80c6cccc(double param_1,double param_2,double param_3,double param_4, s32 type, u16 param_6);
 UNKNOWN_FUNCTION(func_80c6ce24)
 void rpg_screen_draw();
 
