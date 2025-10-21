@@ -49,6 +49,9 @@
 80405bd8:msgdrv_msgIcon
 // more
 
+// offscreendrv.c 
+800354d8:offscreenSetEntryType
+
 // swdrv.c
 80037eac:swInit
 80037f48:swReInit
@@ -403,6 +406,25 @@
 8011f45c:func_8011f45c
 // more
 
+// evt_frame.c 
+800e8824:evt_frame_delete
+800e8854:evt_frame_offscreen_draw_flag_onoff
+800e88d0:evt_frame_offscreen_entry
+800e89d4:evt_frame_bind_offscreen
+800e8a58:evt_frame_set_img_anim
+800e8ab4:evt_frame_set_color
+800e8b48:evt_frame_flag_onoff
+800e8be8:evt_frame_wire_entry
+800e8cd0:evt_frame_wire_wait_draw_finished
+800e8d0c:evt_frame_set_draw_speed
+800e8d98:evt_frame_set_wire_color
+800e8e2c:evt_frame_set_wire_line_width
+800e8e94:evt_frame_set_wire_draw_rotation
+800e8f4c:evt_frame_evt_entry
+800e902c:evt_frame_set_rotation
+800e90e4:evt_frame_set_color2
+800e9178:evt_frame_spin_device_entry
+
 // evt_guide.c
 800ea87c:evt_guide_flag2_onoff
 800ea984:evt_guide_check_flag0
@@ -625,6 +647,11 @@
 8040E598:evt_cutscene_pure_heart
 804E5C20:evt_memcard_save
 80436a68:wracktail_defeat
+
+// evt_offscreen.c
+8010c4a4:evt_offscreen_entry
+8010c4d4:evt_offscreen_delete
+8010c504:evt_offscreen_get_boundingbox2
 
 // evt_paper.c
 8010c600:evt_paper_entry
@@ -1005,6 +1032,7 @@
 801c2148:npcAddPart
 801c2458:npcGetPartById
 801c2558:npcPartUpdatePosition
+801c4afc:npcGetFrameBoundingBox
 801c65e8:npcTakeDamage
 801c82a8:npcHandleHitXp
 801c8b44:npcFleeped

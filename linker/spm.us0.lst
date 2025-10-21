@@ -698,6 +698,26 @@
 8056CF20:item_event_data_wp
 80131058:marioGetHitboxWidth
 
+// new to Super Duper Paper Mario 
+8010BE90:evt_offscreen_entry
+8010BEC0:evt_offscreen_delete
+8010BEF0:evt_offscreen_get_boundingbox2
+801C3A7C:npcGetFrameBoundingBox
+800E89D0:evt_frame_offscreen_draw_flag_onoff
+800E8A4C:evt_frame_offscreen_entry
+800E8B50:evt_frame_bind_offscreen
+800E8BD4:evt_frame_set_img_anim
+800E8C30:evt_frame_set_color
+800E8D64:evt_frame_wire_entry
+800E8E4C:evt_frame_wire_wait_draw_finished
+800E8E88:evt_frame_set_draw_speed
+800E8F14:evt_frame_set_wire_color
+800E8FA8:evt_frame_set_wire_line_width
+800E9010:evt_frame_set_wire_draw_rotation
+800E90C8:evt_frame_evt_entry
+800E91A8:evt_frame_set_rotation
+800353BC:offscreenSetEntryType
+
 // new to rld3 v1
 8025C1B0:strcat
 80295CD4:IOS_Read
@@ -759,7 +779,6 @@
 8019B804:distABf
 801046AC:evt_npc_get_property
 8021BA80:ninjoe_bomb_calc_chance
-80D4ACD0:tree_block_trigger
 801CA9EC:npcDamageMario
 8056CFF0:icondrv_wp
 804A2EE8:evt_memcard_save

@@ -893,7 +893,9 @@ UNKNOWN_FUNCTION(func_801c3cb4)
 UNKNOWN_FUNCTION(func_801c3d94)
 UNKNOWN_FUNCTION(func_801c45a4)
 UNKNOWN_FUNCTION(func_801c498c)
-UNKNOWN_FUNCTION(func_801c4afc)
+
+void npcGetFrameBoundingBox(NPCEntry * npc, Vec3 * ret1, Vec3 * ret2);
+
 UNKNOWN_FUNCTION(func_801c5140)
 
 // NOTE: npc is the one dealing damage, npcPart->owner is the one taking damage

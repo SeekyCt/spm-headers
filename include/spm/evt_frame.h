@@ -53,7 +53,7 @@ EVT_DECLARE_USER_FUNC(evt_frame_evt_entry, 6)
 EVT_DECLARE_USER_FUNC(evt_frame_set_rotation, 4)
 
 // evt_frame_set_color(const char * instanceName, u8 r, u8 g, u8 b, u8 a)
-EVT_DECLARE_USER_FUNC(evt_frame_set_color, 5)
+EVT_DECLARE_USER_FUNC(evt_frame_set_color2, 5)
 
 // evt_frame_spin_device_entry(s32 arg1, const char * startSegment, const char * segmentArray)
 //     segmentArrays are terminated by a nullptr
