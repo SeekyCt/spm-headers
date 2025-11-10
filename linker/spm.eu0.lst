@@ -262,6 +262,7 @@
 // evt_cam.c
 800dff20:evt_cam3d_evt_zoom_in
 800e01f8:func_800e01f8
+800dfc80:evt_cam_flag_onoff
 800e0430:evt_cam_zoom_to_coords
 800e04fc:evt_cam_look_at_door
 800dfe08:evt_cam_shake
@@ -397,6 +398,7 @@
 // evt_fairy.c
 800e7404:evt_fairy_all_enter_run_mode1
 800e7458:evt_fairy_all_enter_run_mode2
+800e74ec:evt_fairy_set_pos
 800e7620:evt_fairy_get_pos
 800e7d88:evt_fairy_fly_to
 800e86dc:evt_fairy_set_anim
@@ -699,6 +701,7 @@
 
 // mario.c
 801243a8:marioMain
+80121e50:marioGetGameSpeedScale
 80121f48:marioGetPtr
 80122af0:marioChkKey
 80122b4c:marioCtrlOnChk
@@ -711,15 +714,14 @@
 801266e4:marioChgPose
 80126940:marioChgPaper
 80126aac:marioPaperOn
-8012a680:marioTakeDamage
-8012b080:marioCheck3d
-8012b50c:marioSetGravity
-8012a3a8:marioCalcDamageToEnemy
-8012b018:marioSetInvincibility
-80121e50:marioGetGameSpeedScale
-801266e4:marioChgPose
+80126d48:marioGetScreenPos
 8012823c:marioEffectFlagOn
 80128360:marioEffectFlagOff
+8012a3a8:marioCalcDamageToEnemy
+8012a680:marioTakeDamage
+8012b018:marioSetInvincibility
+8012b080:marioCheck3d
+8012b50c:marioSetGravity
 8012bd5c:marioHandleSquash
 //data
 805ae8e8:mario_gameSpeedScale

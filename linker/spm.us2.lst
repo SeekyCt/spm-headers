@@ -778,7 +778,6 @@
 800D48A8:evt_sub_get_mapname
 800FBB1C:evt_msg_print_insert
 80101998:evtNpcNameToPtr_NoAssert
-800ECDD8:evt_item_entry
 800ed02c:evt_item_flag_onoff
 800ed280:evt_item_wait_collected
 80161D98:boomerFuseMain
