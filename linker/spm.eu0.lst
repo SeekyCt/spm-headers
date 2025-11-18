@@ -621,6 +621,7 @@
 801093E0:evt_npc_wait_axis_movement_unit_end
 80109548:evt_npc_set_thoreau_override
 80109900:marioLuigiNpcDispCb
+80109a00:peachNpcDispCb
 80109d20:oChunksNpcDispCb
 80109da0:evt_npc_set_disp_callback
 8010a418:evt_npc_wait_for
