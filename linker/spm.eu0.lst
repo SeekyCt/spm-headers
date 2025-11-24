@@ -715,6 +715,7 @@
 801266e4:marioChgPose
 80126940:marioChgPaper
 80126aac:marioPaperOn
+80126b88:marioPaperOff
 80126d48:marioGetScreenPos
 8012823c:marioEffectFlagOn
 80128360:marioEffectFlagOff
