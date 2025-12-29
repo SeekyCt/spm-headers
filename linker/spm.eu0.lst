@@ -131,6 +131,8 @@
 8005af04:dispEntry
 // more
 
+800b3014:effHappyFlower
+
 // effdrv.c
 800616e4:effEntryType
 800618b0:effMain
