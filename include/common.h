@@ -1,7 +1,7 @@
 #pragma once
 
 // Unknown function declaration
-#define UNKNOWN_FUNCTION(name) void name(void)
+#define UNKNOWN_FUNCTION(name) void name(void);
 
 // Intellisense doesn't like asm compiler extensions
 #ifdef __INTELLISENSE__ 
