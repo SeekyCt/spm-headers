@@ -717,6 +717,16 @@
 800E90A0:evt_frame_evt_entry
 800E9180:evt_frame_set_rotation
 8003535C:offscreenSetEntryType
+800B31B0:effHappyFlower
+800E7640:evt_fairy_set_pos
+800E8978:evt_frame_delete
+8010cadc:evt_seq_mapchange
+800E7360:evt_set_transition
+80126314:marioChgPaper
+8012671C:marioGetScreenPos
+8012655C:marioPaperOff
+80126480:marioPaperOn
+80109450:peachNpcDispCb
 
 // new to rld3 v1
 8025C950:strcat
