@@ -1416,14 +1416,14 @@
 
 // he1_01.c
 // data
-1,5,3aa88:tippi_tutorial_evt
+1,5,3aa88:he1_01_tippi_tutorial_evt
 // more
 
 // mi4.c
 1,1,cac4:mi4MimiHolographicEffect
 
 // ta3_02.c
-1,5,85b00:tree_block_trigger
+1,5,85b00:ta3_02_tree_block_trigger
 // more
 
 // ta4_01.c

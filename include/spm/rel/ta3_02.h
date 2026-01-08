@@ -6,7 +6,7 @@
 
 CPP_WRAPPER(spm::ta3_02)
 
-EVT_DECLARE(tree_block_trigger)
+EVT_DECLARE(ta3_02_tree_block_trigger)
 
 // more
 CPP_WRAPPER_END()

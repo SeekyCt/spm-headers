@@ -724,7 +724,7 @@
 8019B7F4:distABf
 801046AC:evt_npc_get_property
 8021BA28:ninjoe_bomb_calc_chance
-80D65BF0:tree_block_trigger
+80D65BF0:ta3_02_tree_block_trigger
 801CA994:npcDamageMario
 805422F0:icondrv_wp
 80478188:evt_memcard_save
