@@ -45,14 +45,14 @@ SIZE_ASSERT(FadeWork, 0x260)
 DECOMP_STATIC(FadeWork * fadedrv_wp)
 
 void fadeInit();
-void fadeEntry(s32 transitionType, s32 lengthMsec, GXColor color);
-UNKNOWN_FUNCTION(func_80066558);
+void fadeEntry(s32 transitionType, s32 lengthMsec, GXColor colour);
+UNKNOWN_FUNCTION(func_80066558)
 void fadeMain();
-UNKNOWN_FUNCTION(func_80066e4c);
-UNKNOWN_FUNCTION(func_80067588);
+UNKNOWN_FUNCTION(func_80066e4c)
+UNKNOWN_FUNCTION(func_80067588)
 bool fadeIsFinish();
-UNKNOWN_FUNCTION(func_80067824);
-UNKNOWN_FUNCTION(func_8006783c);
+UNKNOWN_FUNCTION(func_80067824)
+UNKNOWN_FUNCTION(func_8006783c)
 s32 fadeGetMapChangeInTransition();
 s32 fadeGetMapChangeOutTransition();
 
@@ -66,8 +66,8 @@ void fadeSetMapChangeTransition(s32 in, s32 out);
 s32 fadeGetFadeOutLength();
 s32 fadeGetFadeInLength();
 void fadeSetTransitionLengths(s32 out, s32 in);
-UNKNOWN_FUNCTION(func_80067928);
-UNKNOWN_FUNCTION(func_800679d0);
-UNKNOWN_FUNCTION(func_800679d8);
+UNKNOWN_FUNCTION(func_80067928)
+UNKNOWN_FUNCTION(func_800679d0)
+UNKNOWN_FUNCTION(func_800679d8)
 
 CPP_WRAPPER_END()

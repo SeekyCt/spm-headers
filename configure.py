@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from argparse import ArgumentParser
 from io import StringIO
 import os
@@ -29,6 +31,8 @@ n.variable("builddir", "build")
 n.variable("incdir", "include")
 
 n.variable("seed", args.seed)
+
+n.variable("validate_lst", f"{PYTHON} tools/validate_lst.py")
 
 n.variable("incgen", f"{PYTHON} tools/incgen.py")
 n.variable("incgen_single", f"{PYTHON} tools/incgen_single.py")
@@ -160,6 +164,11 @@ n.rule(
     depfile = "$out.d"
 )
 
+n.rule(
+    "validate_lst",
+    ALLOW_CHAIN + "$validate_lst $in && touch $out"
+)
+
 ##########
 # Builds #
 ##########
@@ -265,16 +274,34 @@ def test_mod_individual(regions: List[str]):
         compile_regions(os.path.join("$builddir", "{region}", "individual", f"{name}.o"), source,
                         regions, MOD_INCLUDES, ["SPM_EU0"])
 
+def lst_path(region: str) -> str:
+    if region == "eu1":
+        region = "eu0"
+    return os.path.join("linker", f"spm.{region}.lst")
+
+def test_lsts(regions: List[str]):
+    for region in regions:
+        path = lst_path(region)
+
+        dest = os.path.join("$builddir", "lsts", f"{region}.ok")
+
+        n.build(
+            dest,
+            "validate_lst",
+            [path],
+        )
+
 test_fns = {
     "mod_ctx" : test_mod_ctx,
     "rns_mod_ctx" : test_rns_mod_ctx,
     "decomp_ctx" : test_decomp_ctx,
     "mod_ctx_shuffle" : test_mod_ctx_shuffle,
     "test_mod_individual" : test_mod_individual,
+    "validate_lst" : test_lsts,
 }
 
 incgen("$mod_source", MOD_INCLUDES)
-default_tests = ["mod_ctx", "rns_mod_ctx"]
+default_tests = ["mod_ctx", "rns_mod_ctx", "validate_lst"]
 
 if args.codewarrior:
     incgen("$decomp_source", DECOMP_INCLUDES)
