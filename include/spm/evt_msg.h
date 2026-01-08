@@ -10,7 +10,7 @@ USING(spm::evtmgr::EvtEntry)
 
 void evt_msg_init();
 
-s32 _evt_msg_print(EvtEntry *entry, int firstCall, u32 flags, const char * msg, void * mainFunc, char * speaker);
+s32 _evt_msg_print(EvtEntry *entry, int firstCall, u32 flags, const char * msg, void * mainFunc, const char * speaker);
 
 // evt_msg_print(u32 flags, const char * msg, s32 mainFunc, const char * speaker)
 EVT_DECLARE_USER_FUNC(evt_msg_print, 4)

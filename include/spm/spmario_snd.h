@@ -17,7 +17,7 @@ typedef struct Snd_SoundHandle {
 SIZE_ASSERT(Snd_SoundHandle, 0x4)
 
 typedef struct {
-    char *name;
+    const char *name;
     short brsarIdx; /* file param 6 */
     u16 fileParam1; /* file param 1 */
     u8 volume; /* file param 2 */

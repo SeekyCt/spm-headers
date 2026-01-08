@@ -19,6 +19,6 @@ UNKNOWN_FUNCTION(func_800352cc)
 UNKNOWN_FUNCTION(func_800353c4)
 UNKNOWN_FUNCTION(func_80035478)
 
-void offscreenSetEntryType(char *name, u32 type);
+void offscreenSetEntryType(const char *name, u32 type);
 
 CPP_WRAPPER_END()

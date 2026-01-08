@@ -265,7 +265,7 @@ DECOMP_STATIC(MapWork * mapdrv_wp)
         0 - MapObj
         1 - HitObj
 */
-void mapErrorEntry(s32 type, char * elementName);
+void mapErrorEntry(s32 type, const char * elementName);
 
 UNKNOWN_FUNCTION(func_8007ecc4)
 UNKNOWN_FUNCTION(func_8007ee24)

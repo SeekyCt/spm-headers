@@ -132,7 +132,7 @@ UNKNOWN_FUNCTION(func_8007d684)
 /*
     Sets the current animation of an item
 */
-void itemSetAnim(char * itemName,char * animName);
+void itemSetAnim(const char * itemName, const char * animName);
 
 UNKNOWN_FUNCTION(func_8007d868)
 

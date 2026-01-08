@@ -12,7 +12,7 @@ USING(spm::evtmgr::EvtEntry)
 
 UNKNOWN_FUNCTION(_intplGetFloat)
 
-NPCEntry * evtNpcNameToPtr_NoAssert(EvtEntry* evtEntry, char *name);
+NPCEntry * evtNpcNameToPtr_NoAssert(EvtEntry* evtEntry, const char * name);
 NPCEntry * evtNpcNameToPtr(EvtEntry * entry, const char * name);
 
 // evt_npc_get_position(const char * name, f32& x, f32& y, f32& z)

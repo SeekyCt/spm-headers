@@ -535,12 +535,12 @@ typedef struct
 /* 0x19 */ u8 partsCount;
 /* 0x1A */ // padding 0x1a-1b
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
-/* 0x20 */ char * powBlockDeathSfx;
-/* 0x24 */ char * bowserFireDeathSfx;
-/* 0x28 */ char * boomerDeathSfx;
-/* 0x2c */ char * barryDeathSfx;
-/* 0x30 */ char * unused_sfx;
-/* 0x34 */ char * fireBurstDeathSfx;
+/* 0x20 */ const char * powBlockDeathSfx;
+/* 0x24 */ const char * bowserFireDeathSfx;
+/* 0x28 */ const char * boomerDeathSfx;
+/* 0x2c */ const char * barryDeathSfx;
+/* 0x30 */ const char * unused_sfx;
+/* 0x34 */ const char * fireBurstDeathSfx;
 /* 0x38 */ s16 killXp;
 /* 0x3a */ s16 hitXp;
 /* 0x3c */ s16 stylishXp;
@@ -666,7 +666,7 @@ typedef struct _NPCEntry
 /* 0x588 */ u8 unknown_0x588[0x624 - 0x588];
 /* 0x624 */ f32 stunTime;
 /* 0x628 */ u8 unknown_0x628[0x6e0 - 0x628];
-/* 0x6E0 */ char * unkShellSfx;
+/* 0x6E0 */ const char * unkShellSfx;
 /* 0x6E4 */ u8 unknown_0x6e4[0x714 - 0x6e4];
 /* 0x714 */ NPCPart * parts; // made from tribe's NPCPartDef list, linked list
 /* 0x718 */ EvtScriptCode * templateField0x58; // field 0x58 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
@@ -802,7 +802,7 @@ NPCEntry * npcEntry(const char * instanceName, const char * animPoseName, s32 in
 NPCEntry * npcIdToPtr(s32 id);
 NPCEntry * npcNameToPtr(const char * instanceName);
 NPCEntry * npcNameToPtr_NoAssert(const char * instanceName);
-void npcDelete(char *name);
+void npcDelete(const char *name);
 UNKNOWN_FUNCTION(func_801b73cc)
 UNKNOWN_FUNCTION(func_801b7a20)
 UNKNOWN_FUNCTION(func_801b8064)
