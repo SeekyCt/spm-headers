@@ -726,6 +726,8 @@
 8012612C:marioPaperOff
 80126050:marioPaperOn
 80109020:peachNpcDispCb
+1,1,24c58:evt_npc_sammer_display_count
+1,1,38910:evt_bos_01_pure_heart_set_pos
 
 // new to rld3 v1
 8025C1B0:strcat
