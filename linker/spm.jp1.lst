@@ -475,3 +475,11 @@
 80541AB0:nandmgr_wp
 80239148:spsndSFXOn
 8017C538:loadMain
+
+// 2025-09-27
+800677D8:fadeGetMapChangeInTransition
+800677E4:fadeGetMapChangeOutTransition
+80067804:fadeGetFadeOutLength
+80067810:fadeGetFadeInLength
+8006781C:fadeSetTransitionLengths
+80542128:fadedrv_wp

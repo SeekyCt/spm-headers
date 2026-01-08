@@ -153,8 +153,14 @@
 805ae7e4:effsub_wp
 
 // fadedrv.c
+80065d60:fadeEntry
 800677f8:fadeIsFinish
+800678d0:fadeGetMapChangeInTransition
+800678dc:fadeGetMapChangeOutTransition
 800678e8:fadeSetMapChangeTransition
+800678fc:fadeGetFadeOutLength
+80067908:fadeGetFadeInLength
+80067914:fadeSetTransitionLengths
 // more
 805ae828:fadedrv_wp
 
