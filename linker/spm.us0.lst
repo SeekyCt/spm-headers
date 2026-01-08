@@ -687,7 +687,6 @@
 80109340:oChunksNpcDispCb
 8014EE84:pouchSetEnemiesDefeated
 803C78B8:acdrv_acDefs
-80C4F22C:evt_bos_01_pure_heart_set_pos
 80072B30:iconDelete
 80072BC4:iconDisp
 800746FC:iconFlagOn
@@ -793,7 +792,6 @@
 8056CFF0:icondrv_wp
 804A2EE8:evt_memcard_save
 8012A5BC:marioSetInvincibility
-80C3B574:evt_npc_sammer_display_count
 800FBB60:evt_msg_select
 80104F44:evt_npc_get_axis_movement_unit
 80102488:evt_npc_delete

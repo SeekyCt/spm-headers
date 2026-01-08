@@ -724,12 +724,10 @@
 8019B7F4:distABf
 801046AC:evt_npc_get_property
 8021BA28:ninjoe_bomb_calc_chance
-80D65BF0:ta3_02_tree_block_trigger
 801CA994:npcDamageMario
 805422F0:icondrv_wp
 80478188:evt_memcard_save
 8012A5BC:marioSetInvincibility
-80C56494:evt_npc_sammer_display_count
 800FBB60:evt_msg_select
 80104F44:evt_npc_get_axis_movement_unit
 800D4934:evt_sub_get_mapname
