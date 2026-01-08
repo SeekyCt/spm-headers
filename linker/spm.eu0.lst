@@ -645,7 +645,7 @@
 80224804:func_80224804
 80224874:func_80224874
 80225380:func_80225380
-80c6a8e0:evt_npc_sammer_display_count
+1,1,24fe4:evt_npc_sammer_display_count
 // more
 
 // not sure where you want this
@@ -1441,8 +1441,8 @@
 
 // bos_01.c 
 // data
-80c7e598:evt_bos_01_pure_heart_set_pos
-80c7e644:evt_bos_01_pure_heart_get_pos
+1,1,38c9c:evt_bos_01_pure_heart_set_pos
+1,1,38d48:evt_bos_01_pure_heart_get_pos
 
 // sp4_13.c
 // text
