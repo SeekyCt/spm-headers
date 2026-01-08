@@ -23,18 +23,28 @@ USING(spm::filemgr::_FileEntry)
 USING(wii::gx::GXTexObj)
 USING(wii::mem::MEMHeapHandle)
 
-#define MEM1_HEAP_COUNT 3
-
-// Korean adds a 10th heap
 #ifdef SPM_KR0
-#define MEM2_HEAP_COUNT 7
-#define HEAP_COUNT 10
+    #define MEMORY_C_VERSION 3
+#elif (defined SPM_EU0) || (defined SPM_EU1)
+    #define MEMORY_C_VERSION 2
 #else
-#define MEM2_HEAP_COUNT 6
-#define HEAP_COUNT 9
+    #define MEMORY_C_VERSION 1
 #endif
 
-#define SMART_HEAP_ID 7
+#if MEMORY_C_VERSION >= 3
+    #define MEM1_HEAP_COUNT 3
+    #define MEM2_HEAP_COUNT 7
+    #define HEAP_COUNT 10
+#elif MEMORY_C_VERSION == 2
+    #define MEM1_HEAP_COUNT 3
+    #define MEM2_HEAP_COUNT 6
+    #define HEAP_COUNT 9
+#else // == 1
+    #define MEM1_HEAP_COUNT 5
+    #define MEM2_HEAP_COUNT 4
+    #define HEAP_COUNT 9
+#endif
+
 #define SMART_ALLOCATION_MAX 2048
 
 enum Heap
@@ -57,6 +67,18 @@ enum HeapSizeType
 {
 /* 0x0 */ HEAPSIZE_PERCENT_REMAINING,
 /* 0x1 */ HEAPSIZE_ABSOLUTE_KB
+};
+
+enum SmartAllocType
+{
+/* 0x0 */ SMART_TYPE_0,
+/* 0x1 */ SMART_TYPE_1,
+/* 0x2 */ SMART_TYPE_2,
+/* 0x3 */ SMART_TYPE_3,
+
+    // On smartFree, demotes to type 3 instead of freeing
+    // For smartAutoFree, is freed when type 3 is freed
+/* 0x4 */ SMART_TYPE_4
 };
 
 typedef struct

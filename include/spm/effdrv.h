@@ -16,6 +16,15 @@ USING(wii::gx::GXTexObj)
 struct _EffEntry;
 typedef void (EffFunc)(struct _EffEntry * entry);
 
+/*
+    effdata.dat file header
+*/
+typedef struct
+{
+/* 0x00 */ void * offsets[16];
+} EffDataHeader;
+SIZE_ASSERT(EffDataHeader, 0x40)
+
 #define EFF_FLAG_SOFT_DELETED 4
 #define EFF_FLAG_IN_USE 1
 
