@@ -14,4 +14,3 @@ EffEntry * effHappyFlower(s32 variant);
 // ...
 
 CPP_WRAPPER_END()
-
