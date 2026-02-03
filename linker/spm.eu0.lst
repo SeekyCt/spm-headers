@@ -1267,6 +1267,7 @@
 8027a7e8:PSMTXTransApply
 8027a834:PSMTXScale
 8027a85c:PSMTXScaleApply
+8027aec0:C_MTXPerspective
 8027afac:C_MTXOrtho
 8027b4fc:PSVECSquareDistance
 // more
