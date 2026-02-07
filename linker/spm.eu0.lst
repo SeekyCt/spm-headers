@@ -437,6 +437,7 @@
 
 // evt_guide.c
 800ea87c:evt_guide_flag2_onoff
+800ea908:evt_guide_flag0_onoff
 800ea984:evt_guide_check_flag0
 800eaa88:evt_guide_get_can_search
 // more

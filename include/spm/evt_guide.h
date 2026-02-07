@@ -27,7 +27,8 @@ UNKNOWN_FUNCTION(func_800ea858)
 // evt_guide_flag2_onoff(bool onoff, u32 flags)
 EVT_DECLARE_USER_FUNC(evt_guide_flag2_onoff, 2)
 
-UNKNOWN_FUNCTION(evt_guide_flag0_onoff)
+// evt_guide_flag0_onoff(bool onoff, u32 flags)
+EVT_DECLARE_USER_FUNC(evt_guide_flag0_onoff, 2)
 
 // evt_guide_check_flag0(u32 flags, bool &ret)
 EVT_DECLARE_USER_FUNC(evt_guide_check_flag0, 2)
