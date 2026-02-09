@@ -52,7 +52,7 @@ typedef struct
 /* 0x0 */ u32 size;
 /* 0x4 */ const char * contents;
 /* 0x8 */ s32 messageCount;
-/* 0xC */ u8 unknown_0xc[0x10 - 0xc];
+/* 0xC */ SmartAllocation *messages;
 } MsgFile;
 SIZE_ASSERT(MsgFile, 0x10)
 
@@ -68,6 +68,13 @@ SIZE_ASSERT(MsgWork, 0x98)
 
 DECOMP_STATIC(MsgWork * msgdrv_msgw)
 DECOMP_STATIC(MsgWork msgdrv_work)
+
+typedef struct
+{
+/* 0x0 */ const char *nameOffset;
+/* 0x4 */ const char *contentsOffset;
+} MsgEntry;
+SIZE_ASSERT(MsgEntry, 0x8)
 
 typedef struct
 {
