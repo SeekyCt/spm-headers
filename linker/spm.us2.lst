@@ -991,3 +991,4 @@
 8056C918:msgdrv_msgw
 8007926C:itemNameToPtr
 8007A5E0:itemCollectPouchItem
+80077B60:itemMain
