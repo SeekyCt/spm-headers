@@ -47,6 +47,7 @@
 80032f84:msgWindow_Add
 //data
 80405bd8:msgdrv_msgIcon
+805adf18:msgdrv_msgw
 // more
 
 // offscreendrv.c 
