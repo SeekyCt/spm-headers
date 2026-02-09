@@ -946,3 +946,5 @@
 8014E524:pouchMakeCharNotSelectable
 800EA79C:evt_guide_flag0_onoff
 8056CF38:msgdrv_msgw
+800792CC:itemNameToPtr
+8007A640:itemCollectPouchItem

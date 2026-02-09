@@ -202,6 +202,8 @@
 // itemdrv.c
 80077660:itemGetWork
 80078b3c:itemEntry
+800793e4:itemNameToPtr
+8007a758:itemCollectPouchItem
 8007bccc:itemTypeNameToId
 8007d8b4:itemCheckForId
 // more
