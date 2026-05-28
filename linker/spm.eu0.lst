@@ -157,6 +157,11 @@
 800a82c0:func_800a82c0
 800bc828:damageEffect
 80061b90:effNameToPtr
+800630b8:func_800630b8
+800631b8:effSetTargetNPC
+80098ef4:eff_robo_vacuum
+80099064:robo_vacuum_set_target
+80099270:effRoboVacuumDisp
 // data
 805adf90:effdrv_wp
 

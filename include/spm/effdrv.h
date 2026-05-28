@@ -12,6 +12,7 @@ CPP_WRAPPER(spm::effdrv)
 
 USING(spm::filemgr::FileEntry)
 USING(wii::gx::GXTexObj)
+USING(spm::camdrv::CameraId)
 
 struct _EffEntry;
 typedef void (EffFunc)(struct _EffEntry * entry);
@@ -64,6 +65,56 @@ SIZE_ASSERT(EffWork, 0x134)
 
 DECOMP_STATIC(EffWork effdrv_work)
 DECOMP_STATIC(EffWork * effdrv_wp)
+
+typedef enum EffTargetType {
+    TARGET_NULL=0,
+    TARGET_MARIO=1,
+    TARGET_NPC=2,
+    TARGET_3=3,
+    TARGET_FAIRY=4,
+    TARGET_GUIDE=5
+} EffTargetType;
+
+struct EffTarget_Fairy {
+    enum EffTargetType type;
+    int fairyId;
+    u8 unknown_0x8[0x1b - 0x8];
+};
+SIZE_ASSERT(EffTarget_Fairy, 0x1c)
+
+struct EffTarget_Guide {
+    enum EffTargetType type;
+    u8 unknown_0x8[0x1b - 0x4];
+};
+SIZE_ASSERT(EffTarget_Guide, 0x1c)
+
+struct EffTarget_Raw {
+    enum EffTargetType type;
+    Vec3 pos;
+    Vec3 offset;
+};
+
+struct EffTarget_NPC {
+    enum EffTargetType type;
+    int npcId;
+    NPCEntry *npcEntry;
+    u8 unknown_0xc[0x1b - 0xc];
+};
+SIZE_ASSERT(EffTarget_NPC, 0x1c)
+
+struct EffTarget_Mario {
+    enum EffTargetType type;
+    u8 unknown_0x8[0x1b - 0x4];
+};
+SIZE_ASSERT(EffTarget_Mario, 0x1c)
+
+union EffTargetUnion {
+    EffTarget_Mario mario;
+    EffTarget_NPC npc;
+    EffTarget_Raw raw;
+    EffTarget_Fairy fairy;
+    EffTarget_Guide guide;
+};
 
 /*
     Allocates entries
@@ -123,6 +174,14 @@ EffEntry * effNameToPtr(const char * name);
 
 EffEntry * eff_item_thunder(float x, float y, float z, s32 param_4, s32 param_5, s32 param_6, s32 param_7, s32 param_8);
 
+EffEntry * eff_robo_vacuum(float x, float y, float z);
+
+void robo_vacuum_set_target(EffEntry * entry, int evtId, char *npcName);
+
+void effSetTargetNPC(EffTargetUnion *target, int evtId, char *npcName);
+
+void effRoboVacuumDisp(CameraId id, EffEntry * entry);
+
 EffEntry * damageEffect(float x, float y, float z,int param_4, s32 damage);
 
 UNKNOWN_FUNCTION(func_80061c28)
@@ -133,7 +192,7 @@ UNKNOWN_FUNCTION(func_80061eb8)
 UNKNOWN_FUNCTION(func_800623f8)
 UNKNOWN_FUNCTION(func_80062d04)
 UNKNOWN_FUNCTION(func_80062f9c)
-UNKNOWN_FUNCTION(func_800630b8)
+s32 func_800630b8(EffTargetUnion * target, s32 param_1, s32 param_2, Mtx34 matrix);
 UNKNOWN_FUNCTION(func_80063130)
 UNKNOWN_FUNCTION(func_80063198)
 UNKNOWN_FUNCTION(func_800631a4)
