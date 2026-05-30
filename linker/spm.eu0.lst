@@ -162,6 +162,7 @@
 80098ef4:eff_robo_vacuum
 80099064:robo_vacuum_set_target
 80099270:effRoboVacuumDisp
+800c63a0:effGonbabaEntry
 // data
 805adf90:effdrv_wp
 
@@ -211,6 +212,7 @@
 80072710:iconEntry
 80072cdc:iconDisp
 80073444:iconDispGxCol
+80073898:iconGetWidthHeight
 80074690:iconNameToPtr
 80074814:iconFlagOn
 // sdata
@@ -1439,6 +1441,7 @@
 
 // tpl.c
 802e30ec:TPLBind
+802e3200:TPLGet
 802e3220:TPLGetGXTexObjFromPalette
 // more
 
