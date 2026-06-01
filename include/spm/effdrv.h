@@ -181,6 +181,8 @@ void robo_vacuum_set_target(EffEntry * entry, int evtId, char *npcName);
 
 void effSetTargetNPC(EffTargetUnion *target, int evtId, char *npcName);
 
+void effRoboVacuumMain(EffEntry * entry);
+
 void effRoboVacuumDisp(CameraId id, EffEntry * entry);
 
 EffEntry * damageEffect(float x, float y, float z,int param_4, s32 damage);

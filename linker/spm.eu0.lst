@@ -161,6 +161,7 @@
 800631b8:effSetTargetNPC
 80098ef4:eff_robo_vacuum
 80099064:robo_vacuum_set_target
+80099070:effRoboVacuumMain
 80099270:effRoboVacuumDisp
 800c63a0:effGonbabaEntry
 // data
