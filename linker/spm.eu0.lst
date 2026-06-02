@@ -501,6 +501,7 @@
 // more
 
 // evt_mario.c
+800ef3c8:evt_mario_flag_onoff
 800ef4c0:evt_mario_flag8_onoff
 800ef62c:evt_mario_key_on
 800ef650:evt_mario_key_off
