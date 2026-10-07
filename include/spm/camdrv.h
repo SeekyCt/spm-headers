@@ -48,7 +48,8 @@ typedef struct _CamEntry
 /* 0x000 */ u32 flag; // CAMFLAG defines
 /* 0x004 */ s32 cam_no; // CAM_ID defines
 /* 0x008 */ u16 cameraMode;
-/* 0x00A */ u8 unknown_0xa[0x18 - 0xa];
+/* 0x00A */ u16 in3d;
+/* 0x00C */ u8 unknown_0xc[0x18 - 0xc];
 /* 0x018 */ u16 scissorX;
 /* 0x01A */ u16 scissorY;
 /* 0x01C */ u16 scissorWidth;
