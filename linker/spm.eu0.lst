@@ -293,6 +293,16 @@
 // eff_map_block_del.c
 800b5938:effMapBlockDelEntry
 
+// eff_map_darkness.c
+800b5f68:getVoidLevel
+800b606c:voidInit
+800b69ac:voidMain
+80c46f04:evt_map_darkness_grow_void
+80c54758:evt_map_darkness_soft_delete
+// data
+80409bd8:voidMaps
+80409980:mapDarknessEntries
+
 // evt_cam.c
 800dff20:evt_cam3d_evt_zoom_in
 800e01f8:func_800e01f8
