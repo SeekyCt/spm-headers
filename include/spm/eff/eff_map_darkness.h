@@ -3,7 +3,7 @@
 #include <common.h>
 #include <evt_cmd.h>
 
-#include <effdrv.h>
+#include <spm/effdrv.h>
 
 CPP_WRAPPER(spm::eff_map_darkness)
 
