@@ -5,6 +5,8 @@
 #pragma once
 
 #include <common.h>
+#include <stdlib.h>
+#include <wii/mtx.h>
 #include <wii/mtx.h>
 
 CPP_WRAPPER(spm::system)
@@ -55,9 +57,6 @@ typedef f32 (IntplUserFunc)(s32, s32, f32, f32);
     if (!(condition)) spm::system::__assert2(__FILE__, __LINE__, #condition, __VA_ARGS__)
 
 #endif
-
-#define RAND_MAX 0x7fff
-
 
 /*
     Initialises an unused mutex

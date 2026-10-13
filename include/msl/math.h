@@ -30,7 +30,7 @@ double floor(double x);
     #define fabs(x) __fabs(x)
     #define fabsf(x) __fabsf(x)
     #define abs(x) __abs(x)
-#elif defined __GNU_C__
+#elif defined __GNUC__
     #define fabs(x) __builtin_fabs(x)
     #define fabsf(x) __builtin_fabsf(x)
     #define abs(x) __builtin_abs(x)

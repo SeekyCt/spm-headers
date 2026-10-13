@@ -19,7 +19,7 @@ It is recommended to use this with [git subrepo](https://github.com/ingydotnet/g
 
 ## Decomp
 
-For use in decomp, the `include`, `include_cpp` and `decomp` folders should be added to the include path, and the preprocessor define `DECOMP` should be used.
+For use in decomp, the `include` and `decomp` folders should be added to the include path, and the preprocessor define `DECOMP` should be used.
 
 ## Mods
 
