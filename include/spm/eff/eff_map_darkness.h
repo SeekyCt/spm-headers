@@ -25,8 +25,8 @@ typedef struct {
     u8 field2261_0x933;
     u8 field2262_0x934;
     u8 field2263_0x935;
-    u8 field2264_0x936;
-    u8 field2265_0x937;
+    u16 field2264_0x936;
+    u16 field2265_0x937;
     float field2266_0x938;
     float field2267_0x93c;
     float field2268_0x940;
