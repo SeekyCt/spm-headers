@@ -33,7 +33,6 @@ double floor(double x);
 #elif defined __GNUC__
     #define fabs(x) __builtin_fabs(x)
     #define fabsf(x) __builtin_fabsf(x)
-    #define abs(x) __builtin_abs(x)
 #else
     double fabs(double x);
     float fabsf(float x);

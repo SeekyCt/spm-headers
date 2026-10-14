@@ -104,13 +104,13 @@ struct EffTarget_NPC {
     enum EffTargetType type;
     int npcId;
     NPCEntry * npcEntry;
-    u8 unknown_0xc[0x1b - 0xc];
+    u8 unknown_0xc[0x1c - 0xc];
 };
 SIZE_ASSERT(EffTarget_NPC, 0x1c)
 
 struct EffTarget_Mario {
     enum EffTargetType type;
-    u8 unknown_0x8[0x1b - 0x4];
+    u8 unknown_0x8[0x1c - 0x4];
 };
 SIZE_ASSERT(EffTarget_Mario, 0x1c)
 
