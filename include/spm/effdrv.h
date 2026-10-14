@@ -72,7 +72,7 @@ SIZE_ASSERT(EffWork, 0x134)
 DECOMP_STATIC(EffWork effdrv_work)
 DECOMP_STATIC(EffWork * effdrv_wp)
 
-typedef enum EffTargetType {
+typedef enum EffTargetType : s32 {
     TARGET_NULL=0,
     TARGET_MARIO=1,
     TARGET_NPC=2,
