@@ -7,12 +7,14 @@
 #include <common.h>
 #include <spm/filemgr.h>
 #include <spm/camdrv.h>
+#include <spm/npcdrv.h>
 #include <wii/gx.h>
 #include <wii/mtx.h>
 
 CPP_WRAPPER(spm::effdrv)
 
 USING(spm::filemgr::FileEntry)
+USING(spm::npcdrv::NPCEntry)
 USING(wii::gx::GXTexObj)
 USING(wii::mtx::Mtx34)
 USING(wii::mtx::Vec3)
@@ -101,7 +103,7 @@ struct EffTarget_Raw {
 struct EffTarget_NPC {
     enum EffTargetType type;
     int npcId;
-    NPCEntry *npcEntry;
+    NPCEntry * npcEntry;
     u8 unknown_0xc[0x1b - 0xc];
 };
 SIZE_ASSERT(EffTarget_NPC, 0x1c)
