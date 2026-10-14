@@ -10,8 +10,8 @@ CPP_WRAPPER(spm::eff_map_darkness)
 USING(spm::effdrv::EffEntry)
 
 typedef struct {
-  u8 minGSW0;
-  u8 chapterSizes[9];
+  u16 minGSW0;
+  u16 chapterSizes[9];
 } MapDarknessParamEntry;
 SIZE_ASSERT(MapDarknessParamEntry, 0x14)
 
