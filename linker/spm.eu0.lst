@@ -952,6 +952,7 @@
 8019c688:distABf
 8019c508:getSpmarioDVDRoot
 8019c62c:reviseAngle
+8019c8ac:sincosf
 8019dc94:intplGetValue
 // more
 
