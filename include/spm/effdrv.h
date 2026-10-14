@@ -15,6 +15,7 @@ CPP_WRAPPER(spm::effdrv)
 USING(spm::filemgr::FileEntry)
 USING(wii::gx::GXTexObj)
 USING(wii::mtx::Mtx34)
+USING(wii::mtx::Vec3)
 USING(spm::camdrv::CameraId)
 
 struct _EffEntry;
