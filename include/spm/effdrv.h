@@ -104,7 +104,7 @@ typedef struct {
     enum EffTargetType type;
     int npcId;
     NPCEntry * npcEntry;
-    u8 unknown_0xc[0x1c - 0x10];
+    u8 unknown_0xc[0x1c - 0xc];
 } EffTarget_NPC;
 SIZE_ASSERT(EffTarget_NPC, 0x1c)
 
