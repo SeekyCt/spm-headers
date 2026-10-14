@@ -13,7 +13,7 @@ typedef struct MapDarknessParamEntry {
   u8 minGSW0;
   u8 chapterSizes[9];
 } MapDarknessParamEntry;
-SIZE_ASSERT(EffMapDarknessBg, 0x14)
+SIZE_ASSERT(MapDarknessParamEntry, 0x14)
 
 typedef struct EffMapDarknessBg {
     u32 field0_0x0;

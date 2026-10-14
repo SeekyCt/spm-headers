@@ -200,7 +200,7 @@ UNKNOWN_FUNCTION(func_80061eb8)
 UNKNOWN_FUNCTION(func_800623f8)
 UNKNOWN_FUNCTION(func_80062d04)
 UNKNOWN_FUNCTION(func_80062f9c)
-s32 func_800630b8(EffTargetUnion * target, s32 param_1, s32 param_2, wii::mtx::Mtx34 matrix);
+s32 func_800630b8(EffTargetUnion * target, s32 param_1, s32 param_2, Mtx34 matrix);
 UNKNOWN_FUNCTION(func_80063130)
 UNKNOWN_FUNCTION(func_80063198)
 UNKNOWN_FUNCTION(func_800631a4)
