@@ -19,7 +19,7 @@ USING(wii::mtx::Vec3)
 USING(wii::mtx::Mtx34)
 
 // todo: JP IconId
-enum IconId : s16
+enum IconId 
 {
 #if defined(SPM_EU0) || defined(SPM_EU1)
 /* 0x00 */ ICON_BTN_WII_REMOTE,
