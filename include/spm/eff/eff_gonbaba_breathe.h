@@ -20,7 +20,7 @@ typedef struct
 } EffGonbabaBreath;
 SIZE_ASSERT(EffGonbabaBreath, 0x58)
 
-EffEntry * effGonbabaEntry(f32 x, f32 y, f32 z, f32 scale, s32 type, s32 duration);
+EffEntry * effGonbabaBreathEntry(f32 x, f32 y, f32 z, f32 scale, s32 type, s32 duration);
 
 // ...
 

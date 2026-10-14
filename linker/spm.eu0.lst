@@ -163,7 +163,7 @@
 80099064:robo_vacuum_set_target
 80099070:effRoboVacuumMain
 80099270:effRoboVacuumDisp
-800c63a0:effGonbabaEntry
+800c63a0:effGonbabaBreathEntry
 // data
 805adf90:effdrv_wp
 
