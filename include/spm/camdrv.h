@@ -196,8 +196,8 @@ UNKNOWN_FUNCTION(func_800583b4)
 UNKNOWN_FUNCTION(func_80058404)
 UNKNOWN_FUNCTION(func_8005869c)
 void func_800586c8(f32, f32, f32, s32 camId, Vec3 * position);
-void camShakeInit(f32 x, f32 y, f32 z, CameraId camId, u32 duration);
-void camShakeInit_Frm(f32 x, f32 y, f32 z, CameraId camId, u32 duration);
+void camShakeInit(f32 x, f32 y, f32 z, s32 camId, u32 duration);
+void camShakeInit_Frm(f32 x, f32 y, f32 z, s32 camId, u32 duration);
 UNKNOWN_FUNCTION(func_80058800)
 UNKNOWN_FUNCTION(func_8005881c)
 UNKNOWN_FUNCTION(func_80058840)
