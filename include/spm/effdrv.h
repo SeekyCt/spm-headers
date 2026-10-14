@@ -8,11 +8,13 @@
 #include <spm/filemgr.h>
 #include <spm/camdrv.h>
 #include <wii/gx.h>
+#include <wii/mtx.h>
 
 CPP_WRAPPER(spm::effdrv)
 
 USING(spm::filemgr::FileEntry)
 USING(wii::gx::GXTexObj)
+USING(wii::mtx::Mtx34)
 USING(spm::camdrv::CameraId)
 
 struct _EffEntry;
