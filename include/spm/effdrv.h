@@ -90,7 +90,7 @@ SIZE_ASSERT(EffTarget_Fairy, 0x1c)
 
 struct EffTarget_Guide {
     enum EffTargetType type;
-    u8 unknown_0x8[0x1b - 0x4];
+    u8 unknown_0x8[0x1c - 0x4];
 };
 SIZE_ASSERT(EffTarget_Guide, 0x1c)
 
