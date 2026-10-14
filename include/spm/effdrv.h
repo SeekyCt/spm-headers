@@ -83,35 +83,36 @@ enum EffTargetType
 };
 
 typedef struct {
-    s32 type;
-    s32 fairyId;
-    u8 unknown_0x8[0x1c - 0x8];
+/* 0x000 */ s32 type;
+/* 0x004 */ s32 fairyId;
+/* 0x008 */ u8 unknown_0x8[0x1c - 0x8];
 } EffTarget_Fairy;
 SIZE_ASSERT(EffTarget_Fairy, 0x1c)
 
 typedef struct {
-    s32 type;
-    u8 unknown_0x4[0x1c - 0x4];
+/* 0x000 */ s32 type;
+/* 0x000 */ u8 unknown_0x4[0x1c - 0x4];
 } EffTarget_Guide;
 SIZE_ASSERT(EffTarget_Guide, 0x1c)
 
 typedef struct {
-    s32 type;
-    Vec3 pos;
-    Vec3 offset;
+/* 0x000 */ s32 type;
+/* 0x004 */ Vec3 pos;
+/* 0x010 */ Vec3 offset;
 } EffTarget_Raw;
+SIZE_ASSERT(EffTarget_Raw, 0x1c)
 
 typedef struct {
-    s32 type;
-    int npcId;
-    NPCEntry * npcEntry;
-    u8 unknown_0xc[0x1c - 0xc];
+/* 0x000 */ s32 type;
+/* 0x004 */ int npcId;
+/* 0x008 */ NPCEntry * npcEntry;
+/* 0x00C */ u8 unknown_0xc[0x1c - 0xc];
 } EffTarget_NPC;
 SIZE_ASSERT(EffTarget_NPC, 0x1c)
 
 typedef struct {
-    s32 type;
-    u8 unknown_0x4[0x1c - 0x4];
+/* 0x000 */ s32 type;
+/* 0x004 */ u8 unknown_0x4[0x1c - 0x4];
 } EffTarget_Mario;
 SIZE_ASSERT(EffTarget_Mario, 0x1c)
 
