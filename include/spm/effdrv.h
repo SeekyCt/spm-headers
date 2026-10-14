@@ -90,7 +90,7 @@ SIZE_ASSERT(EffTarget_Fairy, 0x1c)
 
 typedef struct {
     enum EffTargetType type;
-    u8 unknown_0x8[0x1b - 0x4];
+    u8 unknown_0x4[0x1b - 0x4];
 } EffTarget_Guide;
 SIZE_ASSERT(EffTarget_Guide, 0x1c)
 
@@ -110,7 +110,7 @@ SIZE_ASSERT(EffTarget_NPC, 0x1c)
 
 typedef struct {
     enum EffTargetType type;
-    u8 unknown_0x8[0x1b - 0x4];
+    u8 unknown_0x4[0x1b - 0x4];
 } EffTarget_Mario;
 SIZE_ASSERT(EffTarget_Mario, 0x1c)
 
