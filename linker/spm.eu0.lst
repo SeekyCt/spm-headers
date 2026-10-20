@@ -883,6 +883,12 @@
 805ae0a8:seq_mapchange_wp
 // more
 
+// seq_gameover.c
+801789f4:seq_gameOverInit
+80178af4:seq_gameOverExit
+80178b68:seq_gameOverMain
+// more
+
 // seq_title.c
 8017b250:seq_titleMain
 8017bc4c:getDanMapName
