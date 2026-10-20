@@ -888,6 +888,12 @@
 8017bc4c:getDanMapName
 // more
 
+// seq_load.c
+8017c10c:seq_loadInit
+8017c13c:seq_loadMain
+8017c138:seq_loadExit
+// more
+
 // seq_game.c
 8017ce44:seq_gameInit
 // more
@@ -904,6 +910,7 @@
 //seq_load_sub.c
 // text
 8017d1ac:seq_load_sub_loadMain
+8017e880:windowRenderMain
 // data
 805ae0d0:seq_load_sub_wp
 
@@ -1184,6 +1191,10 @@
 8023e9ec:nandGetSaveFiles
 8023edcc:nandUpdateSave
 8023efe0:nandLoadSave
+8023f570:nandWriteAllSavesMain
+8023fa24:nandWriteSaveMain
+8023fd64:nandWriteBannerLoadAllSavesMain
+80240414:nandDeleteSaveMain
 // more
 // data
 805ae1b0:nandmgr_wp
