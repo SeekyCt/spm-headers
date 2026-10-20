@@ -33,4 +33,6 @@ DECOMP_STATIC(SeqLoadSubWork* seq_load_sub_wp)
 
 DECOMP_STATIC(s32 seq_load_sub_loadMain())
 
+void windowRenderMain();
+
 CPP_WRAPPER_END()
