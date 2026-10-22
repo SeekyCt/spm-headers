@@ -699,7 +699,6 @@
 
 // not sure where you want this
 8040E598:evt_cutscene_pure_heart
-804E5C20:evt_memcard_save
 80436a68:wracktail_defeat
 
 // evt_offscreen.c
@@ -1198,6 +1197,7 @@
 
 // nandmgr.c
 8023e9ec:nandGetSaveFiles
+8023ed08:nandClearSave
 8023edcc:nandUpdateSave
 8023efe0:nandLoadSave
 8023f570:nandWriteAllSavesMain
@@ -1207,6 +1207,15 @@
 // more
 // data
 805ae1b0:nandmgr_wp
+
+// evt_nand.c
+8024174c:evt_nand_update_save
+// more 
+// data
+804e5658:savefile_update_evt
+804e5c20:evt_memcard_save
+804e5c48:delete_save_confirm_evt
+804e5d40:copy_save_confirm_evt
 
 // homebuttondrv.c
 // text
