@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ghcr.io/seekyct/spm-docker:v1
+    container: ghcr.io/seekyct/spm-docker:v3
     strategy:
       fail-fast: false
       matrix:
@@ -16,13 +16,16 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Git config
-      run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+    - name: Create venv
+      run: |
+        python3 -m venv .venv
+        .venv/bin/python3 -m pip install --upgrade pip
+        .venv/bin/python3 -m pip install -r requirements.txt
     - name: Build
       run: |
-        python3 configure.py ${{matrix.test}} \
+        .venv/bin/python3 configure.py ${{matrix.test}} \
             --regions ${{matrix.region}} \
             --shuffle 500 \
             --wine wibo \
-            --codewarrior /spmfiles/4199_60831/mwcceppc.exe
+            --codewarrior /mwcc/GC/3.0a5.2/mwcceppc.exe
         ninja
