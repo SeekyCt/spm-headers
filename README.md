@@ -37,7 +37,7 @@ Everything under the `mod` folder is available under the GPLv3 license as it's d
 
 # Symbols
 
-Currently, symbols are manually added and ported as needed. Any symbols that are missing from the lsts here can be found in the [decomp symbols yml](https://github.com/SeekyCt/spm-decomp/blob/master/config/symbols.yml) for eu0. In the future, that yml will become part of this repo and the lsts will be auto generated based on it.
+Currently, symbols are manually added and ported as needed. Any symbols that are missing from the lsts here can be found in the [decomp symbols.txt](https://github.com/SeekyCt/spm-decomp/blob/master/config/EU0/symbols.txt) for eu0. In the future, that yml will become part of this repo and the lsts will be auto generated based on it.
 
 # Contributing
 
