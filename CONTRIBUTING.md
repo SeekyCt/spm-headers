@@ -55,7 +55,11 @@
 - Wrap file-local and function-local symbols in DECOMP_STATIC in headers (for
   example, `DECOMP_STATIC(evtmgr_work)`)
 - Add offset comments on the left of every struct member
+  - For structs with version differences, use the eu0 offsets; for fields that
+    do not exist in eu0, leave a blank space in the offset comment
 - Add value comments on the left of every enum member
+  - For enums with version differences, use the eu0 values; for items that
+    do not exist in eu0, leave a blank space in the value comment
 - In offset/value comments, use uppercase letters hex
 - In code, use lowercase letters in hex
 - Add a SIZE_ASSERT for every struct (for example, `SIZE_ASSERT(EvtWork, 0xa0)`)
