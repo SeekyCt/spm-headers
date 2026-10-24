@@ -42,9 +42,12 @@
 // msgdrv.c
 8002f130:msgLoad
 8002f35c:msgUnLoad
+8002f51c:msgMain
 8003270c:msgSearch
 800327e4:msgSearchNoFallback
+80033234:msgWindow_Main
 80032f84:msgWindow_Add
+80033a40:msgWindow_Clear_Main
 //data
 80405bd8:msgdrv_msgIcon
 805adf18:msgdrv_msgw
@@ -73,9 +76,19 @@
 // more
 
 // winmgr.c
+8003b2c8:winMgrDisp
 8003bc78:winMgrSelectEntry
 8003c8a8:winMgrSelect
+8003c9d0:winMgrSelectGetIndex
 8003c90c:winMgrSelectDelete
+8003bc2c:winMgrSetSize
+8003c9d8:select_main
+8003d2ac:select_disp
+8003e5e0:select_disp2
+// data
+80326400:select_disp_arrow_move
+80406e98:winmgr_select_desc_tbl
+805adf48:winmgr_wp
 
 // acdrv.c
 8003eb4c:acInit
@@ -120,8 +133,10 @@
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
+800586c8:func_800586c8
 // bss
 8050b580:camPtrTbl
+800559ac:camLoadRoadNoRead
 // more
 
 // casedrv.c
@@ -145,6 +160,13 @@
 800a82c0:func_800a82c0
 800bc828:damageEffect
 80061b90:effNameToPtr
+800630b8:func_800630b8
+800631b8:effSetTargetNPC
+80098ef4:eff_robo_vacuum
+80099064:robo_vacuum_set_target
+80099070:effRoboVacuumMain
+80099270:effRoboVacuumDisp
+800c63a0:effGonbabaBreathEntry
 // data
 805adf90:effdrv_wp
 
@@ -189,10 +211,12 @@
 80072ea8:iconDispGxAlpha
 80073980:iconGX
 800731b0:iconDispGx
+800731b8:iconDispGx2
 800721f4:iconMain
 80072710:iconEntry
 80072cdc:iconDisp
 80073444:iconDispGxCol
+80073898:iconGetWidthHeight
 80074690:iconNameToPtr
 80074814:iconFlagOn
 // sdata
@@ -234,6 +258,7 @@
 80090680:mapObjSetColor
 80090a80:mapGrpSetColor
 8008181c:mapLoad
+80081618:mapUnload
 // more
 
 // somewhere
@@ -270,6 +295,16 @@
 
 // eff_map_block_del.c
 800b5938:effMapBlockDelEntry
+
+// eff_map_darkness.c
+800b5f68:getVoidLevel
+800b606c:voidInit
+800b69ac:voidMain
+1,1,1608:evt_map_darkness_grow_void
+1,1,ee5c:evt_map_darkness_soft_delete
+// data
+80409bd8:voidMaps
+80409980:mapDarknessEntries
 
 // evt_cam.c
 800dff20:evt_cam3d_evt_zoom_in
@@ -479,6 +514,7 @@
 // more
 
 // evt_mario.c
+800ef3c8:evt_mario_flag_onoff
 800ef4c0:evt_mario_flag8_onoff
 800ef62c:evt_mario_key_on
 800ef650:evt_mario_key_off
@@ -636,6 +672,7 @@
 80109548:evt_npc_set_thoreau_override
 80109900:marioLuigiNpcDispCb
 80109a00:peachNpcDispCb
+80109c20:bowserNpcDispCb
 80109d20:oChunksNpcDispCb
 80109da0:evt_npc_set_disp_callback
 8010a418:evt_npc_wait_for
@@ -662,7 +699,6 @@
 
 // not sure where you want this
 8040E598:evt_cutscene_pure_heart
-804E5C20:evt_memcard_save
 80436a68:wracktail_defeat
 
 // evt_offscreen.c
@@ -849,9 +885,21 @@
 805ae0a8:seq_mapchange_wp
 // more
 
+// seq_gameover.c
+801789f4:seq_gameOverInit
+80178af4:seq_gameOverExit
+80178b68:seq_gameOverMain
+// more
+
 // seq_title.c
 8017b250:seq_titleMain
 8017bc4c:getDanMapName
+// more
+
+// seq_load.c
+8017c10c:seq_loadInit
+8017c13c:seq_loadMain
+8017c138:seq_loadExit
 // more
 
 // seq_game.c
@@ -870,11 +918,13 @@
 //seq_load_sub.c
 // text
 8017d1ac:seq_load_sub_loadMain
+8017e880:windowRenderMain
 // data
 805ae0d0:seq_load_sub_wp
 
 // pausewin.c
 // text
+80183fb0:pausewinGetEntry
 80184c18:pausewinEntry
 80185088:pausewinMoveTo
 801850d8:pausewinAppear
@@ -882,6 +932,7 @@
 80185148:pausewinDelete
 801853cc:pausewinPauseGame
 80185510:pausewinUnpauseGame
+8018824c:pausewinMsgBoxDisp
 80188508:pausewinSetMessage
 80188628:pausewinSetMessageCard
 80188a64:pluswinKeyItemMain
@@ -916,6 +967,7 @@
 8019c688:distABf
 8019c508:getSpmarioDVDRoot
 8019c62c:reviseAngle
+8019c8ac:sincosf
 8019dc94:intplGetValue
 // more
 
@@ -1145,11 +1197,25 @@
 
 // nandmgr.c
 8023e9ec:nandGetSaveFiles
+8023ed08:nandClearSave
 8023edcc:nandUpdateSave
 8023efe0:nandLoadSave
+8023f570:nandWriteAllSavesMain
+8023fa24:nandWriteSaveMain
+8023fd64:nandWriteBannerLoadAllSavesMain
+80240414:nandDeleteSaveMain
 // more
 // data
 805ae1b0:nandmgr_wp
+
+// evt_nand.c
+8024174c:evt_nand_update_save
+// more 
+// data
+804e5658:savefile_update_evt
+804e5c20:evt_memcard_save
+804e5c48:delete_save_confirm_evt
+804e5d40:copy_save_confirm_evt
 
 // homebuttondrv.c
 // text
@@ -1268,11 +1334,15 @@
 
 // mtx.a
 // mtx.c
+8027a2d0:PSMTXConcat
 8027a270:PSMTXIdentity
+8027a29c:PSMTXCopy
+8027a55c:PSMTXRotRad
 8027a7b4:PSMTXTrans
 8027a7e8:PSMTXTransApply
 8027a834:PSMTXScale
 8027a85c:PSMTXScaleApply
+8027acf0:PSMTXMultVec
 8027aec0:C_MTXPerspective
 8027afac:C_MTXOrtho
 8027b4fc:PSVECSquareDistance
@@ -1323,17 +1393,25 @@
 802915a0:GXInitTexObj
 802917f4:GXInitTexObjLOD
 802929d4:GXSetTevOp
+80292ae8:GXSetTevColorOp
+80292b98:GXSetTevColor
+80292d58:GXSetTevSwapMode
+80292a68:GXSetTevColorIn
 80292e10:GXSetAlphaCompare
 80292ed4:GXSetTevOrder
 80293030:GXSetNumTevStages
 80293054:GXSetFog
 802933a4:GXSetBlendMode
+802933f4:GXSetColorUpdate
+80293420:GXSetAlphaUpdate
 8029344c:GXSetZMode
 80293480:GXSetZCompLoc
 80294214:GXSetProjection
 80294304:GXLoadPosMtxImm
 802943ac:GXSetCurrentMtx
-// more
+80294598:GXSetZScaleOffset
+802945c8:GXSetScissor
+80294630:GXGetScissor
 
 // mem.a
 // mem_heapCommon.c
@@ -1406,6 +1484,7 @@
 
 // tpl.c
 802e30ec:TPLBind
+802e3200:TPLGet
 802e3220:TPLGetGXTexObjFromPalette
 // more
 

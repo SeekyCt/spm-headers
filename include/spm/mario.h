@@ -243,16 +243,25 @@ typedef bool (MarioPaneChangeFunc)(s32 newPane);
 // Jumping out of water
 #define MARIO_MISC_FLAG_WATER_JUMP 0x10
 
-// Paper pose on
-#define MARIO_DISP_FLAG_PAPER 0x40000000
+// Where did he go?
+#define MARIO_DISP_FLAG_INVISIBLE 0x1
 
-#define MARIO_DISP_FLAG_0x800000 0x800000
+// Locks the current anim pose
+#define MARIO_DISP_FLAG_LOCK_POSE 0x2
+
+// Forces Mario to face the toward the screen at all times (back pose disabled)
+#define MARIO_DISP_FLAG_FORCE_FRONT_POSE 0x4
 
 // Lock facing direction towards facingTarget
 #define MARIO_DISP_FLAG_LOCK_FACING 0x20
 
-// Entering/exiting a door
-#define MARIO_DISP_FLAG_DOOR 0x80
+// Displays at marioWork->dispCamId rather than CAM_3D
+#define MARIO_DISP_FLAG_CAM_ID 0x80
+
+#define MARIO_DISP_FLAG_FLORO_SPROUT 0x800000
+
+// Paper pose on
+#define MARIO_DISP_FLAG_PAPER 0x40000000
 
 
 typedef struct
@@ -338,7 +347,9 @@ typedef struct
 /* 0x0054 */ f32 jumpPeakAirTime; // value of airTimer when reaching top of jump
 /* 0x0058 */ u8 unknown_0x58[0x5c - 0x58];
 /* 0x005C */ Vec3 position;
-/* 0x0068 */ u8 unknown_0x68[0xb0 - 0x68];
+/* 0x0068 */ u8 unknown_0x68[0x8c - 0x68];
+/* 0x008C */ Vec3 modelTranslation;
+/* 0x0098 */ u8 unknown_0x98[0xb0 - 0x98];
 /* 0x00B0 */ Vec3 ttydRotation;
 /* 0x00BC */ Vec3 scale;
 /* 0x00C8 */ u8 unknown_0xc8[0x120 - 0xc8];

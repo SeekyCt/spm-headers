@@ -5,7 +5,7 @@
 
 CPP_WRAPPER(spm::evt_mario)
 
-UNKNOWN_FUNCTION(evt_mario_flag0_onoff)
+EVT_DECLARE_USER_FUNC(evt_mario_flag_onoff, 2)
 UNKNOWN_FUNCTION(evt_mario_flag4_onoff)
 
 // evt_mario_flag8_onoff(bool onOff, u32 mask)

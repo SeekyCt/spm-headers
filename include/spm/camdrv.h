@@ -48,7 +48,8 @@ typedef struct _CamEntry
 /* 0x000 */ u32 flag; // CAMFLAG defines
 /* 0x004 */ s32 cam_no; // CAM_ID defines
 /* 0x008 */ u16 cameraMode;
-/* 0x00A */ u8 unknown_0xa[0x18 - 0xa];
+/* 0x00A */ u16 in3d;
+/* 0x00C */ u8 unknown_0xc[0x18 - 0xc];
 /* 0x018 */ u16 scissorX;
 /* 0x01A */ u16 scissorY;
 /* 0x01C */ u16 scissorWidth;
@@ -194,9 +195,9 @@ UNKNOWN_FUNCTION(func_80058388)
 UNKNOWN_FUNCTION(func_800583b4)
 UNKNOWN_FUNCTION(func_80058404)
 UNKNOWN_FUNCTION(func_8005869c)
-UNKNOWN_FUNCTION(func_800586c8)
-UNKNOWN_FUNCTION(func_80058700)
-UNKNOWN_FUNCTION(func_800587a0)
+void func_800586c8(f32, f32, f32, s32 camId, Vec3 * position);
+void camShakeInit(f32 x, f32 y, f32 z, s32 camId, u32 duration);
+void camShakeInit_Frm(f32 x, f32 y, f32 z, s32 camId, u32 duration);
 UNKNOWN_FUNCTION(func_80058800)
 UNKNOWN_FUNCTION(func_8005881c)
 UNKNOWN_FUNCTION(func_80058840)

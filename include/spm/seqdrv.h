@@ -34,6 +34,8 @@ typedef struct _SeqWork
 } SeqWork;
 SIZE_ASSERT(SeqWork, 0x24)
 
+DECOMP_STATIC(SeqWork seqWork)
+
 /*
     Initialises data used by seqdrv functions
 */

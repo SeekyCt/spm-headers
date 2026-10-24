@@ -383,7 +383,7 @@ void mapUnload();
 /*
     Loads a new map
 */
-void mapLoad(const char * name);
+int mapLoad(const char * name);
 
 UNKNOWN_FUNCTION(func_80083aa4)
 

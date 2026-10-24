@@ -6,12 +6,19 @@
 
 #include <common.h>
 #include <spm/filemgr.h>
+#include <spm/camdrv.h>
+#include <spm/npcdrv.h>
 #include <wii/gx.h>
+#include <wii/mtx.h>
 
 CPP_WRAPPER(spm::effdrv)
 
 USING(spm::filemgr::FileEntry)
+USING(spm::npcdrv::NPCEntry)
 USING(wii::gx::GXTexObj)
+USING(wii::mtx::Mtx34)
+USING(wii::mtx::Vec3)
+USING(spm::camdrv::CameraId)
 
 struct _EffEntry;
 typedef void (EffFunc)(struct _EffEntry * entry);
@@ -64,6 +71,58 @@ SIZE_ASSERT(EffWork, 0x134)
 
 DECOMP_STATIC(EffWork effdrv_work)
 DECOMP_STATIC(EffWork * effdrv_wp)
+
+enum EffTargetType
+{
+  TARGET_NULL = 0,
+  TARGET_MARIO = 1,
+  TARGET_NPC = 2,
+  TARGET_3 = 3,
+  TARGET_FAIRY = 4,
+  TARGET_GUIDE = 5
+};
+
+typedef struct {
+/* 0x000 */ s32 type;
+/* 0x004 */ s32 fairyId;
+/* 0x008 */ u8 unknown_0x8[0x1c - 0x8];
+} EffTarget_Fairy;
+SIZE_ASSERT(EffTarget_Fairy, 0x1c)
+
+typedef struct {
+/* 0x000 */ s32 type;
+/* 0x000 */ u8 unknown_0x4[0x1c - 0x4];
+} EffTarget_Guide;
+SIZE_ASSERT(EffTarget_Guide, 0x1c)
+
+typedef struct {
+/* 0x000 */ s32 type;
+/* 0x004 */ Vec3 pos;
+/* 0x010 */ Vec3 offset;
+} EffTarget_Raw;
+SIZE_ASSERT(EffTarget_Raw, 0x1c)
+
+typedef struct {
+/* 0x000 */ s32 type;
+/* 0x004 */ int npcId;
+/* 0x008 */ NPCEntry * npcEntry;
+/* 0x00C */ u8 unknown_0xc[0x1c - 0xc];
+} EffTarget_NPC;
+SIZE_ASSERT(EffTarget_NPC, 0x1c)
+
+typedef struct {
+/* 0x000 */ s32 type;
+/* 0x004 */ u8 unknown_0x4[0x1c - 0x4];
+} EffTarget_Mario;
+SIZE_ASSERT(EffTarget_Mario, 0x1c)
+
+union EffTargetUnion {
+    EffTarget_Mario mario;
+    EffTarget_NPC npc;
+    EffTarget_Raw raw;
+    EffTarget_Fairy fairy;
+    EffTarget_Guide guide;
+};
 
 /*
     Allocates entries
@@ -123,6 +182,16 @@ EffEntry * effNameToPtr(const char * name);
 
 EffEntry * eff_item_thunder(float x, float y, float z, s32 param_4, s32 param_5, s32 param_6, s32 param_7, s32 param_8);
 
+EffEntry * eff_robo_vacuum(float x, float y, float z);
+
+void robo_vacuum_set_target(EffEntry * entry, int evtId, char *npcName);
+
+void effSetTargetNPC(EffTargetUnion *target, int evtId, char *npcName);
+
+void effRoboVacuumMain(EffEntry * entry);
+
+void effRoboVacuumDisp(CameraId id, EffEntry * entry);
+
 EffEntry * damageEffect(float x, float y, float z,int param_4, s32 damage);
 
 UNKNOWN_FUNCTION(func_80061c28)
@@ -133,7 +202,7 @@ UNKNOWN_FUNCTION(func_80061eb8)
 UNKNOWN_FUNCTION(func_800623f8)
 UNKNOWN_FUNCTION(func_80062d04)
 UNKNOWN_FUNCTION(func_80062f9c)
-UNKNOWN_FUNCTION(func_800630b8)
+s32 func_800630b8(EffTargetUnion * target, s32 param_1, s32 param_2, Mtx34 matrix);
 UNKNOWN_FUNCTION(func_80063130)
 UNKNOWN_FUNCTION(func_80063198)
 UNKNOWN_FUNCTION(func_800631a4)

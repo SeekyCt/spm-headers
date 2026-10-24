@@ -31,9 +31,15 @@ double floor(double x);
     #define fabsf(x) __fabsf(x)
     #define abs(x) __abs(x)
 #elif defined __GNUC__
-    #define fabs(x) __builtin_fabs(x)
-    #define fabsf(x) __builtin_fabsf(x)
-    #define abs(x) __builtin_abs(x)
+    static inline double fabs(double x) {
+        return __builtin_fabs(x);
+    }
+    static inline float fabsf(float x) {
+        return __builtin_fabsf(x);
+    }
+    static inline int abs(int x) {
+        return __builtin_abs(x);
+    }
 #else
     double fabs(double x);
     float fabsf(float x);

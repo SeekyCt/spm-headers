@@ -59,6 +59,14 @@ typedef f32 (IntplUserFunc)(s32, s32, f32, f32);
 #endif
 
 /*
+    Used to check flags
+*/
+inline bool flag(u32 flags, u32 mask)
+{
+    return (flags & mask) != 0;
+}
+
+/*
     Initialises an unused mutex
 */
 void sysInitMutex();
