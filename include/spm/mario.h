@@ -790,7 +790,7 @@ DECOMP_STATIC(const char * mario_toRearPose(const char * name))
 DECOMP_STATIC(const char * mario_toFrontPose(const char * name))
 
 UNKNOWN_FUNCTION(func_801299f8)
-UNKNOWN_FUNCTION(func_80129d8c)
+void func_80129d8c();
 UNKNOWN_FUNCTION(func_80129db8)
 UNKNOWN_FUNCTION(func_80129ddc)
 UNKNOWN_FUNCTION(func_80129dfc)
