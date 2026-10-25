@@ -111,6 +111,10 @@
 80044734:animPoseSetMaterialFlagOn
 80044818:animPoseSetMaterialFlagOff
 80044c8c:animPoseSetMaterialEvtColor
+80044d84:animPoseSetMaterialAnmColor
+80044ac4:animPoseSetMaterialLightFlagOn
+800448fc:animPoseSetFlagF4On
+800449e0:animPoseSetFlagF4Off
 80044e68:animPoseGetMaterialFlag
 80045008:animPoseGetMaterialEvtColor
 800450d8:animPoseSetDispCallback2
@@ -320,13 +324,13 @@
 800d218c:evt_snd_bgmon_f_d
 800d21f8:evt_snd_bgmoff
 800d2224:evt_snd_bgmoff_f_d
+800d2294:evt_snd_bgm_fadeout
 800d22d8:evt_snd_bgm_fadein
 800d23cc:evt_snd_bgm_set_vol
 800d24b8:evt_snd_get_bgm_wait_time
 800d2800:evt_snd_sfxon
 800d28fc:evt_snd_sfxon_character
 800d29cc:evt_snd_sfxon_3d
-800d2294:evt_snd_channel_fadeout
 800d2af4:evt_snd_sfxon_npc
 800d2b64:evt_snd_sfxon_npc_delay
 800d2cd8:evt_snd_sfxon_3d_player_character
@@ -533,6 +537,7 @@
 800f05b0:func_800f05b0
 800f0d58:evt_mario_jump_to
 800f119c:func_800f119c
+80129d8c:func_80129d8c
 800f1954:evt_mario_set_pose
 800F19C0:evt_mario_wait_anim
 800f1a4c:func_800f1a4c
