@@ -151,7 +151,9 @@ typedef struct
 /* 0x014 */ Unk curAnimIndex;
 /* 0x018 */ u8 unknown_0x18[0x020 - 0x018];
 /* 0x020 */ f32 frmCounter; // unconfirmed
-/* 0x024 */ u8 unknown_0x24[0x188 - 0x024];
+/* 0x024 */ u8 unknown_0x24[0xf4 - 0x024];
+/* 0x0F4 */ u32 flag_f4;
+/* 0x024 */ u8 unknown_0xf8[0x188 - 0x0f8];
 } AnimPose;
 SIZE_ASSERT(AnimPose, 0x188)
 
@@ -182,16 +184,14 @@ UNKNOWN_FUNCTION(animPoseSetGXFunc)
 f32 animPoseGetLoopTimes(s32 animPoseId);
 UNKNOWN_FUNCTION(animPoseSetFlagF0On)
 UNKNOWN_FUNCTION(animPoseSetFlagF0Off)
-UNKNOWN_FUNCTION(animPoseSetFlagF4On)
-UNKNOWN_FUNCTION(animPoseSetFlagF4Off)
-UNKNOWN_FUNCTION(animPoseSetMaterialLightFlagOn)
-UNKNOWN_FUNCTION(animPoseSetMaterialLightFlagOff)
+void animPoseSetFlagF4On(s32 poseId, u32 flag);
+void animPoseSetFlagF4Off(s32 poseId, u32 flag);
+void animPoseSetMaterialLightFlagOn(s32 animPoseId, u32 flag);
+void animPoseSetMaterialLightFlagOff(s32 animPoseId, u32 flag);
 
 void animPoseSetMaterialFlagOn(s32 animPoseId, u32 flag);
 
 void animPoseSetMaterialFlagOff(s32 animPoseId, u32 flag);
-
-UNKNOWN_FUNCTION(animPoseSetMaterialAnmColor)
 
 GXColor animPoseGetMaterialEvtColor(s32 animPoseId);
 
@@ -200,6 +200,8 @@ u32 animPoseGetMaterialFlag(s32 animPoseId);
 UNKNOWN_FUNCTION(animPoseGetFlagF4)
 
 void animPoseSetMaterialEvtColor(s32 animPoseId, GXColor color);
+
+void animPoseSetMaterialAnmColor(s32 animPoseId, u8 r, u8 g, u8 b, u8 a);
 
 void animPoseSetDispCallback2(s32 id, void * func, void * evt);
 
