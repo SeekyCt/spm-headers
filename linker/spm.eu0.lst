@@ -137,6 +137,7 @@
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
+80058404:func_80058404
 800586c8:func_800586c8
 // bss
 8050b580:camPtrTbl
@@ -545,6 +546,8 @@
 800f25b0:evt_set_gravity
 800f29c8:evt_mario_take_damage
 800f2f68:evt_mario_set_anim_change_handler
+800f3310:evt_mario_end_intermission
+800f3334:evt_mario_start_intermission
 800f3364:evt_mario_check_3d
 800f09c4:evt_mario_walk_back_from_pos
 // more
@@ -560,7 +563,6 @@
 800f3a88:evt_mobj_set_position
 800f3b90:evt_mobj_set_scale
 800f3c98:evt_mobj_set_rotation
-800f36b0:evt_mobj_hit_onoff
 800f3da0:evt_mobj_set_anim
 800f5ad8:evt_mobj_zyo
 800f52a4:evt_mobj_jumpstand
@@ -802,6 +804,7 @@
 // mario_pouch.c
 // text
 8014c088:pouchGetPtr
+8014cd90:pouchMain
 8014d1bc:pouchSetLevel
 8014d394:pouchSetAttack
 8014d3c8:pouchGetAttack
