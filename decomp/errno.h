@@ -2,8 +2,8 @@
 
 #include <common.h>
 
-CPP_WRAPPER(msl::errno)
+EXTERN_C()
 
 extern s32 errno;
 
-CPP_WRAPPER_END()
+EXTERN_C_END()

@@ -2,7 +2,7 @@
 
 #include <common.h>
 #include <wii/mem.h>
-#include <msl/new>
+#include <new>
 #include <nw4r/lyt/animation.hpp>
 #include <nw4r/lyt/drawInfo.hpp>
 #include <nw4r/lyt/pane.hpp>

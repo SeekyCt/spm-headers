@@ -4,9 +4,6 @@
 
 #pragma once
 
-// TODO: does this actually need to be hidden for modding?
-#ifdef DECOMP
-
 namespace std {
 
 class exception
@@ -44,5 +41,3 @@ terminate_handler set_terminate(terminate_handler handler);
 void terminate();
 
 }
-
-#endif

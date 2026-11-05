@@ -1,7 +1,7 @@
 #pragma once
 
 #include <common.h>
-#include <msl/new>
+#include <new>
 #include <nw4r/lyt/animation.hpp>
 #include <nw4r/lyt/material.hpp>
 #include <nw4r/lyt/resourceAccessor.hpp>

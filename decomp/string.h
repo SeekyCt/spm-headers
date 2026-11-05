@@ -5,7 +5,7 @@
 
 #include <common.h>
 
-CPP_WRAPPER(msl::string)
+EXTERN_C()
 
 void * memcpy(void * dest, const void * src, size_t num);
 void * memset(void * ptr, int value, size_t num);
@@ -20,4 +20,4 @@ const char * strchr(const char * str, char c);
 size_t strlen(const char * str);
 const char * strstr(const char * str1, const char * str2);
 
-CPP_WRAPPER_END()
+EXTERN_C_END()

@@ -2,6 +2,8 @@
 
 #include <common.h>
 
+EXTERN_C()
+
 #define NULL 0
 
 typedef s32 ptrdiff_t;
@@ -21,3 +23,5 @@ typedef s32 ptrdiff_t;
 #ifndef __cplusplus
     typedef u16 wchar_t;
 #endif
+
+EXTERN_C_END()

@@ -76,6 +76,15 @@
     #define CPP_WRAPPER_END()
 #endif
 
+// Use extern "C" in C++, no namespacing
+#ifdef __cplusplus
+    #define EXTERN_C() extern "C" {
+    #define EXTERN_C_END() }
+#else
+    #define EXTERN_C()
+    #define EXTERN_C_END()
+#endif
+
 // Macro for potential using statements
 // Should go inside a CPP_WRAPPER
 #if (defined __cplusplus) && !(defined DECOMP)

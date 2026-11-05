@@ -4,11 +4,8 @@
 
 #pragma once
 
-// TODO: does this actually need to be hidden for modding?
-#ifdef DECOMP
-
 #include <common.h>
-#include <msl/exception>
+#include <exception>
 
 namespace std {
 
@@ -38,6 +35,3 @@ inline void * operator new (size_t size, void * mem) throw()
 
     return mem;
 }
-
-
-#endif

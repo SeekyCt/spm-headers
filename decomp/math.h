@@ -2,7 +2,7 @@
 
 #include <common.h>
 
-CPP_WRAPPER(msl::math)
+EXTERN_C()
 
 typedef float float_t;
 typedef double double_t;
@@ -26,27 +26,11 @@ double pow(double base, double exponent);
 
 double floor(double x);
 
-#ifdef __MWERKS__
-    #define fabs(x) __fabs(x)
-    #define fabsf(x) __fabsf(x)
-    #define abs(x) __abs(x)
-#elif defined __GNUC__
-    static inline double fabs(double x) {
-        return __builtin_fabs(x);
-    }
-    static inline float fabsf(float x) {
-        return __builtin_fabsf(x);
-    }
-    static inline int abs(int x) {
-        return __builtin_abs(x);
-    }
-#else
-    double fabs(double x);
-    float fabsf(float x);
-    int abs(int x);
-#endif
+#define fabs(x) __fabs(x)
+#define fabsf(x) __fabsf(x)
+#define abs(x) __abs(x)
 
 double ceil(double x);
 #define ceilf(x) ((f32)ceil(x))
 
-CPP_WRAPPER_END()
+EXTERN_C_END()

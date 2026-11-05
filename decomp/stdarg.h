@@ -2,7 +2,7 @@
 
 #include <common.h>
 
-CPP_WRAPPER(msl::stdarg)
+EXTERN_C()
 
 // Based on open_rvl
 
@@ -33,4 +33,4 @@ void* __va_arg(va_list, int);
     (*(ARG_TYPE*)__va_arg(VA_LIST, _var_arg_typeof(ARG_TYPE)))
 #endif
 
-CPP_WRAPPER_END()
+EXTERN_C_END()
