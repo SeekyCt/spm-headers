@@ -111,6 +111,10 @@
 80044734:animPoseSetMaterialFlagOn
 80044818:animPoseSetMaterialFlagOff
 80044c8c:animPoseSetMaterialEvtColor
+80044d84:animPoseSetMaterialAnmColor
+80044ac4:animPoseSetMaterialLightFlagOn
+800448fc:animPoseSetFlagF4On
+800449e0:animPoseSetFlagF4Off
 80044e68:animPoseGetMaterialFlag
 80045008:animPoseGetMaterialEvtColor
 800450d8:animPoseSetDispCallback2
@@ -133,6 +137,7 @@
 80055b38:camGetCurPtr
 80056a60:cam3dMain
 80058294:getScreenPoint
+80058404:func_80058404
 800586c8:func_800586c8
 // bss
 8050b580:camPtrTbl
@@ -320,13 +325,13 @@
 800d218c:evt_snd_bgmon_f_d
 800d21f8:evt_snd_bgmoff
 800d2224:evt_snd_bgmoff_f_d
+800d2294:evt_snd_bgm_fadeout
 800d22d8:evt_snd_bgm_fadein
 800d23cc:evt_snd_bgm_set_vol
 800d24b8:evt_snd_get_bgm_wait_time
 800d2800:evt_snd_sfxon
 800d28fc:evt_snd_sfxon_character
 800d29cc:evt_snd_sfxon_3d
-800d2294:evt_snd_channel_fadeout
 800d2af4:evt_snd_sfxon_npc
 800d2b64:evt_snd_sfxon_npc_delay
 800d2cd8:evt_snd_sfxon_3d_player_character
@@ -422,7 +427,7 @@
 // evt_eff.c
 800e57bc:evt_eff
 800e6148:evt_eff_softdelete
-800E6250:evt_eff_exclamation_question
+800E6250:evt_eff_fukidashi
 1,1,ce3c:evt_eff_sundale_support
 // more
 
@@ -497,7 +502,9 @@
 800ec4ec:evt_img_alloc_capture
 800ec7e0:evt_img_free_capture
 800ec8c4:evt_img_release
+800ec30c:evt_img_set_position
 800ec920:evt_img_wait_animend
+800eca64:evt_img_set_z
 
 // evt_map.c
 800ed9b0:evt_map_set_blend
@@ -533,6 +540,7 @@
 800f05b0:func_800f05b0
 800f0d58:evt_mario_jump_to
 800f119c:func_800f119c
+80129d8c:func_80129d8c
 800f1954:evt_mario_set_pose
 800F19C0:evt_mario_wait_anim
 800f1a4c:func_800f1a4c
@@ -540,6 +548,8 @@
 800f25b0:evt_set_gravity
 800f29c8:evt_mario_take_damage
 800f2f68:evt_mario_set_anim_change_handler
+800f3310:evt_mario_end_intermission
+800f3334:evt_mario_start_intermission
 800f3364:evt_mario_check_3d
 800f09c4:evt_mario_walk_back_from_pos
 // more
@@ -555,7 +565,6 @@
 800f3a88:evt_mobj_set_position
 800f3b90:evt_mobj_set_scale
 800f3c98:evt_mobj_set_rotation
-800f36b0:evt_mobj_hit_onoff
 800f3da0:evt_mobj_set_anim
 800f5ad8:evt_mobj_zyo
 800f52a4:evt_mobj_jumpstand
@@ -797,6 +806,7 @@
 // mario_pouch.c
 // text
 8014c088:pouchGetPtr
+8014cd90:pouchMain
 8014d1bc:pouchSetLevel
 8014d394:pouchSetAttack
 8014d3c8:pouchGetAttack
@@ -858,7 +868,7 @@
 8016c0ac:fairySpindashUseFunc
 8016c0b4:mot_spindash
 8016c568:mot_spindash_post
-8016ece4:func_8016ece4
+8016ece4:fairyHammerHitChk
 80170384:func_80170384
 8016e520:mot_hammer
 8016ebb0:mot_hammer_post
@@ -879,6 +889,7 @@
 
 // seq_mapchange.c
 8017a33c:seq_mapChangeInit
+8017a460:seq_mapChangeExit
 8017a464:seq_mapChangeMain
 8017af98:_unload
 //sdata

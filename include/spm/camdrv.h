@@ -83,7 +83,8 @@ typedef struct _CamEntry
 /* 0x230 */ Vec3 zoomDestTarget;
 /* 0x23C */ u8 unknown_0x23c[0x240 - 0x23c];
 /* 0x240 */ OSTime zoomStartTime;
-/* 0x248 */ u8 unknown_0x248[0x254 - 0x248];
+/* 0x248 */ s32 zoomDuration;
+/* 0x24C */ u8 unknown_0x248[0x254 - 0x24c];
 /* 0x254 */ void * cameraRoad;
 /* 0x258 */ CamDispFunc * dispFunc;
 /* 0x25C */ u8 unknown_0x25c[0x2f0 - 0x25c];
@@ -193,7 +194,7 @@ bool camCheck3d(s32 camId);
 
 UNKNOWN_FUNCTION(func_80058388)
 UNKNOWN_FUNCTION(func_800583b4)
-UNKNOWN_FUNCTION(func_80058404)
+void func_80058404(s32 camId, s32 isFlipped);
 UNKNOWN_FUNCTION(func_8005869c)
 void func_800586c8(f32, f32, f32, s32 camId, Vec3 * position);
 void camShakeInit(f32 x, f32 y, f32 z, s32 camId, u32 duration);
