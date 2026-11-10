@@ -427,7 +427,7 @@
 // evt_eff.c
 800e57bc:evt_eff
 800e6148:evt_eff_softdelete
-800E6250:evt_eff_exclamation_question
+800E6250:evt_eff_fukidashi
 1,1,ce3c:evt_eff_sundale_support
 // more
 
@@ -502,7 +502,9 @@
 800ec4ec:evt_img_alloc_capture
 800ec7e0:evt_img_free_capture
 800ec8c4:evt_img_release
+800ec30c:evt_img_set_position
 800ec920:evt_img_wait_animend
+800eca64:evt_img_set_z
 
 // evt_map.c
 800ed9b0:evt_map_set_blend
@@ -866,7 +868,7 @@
 8016c0ac:fairySpindashUseFunc
 8016c0b4:mot_spindash
 8016c568:mot_spindash_post
-8016ece4:func_8016ece4
+8016ece4:fairyHammerHitChk
 80170384:func_80170384
 8016e520:mot_hammer
 8016ebb0:mot_hammer_post
@@ -887,6 +889,7 @@
 
 // seq_mapchange.c
 8017a33c:seq_mapChangeInit
+8017a460:seq_mapChangeExit
 8017a464:seq_mapChangeMain
 8017af98:_unload
 //sdata
