@@ -385,7 +385,7 @@ typedef struct
         Others unknown
     */
 /* 0x01BC */ HitObj * hitObjs1[10];
-/* 0x01E4 */ u8 unknown_0x1e4[0x1e8 - 0x1e4];
+/* 0x01E4 */ HitObj * hitObjLastHammeredWall;
 /* 0x01E8 */ HitObj * cudgeFloorHitObj; // Updates for 1 frame during hammer action on a floor and then clears, value taken directly from below
 /* 0x01EC */ HitObj * cudgeFloorHitObj2; // Updates only when cudge is used (?)
 /* 0x01F0 */ u8 unknown_0x1ec[0x1fc - 0x1f0];
