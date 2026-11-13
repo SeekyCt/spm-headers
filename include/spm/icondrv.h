@@ -20,7 +20,7 @@ USING(wii::mtx::Mtx34)
 
 // TODO: port
 #if !(defined SPM_JP0) && !(defined SPM_JP1) && !(defined SPM_KR0)
-enum IconId 
+enum IconId
 {
 /* 0x00 */ ICON_BTN_WII_REMOTE,
 /* 0x01 */ ICON_BTN_1_UP,
@@ -204,13 +204,13 @@ enum IconId
 /* 0xC3 */ ICON_HUD_COINS_FR, // Pie`ces
 /* 0xC4 */ ICON_HUD_COINS_SP, // Monedas
 /* 0xC5 */ ICON_HUD_COINS_IT, // Monete
-#else 
-/*      */ ICON_HUD_HP,
-/*      */ ICON_HUD_SCORE_JP,
-/*      */ ICON_HUD_COINS_JP,
-/*      */ ICON_HUD_SCORE_US,
-/*      */ ICON_HUD_COINS_US,
-#endif 
+#else
+/* ---- */ ICON_HUD_HP,
+/* ---- */ ICON_HUD_SCORE_JP,
+/* ---- */ ICON_HUD_COINS_JP,
+/* ---- */ ICON_HUD_SCORE_US,
+/* ---- */ ICON_HUD_COINS_US,
+#endif
 /* 0xC6 */ ICON_UNK_WIDE_GRAY_BOX,
 /* 0xC7 */ ICON_UNK_SMALL_GRAY_SQUARE,
 /* 0xC8 */ ICON_UNK_SMALL_MAGENTA_SQUARE,

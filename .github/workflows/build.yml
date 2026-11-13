@@ -5,6 +5,17 @@ on:
   pull_request:
 
 jobs:
+  check-format:
+    name: Check coding conventions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Run clang-format
+        run: |
+          shopt -s globstar
+          clang-format --dry-run --Werror include/**/*.h mod/**/*.h decomp/**/*.h
+
   build:
     runs-on: ubuntu-latest
     container: ghcr.io/seekyct/spm-docker:v3
