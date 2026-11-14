@@ -12,20 +12,28 @@ jobs:
       fail-fast: false
       matrix:
         region: [eu0, eu1, us0, us1, us2, jp0, jp1, kr0]
-        test: [mod_ctx, rns_mod_ctx, decomp_ctx, mod_ctx_shuffle, test_mod_individual, validate_lst]
+        test:
+          [
+            mod_ctx,
+            rns_mod_ctx,
+            decomp_ctx,
+            mod_ctx_shuffle,
+            test_mod_individual,
+            validate_lst,
+          ]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Create venv
-      run: |
-        python3 -m venv .venv
-        .venv/bin/python3 -m pip install --upgrade pip
-        .venv/bin/python3 -m pip install -r requirements.txt
-    - name: Build
-      run: |
-        .venv/bin/python3 configure.py ${{matrix.test}} \
-            --regions ${{matrix.region}} \
-            --shuffle 500 \
-            --wine wibo \
-            --codewarrior /mwcc/GC/3.0a5.2/mwcceppc.exe
-        ninja
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Create venv
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python3 -m pip install --upgrade pip
+          .venv/bin/python3 -m pip install -r requirements.txt
+      - name: Build
+        run: |
+          .venv/bin/python3 configure.py ${{matrix.test}} \
+              --regions ${{matrix.region}} \
+              --shuffle 500 \
+              --wine wibo \
+              --codewarrior /mwcc/GC/3.0a5.2/mwcceppc.exe
+          ninja
