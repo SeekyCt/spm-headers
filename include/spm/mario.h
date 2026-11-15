@@ -455,8 +455,8 @@ typedef struct
 /* 0x09B8 */ HitObj * hitObjHeadArray[20];
 /* 0x0A08 */ s32 numHitObjHeadArray; // number of pointers in the array above
 /* 0x0A0C */ u8 unknown_0xa0c[0xafc - 0xa0c];
-/* 0x0AFC */ HitObj * hitObj9Array[16];
-/* 0x0B3C */ u8 unknown_0xb3c[0xb7c - 0xb3c];
+/* 0x0AFC */ HitObj * hitObjHammerWallArray[16];
+/* 0x0B3C */ HitObj * hitObjHammerWallArray2[16];
 /* 0x0B7C */ s32 hitobj_related1;
 /* 0x0B80 */ u8 unknown_0xb80[0xcd8 - 0xb80];
 /* 0x0CD8 */ MarioJumpFallPara jumpFallPara;
