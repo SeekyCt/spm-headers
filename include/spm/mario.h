@@ -385,7 +385,7 @@ typedef struct
         Others unknown
     */
 /* 0x01BC */ HitObj * hitObjs1[10];
-/* 0x01E4 */ u8 unknown_0x1e4[0x1e8 - 0x1e4];
+/* 0x01E4 */ HitObj * hitObjLastHammeredWall;
 /* 0x01E8 */ HitObj * cudgeFloorHitObj; // Updates for 1 frame during hammer action on a floor and then clears, value taken directly from below
 /* 0x01EC */ HitObj * cudgeFloorHitObj2; // Updates only when cudge is used (?)
 /* 0x01F0 */ u8 unknown_0x1ec[0x1fc - 0x1f0];
@@ -455,9 +455,9 @@ typedef struct
 /* 0x09B8 */ HitObj * hitObjHeadArray[20];
 /* 0x0A08 */ s32 numHitObjHeadArray; // number of pointers in the array above
 /* 0x0A0C */ u8 unknown_0xa0c[0xafc - 0xa0c];
-/* 0x0AFC */ HitObj * hitObj9Array[16];
-/* 0x0B3C */ u8 unknown_0xb3c[0xb7c - 0xb3c];
-/* 0x0B7C */ s32 hitobj_related1;
+/* 0x0AFC */ HitObj * hitObjHammerWallArray[16];
+/* 0x0B3C */ HitObj * hitObjHammerWallArray2[16];
+/* 0x0B7C */ s32 numHitObjHammerWallArray;
 /* 0x0B80 */ u8 unknown_0xb80[0xcd8 - 0xb80];
 /* 0x0CD8 */ MarioJumpFallPara jumpFallPara;
 /* 0x0D0C */ u8 unknown_0xd0c[0xd58 - 0xd0c];
@@ -790,7 +790,7 @@ DECOMP_STATIC(const char * mario_toRearPose(const char * name))
 DECOMP_STATIC(const char * mario_toFrontPose(const char * name))
 
 UNKNOWN_FUNCTION(func_801299f8)
-UNKNOWN_FUNCTION(func_80129d8c)
+void func_80129d8c();
 UNKNOWN_FUNCTION(func_80129db8)
 UNKNOWN_FUNCTION(func_80129ddc)
 UNKNOWN_FUNCTION(func_80129dfc)

@@ -45,6 +45,6 @@ EVT_UNKNOWN_USER_FUNC(func_800e6250)
 
 EVT_DECLARE_USER_FUNC(evt_eff_sundale_support, 3)
 
-EVT_DECLARE_USER_FUNC(evt_eff_exclamation_question, 11)
+EVT_DECLARE_USER_FUNC(evt_eff_fukidashi, 11)
 
 CPP_WRAPPER_END()

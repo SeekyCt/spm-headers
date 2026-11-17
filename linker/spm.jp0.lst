@@ -782,7 +782,7 @@
 802580F0:memcmp
 
 // new to april fools 2024
-800E63CC:evt_eff_exclamation_question
+800E63CC:evt_eff_fukidashi
 800F1818:evt_mario_wait_anim
 80104FF0:evt_npc_set_axis_movement_unit
 80108A00:evt_npc_wait_axis_movement_unit_end
