@@ -31,8 +31,8 @@ EVT_DECLARE_USER_FUNC(evt_frame_flag_onoff, 3)
 //     f32 x, f32 y, f32 z, f32 drawScale)
 EVT_DECLARE_USER_FUNC(evt_frame_wire_entry, 7)
 
-// evt_frame_check_draw_finished(const char * instanceName)
-EVT_DECLARE_USER_FUNC(evt_frame_check_draw_finished, 1)
+// evt_frame_wire_wait_draw_finished(const char * instanceName)
+EVT_DECLARE_USER_FUNC(evt_frame_wire_wait_draw_finished, 1)
 
 // evt_frame_set_draw_speed(const char * instanceName, f32 drawSpeed)
 EVT_DECLARE_USER_FUNC(evt_frame_set_draw_speed, 2)
@@ -47,12 +47,13 @@ EVT_DECLARE_USER_FUNC(evt_frame_set_wire_line_width, 2)
 EVT_DECLARE_USER_FUNC(evt_frame_set_wire_draw_rotation, 4)
 
 // evt_frame_evt_entry(const char * instanceName, f32 x, f32 y, f32 z, f32 width, f32 height)
+//     [this is for a frame entry of type evt, not an evt entry of type frame. don't get it twisted bucko]
 EVT_DECLARE_USER_FUNC(evt_frame_evt_entry, 6)
 
 // evt_frame_set_rotation(const char * instanceName, f32 xRot, f32 yRot, f32 zRot)
 EVT_DECLARE_USER_FUNC(evt_frame_set_rotation, 4)
 
-// evt_frame_set_color(const char * instanceName, u8 r, u8 g, u8 b, u8 a)
+// evt_frame_set_color2(const char * instanceName, u8 r, u8 g, u8 b, u8 a)
 EVT_DECLARE_USER_FUNC(evt_frame_set_color2, 5)
 
 // evt_frame_spin_device_entry(s32 arg1, const char * startSegment, const char * segmentArray)

@@ -46,8 +46,8 @@ UNKNOWN_FUNCTION(func_800ff2a8)
 UNKNOWN_FUNCTION(func_800ff3ec)
 
 EVT_DECLARE_USER_FUNC(evt_npc_set_color, 5)
-EVT_DECLARE_USER_FUNC(evt_npc_set_colorcopy, 5)
-EVT_DECLARE_USER_FUNC(evt_npc_set_colorcopytwo, 5)
+EVT_DECLARE_USER_FUNC(evt_npc_set_part_color, 5)
+EVT_DECLARE_USER_FUNC(evt_npc_set_all_part_color, 5)
 UNKNOWN_FUNCTION(func_800ff86c)
 EVT_UNKNOWN_USER_FUNC(func_800ff8f8)
 UNKNOWN_FUNCTION(func_800ff9a4)
@@ -196,7 +196,7 @@ UNKNOWN_FUNCTION(func_801061c8)
 UNKNOWN_FUNCTION(func_80106260)
 UNKNOWN_FUNCTION(func_801062b0)
 UNKNOWN_FUNCTION(func_80106300)
-EVT_UNKNOWN_USER_FUNC(evt_read_setup_file)
+EVT_DECLARE_USER_FUNC(evt_read_setup_file, 0)
 
 // evt_npc_entry_from_template(s32 instanceIdOverride, s32 templateId, s32 x, s32 y,
 //                             s32 z, &s32 instanceId, &char * instanceName)
@@ -300,7 +300,7 @@ UNKNOWN_FUNCTION(func_80109ca0)
 
 s32 oChunksNpcDispCb(void *param_1, s32 param_2);
 
-EVT_UNKNOWN_USER_FUNC(evt_npc_set_disp_callback)
+EVT_DECLARE_USER_FUNC(evt_npc_set_disp_callback, 2)
 
 UNKNOWN_FUNCTION(func_80109e18)
 UNKNOWN_FUNCTION(func_80109e94)
@@ -308,7 +308,7 @@ UNKNOWN_FUNCTION(func_80109f18)
 UNKNOWN_FUNCTION(func_8010a008)
 UNKNOWN_FUNCTION(func_8010a060)
 UNKNOWN_FUNCTION(func_8010a0e8)
-UNKNOWN_FUNCTION(func_8010a148)
+EVT_DECLARE_USER_FUNC(evt_npc_set_unk_shell_sfx, 2)
 UNKNOWN_FUNCTION(func_8010a1c4)
 UNKNOWN_FUNCTION(func_8010a1e8)
 UNKNOWN_FUNCTION(func_8010a298)

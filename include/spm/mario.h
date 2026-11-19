@@ -19,6 +19,7 @@ USING(spm::mobjdrv::MobjEntry)
 USING(spm::npcdrv::NPCEntry)
 USING(wii::mtx::Vec3)
 USING(wii::mtx::Vec3i)
+USING(wii::mtx::Mtx34)
 
 // Returns an override for the name
 typedef const char * (MarioAnimChangeHandler)(const char * newAnimName);
@@ -33,7 +34,19 @@ enum PlayerCharacter
 
 typedef struct
 {
-/* 0x00 */ u8 unknown_0x0[0x34 - 0x0];
+/* 0x00 */ f32 jumpFallPhase;
+/* 0x04 */ f32 maxJumpFallPhase;
+/* 0x08 */ f32 speedY;
+/* 0x0C */ f32 initJumpSpeed;
+/* 0x10 */ f32 jumpAccel;
+/* 0x14 */ f32 param_3;
+/* 0x18 */ f32 param_4;
+/* 0x1C */ f32 nextSpeedY;
+/* 0x20 */ f32 nextJumpAccel;
+/* 0x24 */ f32 nextParam_3;
+/* 0x28 */ f32 nextParam_4;
+/* 0x2C */ f32 terminalVelocity;
+/* 0x30 */ f32 jumpFallYDifference;
 } MarioJumpFallPara;
 SIZE_ASSERT(MarioJumpFallPara, 0x34)
 
@@ -162,15 +175,15 @@ typedef bool (MarioPaneChangeFunc)(s32 newPane);
 #define MOT_TALK 0x13 // Talking to an NPC
 #define MOT_HAZARD_RESPAWN_UNUSED 0x14 // Synonymous with the below; same mainfunc, always sets mot id to 21
 #define MOT_HAZARD_RESPAWN 0x15 // Jumping on spikes and respawning, i.e. 3-3, 3-4, 8-2
-#define MOT_MOT_HAZARD_RESPAWN_END 0x16 // Almost certainly unused; most of this behavior is just handled by the above anyway
+#define MOT_HAZARD_RESPAWN_END 0x16 // Almost certainly unused; most of this behavior is just handled by the above anyway
 #define MOT_FORCE_RESET 0x17 // ? TTYD name, unused
-#define MOT_24 0x18
+#define MOT_DEATH 0x18
 #define MOT_BOTTOMLESS 0x19 // Respawning from falling
 #define MOT_FLIP_AIR 0x1A // Flip into midair
-#define MOT_DAMAGE 0x1B // Taking damage
-#define MOT_28 0x1C
+#define MOT_HIT 0x1B // Taking damage from an NPC
+#define MOT_DAMAGE 0x1C // Taking damage not from an NPC
 #define MOT_SUCK_IN 0x1D // Bleck big portal and Brobot L-Type sucking-in effect
-#define MOT_30 0x1E
+#define MOT_LIFE_SHROOM 0x1E
 #define MOT_31 0x1F
 #define MOT_32 0x20
 #define MOT_33 0x21
@@ -208,7 +221,7 @@ typedef bool (MarioPaneChangeFunc)(s32 newPane);
 #define MOT_65 0x41
 #define MOT_66 0x42
 #define MOT_67 0x43
-#define MOT_68 0x44
+#define MOT_MEGA_STAR 0x44
 #define MOT_SWIM 0x45 // Off-ground underwater
 #define MOT_SPACE_SWIM 0x46 // In space; 4-1/4-3
 #define MOT_CHAR_CHANGE 0x47 // Changing character
@@ -340,7 +353,7 @@ typedef struct
 /* 0x003B */ u8 wallTimer;
 /* 0x003C */ s32 subMotionId; // values vary by motion id
 /* 0x0040 */ u8 unknown_0x40[0x44 - 0x40];
-/* 0x0044 */ f32 unknown_0x44;
+/* 0x0044 */ f32 motTime;
 /* 0x0048 */ f32 invincibilityTimer;
 /* 0x004C */ u8 unknown_0x4c[0x50 - 0x4c];
 /* 0x0050 */ f32 airTimer; // time in air
@@ -349,10 +362,14 @@ typedef struct
 /* 0x005C */ Vec3 position;
 /* 0x0068 */ u8 unknown_0x68[0x8c - 0x68];
 /* 0x008C */ Vec3 modelTranslation;
-/* 0x0098 */ u8 unknown_0x98[0xb0 - 0x98];
-/* 0x00B0 */ Vec3 ttydRotation;
+/* 0x0098 */ u8 unknown_0x98[0xa4 - 0x98];
+/* 0x00A4 */ Vec3 pivotPoint;
+/* 0x00B0 */ Vec3 axisRotation;
 /* 0x00BC */ Vec3 scale;
-/* 0x00C8 */ u8 unknown_0xc8[0x120 - 0xc8];
+/* 0x00C8 */ u8 unknown_0xc8[0xf8 - 0xc8];
+/* 0x00F8 */ Vec3 lastJumpStartEndPos; // last position before a jump state occurs & upon landing, updates in mot_stay and jump init
+/* 0x0104 */ Vec3 lastFallPeakPos; // last position before beginning to fall
+/* 0x0110 */ u8 unknown_0x104[0x120 - 0x110];
 /* 0x0120 */ s32 camId;
 /* 0x0124 */ u8 unknown_0x124[0x128 - 0x124];
 /* 0x0128 */ Vec3i framebufferPos;
@@ -360,10 +377,12 @@ typedef struct
 /* 0x0148 */ f32 xzSpeed; // current horizontal speed
 /* 0x014C */ f32 walkSpeed; // base walk speed
 /* 0x0150 */ f32 dashSpeed; // base dash speed
-/* 0x0154 */ u8 unknown_0x154[0x160 - 0x154];
+/* 0x0154 */ f32 unknown_0x154;
+/* 0x0158 */ f32 swimSpeed; // base swim speed
+/* 0x015C */ f32 unknown_0x15C;
 /* 0x0160 */ f32 lastGroundSpeed; // xzSpeed when last on ground
 /* 0x0164 */ u8 unknown_0x164[0x168 - 0x164];
-/* 0x0168 */ f32 unknown_0x168;
+/* 0x0168 */ f32 stickLateralMagnitude;
 /* 0x016C */ u8 unknown_0x16c[0x174 - 0x16c];
 /* 0x0174 */ f32 directionWorld; // degrees
 /* 0x0178 */ f32 directionView; // degrees
@@ -375,22 +394,28 @@ typedef struct
 /* 0x0198 */ f32 hitboxHeight;
 /* 0x019C */ f32 baseHitboxWidth;
 /* 0x01A0 */ f32 baseHitboxHeight;
-/* 0x01A4 */ u8 unknown_0x1a4[0x1bc - 0x1a4];
-    /*
-        1 is interact (in front of player)
-        2 is stand on
-        3 is jump from
-        6 is head
-        9 is cudged obj that interrupts the hammer animation
-        Others unknown
-    */
-/* 0x01BC */ HitObj * hitObjs1[10];
-/* 0x01E4 */ HitObj * hitObjLastHammeredWall;
-/* 0x01E8 */ HitObj * cudgeFloorHitObj; // Updates for 1 frame during hammer action on a floor and then clears, value taken directly from below
-/* 0x01EC */ HitObj * cudgeFloorHitObj2; // Updates only when cudge is used (?)
-/* 0x01F0 */ u8 unknown_0x1ec[0x1fc - 0x1f0];
+/* 0x01A4 */ u8 unknown_0x1a4[0x1b4 - 0x1a4];
+/* 0x01B4 */ f32 targetMovingAngle;
+/* 0x01B8 */ u8 unknown_0x1b8[0x1bc - 0x1b8];
+/* 0x01BC */ HitObj * hitObjBalloon; // Wall touching & interactable
+/* 0x01C0 */ HitObj * hitObjInteract; // Wall touching
+/* 0x01C4 */ HitObj * hitObjRide; // Floor standing on
+/* 0x01C8 */ HitObj * hitObjJumpFrom; // Floor last jumped from
+/* 0x01CC */ HitObj * hitObjPush; // Wall running into
+/* 0x01D0 */ HitObj * hitObjWall; // Wall walking into
+/* 0x01D4 */ HitObj * hitObjHead; // Ceiling being touched
+/* 0x01D8 */ HitObj * hitObjUnder; // Floor directly under
+/* 0x01DC */ HitObj * hitObjShadow; // Floor under where player shadow displays
+/* 0x01E0 */ HitObj * hitObjHammeredWall; // set for 1 frame and then clears
+/* 0x01E4 */ HitObj * hitObjLastHammeredWall; // Last hammered wall
+/* 0x01E8 */ HitObj * hitObjHammeredFloor; // Updates for 1 frame during hammer action on a floor and then clears, value taken directly from below
+/* 0x01EC */ HitObj * hitObjLastHammeredFloor; // Updates only when cudge is used (?)
+/* 0x01F0 */ HitObj * unused_0x1f0; // Likely an unused hitobj
+/* 0x01F4 */ HitObj * hitObjWallFront2D; // 2D wall in front of player
+/* 0x01F8 */ HitObj * hitObjWallBack2D; // 2D wall behind player
     /*
         0 is MOBJ interact
+        1 is Bowser fire interact
         Others unknown
     */
 /* 0x01FC */ HitObj * hitObjs2[3];
@@ -398,8 +423,8 @@ typedef struct
     /*
         0 is main model
         1 is back model (Mario only)
-        6 is paper pose
-        8 is slim flip model
+        5 is paper pose
+        7 is slim flip model
         Others unknown
     */
 /* 0x024C */ s32 animPoseIds[8];
@@ -422,10 +447,18 @@ typedef struct
 /* 0x0322 */ u8 unknown_0x322[0x348 - 0x322];
 /* 0x0348 */ s32 sfxIds[4];
 /* 0x0358 */ u8 unknown_0x358[0x368 - 0x358];
-/* 0x0368 */ f32 unknown_0x368;
-/* 0x036C */ f32 unknown_0x36c;
-/* 0x0370 */ s32 unknown_0x370;
-/* 0x0374 */ u8 unknown_0x374[0x3a4 - 0x374];
+    /*
+        Variables used by many motion ID functions
+        None of them have specific data types or use cases
+        Known as "MultiVal" in TTYD
+    */
+/* 0x0368 */ union
+             {
+                 u32 motTempU[7];
+                 s32 motTempS[7];
+                 f32 motTempF[7];
+             };
+/* 0x0384 */ u8 unknown_0x384[0x3a4 - 0x384];
     /*
         Info on entity caught with Thoreau
         catchType indicates the type of caught
@@ -441,7 +474,10 @@ typedef struct
                  MobjEntry * mobj;
              } caught;
 /* 0x03A8 */ s32 catchType;
-/* 0x03AC */ u8 unknown_0x3ac[0x3d0 - 0x3ac];
+/* 0x03AC */ u8 unknown_0x3ac[0x3c4 - 0x3ac];
+/* 0x03C4 */ f32 unknown_0x3c4;
+/* 0x03C8 */ f32 unknown_0x3c8;
+/* 0x03AC */ u8 unknown_0x3cc[0x3d0 - 0x3cc];
 /* 0x03D0 */ f32 xzSpeedFactor;
 /* 0x03D4 */ s32 cam3dRelated;
 /* 0x03D8 */ Vec3 respawnPosition;
@@ -468,7 +504,10 @@ typedef struct
 /* 0x0E80 */ MarioStatus statusTbl[32];
 /* 0x1300 */ MarioStatus * firstStatus;
 /* 0x1304 */ MarioStatus * lastStatus;
-/* 0x1308 */ u8 unknown_0x1308[0x1360 - 0x1308];
+/* 0x1308 */ u8 unknown_0x1308[0x133c - 0x1308];
+/* 0x133C */ s32 jumpCombo;
+/* 0x1340 */ s32 jumpComboScore;
+/* 0x1344 */ u8 unknown_0x1344[0x1360 - 0x1344];
 /* 0x1360 */ s32 gravityType; // see enum above
     // Unit vectors for each direction under current gravity
 /* 0x1364 */ Vec3 gravUnitRight; // positive x normally
@@ -482,7 +521,7 @@ typedef struct
 /* 0x1498 */ u16 acrobatFlags;
 /* 0x149A */ u8 unknown_0x149a[0x149c - 0x149a];
 /* 0x149C */ f32 stylishLevel;
-/* 0x14A0 */ u8 unknown_0x14a0[0x14a4 - 0x14a0];
+/* 0x14A0 */ s32 curStylishXp;
 /* 0x14A4 */ s32 lastStylishXp;
 /* 0x14A8 */ s32 stylishSfxId;
 /* 0x14AC */ s32 stylishCombo;
@@ -515,6 +554,10 @@ typedef struct
 SIZE_ASSERT(CharacterProperties, 0x14)
 
 extern CharacterProperties characterProperties[4]; // index character id
+
+extern const char * marioCharPoseNames[4][2]; // indices are character id, normal/mega
+
+extern const char * marioCharBackPoseNames[4][2];
 
 typedef void (MarioMotFunc)(MarioWork * mp);
 
@@ -780,7 +823,7 @@ UNKNOWN_FUNCTION(func_80128d1c)
 void marioDisp();
 
 UNKNOWN_FUNCTION(func_80128f2c)
-UNKNOWN_FUNCTION(func_80128fd4)
+void marioDrawAfterimg(Vec3 * pos, Mtx34 mtx, u8 alpha);
 UNKNOWN_FUNCTION(func_801291f8)
 
 /*
@@ -848,7 +891,8 @@ UNKNOWN_FUNCTION(func_8012b018)
 */
 bool marioCheck3d();
 
-UNKNOWN_FUNCTION(func_8012b090)
+u32 marioCheckIfCanTakeDamage();
+
 UNKNOWN_FUNCTION(func_8012b218)
 UNKNOWN_FUNCTION(func_8012b2c4)
 UNKNOWN_FUNCTION(func_8012b370)

@@ -49,18 +49,30 @@ USING(wii::mem::MEMHeapHandle)
 
 enum Heap
 {
-/* 0x0 */ HEAP_MAIN,
-/* 0x1 */ HEAP_MAP,
-/* 0x2 */ HEAP_MEM1_UNUSED,
-/* 0x3 */ HEAP_EXT,
-/* 0x4 */ HEAP_EFFECT,
-/* 0x5 */ HEAP_WPAD,
-/* 0x6 */ HEAP_SOUND,
-/* 0x7 */ HEAP_SMART,
-#ifdef SPM_KR0
-/* 0x8 */ HEAP_FONT,
+#if MEMORY_C_VERSION >= 2
+/* 0x0 */ HEAP_MAIN,               // MEM1
+/* 0x1 */ HEAP_MAP,                // MEM1
+/* 0x2 */ HEAP_MEM1_UNUSED,        // MEM1
+/* 0x3 */ HEAP_EXT,                // MEM2
+/* 0x4 */ HEAP_EFFECT,             // MEM2
+/* 0x5 */ HEAP_WPAD,               // MEM2
+/* 0x6 */ HEAP_SOUND,              // MEM2
+/* 0x7 */ HEAP_SMART,              // MEM2
+#if MEMORY_C_VERSION >= 3
+/* 0x8 */ HEAP_FONT,               // MEM2
 #endif
-/* 0x8 / 0x9 */ HEAP_MEM2_UNUSED
+/* 0x8 / 0x9 */ HEAP_MEM2_UNUSED   // MEM2
+#else // == 1
+/* 0x0 */ HEAP_MAIN,               // MEM1
+/* 0x1 */ HEAP_MAP,                // MEM1
+/* 0x2 */ HEAP_EXT,                // MEM1
+/* 0x3 */ HEAP_EFFECT,             // MEM1
+/* 0x4 */ HEAP_MEM1_UNUSED,        // MEM1
+/* 0x5 */ HEAP_WPAD,               // MEM2
+/* 0x6 */ HEAP_SOUND,              // MEM2
+/* 0x7 */ HEAP_SMART,              // MEM2
+/* 0x8 */ HEAP_MEM2_UNUSED         // MEM2
+#endif
 };
 
 enum HeapSizeType

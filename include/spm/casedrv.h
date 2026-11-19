@@ -13,6 +13,31 @@ CPP_WRAPPER(spm::casedrv)
 USING(spm::evtmgr::EvtScriptCode)
 USING(spm::hitdrv::HitObj)
 
+enum CaseType
+{
+    CASE_STAND_ON = 0,           /* standing on obj */
+    CASE_RUN_UNTIL_STAND_ON = 1, /* unused; always runs unless standing on target hitobj */
+    CASE_TALK = 2,               /* strict "Up" interaction i.e. talking to NPCs */
+    CASE_DOWN = 3,               /* i.e. going down pipes */
+    CASE_STAND_BY = 4,           /* activates upon touching side of obj while grounded */
+    CASE_UP = 5,                 /* i.e. entering 2D door or reading sign */
+    CASE_HIT_BOTTOM = 6,         /* i.e. mirror hall blocks upside-down pipes */
+    CASE_HIT_BOTTOM_HOLD_UP = 7, /* unused; like case 6 but must hold Up */
+    CASE_CUDGE_WALL = 8,         /* unused; hammering a vertical plane like a wall or door */
+    CASE_CUDGE_FLOOR = 9,        /* hammering a horizontal plane like 7-3 floor to get apples */
+    CASE_HOLD_SIDE = 10,         /* i.e. entering side pipes and 3D doors */
+    CASE_BOOMER = 11,            /* i.e. cracks in walls */
+    CASE_FIRE = 12,              /* i.e. torches in 7-2 8-1 */
+    CASE_THUDLEY = 13,           /* i.e. yellow posts */
+    CASE_SPACE_SWIM_TO = 14,     /* i.e. entering black hole */
+    CASE_SPACE_HIT = 15,         /* i.e. hit by hedron in 4-3 */
+    CASE_SPACE_SHOOT_64 = 16,    /* i.e. shooting a space rock 64 times */
+    CASE_SPACE_SHOOT_256 = 17,   /* i.e. shooting a hedron 256 times */
+    CASE_MEGA_STAR = 18,         /* i.e. breaking pipes while in mega star state */
+    CASE_FLIP_2D = 19,           /* flipping to 2D */
+    CASE_FLIP_3D = 20            /* flipping to 3D */
+};
+
 typedef struct
 {
 /* 0x00 */ u16 flags;
