@@ -5,6 +5,10 @@
 
 CPP_WRAPPER(spm::evt_sub)
 
+DECOMP_STATIC(const char *keypadKeysJP[12])
+DECOMP_STATIC(const char *keypadKeys[12])
+DECOMP_STATIC(char keypadInputStorage[32])
+
 UNKNOWN_FUNCTION(func_800d378c)
 EVT_DECLARE_USER_FUNC(evt_sub_intpl_msec_init, 4)
 EVT_DECLARE_USER_FUNC(evt_sub_intpl_msec_get_value, 0)
@@ -43,7 +47,10 @@ EVT_DECLARE_USER_FUNC(evt_sub_get_mapname, -1)
 // evt_sub_get_entername(&char* ret)
 EVT_DECLARE_USER_FUNC(evt_sub_get_entername, 1)
 
-UNKNOWN_FUNCTION(evt_sub_set_entername)
+// Sets the next bero, often used for cutscenes
+// evt_sub_set_entername(&char* ret)
+EVT_DECLARE_USER_FUNC(evt_sub_set_entername, 1)
+
 UNKNOWN_FUNCTION(func_800d47e4)
 EVT_DECLARE_USER_FUNC(evt_sub_get_language, 1)
 
@@ -88,7 +95,9 @@ EVT_DECLARE_USER_FUNC(evt_sub_item_select_menu, 4)
 UNKNOWN_FUNCTION(func_800d7b9c)
 UNKNOWN_FUNCTION(func_800d7e70)
 UNKNOWN_FUNCTION(func_800d815c)
-UNKNOWN_FUNCTION(func_800d8498)
+
+// evt_sub_keypad(s32 flags, s32 numSlots, bool complete?, const char * input)
+EVT_DECLARE_USER_FUNC(evt_sub_keypad, 4)
 
 EVT_DECLARE_USER_FUNC(func_800d8700, 1)
 

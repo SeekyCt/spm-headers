@@ -69,10 +69,10 @@ typedef struct _EvtEntry
                                              // this one is
 /* 0x074 */ union
             {
-                s32 tempS[3];
-                u32 tempU[3];
+                s32 tempS[8];
+                u32 tempU[8];
+                f32 tempF[8];
             }; // Temp values with meanings varying by instruction / user func
-/* 0x080 */ u8 unknown_0x80[0x94 - 0x80];
 /* 0x094 */ UserFunc * userFunc; // Function set & called by the user_func opcode
 /* 0x098 */ s32 lw[16]; // Local Work variables
 /* 0x0D8 */ u32 lf[3]; // Local Flag variables
@@ -114,7 +114,7 @@ typedef struct
 /* 0x04 */ s32 gw[32]; // Global Work variables
 /* 0x84 */ u32 gf[3]; // Global Flag variables
 /* 0x90 */ EvtEntry * entries; // Entry array
-/* 0x04 */ // Alignment padding 0x94-97
+/* 0x94 */ // Alignment padding 0x94-97
 /* 0xA0 */ OSTime time; // Time evtmgrMain last ran
 } EvtWork;
 SIZE_ASSERT(EvtWork, 0xa0)
