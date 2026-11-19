@@ -5,13 +5,16 @@
 #include <wii/mtx.h>
 #include <wii/gx.h>
 #include <spm/filemgr.h>
+#include <spm/memory.h>
 
 CPP_WRAPPER(spm::animdrv)
 
 USING(wii::os::OSTime)
 USING(wii::mtx::Mtx34)
+USING(wii::mtx::Vec3)
 USING(wii::gx::GXColor)
 USING(spm::filemgr::FileEntry)
+USING(spm::memory::SmartAllocation)
 
 typedef void (AnimPoseDisplayCb)(void * param, s32 animGroupIdx, s32 param_3);
 
@@ -129,18 +132,6 @@ typedef struct
 } AnimGroup;
 SIZE_ASSERT(AnimGroup, 0x10)
 
-typedef struct
-{
-/* 0x000 */ AnimGroup * animGroups;
-/* 0x004 */ s32 animGroupNum;
-/* 0x008 */ TextureGroup * textureGroups;
-/* 0x00C */ s32 textureGroupNum;
-/* 0x008 */ u8 unknown_0x8[0x110 - 0x010];
-} AnimWork; // Uncertain size
-SIZE_ASSERT(AnimWork, 0x110)
-
-DECOMP_STATIC(AnimWork * animdrv_wp)
-
 typedef struct 
 {
 /* 0x000 */ u32 flag;
@@ -150,12 +141,43 @@ typedef struct
 /* 0x010 */ s32 animGroupId;
 /* 0x014 */ Unk curAnimIndex;
 /* 0x018 */ u8 unknown_0x18[0x020 - 0x018];
-/* 0x020 */ f32 frmCounter; // unconfirmed
-/* 0x024 */ u8 unknown_0x24[0xf4 - 0x024];
+/* 0x020 */ f32 frmCounter;
+/* 0x024 */ u8 unknown_0x24[0x050 - 0x024];
+/* 0x050 */ Unk * vtxPositions;
+/* 0x054 */ Unk * vtxPositionIndices;
+/* 0x058 */ Unk * vtxNormals;
+/* 0x05C */ Unk * vtxNormalIndices;
+/* 0x060 */ u8 * visibilityGrps;
+/* 0x064 */ u8 * visibilityGrps2;
+/* 0x068 */ Unk * grpTransformData;
+/* 0x06C */ Unk * bufferNode;
+/* 0x070 */ Unk * texCoordTransforms;
+/* 0x074 */ u8 unknown_0x74[0x0f0 - 0x074];
+/* 0x0F0 */ u32 materialFlag;
 /* 0x0F4 */ u32 flag_f4;
-/* 0x0F8 */ u8 unknown_0xf8[0x188 - 0x0f8];
+/* 0x0F8 */ u32 materialLightFlag;
+/* 0x0FC */ GXColor materialEvtColor;
+/* 0x100 */ GXColor materialEvtColor2;
+/* 0x104 */ GXColor materialAnmColor;
+/* 0x108 */ u8 unknown_0xfc[0x188 - 0x108];
 } AnimPose;
 SIZE_ASSERT(AnimPose, 0x188)
+
+typedef struct
+{
+/* 0x000 */ AnimGroup * animGroups;
+/* 0x004 */ s32 animGroupNum;
+/* 0x008 */ TextureGroup * textureGroups;
+/* 0x00C */ s32 textureGroupNum;
+/* 0x010 */ AnimPose * animPose;
+/* 0x014 */ s32 animPoseNum;
+/* 0x018 */ u8 unknown_0x18[0x100 - 0x018];
+/* 0x100 */ SmartAllocation * ag2tg;
+/* 0x104 */ u8 unknown_0x104[0x110 - 0x104];
+} AnimWork; // Uncertain size
+SIZE_ASSERT(AnimWork, 0x110)
+
+DECOMP_STATIC(AnimWork * animdrv_wp)
 
 AnimWork * animGetPtr();
 OSTime animTimeGetTime();
@@ -163,7 +185,7 @@ DECOMP_STATIC(void * animdrv_testAlloc(u32 size))
 void animInit();
 void animMain();
 UNKNOWN_FUNCTION(textureGroupEntry)
-UNKNOWN_FUNCTION(animGroupEntry)
+s32 animGroupEntry(const char * filename);
 UNKNOWN_FUNCTION(animPoseRefresh)
 s32 animPoseEntry(const char * filename, s32 releaseType);
 UNKNOWN_FUNCTION(animPaperPoseEntry)
@@ -243,6 +265,6 @@ UNKNOWN_FUNCTION(animPoseDrawShape)
 UNKNOWN_FUNCTION(func_8004d96c)
 UNKNOWN_FUNCTION(animPoseGetShapeIdx)
 s32 animPoseGetGroupIdx(s32 id, const char * name);
-UNKNOWN_FUNCTION(animPoseGetGroupIdxSubname)
+s32 animPoseGetGroupIdxSubname(s32 id, const char * name);
 
 CPP_WRAPPER_END()

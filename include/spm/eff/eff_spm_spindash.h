@@ -9,9 +9,11 @@ USING(spm::effdrv::EffEntry)
 
 // ...
 
-EffEntry * effSpmSpindashEntry(f32, f32, f32, f32, s32);
+EffEntry * effSpmSpindashEntry(f32 x, f32 y, f32 z, f32 scale, s32 unused_p5);
 
 void effSpmSpindashUpdateUnkEff(EffEntry * eff);
+
+void effSpmSpindashSetTargetMario(EffEntry * eff);
 
 // ...
 

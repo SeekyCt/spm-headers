@@ -4,7 +4,7 @@
 #include <spm/seqdrv.h>
 #include <spm/evtmgr.h>
 #include <spm/filemgr.h>
-
+#include <wii/mtx.h>
 #include <wii/gx.h>
 #include <wii/mtx.h>
 
@@ -59,9 +59,11 @@ typedef struct {
 } SeqLoadSubWork;
 SIZE_ASSERT(SeqLoadSubWork, 0x5C)
 
-DECOMP_STATIC(SeqLoadSubWork* seq_load_sub_wp)
+DECOMP_STATIC(SeqLoadSubWork * seq_load_sub_wp)
 
 DECOMP_STATIC(s32 seq_load_sub_loadMain())
+DECOMP_STATIC(SeqLoadButtonDef seq_loadWindowButtonDefs[7])
+DECOMP_STATIC(SeqLoadButtonDef seq_loadWindowButtonDefs_EraseCopy[7])
 
 void windowRenderMain();
 

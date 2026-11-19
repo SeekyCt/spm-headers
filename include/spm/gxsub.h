@@ -10,8 +10,22 @@ CPP_WRAPPER(spm::gxsub)
 
 USING(spm::camdrv::CamEntry)
 USING(wii::mtx::Mtx34)
+USING(wii::mtx::Vec3)
 USING(wii::gx::GXColor)
 USING(wii::tpl::TPLHeader)
+
+typedef struct
+{
+/* 0x00 */ TPLHeader * tpl;
+/* 0x04 */ CamEntry * cam;
+/* 0x08 */ bool linearTexFilter;
+/* 0x09 */ bool enableTplAlpha;
+/* 0x0A */ u8 unknown_0xa[0xc - 0xa];
+} GxsubWork;
+SIZE_ASSERT(GxsubWork, 0xc)
+
+DECOMP_STATIC(GxsubWork gxsub_work)
+DECOMP_STATIC(GxsubWork * gxsub_wp)
 
 void gxsubInit_Tpl(TPLHeader * tpl);
 void gxsubDrawTextureMtx(u32 texId, Mtx34 mtx, const GXColor * colour);
@@ -33,7 +47,7 @@ void gxsubDrawLineSquareMtx(Mtx34 mtx, f32 width, f32 height, u32 thickness,
                             const GXColor * colour);
 void gxsubDrawDottedLine(Mtx34 mtx, f32 width, f32 height, u32 thickness,
                          const GXColor * colour); // requires no init
-void gxsubDrawLine(Mtx34 mtx, f32 width, f32 height, u32 thickness, const GXColor * colour);
+void gxsubDrawLine(Vec3 * start, Vec3 * end, u32 thickness, const GXColor * colour);
 void gxsubDrawSphere(Mtx34 mtx, const GXColor * colour);
 
 CPP_WRAPPER_END()

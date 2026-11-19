@@ -97,7 +97,8 @@ enum MobjThakoType
 */
 EVT_DECLARE(mobj_save_blk_sysevt)
 
-UNKNOWN_FUNCTION(evt_mobj_entry)
+// evt_mobj_entry(const char * name, const char * animPoseName)
+EVT_DECLARE_USER_FUNC(evt_mobj_entry, 2)
 
 // evt_mobj_delete(const char * name)
 EVT_DECLARE_USER_FUNC(evt_mobj_delete, 1)
@@ -140,7 +141,7 @@ UNKNOWN_FUNCTION(evt_mobj_set_interact_script)
 UNKNOWN_FUNCTION(evt_mobj_set_item)
 UNKNOWN_FUNCTION(func_800f3fa8)
 UNKNOWN_FUNCTION(func_800f4018)
-UNKNOWN_FUNCTION(evt_mobj_check)
+EVT_DECLARE_USER_FUNC(evt_mobj_check, 2)
 UNKNOWN_FUNCTION(func_800f429c)
 s32 mobj_sui(MobjEntry * mobj);
 s32 mobj_sui_stg3(MobjEntry * mobj);
@@ -165,7 +166,7 @@ UNKNOWN_FUNCTION(mobj_hunmer_blk)
 //              EvtScriptCode * interactScript, EvtVar inactive)
 EVT_DECLARE_USER_FUNC(evt_mobj_hunmer_blk, 7)
 
-UNKNOWN_FUNCTION(mobj_zyo)
+s32 mobj_zyo(MobjEntry *entry);
 UNKNOWN_FUNCTION(func_800f5a48)
 
 // evt_mobj_zyo(const char * name, s32 lockItemId, f32 x, f32 y, f32 z, f32 yRotation,
@@ -173,7 +174,7 @@ UNKNOWN_FUNCTION(func_800f5a48)
 // The interactScript normally handles window selection logic (although this is NOT hardcoded), openScript handles what happens after the lock is opened.
 EVT_DECLARE_USER_FUNC(evt_mobj_zyo, 9)
 
-UNKNOWN_FUNCTION(mobj_thako)
+s32 mobj_thako(MobjEntry *entry);
 
 // evt_mobj_thako(s32 type, const char * name, f32 x, f32 y, f32 z, EvtScriptCode * interactScript,
 //              EvtScriptCode * openScript, s32 item, EvtVar/bool opened)
@@ -206,17 +207,17 @@ EVT_DECLARE_USER_FUNC(evt_mobj_arrow, 5)
 */
 UNKNOWN_FUNCTION(mobj_blk_decideItem)
 
-UNKNOWN_FUNCTION(mobj_blk)
-UNKNOWN_FUNCTION(mobj_blk_multicoin)
-UNKNOWN_FUNCTION(mobj_blk_breakable)
-UNKNOWN_FUNCTION(mobj_blk_used)
-UNKNOWN_FUNCTION(mobj_blk_ladder)
-UNKNOWN_FUNCTION(mobj_blk_flip)
-UNKNOWN_FUNCTION(mobj_blk_switch)
-UNKNOWN_FUNCTION(mobj_blk_throwable)
-UNKNOWN_FUNCTION(mobj_blk_colour)
-UNKNOWN_FUNCTION(mobj_blk_gravity)
-UNKNOWN_FUNCTION(mobj_blk_bleck_switch)
+s32 mobj_blk(MobjEntry *entry);
+s32 mobj_blk_multicoin(MobjEntry *entry);
+s32 mobj_blk_breakable(MobjEntry *entry);
+s32 mobj_blk_used(MobjEntry *entry);
+s32 mobj_blk_ladder(MobjEntry *entry);
+s32 mobj_blk_flip(MobjEntry *entry);
+s32 mobj_blk_switch(MobjEntry *entry);
+s32 mobj_blk_throwable(MobjEntry *entry);
+s32 mobj_blk_colour(MobjEntry *entry);
+s32 mobj_blk_gravity(MobjEntry * entry);
+s32 mobj_blk_bleck_switch(MobjEntry *entry);
 
 /*
     Spawns a block mobj (question, brick & variants)
