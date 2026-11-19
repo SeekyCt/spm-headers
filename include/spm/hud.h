@@ -1,15 +1,40 @@
 #pragma once
 
 #include <common.h>
+#include <wii/mtx.h>
 
 // TODO: probably called statuswindow
 
 CPP_WRAPPER(spm::hud)
 
+USING(wii::mtx::Vec2)
+
+typedef void (CountdownDoneCb)();
+
+typedef struct
+{
+/* 0x00 */ s32 state;
+/* 0x04 */ bool deplete;
+/* 0x05 */ u8 pad_0x5[3];
+/* 0x08 */ s32 depleteProgress;
+/* 0x0C */ f32 pos;
+/* 0x10 */ f32 destPos;
+/* 0x14 */ s32 pauseRelated;
+} HudFlipTimeCell;
+SIZE_ASSERT(HudFlipTimeCell, 0x18)
+
 typedef struct
 {
 /* 0x000 */ u32 flags;
-/* 0x004 */ u8 unknown_0x004[0x178 - 0x004];
+/* 0x004 */ u8 unknown_0x004[0x10 - 0x004];
+/* 0x010 */ f32 hudMoveProgress;
+/* 0x014 */ f32 hudMoveLastShownYPos;
+/* 0x018 */ f32 hudMoveTarget;
+/* 0x01C */ f32 unknown_0x1c;
+/* 0x020 */ Vec2 basePos;
+/* 0x028 */ u8 unknown_0x028[0x084 - 0x028];
+/* 0x084 */ HudFlipTimeCell flipTimeCells[10];
+/* 0x174 */ u8 unknown_0x174[0x178 - 0x174];
 /* 0x178 */ s32 countdownTimer;
 /* 0x17C */ void * countdownCallback;
 /* 0x180 */ u8 unknown_0x180[0x190 - 0x180];
@@ -20,27 +45,26 @@ DECOMP_STATIC(HudWork * hud_wp)
 
 void hudInit();
 void hudReInit();
-UNKNOWN_FUNCTION(hudLoadStats)
+void hudLoadStats();
 void hudMain();
-UNKNOWN_FUNCTION(hudGetPos)
-UNKNOWN_FUNCTION(hudUnhideAlt)
+void hudGetPos(f32 * x, f32 * y);
+void hudUnhideAlt();
 void hudHide();
-UNKNOWN_FUNCTION(func_80199b0c)
-UNKNOWN_FUNCTION(func_80199b5c)
-UNKNOWN_FUNCTION(hudUnhide)
-UNKNOWN_FUNCTION(func_80199c74)
-UNKNOWN_FUNCTION(func_80199c88)
-UNKNOWN_FUNCTION(func_80199c9c)
-UNKNOWN_FUNCTION(func_80199cb0)
-typedef void (CountdownDoneCb)();
+void func_80199b0c();
+void func_80199b5c();
+void hudUnhide();
+void hudUnblockDisp();
+void hudBlockDisp();
+void func_80199c9c();
+void func_80199cb0();
 void hudStartCountdown(u32 length, CountdownDoneCb * cb);
-UNKNOWN_FUNCTION(func_80199cf8)
-UNKNOWN_FUNCTION(hudUpdateStats)
-UNKNOWN_FUNCTION(hudDisp)
-void func_8019af88();
-void hudTurnOffFlipTimeBox(s32 idx);
-UNKNOWN_FUNCTION(func_8019b0dc)
+bool hudCheckStatsDesynced();
+void hudUpdateStats();
+void hudDisp();
+void hudRestoreFlipTimeCells();
+void hudDepleteFlipTimeCell(s32 idx);
+void func_8019b0dc();
 void func_8019be84();
-UNKNOWN_FUNCTION(func_8019bea8)
+void func_8019bea8(f32 p1);
 
 CPP_WRAPPER_END()

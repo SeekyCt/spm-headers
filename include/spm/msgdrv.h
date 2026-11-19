@@ -19,14 +19,25 @@ typedef void (MsgSpeakerFunc)(s32 state, SmartAllocation * speakerSp);
 
 typedef struct
 {
+/* 0x00 */ u8 unknown_0x00[0x04 - 0x00];
+/* 0x04 */ s16 unknown_0x04;
+/* 0x06 */ u8 unknown_0x06[0x18 - 0x06];
+} MsgCell;
+SIZE_ASSERT(MsgCell, 0x18)
+
+typedef struct
+{
 /* 0x0000 */ const char * msgName;
 /* 0x0004 */ u32 flags;
-/* 0x0008 */ u8 unknown_0x8[0x18 - 0x8];
+/* 0x0008 */ u8 unknown_0x8[0x10 - 0x8];
+/* 0x0010 */ s32 unknown_0x10;
+/* 0x0014 */ u8 unknown_0x14[0x18 - 0x14];
 /* 0x0018 */ s64 openTime; // when the window was opened
 /* 0x0020 */ u8 unknown_0x20[0x30 - 0x20];
 /* 0x0030 */ s64 messageStartTime; // last time text was added
 /* 0x0038 */ s32 cellCount;
-/* 0x003C */ u8 unknown_0x3c[0xf1fc - 0x3c];
+/* 0x003C */ MsgCell cells[2560];
+/* 0xF03C */ u8 unknown_0x3c[0xf1fc - 0xf03c];
 /* 0xF1FC */ MsgSpeakerFunc * mainFunc; // Called multiple times in msgMain with different states
 /* 0xF200 */ u8 unknown_0xf200[0xf204 - 0xf200];
 /* 0xF204 */ char npcName[32];
@@ -50,9 +61,9 @@ SIZE_ASSERT(MsgSpeaker, 0xf258)
 typedef struct
 {
 /* 0x0 */ u32 size;
-/* 0x4 */ const char * contents;
+/* 0x4 */ const char *contents;
 /* 0x8 */ s32 messageCount;
-/* 0xC */ u8 unknown_0xc[0x10 - 0xc];
+/* 0xC */ SmartAllocation *messages;
 } MsgFile;
 SIZE_ASSERT(MsgFile, 0x10)
 
@@ -71,8 +82,15 @@ DECOMP_STATIC(MsgWork msgdrv_work)
 
 typedef struct
 {
+/* 0x0 */ const char *nameOffset;
+/* 0x4 */ const char *contentsOffset;
+} MsgEntry;
+SIZE_ASSERT(MsgEntry, 0x8)
+
+typedef struct
+{
 /* 0x0 */ const char * name;
-/* 0x4 */ s32 iconid;
+/* 0x4 */ s32 iconId;
 } IconNameIdDef;
 SIZE_ASSERT(IconNameIdDef, 0x8)
 
@@ -143,7 +161,7 @@ SmartAllocation * msgSpeakerInit(const char * msg, MsgSpeakerFunc * mainFunc, Wi
 /*
     Updates a MsgSpeaker
 */
-void msgMain(SmartAllocation * speakerSp);
+s32 msgMain(SmartAllocation * speakerSp);
 
 /*
     Renders the window & text for a MsgSpeaker

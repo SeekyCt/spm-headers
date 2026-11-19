@@ -32,7 +32,11 @@ SIZE_ASSERT(GXRenderModeObj, 0x3c)
 
 typedef struct
 {
-/* 0x0 */ u8 unknown_0x0[0x20 - 0x0];
+/* 0x00 */ u8 unknown_0x0[0x10 - 0x0];
+/* 0x10 */ s32 stage;
+/* 0x14 */ s32 map;
+/* 0x18 */ s32 coord;
+/* 0x1C */ u8 unknown_0x1c[0x20 - 0x1c];
 } GXTexObj;
 SIZE_ASSERT(GXTexObj, 0x20)
 
@@ -181,15 +185,15 @@ UNKNOWN_FUNCTION(__GXUpdateBPMask)
 UNKNOWN_FUNCTION(__GXSetIndirectMask)
 UNKNOWN_FUNCTION(__GXFlushTextureState)
 void GXSetTevOp(u8 tevstage, u8 mode);
-UNKNOWN_FUNCTION(GXSetTevColorIn)
-UNKNOWN_FUNCTION(GXSetTevAlphaIn)
-UNKNOWN_FUNCTION(GXSetTevColorOp)
-UNKNOWN_FUNCTION(GXSetTevAlphaOp)
-UNKNOWN_FUNCTION(GXSetTevColor)
+void GXSetTevColorIn(u8 tevstage, u8 a, u8 b, u8 c, u8 d);
+void GXSetTevAlphaIn(u8 tevstage, u8 a, u8 b, u8 c, u8 d);
+void GXSetTevColorOp(u8 tevstage, u8 tevop, u8 bias, u8 scale, bool clamp, u8 out_reg);
+void GXSetTevAlphaOp(u8 tevstage, u8 tevop, u8 bias, u8 scale, bool clamp, u8 out_reg);
+void GXSetTevColor(s32 id, GXColor * color);
 UNKNOWN_FUNCTION(GXSetTevColorS10)
-UNKNOWN_FUNCTION(GXSetTevKColor)
-UNKNOWN_FUNCTION(GXSetTevKColorSel)
-UNKNOWN_FUNCTION(GXSetTevKAlphaSel)
+void GXSetTevKColor(u8 tevstage, const GXColor * col);
+void GXSetTevKColorSel(u8 tevstage, u8 sel);
+void GXSetTevKAlphaSel(u8 tevstage, u8 sel);
 void GXSetTevSwapMode(u8 tevstage, u8 ras_sel, u8 tex_sel);
 UNKNOWN_FUNCTION(GXSetTevSwapModeTable)
 void GXSetAlphaCompare(u8 comp0, u8 ref0, u8 aop, u8 comp1, u8 ref1);
@@ -199,8 +203,8 @@ void GXSetNumTevStages(u8 num);
 void GXSetFog(u8 type, f32 startz, f32 endz, f32 nearz, f32 farz, const GXColor * col);
 UNKNOWN_FUNCTION(GXSetFogRangeAdj)
 void GXSetBlendMode(u8 type, u8 src_fact, u8 dst_fact, u8 op);
-UNKNOWN_FUNCTION(GXSetColorUpdate)
-UNKNOWN_FUNCTION(GXSetAlphaUpdate)
+void GXSetColorUpdate(u8 enable);
+void GXSetAlphaUpdate(u8 enable);
 void GXSetZMode(u8 enable, u8 func, u8 update_enable);
 void GXSetZCompLoc(u8 before_tex);
 UNKNOWN_FUNCTION(GXSetPixelFmt)
@@ -208,7 +212,7 @@ UNKNOWN_FUNCTION(GXSetDither)
 UNKNOWN_FUNCTION(GXSetDstAlpha)
 UNKNOWN_FUNCTION(GXSetFieldMask)
 UNKNOWN_FUNCTION(GXSetFieldMode)
-UNKNOWN_FUNCTION(GXDrawSphere)
+void GXDrawSphere(u32 p1, u32 p2);
 UNKNOWN_FUNCTION(GXDrawCubeFace)
 UNKNOWN_FUNCTION(GXDrawCube)
 UNKNOWN_FUNCTION(GXBeginDisplayList)
@@ -219,7 +223,7 @@ UNKNOWN_FUNCTION(__GXSetProjection)
 void GXSetProjection(Mtx44 mtx, GXProjectionType type);
 UNKNOWN_FUNCTION(GXSetProjectionv)
 UNKNOWN_FUNCTION(GXGetProjectionv)
-void GXLoadPosMtxImm(Mtx34 * mtx, u32 pnidx);
+void GXLoadPosMtxImm(Mtx34 mtx, u32 pnidx);
 UNKNOWN_FUNCTION(GXLoadNrmMtxImm)
 void GXSetCurrentMtx(u32 mtx);
 UNKNOWN_FUNCTION(GXLoadTexMtxImm)
@@ -227,9 +231,9 @@ UNKNOWN_FUNCTION(__GXSetViewport)
 UNKNOWN_FUNCTION(GXSetViewportJitter)
 UNKNOWN_FUNCTION(GXSetViewport)
 UNKNOWN_FUNCTION(GXGetViewportv)
-UNKNOWN_FUNCTION(GXSetZScaleOffset)
-UNKNOWN_FUNCTION(GXSetScissor)
-UNKNOWN_FUNCTION(GXGetScissor)
+void GXSetZScaleOffset(f32 scale, f32 offset);
+void GXSetScissor(u32 x, u32 y, u32 w, u32 h);
+void GXGetScissor(u32 * x, u32 * y, u32 * w, u32 * h);
 UNKNOWN_FUNCTION(GXSetScissorBoxOffset)
 UNKNOWN_FUNCTION(GXSetClipMode)
 UNKNOWN_FUNCTION(__GXSetMatrixIndex)

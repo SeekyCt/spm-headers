@@ -85,7 +85,10 @@ typedef struct _CamEntry
 /* 0x248 */ u8 unknown_0x248[0x254 - 0x248];
 /* 0x254 */ void * cameraRoad;
 /* 0x258 */ CamDispFunc * dispFunc;
-/* 0x25C */ u8 unknown_0x25c[0x2f0 - 0x25c];
+/* 0x25C */ u8 unknown_0x25c[0x298 - 0x25c];
+/* 0x298 */ s32 shakeDuration;
+/* 0x29C */ Vec3 shakeIntensity;
+/* 0x2A8 */ u8 unknown_0x2a8[0x2f0 - 0x2a8];
 } CamEntry;
 SIZE_ASSERT(CamEntry, 0x2f0)
 
@@ -194,9 +197,9 @@ UNKNOWN_FUNCTION(func_80058388)
 UNKNOWN_FUNCTION(func_800583b4)
 UNKNOWN_FUNCTION(func_80058404)
 UNKNOWN_FUNCTION(func_8005869c)
-UNKNOWN_FUNCTION(func_800586c8)
-UNKNOWN_FUNCTION(func_80058700)
-UNKNOWN_FUNCTION(func_800587a0)
+void func_800586c8(f32, f32, f32, s32 camId, Vec3 * position);
+void camShakeInit(f32 x, f32 y, f32 z, camdrv::CameraId camId, u32 duration);
+void camShakeInit_Frm(f32 x, f32 y, f32 z, camdrv::CameraId camId, u32 duration);
 UNKNOWN_FUNCTION(func_80058800)
 UNKNOWN_FUNCTION(func_8005881c)
 UNKNOWN_FUNCTION(func_80058840)
