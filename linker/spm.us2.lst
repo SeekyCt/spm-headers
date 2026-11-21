@@ -1038,3 +1038,6 @@
 8007926C:itemNameToPtr
 8007A5E0:itemCollectPouchItem
 80077B60:itemMain
+
+801839A0:pausewinMain
+80184D3C:pausewinUpdate

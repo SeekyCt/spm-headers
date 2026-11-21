@@ -179,7 +179,7 @@ bool pausewinCheckVisible(s32 id);
 UNKNOWN_FUNCTION(_pausewinDelete)
 void pausewinPauseGame();
 void pausewinUnpauseGame();
-UNKNOWN_FUNCTION(pausewinUpdate)
+void pausewinUpdate();
 const char *pausewinNumberToString(s32 value, s32 length);
 UNKNOWN_FUNCTION(pausewinCheckHavePixls)
 UNKNOWN_FUNCTION(pausewinCheckHaveCards)

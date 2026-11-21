@@ -672,3 +672,6 @@
 80067810:fadeGetFadeInLength
 8006781C:fadeSetTransitionLengths
 8056D0A8:fadedrv_wp
+
+80183590:pausewinMain
+8018492C:pausewinUpdate
