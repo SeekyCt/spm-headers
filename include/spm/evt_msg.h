@@ -15,7 +15,8 @@ s32 _evt_msg_print(EvtEntry *entry, int firstCall, u32 flags, const char * msg, 
 // evt_msg_print(u32 flags, const char * msg, s32 mainFunc, const char * speaker)
 EVT_DECLARE_USER_FUNC(evt_msg_print, 4)
 
-// evt_msg_print_insert(u32 flags, const char * msg, s32 mainFunc, const char * speaker, insertion)
+// evt_msg_print_insert(u32 flags, const char * msg, s32 mainFunc?, const char * speaker, const char * OR s32 var)
+// seems to support up to 4 var arguments, target msg must support those var types in order
 EVT_DECLARE_USER_FUNC(evt_msg_print_insert, -1)
 
 // evt_msg_print_add(u32 flags, const char * message)
