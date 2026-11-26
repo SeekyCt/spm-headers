@@ -779,6 +779,7 @@
 80126d48:marioGetScreenPos
 8012823c:marioEffectFlagOn
 80128360:marioEffectFlagOff
+80129db8:func_80129db8
 8012a3a8:marioCalcDamageToEnemy
 8012a680:marioTakeDamage
 8012b018:marioSetInvincibility
@@ -798,6 +799,7 @@
 80146f0c:func_80146f0c
 80147604:_marioChangeCharacter
 80147e18:marioChangePixl
+801484fc:marioCheckCharAbilityCanUse
 80148c28:func_80148c28
 801624b8:boomerFuseMain
 // data
