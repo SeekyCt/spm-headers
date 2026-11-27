@@ -45,7 +45,7 @@
 800E83B0:evt_fairy_flag_onoff
 800EA730:evt_guide_flag2_onoff
 800EA838:evt_guide_check_flag0
-800EF338:evt_mario_flag8_onoff
+800EF338:evt_mario_disp_flag_onoff
 800EF4C8:evt_mario_key_off
 800EF4A4:evt_mario_key_on
 800EF8C4:evt_mario_get_pos
