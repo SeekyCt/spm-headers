@@ -77,7 +77,7 @@ enum EffTargetType
   TARGET_NULL = 0,
   TARGET_MARIO = 1,
   TARGET_NPC = 2,
-  TARGET_3 = 3,
+  TARGET_COORD = 3,
   TARGET_FAIRY = 4,
   TARGET_GUIDE = 5
 };
@@ -99,8 +99,8 @@ typedef struct {
 /* 0x000 */ s32 type;
 /* 0x004 */ Vec3 pos;
 /* 0x010 */ Vec3 offset;
-} EffTarget_Raw;
-SIZE_ASSERT(EffTarget_Raw, 0x1c)
+} EffTarget_Coord;
+SIZE_ASSERT(EffTarget_Coord, 0x1c)
 
 typedef struct {
 /* 0x000 */ s32 type;
@@ -119,7 +119,7 @@ SIZE_ASSERT(EffTarget_Mario, 0x1c)
 union EffTargetUnion {
     EffTarget_Mario mario;
     EffTarget_NPC npc;
-    EffTarget_Raw raw;
+    EffTarget_Coord coord;
     EffTarget_Fairy fairy;
     EffTarget_Guide guide;
 };

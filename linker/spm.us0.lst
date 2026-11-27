@@ -716,7 +716,7 @@
 800E90C8:evt_frame_evt_entry
 800E91A8:evt_frame_set_rotation
 800353BC:offscreenSetEntryType
-800B3210:effHappyFlower
+800B3210:effItemExeEntry
 800E7668:evt_fairy_set_pos
 8010C6AC:evt_frame_delete
 800E7388:evt_seq_mapchange

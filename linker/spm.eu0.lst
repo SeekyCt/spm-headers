@@ -153,7 +153,8 @@
 8005af04:dispEntry
 // more
 
-800b3014:effHappyFlower
+800b31ac:effItemExeSetTargetNPC
+800b3014:effItemExeEntry
 
 // effdrv.c
 800616e4:effEntryType
