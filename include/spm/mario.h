@@ -479,7 +479,7 @@ typedef struct
 /* 0x03C8 */ f32 unknown_0x3c8;
 /* 0x03AC */ u8 unknown_0x3cc[0x3d0 - 0x3cc];
 /* 0x03D0 */ f32 xzSpeedFactor;
-/* 0x03D4 */ u8 unknown_0x3d4[0x3d8 - 0x3d4];
+/* 0x03D4 */ s32 cam3dRelated;
 /* 0x03D8 */ Vec3 respawnPosition;
 /* 0x03E4 */ u8 unknown_0x3e4[0x3ec - 0x3e4];
 /* 0x03EC */ HitObj * hitObjRideArray[24];
@@ -834,7 +834,7 @@ DECOMP_STATIC(const char * mario_toFrontPose(const char * name))
 
 UNKNOWN_FUNCTION(func_801299f8)
 void func_80129d8c();
-UNKNOWN_FUNCTION(func_80129db8)
+s32 func_80129db8();
 UNKNOWN_FUNCTION(func_80129ddc)
 UNKNOWN_FUNCTION(func_80129dfc)
 UNKNOWN_FUNCTION(func_8012a064)

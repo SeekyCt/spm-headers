@@ -45,7 +45,7 @@
 800E8390:evt_fairy_flag_onoff
 800EA710:evt_guide_flag2_onoff
 800EA818:evt_guide_check_flag0
-800EF318:evt_mario_flag8_onoff
+800EF318:evt_mario_disp_flag_onoff
 800EF4A8:evt_mario_key_off
 800EF484:evt_mario_key_on
 800EF8A4:evt_mario_get_pos
@@ -666,7 +666,7 @@
 8002EC64:func_8002ed80
 8002EC74:func_8002ed90
 800D88D0:func_800d8700
-800F0FF4:func_800f119c
+800F0FF4:evt_mario_jump_to2
 800F18A4:func_800f1a4c
 801EF400:func_801f0d30
 801EFF50:func_801f1880
@@ -716,7 +716,7 @@
 800E90C8:evt_frame_evt_entry
 800E91A8:evt_frame_set_rotation
 800353BC:offscreenSetEntryType
-800B3210:effHappyFlower
+800B3210:effItemExeEntry
 800E7668:evt_fairy_set_pos
 8010C6AC:evt_frame_delete
 800E7388:evt_seq_mapchange
