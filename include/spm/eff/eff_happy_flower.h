@@ -11,7 +11,7 @@ USING(spm::effdrv::EffEntry)
 USING(spm::effdrv::EffTargetUnion)
 USING(wii::mtx::Vec3)
 
-typedef struct EffItemExe {
+struct EffItemExe {
     bool field0_0x0;
     u8 padding_0x1[0x4 - 0x1];
     s32 effSubDatId;
