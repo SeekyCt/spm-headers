@@ -874,7 +874,6 @@
 80128360:marioEffectFlagOff
 80129db8:func_80129db8
 80128fd4:marioDrawAfterimg
-80129db8:func_80129db8
 8012a3a8:marioCalcDamageToEnemy
 8012a680:marioTakeDamage
 8012af74:marioDropCatch
