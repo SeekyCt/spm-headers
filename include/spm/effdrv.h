@@ -116,38 +116,6 @@ typedef struct {
 } EffTarget_Mario;
 SIZE_ASSERT(EffTarget_Mario, 0x1c)
 
-typedef struct
-{
-/* 0x00 */ s32 type; // EffTargetType
-/* 0x04 */ s32 npcId;
-/* 0x08 */ NPCEntry * npcEntry;
-/* 0x0C */ u8 unknown_0x08[0x1c - 0x0c];
-} EffTarget_NPC;
-SIZE_ASSERT(EffTarget_NPC, 0x1c)
-
-typedef struct
-{
-/* 0x00 */ s32 type; // EffTargetType
-/* 0x04 */ Vec3 pos;
-/* 0x10 */ Vec3 offset; // conjectural, untested
-} EffTarget_Coord;
-SIZE_ASSERT(EffTarget_Coord, 0x1c)
-
-typedef struct
-{
-/* 0x00 */ s32 type; // EffTargetType
-/* 0x04 */ s32 fairyId;
-/* 0x08 */ u8 unknown_0x08[0x1c - 0x08];
-} EffTarget_Fairy;
-SIZE_ASSERT(EffTarget_Fairy, 0x1c)
-
-typedef struct
-{
-/* 0x00 */ s32 type; // EffTargetType
-/* 0x04 */ u8 unknown_0x04[0x1c - 0x04];
-} EffTarget_Guide;
-SIZE_ASSERT(EffTarget_Guide, 0x1c)
-
 typedef union
 {
     EffTarget_Mario mario;
