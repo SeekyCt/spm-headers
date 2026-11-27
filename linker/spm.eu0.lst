@@ -940,13 +940,14 @@
 
 // pausewin.c
 // text
-80184220:pausewinMain
 80183fb0:pausewinGetEntry
+80184220:pausewinMain
 80184c18:pausewinEntry
 80185088:pausewinMoveTo
 801850d8:pausewinAppear
 80185110:pausewinDisappear
 80185148:pausewinDelete
+80185274:_pausewinDelete
 801853cc:pausewinPauseGame
 80185510:pausewinUnpauseGame
 801855bc:pausewinUpdate
